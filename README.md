@@ -22,7 +22,7 @@ src
 
 ## CSS
 * Try not to use `scss` or `sass`.
-* Create a seperate css file for each react component and place them in the same directory.
+* Create a separate css file for each react component and place them in the same directory.
   Eg. 
   ```
   components
