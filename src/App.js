@@ -22,9 +22,7 @@ class App extends Component {
         <NavBar/>
 
         <div className="content">
-          <Route exact path="/" component={() => window.location.href = 'https://excelmec.org/excel2017/' }/>
-          <Route exact path="/events/:id?" component={Events}/>
-          <Route exact path="/talks/:id?" component={Talks}/>
+          <Route exact path="/" component={Events}/>
         </div>
         
       </div>

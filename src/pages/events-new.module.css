@@ -98,8 +98,21 @@ ol.event-desc{
 	grid-template-columns: 1fr 1fr;
 	justify-content: center;
 	grid-column-gap: 10px;
-	padding-bottom: 100px;
+	padding-bottom: 300px;
 
+}
+
+
+.event-theme{
+	color: #fff;
+	font-family: 'Raleway', sans-serif;
+	text-transform: capitalize;
+}
+
+.event-prize{
+	color: #fff;
+	font-family: 'Lato', sans-serif;
+	padding-left: 20px;
 }
 
 .event-action-btn-left,
@@ -126,6 +139,10 @@ ol.event-desc{
 }
 
 @media(min-width: 765px){
+
+	.event-theme{
+		display: none;
+	}
 
 	.event-action{
 		grid-template-columns: repeat(4,1fr);

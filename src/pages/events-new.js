@@ -16,7 +16,7 @@ export default class EventsPage extends Component{
 		super(props)
 		this.state = {
 			eventName: 'Becon 2018',
-			eventDate: '14 June 2018',//Date.now(),
+			eventDate: '14 July 2018',//Date.now(),
 			eventVenue: { 
 				name:'Cochin Gymkhana, Vytilla, Kochi',
 				coords: [9.961196, 76.312707]
@@ -104,6 +104,9 @@ export default class EventsPage extends Component{
 						<img src={beconLogo}/>	
 
 					</div>
+					<div className={styles['event-theme']}>
+						National biomedical conference
+					</div>
 					<div className={styles['event-date']}>
 						<h3><FaIcon name="calendar-alt"/> {this.state.eventDate}</h3>
 					</div>
@@ -114,7 +117,7 @@ export default class EventsPage extends Component{
 					</div>
 				</div>
 				<p className={styles['event-desc']}>
-				Continuous technological developments in healthcare have saved countless lives and improved the quality of life for even more. Not only has technology changed experiences for patients and their families, but it’s also had a huge impact on medical processes and the practices of healthcare professionals.Beacon 18 aims to showcase the best and latest technological advancements in the field of healthcare by conducting a one-day health conferencewith sessions covering the significance of medical technology and bioinformatics for healthcare. Students will be invited to submit abstracts, and the top 5 entries present their research papers to the judges in a paper presentation competition.
+				Continuous technological developments in healthcare have saved countless lives and improved the quality of life for even more. Not only has technology changed experiences for patients and their families, but it’s also had a huge impact on medical processes and the practices of healthcare professionals. Becon 18 aims to showcase the best and latest technological advancements in the field of healthcare by conducting a one-day health conferencewith sessions covering the significance of medical technology and bioinformatics for healthcare. Students will be invited to submit abstracts, and the top 5 entries present their research papers to the judges in a paper presentation competition.
 				</p>
 				<h2 className={styles['section-title']}>Sessions</h2>
 				<div className={styles['event-cards']}>
@@ -122,8 +125,11 @@ export default class EventsPage extends Component{
 				</div>
 				<h2 className={styles['section-title']}>Paper Presentation</h2>
 				<p className={styles['event-desc']}>
-				Paper presentation session will include students presenting their research papers before a panel of judges based on the problem statements given to them. The best five entries will be presented before the audience.
+				Paper presentation session will include students presenting their research papers before a panel of judges based on the problem statements given to them. The best five entries from the submitted abstracts will be presented before the audience.
 				</p>
+				<h4 className={styles['event-prize']}>
+					Prizes worth 10k
+				</h4>
 				<h2 className={styles['section-title']}>Topics</h2>
 				<ol className={styles['event-desc']}>
 					{paperPresentationTopics}
@@ -131,30 +137,15 @@ export default class EventsPage extends Component{
 				<p className={styles['event-desc']}>
 					Entries are not limited to these topics.
 				</p>
-				<h2 className={styles['section-title']}>Evaluation</h2>
-				<p className={styles['event-desc']}>
-					Evaluation will be based on the following criteria.
-				</p>
-				<ol className={styles['event-desc']}>
-					<li>
-						<h4>Practicality of the idea</h4>
-						<p>Level of practicality and ease of implementation will be one of the key factors of evaluation.</p>
-					</li>
-					<li>
-						<h4>Consider scale</h4>
-						<p>Despite population growth slowing in recent years, the global population is projected to reach 8 billion in 2025 and about 11 billion by the year 2100. Consequently, solutions that are able to reach scale will be the most impactful.</p>
-					</li>
-					<li>
-						<h4>Cost Effectiveness</h4>
-						<p>To make the technology accessible to all, cost effectiveness is key.</p>
-					</li>
-				</ol>
+				<br/>
+				<br/>
+				<br/>
 				<div className={styles['event-action']}>
 					<div className={styles['event-action-btn-left']}>
 						<a href="https://www.yepdesk.com/open-register/5b20bb74e4b0a8f119059fbc" target="_blank">Register</a>
 					</div>
 					<div className={styles['event-action-btn-right']}>
-						<a href="#">submit abstract</a>
+						<a href="https://docs.google.com/forms/d/1qq-eNuCL8WPwUrdRL2Q_bC4hhoAySii_HOuXACy3iLY">submit abstract</a>
 					</div>
 				</div>
 			</div>
