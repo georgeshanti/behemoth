@@ -1,0 +1,43 @@
+.navbar{
+    position: fixed;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 3fr 2fr;
+    top:0;
+    padding-top: 20px;
+    z-index: 100;
+}
+
+.excel-logo img{
+    height: 6rem;
+    padding-left: 15px;
+}
+
+.nav-menu{
+    grid-template-columns: 1fr 1fr 1fr;
+    display: grid;
+}
+
+.nav-menu-btn{
+    border: 1px #fffcfc solid;
+    border-radius: 17px;
+    color: #f3e5e5;
+    text-align: center;
+    margin: auto;
+    margin-top: 24px;
+    margin-right: 10px; 
+    min-height: 20px;
+    min-width: 40px;
+    text-transform: uppercase;
+    padding: 12px;
+    line-height: 2;
+    font-size: 10px;
+    padding-bottom: 1px;
+    padding-top: 5px;
+    cursor: pointer;
+}
+
+.nav-menu-hamburger{
+    padding: 20px;
+    padding-bottom: 0;
+}

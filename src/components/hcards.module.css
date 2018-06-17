@@ -1,0 +1,84 @@
+.h-scroll-card-wrapper{
+	overflow-x: auto;
+	width: 100vw;
+	height: 100%;
+	padding-bottom: 20px;
+}
+
+.h-scroll-card-container{
+	display: grid;
+	grid-template-rows: 1fr;
+	height: 100%;
+}
+
+/*.h-scroll-card-container1{
+
+}*/
+
+
+.h-scroll-card{
+	height: 90%;
+	width: 20em;
+	margin:0.2em; 
+	background-color: #94bf82;
+	border-radius: 0.3em;
+	box-shadow: -8px 6px 25px -1px rgba(0, 0, 0, 0.6);
+	display: grid;
+	padding: 8px;
+	grid-template-columns: 1fr 3fr;
+	grid-row: repeat(3,auto);
+}
+
+.h-scroll-card-title h2{
+	margin: 0;
+	font-family: 'Lato', sans-serif;
+	font-size: 1.3rem;
+	text-transform: capitalize;
+}
+
+.h-scroll-card-content p{
+	margin: 0;
+	font-family:'Open Sans', sans-serif;
+}
+
+/*.h-scroll-card-about-pic,
+.h-scroll-card-pic{
+	align-self: end;
+}*/
+
+
+.h-scroll-card-pic img{
+	height: 60px;
+	clip-path: circle(30px at center);
+}
+
+
+
+.h-scroll-card-about-pic h2{
+	margin: 0;
+	font-family: 'Lato', sans-serif;
+	font-weight: 600;
+	text-transform: uppercase;
+	font-size: 0.8rem;
+}
+
+.h-scroll-card-about-pic h5{
+	margin: 0;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 200;
+	font-size: 0.7rem;
+}
+
+.h-scroll-card-title,
+.h-scroll-card-content{
+	grid-column-start: 1;
+	grid-column-end: 3;
+}
+
+.h-scroll-card:first-child{
+	margin-left: 10px;
+}
+
+.h-scroll-card:last-child{
+	margin-right: 10px;
+}

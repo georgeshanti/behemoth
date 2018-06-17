@@ -1,3 +1,95 @@
-.app-font {
-    color: red;
+@import url('https://fonts.googleapis.com/css?family=Lato|Open+Sans|Roboto|Raleway');
+
+.events-container{
+    height: 100vh;
+    width: 100vw;
+    margin: auto;
+    position: relative;
+}
+
+
+.events-text-container{
+    width: 100vw;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translateY(-50%) translateX(-50%);
+}
+
+
+.event-title{
+    text-align: center;
+    font-family: 'Lato' , sans-serif;
+    font-weight: 600;
+    font-size: 3.4rem;
+    text-transform: uppercase;
+    color: #fff;
+    text-shadow: 2px 2px 2px rgba(150, 150, 150, 0.72);
+    margin-bottom: 10px;
+}
+
+.event-short-desc{
+    max-width: 60vw;
+    color: #fff;
+    font-family: 'Roboto' , sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.event-info{
+    margin: 0 auto;
+    display: grid;
+    max-width: 50vw;
+    grid-template-columns: 46% 8% 46%;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.event-date{
+    color: #fff;
+    text-align: right;
+}
+
+.event-venue{
+    grid-column-start: 3;
+    text-align: left;
+    color: #fff;
+}
+
+.event-info i{
+    color: #f0f7ff;
+    font-size: 1.2rem;
+    padding: 3px;
+}
+
+.bg-img-container{
+    position: relative;
+    height: 100vh;
+    width: 100vh;
+}
+
+.bg-img{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translateX(-50%) translateY(-50%);
+    height: 150vh;
+    filter: grayscale(50%);
+    z-index: -2;
+}
+
+.overlay{
+    position: fixed;
+    top:0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    opacity: 0.5;
+    z-index: -1;
 }
