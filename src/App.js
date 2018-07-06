@@ -10,10 +10,12 @@ import NavBar from './components/navbar-new'
 const HomeImport = () => import('./pages/home')
 const EventsImport = () => import('./pages/events-new')
 const TalksImport = () => import('./pages/talks')
+const ExcelEventsImport = () => import('./pages/excel-events')
 
 const Home = asyncComponent(HomeImport)
 const Events = asyncComponent(EventsImport)
 const Talks = asyncComponent(TalksImport)
+const ExcelEvents = asyncComponent(ExcelEventsImport)
 
 class App extends Component {
   render() {
@@ -23,6 +25,7 @@ class App extends Component {
 
         <div className="content">
           <Route exact path="/" component={Events}/>
+          <Route path='/events' component={ExcelEvents} />
         </div>
         
       </div>
