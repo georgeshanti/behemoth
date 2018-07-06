@@ -1,7 +1,7 @@
 .container {
 	padding: 15px;
 	padding-top: 30px;
-
+	overflow: hidden;
 }
 
 .events-grid {
@@ -22,11 +22,12 @@
 
 .events--expanded {
 	background-color: darkgrey;
-	position: fixed;
-	top: 12vh;
-	height: 85vh;
-	width: 98vw;
-	overflow: visible;
+	position: sticky;
+	height: 100vh;
+	width: 80vw;
+	margin-left: auto;
+	margin-right: auto; 
+	margin-bottom: -200px;
 }
 
 .btn-close {

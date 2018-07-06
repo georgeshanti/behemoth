@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import './excel-events.css'
+import { TimelineLite, TweenMax, Power0 } from 'gsap';
 
 export default class ExcelEvents extends Component {
 	constructor(props) {
@@ -9,25 +10,43 @@ export default class ExcelEvents extends Component {
 		}
 		this.showEvent = this.showEvent.bind(this);
 		this.closeEvent = this.closeEvent.bind(this);
+		this.setClasses = this.setClasses.bind(this);
+
+		this.tl = new TimelineLite();
 	}
 
 	showEvent(e) {
-		document.getElementById(e.target.id).classList.add('invisible');
+
+		var x = document.getElementById('contentsContainer')
+		var y = document.getElementById(e.target.id);
+		this.tl.to(y, 0.5, {autoAlpha: 0, ease: Power0.easeOut} );
+		//document.getElementById(e.target.id).classList.add('invisible');
+		this.tl.set(x, {autoAlpha: 1});
 		document.getElementById('contentsContainer').classList.remove('hidden');
 		document.getElementById(e.target.id + '-content').classList.remove('hidden');
 		this.setState({
 			currentEvent: e.target.id
 		});
+		this.tl.fromTo(x, 0.7, {y: 200}, {y: -300, autoAlpha: 1, ease:Power0.easeIn});
 	}
 
 	closeEvent(e) {
+		var y = document.getElementById(this.state.currentEvent);
+		var x = document.getElementById('contentsContainer');
+		this.tl.to(x, 0.7, {y: 300, autoAlpha: 0, ease: Power0.easeOut });
+		this.tl.to(y, 0.5, {autoAlpha: 1, ease: Power0.easeIn});
+		setTimeout(this.setClasses, 700);
+	}
+
+	setClasses() {
 		document.getElementById(this.state.currentEvent + '-content').classList.add('hidden');
 		document.getElementById('contentsContainer').classList.add('hidden');
-		document.getElementById(this.state.currentEvent).classList.remove('invisible');
 		this.setState({
 			currentEvent: null
 		});
 	}
+
+	
 
 
 	render() {
