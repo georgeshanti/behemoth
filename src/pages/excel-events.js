@@ -1,58 +1,85 @@
 import React, {Component} from 'react'
 import './excel-events.css'
-import { TimelineLite, TweenMax, Power0 } from 'gsap';
+import { TimelineLite, Power0} from 'gsap';
 
 export default class ExcelEvents extends Component {
+
 	constructor(props) {
 		super(props);
-		this.state = {
-			currentEvent: null
-		}
-		this.showEvent = this.showEvent.bind(this);
-		this.closeEvent = this.closeEvent.bind(this);
-		this.setClasses = this.setClasses.bind(this);
 
+		//method binding
+		this.showEvent = this.showEvent.bind(this)
+		this.closeEvent = this.closeEvent.bind(this)
+		this.fadeOutEvents = this.fadeOutEvents.bind(this)
+		this.fadeInEvents = this.fadeInEvents.bind(this)
+		this.fadeOutContents = this.fadeOutContents.bind(this)
+		this.fadeInContents = this.fadeInContents.bind(this)
+		this.hideContent = this.hideContent.bind(this)
+
+
+		//initialise timeline
 		this.tl = new TimelineLite();
+
+		//initialise state
+		this.state = {
+			activeEvent: null,
+		};
+	}
+
+	closeEvent(e) {
+		this.fadeOutContents(this.state.activeEvent)
+		this.fadeInEvents()
+		setTimeout(this.hideContent, 700)
+	}
+
+	hideContent() {
+		document.getElementById('contentsContainer').classList.add('hidden')
+		document.getElementById(this.state.activeEvent + '-content').classList.add('hidden')
+
+		this.setState({
+			activeEvent: null,
+		})
 	}
 
 	showEvent(e) {
 
-		var x = document.getElementById('contentsContainer')
-		var y = document.getElementById(e.target.id);
-		this.tl.to(y, 0.5, {autoAlpha: 0, ease: Power0.easeOut} );
-		//document.getElementById(e.target.id).classList.add('invisible');
-		this.tl.set(x, {autoAlpha: 1});
-		document.getElementById('contentsContainer').classList.remove('hidden');
-		document.getElementById(e.target.id + '-content').classList.remove('hidden');
 		this.setState({
-			currentEvent: e.target.id
+			activeEvent: e.target.id,
 		});
-		this.tl.fromTo(x, 0.7, {y: 200}, {y: -300, autoAlpha: 1, ease:Power0.easeIn});
+
+		document.getElementById('contentsContainer').classList.remove('hidden')
+		document.getElementById(e.target.id + '-content').classList.remove('hidden')
+
+		this.fadeOutEvents()
+		this.fadeInContents(e)
+
 	}
 
-	closeEvent(e) {
-		var y = document.getElementById(this.state.currentEvent);
-		var x = document.getElementById('contentsContainer');
-		this.tl.to(x, 0.7, {y: 300, autoAlpha: 0, ease: Power0.easeOut });
-		this.tl.to(y, 0.5, {autoAlpha: 1, ease: Power0.easeIn});
-		setTimeout(this.setClasses, 700);
+	fadeOutEvents() {
+		this.tl.to('#eventsContainer', 0.5, {
+			autoAlpha: 0,
+			ease: Power0.easeOut,
+		},
+	)
 	}
 
-	setClasses() {
-		document.getElementById(this.state.currentEvent + '-content').classList.add('hidden');
-		document.getElementById('contentsContainer').classList.add('hidden');
-		this.setState({
-			currentEvent: null
-		});
+	fadeInEvents() {
+		this.tl.to('#eventsContainer', 0.5, { autoAlpha: 1, ease: Power0.easeIn})
 	}
 
-	
+	fadeOutContents(x) {
+		this.tl.to('#contentsContainer', 0.5, {autoAlpha: 0, scale: 0.1, ease: Power0.easeOut})
+	}
+
+	fadeInContents(e) {
+		this.tl.fromTo('#contentsContainer', 0.5, {autoAlpha: 0, scale: 0.1}, {autoAlpha: 1, scale: 1, ease: Power0.easeIn});
+	}
 
 
 	render() {
 		return(
 			<div className='container'>
-				<div className='events-grid'>
+				<div id='eventsContainer' className='events-grid'>
 					<div id='event1' className='events' onClick={this.showEvent}></div>
 					<div id='event2' className='events' onClick={this.showEvent}></div>
 					<div id='event3' className='events' onClick={this.showEvent}></div>

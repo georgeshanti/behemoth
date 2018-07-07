@@ -1,7 +1,9 @@
 .container {
+	height: 90%;
 	padding: 15px;
-	padding-top: 30px;
+	padding-top: 40px;
 	overflow: hidden;
+	background-color: grey;
 }
 
 .events-grid {
@@ -16,34 +18,32 @@
 	background-color: blueviolet;
 }
 
-.hidden {
-	display: none;
-}
-
 .events--expanded {
-	background-color: darkgrey;
-	position: sticky;
-	height: 100vh;
-	width: 80vw;
-	margin-left: auto;
-	margin-right: auto; 
-	margin-bottom: -200px;
+	opacity: 0;
+	position: fixed;
+	top: 15vh;
+	left: 15vw;
+	height: 80vh;
+	width: 70vw;
+	background-color: white;
 }
 
 .btn-close {
 	position: absolute;
-	right: 1px;
-	top: 1px;
+	right: 2px;
+	top: 2px;
+	color: aqua;
 	z-index: 1;
 }
 
 .contents {
 	position: absolute;
-	background-color: beige;
 	width: 100%;
-	height: 100%;	
+	height: 100%;
+	background-color: black;
+	color: white;
 }
 
-.invisible {
-	opacity: 0;
+.hidden {
+	display: none;
 }
