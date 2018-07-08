@@ -6,6 +6,9 @@
     background: #3a3939;
 }
 
+a{
+	outline: none;
+}
 /*.events-grid {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
@@ -115,6 +118,9 @@
 	.grid-logo-image{
 		height: 15vh;
 	}
+	.btn-close {
+		left: 47vw;
+		}
 }
 
 @media screen and (max-width: 320px){

@@ -123,7 +123,7 @@ export default class ExcelEvents extends Component {
 					</div>
 				</div>
 				<div id='contentsContainer' className='events--expanded hidden'>
-					<div id='contents-close' className='btn-close' onClick={this.closeEvent}><img src={require('../img/access-denied(1).png')}/></div>
+					<div id='contents-close' className='btn-close' onClick={this.closeEvent}><img src={require('../img/close.png')}/></div>
 					<div id='event1-content' className='event-bg hidden'><CardsNew /></div>
 					<div id='event2-content' className='event-bg hidden'><CardsNew /></div>
 					<div id='event3-content' className='event-bg hidden'><CardsNew /></div>
