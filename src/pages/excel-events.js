@@ -82,12 +82,23 @@ export default class ExcelEvents extends Component {
 			<div className='container'>
 				<div id='eventsContainer' className='events-grid'>
 					<div id='event1' className='events' onClick={this.showEvent}>
+					       <div className='big-numbers'>1</div>
 					</div>
-					<div id='event2' className='events big-numbers' onClick={this.showEvent}></div>
-					<div id='event3' className='events' onClick={this.showEvent}></div>
-					<div id='event4' className='events' onClick={this.showEvent}></div>
-					<div id='event5' className='events' onClick={this.showEvent}></div>
-					<div id='event6' className='events' onClick={this.showEvent}></div>
+					<div id='event2' className='events ' onClick={this.showEvent}>
+					       <div className='big-numbers'>2</div>
+					</div>
+					<div id='event3' className='events' onClick={this.showEvent}>
+					       <div className='big-numbers'>3</div>
+					</div>
+					<div id='event4' className='events' onClick={this.showEvent}>
+					       <div className='big-numbers'>4</div>
+					</div>
+					<div id='event5' className='events' onClick={this.showEvent}>
+					       <div className='big-numbers'>5</div>
+					</div>
+					<div id='event6' className='events' onClick={this.showEvent}>
+				           <div className='big-numbers'>6</div>
+					</div>
 				</div>
 				<div id='contentsContainer' className='events--expanded hidden'>
 					<div id='contents-close' className='btn-close' onClick={this.closeEvent}><img src={require('../img/access-denied(1).png')}/></div>

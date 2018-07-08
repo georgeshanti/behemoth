@@ -11,11 +11,11 @@ class CardsNew extends Component {
         for(var i=0;i<this.op.length;i++){
             if(this.op[i]!== e.target.id)
                 document.getElementById(this.op[i]+'-content').classList.add('hidden');
-            else
-                document.getElementById(e.target.id+'-content').classList.remove('hidden');
+        }
+        document.getElementById(e.target.id+'-content').classList.remove('hidden');
                 
                    
-        }
+        
         
     }
          
