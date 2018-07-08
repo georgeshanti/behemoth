@@ -1,6 +1,7 @@
-import React, {Component} from 'react'
-import './excel-events.css'
+import React, {Component} from 'react';
+import './excel-events.css';
 import { TimelineLite, Power0} from 'gsap';
+import CardsNew from '../components/cards-new';
 
 export default class ExcelEvents extends Component {
 
@@ -88,8 +89,8 @@ export default class ExcelEvents extends Component {
 					<div id='event6' className='events' onClick={this.showEvent}></div>
 				</div>
 				<div id='contentsContainer' className='events--expanded hidden'>
-					<button id='contents-close' className='btn-close' onClick={this.closeEvent}>&#10006;</button>
-					<div id='event1-content' className='contents hidden'>Content1</div>
+					<div id='contents-close' className='btn-close' onClick={this.closeEvent}><img src={require('../img/access-denied(1).png')}/></div>
+					<div id='event1-content' className='event-bg hidden'><CardsNew/></div>
 					<div id='event2-content' className='contents hidden'>Content2</div>
 					<div id='event3-content' className='contents hidden'>Content3</div>
 					<div id='event4-content' className='contents hidden'>Content4</div>

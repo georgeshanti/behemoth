@@ -15,10 +15,10 @@
 }
 
 .events {
-	background-color: blueviolet;
+	background-color: whitesmoke;
 }
 
-.events--expanded {
+/*.events--expanded {
 	opacity: 0;
 	position: fixed;
 	top: 15vh;
@@ -26,13 +26,31 @@
 	height: 80vh;
 	width: 70vw;
 	background-color: white;
+}*/
+
+.events--expanded {
+	opacity: 0;
+	position: fixed;
+	top: 6vh;
+	left: 0vw;
+	height: 100vh;
+	width: 100vw;
+	background-color: white;
+}
+
+.event-bg{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: black;
+	background-image: url('../img/trianglebg.png');
 }
 
 .btn-close {
 	position: absolute;
-	right: 2px;
-	top: 2px;
-	color: aqua;
+	left: 2vw;
+	top: 2vh;
+	color: whitesmoke;
 	z-index: 1;
 }
 
@@ -46,4 +64,11 @@
 
 .hidden {
 	display: none;
+}
+
+@media screen and (max-width: 600px){
+	.events--expanded {
+		top: 9vh;
+		left: 0vw;
+	}
 }
