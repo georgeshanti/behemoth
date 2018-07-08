@@ -1,21 +1,28 @@
 .container {
-	height: 90%;
-	padding: 15px;
-	padding-top: 40px;
+	height: 100vh;
+	/*padding: 15px;
+	padding-top: 40px;*/
 	overflow: hidden;
 	background-color: grey;
 }
 
-.events-grid {
+/*.events-grid {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	grid-template-rows: repeat(2, 250px);
 	grid-column-gap: 10px;
 	grid-row-gap: 10px;
 }
+*/
+.events-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 1px;
+}
 
 .events {
 	background-color: whitesmoke;
+	height: 47vh;
 }
 
 /*.events--expanded {
