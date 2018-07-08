@@ -44,16 +44,19 @@ export default class ExcelEvents extends Component {
 
 	showEvent(e) {
 
+		
+		console.log(e)
+
 		this.setState({
-			activeEvent: e.target.id,
+			activeEvent: e,
 		});
 
 		document.getElementById('contentsContainer').classList.remove('hidden')
-		document.getElementById(e.target.id + '-content').classList.remove('hidden')
+		document.getElementById(e + '-content').classList.remove('hidden')
 
 		this.fadeOutEvents()
-		this.fadeInContents(e)
-
+		this.fadeInContents()
+		
 	}
 
 	fadeOutEvents() {
@@ -72,7 +75,7 @@ export default class ExcelEvents extends Component {
 		this.tl.to('#contentsContainer', 0.5, {autoAlpha: 0, scale: 0.1, ease: Power0.easeOut})
 	}
 
-	fadeInContents(e) {
+	fadeInContents() {
 		this.tl.fromTo('#contentsContainer', 0.5, {autoAlpha: 0, scale: 0.1}, {autoAlpha: 1, scale: 1, ease: Power0.easeIn});
 	}
 
@@ -81,23 +84,23 @@ export default class ExcelEvents extends Component {
 		return(
 			<div className='container'>
 				<div id='eventsContainer' className='events-grid'>
-					<div id='event1' className='events' onClick={this.showEvent}>
-					       <div className='big-numbers'>1</div>
+					<div id='event1' className=' event1 events' onClick={() =>this.showEvent('event1')}>
+					       <div className=' event1 big-numbers'>1</div>
 					</div>
-					<div id='event2' className='events ' onClick={this.showEvent}>
-					       <div className='big-numbers'>2</div>
+					<div id='event2' className=' event2 events' onClick={() =>this.showEvent('event2')}>
+					       <div className=' event2 big-numbers'>2</div>
 					</div>
-					<div id='event3' className='events' onClick={this.showEvent}>
-					       <div className='big-numbers'>3</div>
+					<div id='event3' className=' event3 events' onClick={() =>this.showEvent('event3')}>
+					       <div className=' event3 big-numbers'>3</div>
 					</div>
-					<div id='event4' className='events' onClick={this.showEvent}>
-					       <div className='big-numbers'>4</div>
+					<div id='event4' className=' event4 events' onClick={() =>this.showEvent('event4')}>
+					       <div className=' event4 big-numbers'>4</div>
 					</div>
-					<div id='event5' className='events' onClick={this.showEvent}>
-					       <div className='big-numbers'>5</div>
+					<div id='event5' className='event5 events ' onClick={() =>this.showEvent('event5')}>
+					       <div className='event5 big-numbers '>5</div>
 					</div>
-					<div id='event6' className='events' onClick={this.showEvent}>
-				           <div className='big-numbers'>6</div>
+					<div id='event6' className='event6 events ' onClick={() =>this.showEvent('event6')}>
+				           <div className='event6 big-numbers '>6</div>
 					</div>
 				</div>
 				<div id='contentsContainer' className='events--expanded hidden'>
