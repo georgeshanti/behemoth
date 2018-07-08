@@ -81,8 +81,9 @@ export default class ExcelEvents extends Component {
 		return(
 			<div className='container'>
 				<div id='eventsContainer' className='events-grid'>
-					<div id='event1' className='events' onClick={this.showEvent}></div>
-					<div id='event2' className='events' onClick={this.showEvent}></div>
+					<div id='event1' className='events' onClick={this.showEvent}>
+					</div>
+					<div id='event2' className='events big-numbers' onClick={this.showEvent}></div>
 					<div id='event3' className='events' onClick={this.showEvent}></div>
 					<div id='event4' className='events' onClick={this.showEvent}></div>
 					<div id='event5' className='events' onClick={this.showEvent}></div>

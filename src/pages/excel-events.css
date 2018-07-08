@@ -3,7 +3,7 @@
 	/*padding: 15px;
 	padding-top: 40px;*/
 	overflow: hidden;
-	background-color: grey;
+    background: #272727;
 }
 
 /*.events-grid {
@@ -21,7 +21,7 @@
 }
 
 .events {
-	background-color: whitesmoke;
+	background:whitesmoke;
 	height: 47vh;
 }
 
@@ -75,7 +75,23 @@
 
 @media screen and (max-width: 600px){
 	.events--expanded {
-		top: 9vh;
+		top: 8.45vh;
 		left: 0vw;
+	}
+	.events {
+		background-color: whitesmoke;
+		height: 31vh;
+	}
+	.events-grid {
+		display: grid;
+		grid-template-columns: auto auto;
+		grid-gap: 1px;
+		grid-row: auto auto auto;
+	}
+}
+
+@media screen and (max-width: 320px){
+	.events--expanded {
+		top: 11vh;
 	}
 }
