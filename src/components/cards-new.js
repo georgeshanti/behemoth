@@ -9,10 +9,37 @@ import Contact from './cards-new-contact'
 import {
     Route,
     NavLink,
-    HashRouter
+    HashRouter,
+    Redirect
   } from 'react-router-dom';
 
 class CardsNew extends Component {
+
+    constructor(props) {
+        super(props)
+    }
+
+    renderRedirect() {
+        if(this.props.redirect) {
+            return(
+                <div>
+                <Route exact path="/events/format" render = {() => <Redirect to="/events" />}/>
+                <Route exact path="/events/rules" render = {() => <Redirect to="/events" />}/>
+                <Route exact path="/events/contact" render = {() => <Redirect to="/events" />}/>
+                </div>
+            );
+        }
+        else
+         <div></div>
+    }
+
+    renderAbout() {
+        if(this.props.redirectAbout) {
+            return <Route exact path="/events" render = {() => <Redirect to="/events/about" />}/>
+        }
+        else 
+        return <div></div>
+    }
 
          
     render() {
@@ -46,6 +73,8 @@ class CardsNew extends Component {
                 <Route exact path="/events/format" component={Format} />
                 <Route exact path="/events/rules" component={Rules} />
                 <Route exact path="/events/contact" component={Contact} />
+                <div>{this.renderAbout()}</div>
+                <div>{this.renderRedirect()}</div>
             </div>
     </div>
     </div>

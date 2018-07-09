@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import './excel-events.css';
 import { TimelineLite, Power0} from 'gsap';
 import CardsNew from '../components/cards-new';
+import {Route, Redirect} from 'react-router-dom'
 
 export default class ExcelEvents extends Component {
 
@@ -24,10 +25,15 @@ export default class ExcelEvents extends Component {
 		//initialise state
 		this.state = {
 			activeEvent: null,
+			redirect : false,
+			redirectAbout: false,
 		};
 	}
 
 	closeEvent(e) {
+
+		this.setState({redirect: true, redirectAbout: false});
+
 		this.fadeOutContents(this.state.activeEvent)
 		this.fadeInEvents()
 		setTimeout(this.hideContent, 700)
@@ -44,11 +50,11 @@ export default class ExcelEvents extends Component {
 
 	showEvent(e) {
 
-		
-		console.log(e)
 
 		this.setState({
+			redirect: false,
 			activeEvent: e,
+			redirectAbout: true,
 		});
 
 		document.getElementById('contentsContainer').classList.remove('hidden')
@@ -124,12 +130,12 @@ export default class ExcelEvents extends Component {
 				</div>
 				<div id='contentsContainer' className='events--expanded hidden'>
 					<div id='contents-close' className='btn-close' onClick={this.closeEvent}><img src={require('../img/close.png')}/></div>
-					<div id='event1-content' className='event-bg hidden'><CardsNew /></div>
-					<div id='event2-content' className='event-bg hidden'><CardsNew /></div>
-					<div id='event3-content' className='event-bg hidden'><CardsNew /></div>
-					<div id='event4-content' className='event-bg hidden'><CardsNew /></div>
-					<div id='event5-content' className='event-bg hidden'><CardsNew /></div>
-					<div id='event6-content' className='event-bg hidden'><CardsNew /></div>
+					<div id='event1-content' className='event-bg hidden'><CardsNew redirect={this.state.redirect} redirectAbout={this.state.redirectAbout}/></div>
+					<div id='event2-content' className='event-bg hidden'><CardsNew redirect={this.state.redirect} redirectAbout={this.state.redirectAbout}/></div>
+					<div id='event3-content' className='event-bg hidden'><CardsNew redirect={this.state.redirect} redirectAbout={this.state.redirectAbout}/></div>
+					<div id='event4-content' className='event-bg hidden'><CardsNew redirect={this.state.redirect} redirectAbout={this.state.redirectAbout}/></div>
+					<div id='event5-content' className='event-bg hidden'><CardsNew redirect={this.state.redirect} redirectAbout={this.state.redirectAbout}/></div>
+					<div id='event6-content' className='event-bg hidden'><CardsNew redirect={this.state.redirect} redirectAbout={this.state.redirectAbout}/></div>
 				</div>
 			</div>
 		);
