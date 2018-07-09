@@ -73,12 +73,14 @@ nav ul {
       width:25%;
     float:left;
     text-align:center;
-    padding-top:2vh;
-    padding-bottom: 2vh;
-
   }
   
-  nav ul li:hover{
+  nav ul li a{
+    padding-top:2vh;
+    padding-bottom: 2vh;
+  }
+
+  nav ul li a:hover{
       background-color: black;
   }
 

@@ -54,21 +54,22 @@ class CardsNew extends Component {
             <nav>
                 <ul>
                     <li>                        
-                        <div id="about"><NavLink exact to="/events/about">About</NavLink></div>
+                        <div id="about"><NavLink exact to="/events/about" activeStyle={{color:"white",backgroundColor:"black"}}>About</NavLink></div>
                     </li>
                     <li>
-                        <div id="format"><NavLink exact to="/events/format">Format</NavLink></div>
+                        <div id="format"><NavLink exact to="/events/format" activeStyle={{color:"white",backgroundColor:"black"}}>Format</NavLink></div>
                     </li>
                     <li>
-                        <div id="rules"><NavLink exact to="/events/rules">Rules</NavLink></div>
+                        <div id="rules"><NavLink exact to="/events/rules" activeStyle={{color:"white",backgroundColor:"black"}}>Rules</NavLink></div>
                     </li>
                     <li>
-                        <div id="contact"><NavLink exact to="/events/contact">Contact</NavLink></div> 
+                        <div id="contact"><NavLink exact to="/events/contact" activeStyle={{color:"white",backgroundColor:"black"}}>Contact</NavLink></div> 
                     </li>
                 </ul>
             </nav>
             </div>
             <div className="main-nav-content">
+                <Route path="/events" render={() => <Redirect to="/events/about" />} />
                 <Route exact path="/events/about" component={About} />
                 <Route exact path="/events/format" component={Format} />
                 <Route exact path="/events/rules" component={Rules} />
