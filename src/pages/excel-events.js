@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import './excel-events.css';
 import { TimelineLite, Power0} from 'gsap';
 import CardsNew from '../components/cards-new';
-import {Route, Redirect} from 'react-router-dom'
 
 export default class ExcelEvents extends Component {
 

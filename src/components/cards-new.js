@@ -23,6 +23,7 @@ class CardsNew extends Component {
         if(this.props.redirect) {
             return(
                 <div>
+                <Route exact path="/events/about" render = {() => <Redirect to="/events" />}/>
                 <Route exact path="/events/format" render = {() => <Redirect to="/events" />}/>
                 <Route exact path="/events/rules" render = {() => <Redirect to="/events" />}/>
                 <Route exact path="/events/contact" render = {() => <Redirect to="/events" />}/>
@@ -69,7 +70,6 @@ class CardsNew extends Component {
             </nav>
             </div>
             <div className="main-nav-content">
-                <Route path="/events" render={() => <Redirect to="/events/about" />} />
                 <Route exact path="/events/about" component={About} />
                 <Route exact path="/events/format" component={Format} />
                 <Route exact path="/events/rules" component={Rules} />
