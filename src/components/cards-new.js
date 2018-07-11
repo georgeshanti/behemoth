@@ -5,32 +5,34 @@ import './cards-new.css';
 class CardsNew extends Component {
 
     constructor(props) {
-		super(props);
+        super(props);
         
-		//method binding
-		this.switchLink = this.switchLink
+        this.switchLink=this.switchLink.bind(this)
+        
+		this.index=this.props.index;
 
 	}
 
 
     switchLink(e){
         console.log('switchLink works')
-        let xScrollWidth = document.getElementById('tab-content-wrap').scrollWidth
+        let xScrollWidth = document.getElementsByClassName('tab-content-wrap')[this.index].scrollWidth
         let scrollDistance
         if(e==='about'){
-            document.getElementById('tab-content-wrap').style.transform="translate(0px)"
+            document.getElementsByClassName('tab-content-wrap')[this.index].style.transform="translate(0px)"
         }
         else if(e==='format'){
             scrollDistance=xScrollWidth*0.25
-            document.getElementById('tab-content-wrap').style.transform="translate(-"+scrollDistance+"px)"
+            document.getElementsByClassName('tab-content-wrap')[this.index].style.transform="translate(-"+scrollDistance+"px)"
+            console.log('in format');
         }
         else if(e==='rules'){
             scrollDistance=xScrollWidth*0.50
-            document.getElementById('tab-content-wrap').style.transform="translate(-"+scrollDistance+"px)"
+            document.getElementsByClassName('tab-content-wrap')[this.index].style.transform="translate(-"+scrollDistance+"px)"
         }
         else if(e==='contact'){
             scrollDistance=xScrollWidth*0.75
-            document.getElementById('tab-content-wrap').style.transform="translate(-"+scrollDistance+"px)"
+            document.getElementsByClassName('tab-content-wrap')[this.index].style.transform="translate(-"+scrollDistance+"px)"
         }
 
     }
@@ -60,7 +62,7 @@ class CardsNew extends Component {
             </div>
         </div>
         <div id="tab-wrapper" className="tab-wrapper">
-        <div id="tab-content-wrap">
+        <div className="tab-content-wrap">
         <div id="about-content" className="white-font tab-content">
         <p>A million things can happen in a moment. From myriad emotions to familiar scents, places and it's people to memories and journeys, a moment is never enough.
                  Photography is the art of weaving a million stories from a single moment. It's never just about what is seen, it's always about how it is seen and experienced. For those who believe that immortality is just a click away, Excel 2017 brings you 'The Third Eye Photography Contest' in the memory of Vineeth Marar. 
