@@ -27,7 +27,7 @@ export default class ExcelEvents extends Component {
 			activeEvent: null,
 			redirect : false,
 			redirectAbout: false,
-			initialItem:["event 1","event 2","event 3","event 4","event 5","event 6"],
+			initialItem:["All","Dept 1","Dept 2","Dept 3","Dept 4"],
 			items:[]
 		};
 	}
@@ -37,12 +37,16 @@ export default class ExcelEvents extends Component {
 	}
 
 	//searching
-	filterList(e){
-		var updatedList=this.state.initialItem;
-		updatedList=updatedList.filter(function( item){
-			return item.toLowerCase().search(e.target.value.toLowerCase())!==-1
-		});
-		this.setState({items:updatedList});
+	filterList(dept){
+		console.log(dept)
+		if(dept!=="All")
+		{ var updatedList=this.state.initialItem;
+		  updatedList=updatedList.filter(function( item){
+		    	return item.toLowerCase().search(dept.toLowerCase())!==-1
+		  });
+		  this.setState({items:updatedList});
+		 
+		}  
 	}
 
 	closeEvent(e) {
@@ -104,9 +108,18 @@ export default class ExcelEvents extends Component {
 	render() {
 		return(
 			<div className='container'>
-			    <div> <input type="text" placeholder="search"  onChange={this.filterList}/> </div>
+			   <div class="dropdown">
+                    <button class="dropbtn">{this.state.items[0]}</button>
+                          <div className="dropdown-content">
+                             <a onClick={() =>this.filterList("Dept 1")}>Dept 1</a>
+                             <a onClick={() =>this.filterList("Dept 2")}>Dept 2</a>
+                             <a onClick={() =>this.filterList("Dept 3")}>Dept 3</a>
+							 <a onClick={() =>this.filterList("Dept 4")}>Dept 4</a>
+                          </div>
+                </div>
+				
 				<div id='eventsContainer' className='events-grid'>
-				   {this.state.items.indexOf("event 1")!==-1?
+				   {this.state.items.indexOf("Dept 1")!==-1?
 					  (<div id='event1' className=' event1 events' onClick={() =>this.showEvent('event1')}>
 					       <div className=' event1 big-numbers'>
 						   <img src={require('../img/dummy-img.png')} className="grid-logo-image"/><br/>
@@ -115,7 +128,7 @@ export default class ExcelEvents extends Component {
 					  </div>)
 					:("")
 				   }
-				   {this.state.items.indexOf("event 2")!==-1?
+				   {this.state.items.indexOf("Dept 2")!==-1?
 					  (<div id='event2' className=' event2 events' onClick={() =>this.showEvent('event2')}>
 					       <div className=' event2 big-numbers'>
 						   <img src={require('../img/dummy-img.png')} className="grid-logo-image"/><br/>
@@ -124,7 +137,7 @@ export default class ExcelEvents extends Component {
 					  </div>)
 					:("")
 				    }
-					{this.state.items.indexOf("event 3")!==-1?
+					{this.state.items.indexOf("Dept 3")!==-1?
 					  (<div id='event3' className=' event3 events' onClick={() =>this.showEvent('event3')}>
 					       <div className=' event3 big-numbers'>
 						   <img src={require('../img/dummy-img.png')} className="grid-logo-image"/><br/>
@@ -133,7 +146,7 @@ export default class ExcelEvents extends Component {
 					   </div>)
 					:("")
 					}
-					{this.state.items.indexOf("event 4")!==-1?
+					{this.state.items.indexOf("Dept 4")!==-1?
 					  (<div id='event4' className=' event4 events' onClick={() =>this.showEvent('event4')}>
 					       <div className=' event4 big-numbers'>
 						   <img src={require('../img/dummy-img.png')} className="grid-logo-image"/><br/>
@@ -142,7 +155,7 @@ export default class ExcelEvents extends Component {
 					  </div>)
 					:("") 
 				    }
-					{this.state.items.indexOf("event 5")!==-1? 
+					{this.state.items.indexOf("Dept 1")!==-1? 
 					  (<div id='event5' className='event5 events ' onClick={() =>this.showEvent('event5')}>
 					       <div className='event5 big-numbers '>
 						   <img src={require('../img/dummy-img.png')} className="grid-logo-image"/><br/>
@@ -152,7 +165,7 @@ export default class ExcelEvents extends Component {
 					  </div>)
 					:("")
 				    }
-					{this.state.items.indexOf("event 6")!==-1?  
+					{this.state.items.indexOf("Dept 2")!==-1?  
 					  (<div id='event6' className='event6 events ' onClick={() =>this.showEvent('event6')}>
 				           <div className='event6 big-numbers '>
 						   <img src={require('../img/dummy-img.png')} className="grid-logo-image"/><br/>						   
