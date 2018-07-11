@@ -36,6 +36,9 @@ export default class ExcelEvents extends Component {
 		this.setState({items:this.state.initialItem})
 	}
 
+	showOptions(){
+		document.getElementsByClassName("dropdown-content")[0].classList.remove("hidden");
+	}
 	//searching
 	filterList(dept){
 		console.log(dept)
@@ -45,8 +48,11 @@ export default class ExcelEvents extends Component {
 		    	return item.toLowerCase().search(dept.toLowerCase())!==-1
 		  });
 		  this.setState({items:updatedList});
-		 
 		}  
+		else{
+			this.setState({items:this.state.initialItem});
+		}
+		document.getElementsByClassName("dropdown-content")[0].classList.add("hidden");
 	}
 
 	closeEvent(e) {
@@ -108,13 +114,14 @@ export default class ExcelEvents extends Component {
 	render() {
 		return(
 			<div className='container'>
-			   <div class="dropdown">
-                    <button class="dropbtn">{this.state.items[0]}</button>
-                          <div className="dropdown-content">
-                             <a onClick={() =>this.filterList("Dept 1")}>Dept 1</a>
-                             <a onClick={() =>this.filterList("Dept 2")}>Dept 2</a>
-                             <a onClick={() =>this.filterList("Dept 3")}>Dept 3</a>
-							 <a onClick={() =>this.filterList("Dept 4")}>Dept 4</a>
+			   <div className="dropdown">
+                    <div className="dropbtn" onClick={this.showOptions}>{this.state.items[0]}</div>
+                          <div className="dropdown-content hidden">
+						     <div onClick={() =>this.filterList("All")}>All dept</div>
+                             <div onClick={() =>this.filterList("Dept 1")}>Dept 1</div>
+                             <div onClick={() =>this.filterList("Dept 2")}>Dept 2</div>
+                             <div onClick={() =>this.filterList("Dept 3")}>Dept 3</div>
+							 <div onClick={() =>this.filterList("Dept 4")}>Dept 4</div>
                           </div>
                 </div>
 				
