@@ -29,10 +29,16 @@ export default class ExcelEvents extends Component {
 			index: 0,
 			cardInfo: [
 				{
-					about: "",
-					format: "",
-					rules: "",
-					contact: ""
+					about: {content:"this is evnt one about please do change me",
+							date:"7 july",
+							time:"10:30-11:30",
+							venue:"no where?"
+						     },
+					format: {prelims:"MCQ round of 30 questions for 30 minutes. Top 8 teams will be Shortlisting to the final round. Correct answer will get 2 marks each. Wrong answers will have a negative mark of 1 marks.",
+					         final:"Final round comprises of 3 questions. The team members must decide which order they wish to follow before the final round question has been provided, and will not be allowed to change this order"
+					},
+					rules: "anything ",
+					contact: "lorem"
 				},
 				{
 					about: "",
