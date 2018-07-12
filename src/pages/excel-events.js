@@ -19,6 +19,7 @@ export default class ExcelEvents extends Component {
 		this.filterList=this.filterList.bind(this)
 
 
+
 		//initialise timeline
 		this.tl = new TimelineLite();
 
@@ -29,49 +30,92 @@ export default class ExcelEvents extends Component {
 			index: 0,
 			cardInfo: [
 				{
-					about: {content:"this is evnt one about please do change me",
-							date:"7 july",
-							time:"10:30-11:30",
-							venue:"no where?"
-						     },
-					format: {prelims:"MCQ round of 30 questions for 30 minutes. Top 8 teams will be Shortlisting to the final round. Correct answer will get 2 marks each. Wrong answers will have a negative mark of 1 marks.",
-					         final:"Final round comprises of 3 questions. The team members must decide which order they wish to follow before the final round question has been provided, and will not be allowed to change this order"
-					},
+					about: {
+						content: "A million things can happen in a moment. From myriad emotions to familiar scents, places and it's people to memories and journeys, a moment is never enough. Photography is the art of weaving a million stories from a single moment. It's never just about what is seen, it's always about how it is seen and experienced. For those who believe that immortality is just a click away, Excel 2017 brings you 'The Third Eye Photography Contest' in the memory of Vineeth Marar. Become a storyteller, capture defining moments and share your experience through images. Ignite passions, initiate thought and inspire action through the power of the lens.",
+						date:"7 july",
+						time:"10:30-11:30",
+						venue:"no where?"
+						},
+					format: {
+						prelims:"MCQ round of 30 questions for 30 minutes. Top 8 teams will be Shortlisting to the final round. Correct answer will get 2 marks each. Wrong answers will have a negative mark of 1 marks.",
+					    final:"Final round comprises of 3 questions. The team members must decide which order they wish to follow before the final round question has been provided, and will not be allowed to change this order"
+						},
 					rules: "anything ",
 					contact: "lorem"
 				},
 				{
-					about: "",
-					format: "",
-					rules: "",
-					contact: ""
+					about: {
+						content: "A million things can happen in a moment. From myriad emotions to familiar scents, places and it's people to memories and journeys, a moment is never enough. Photography is the art of weaving a million stories from a single moment. It's never just about what is seen, it's always about how it is seen and experienced. For those who believe that immortality is just a click away, Excel 2017 brings you 'The Third Eye Photography Contest' in the memory of Vineeth Marar. Become a storyteller, capture defining moments and share your experience through images. Ignite passions, initiate thought and inspire action through the power of the lens.",
+						date:"7 july",
+						time:"10:30-11:30",
+						venue:"no where?"
+						},
+					format: {
+						prelims:"MCQ round of 30 questions for 30 minutes. Top 8 teams will be Shortlisting to the final round. Correct answer will get 2 marks each. Wrong answers will have a negative mark of 1 marks.",
+					    final:"Final round comprises of 3 questions. The team members must decide which order they wish to follow before the final round question has been provided, and will not be allowed to change this order"
+						},
+					rules: "anything ",
+					contact: "lorem"
 				},
 				{
-					about: "",
-					format: "",
-					rules: "",
-					contact: ""
+					about: {
+						content: "A million things can happen in a moment. From myriad emotions to familiar scents, places and it's people to memories and journeys, a moment is never enough. Photography is the art of weaving a million stories from a single moment. It's never just about what is seen, it's always about how it is seen and experienced. For those who believe that immortality is just a click away, Excel 2017 brings you 'The Third Eye Photography Contest' in the memory of Vineeth Marar. Become a storyteller, capture defining moments and share your experience through images. Ignite passions, initiate thought and inspire action through the power of the lens.",
+						date:"7 july",
+						time:"10:30-11:30",
+						venue:"no where?"
+						},
+					format: {
+						prelims:"MCQ round of 30 questions for 30 minutes. Top 8 teams will be Shortlisting to the final round. Correct answer will get 2 marks each. Wrong answers will have a negative mark of 1 marks.",
+					    final:"Final round comprises of 3 questions. The team members must decide which order they wish to follow before the final round question has been provided, and will not be allowed to change this order"
+						},
+					rules: "anything ",
+					contact: "lorem"
 				},
 				{
-					about: "",
-					format: "",
-					rules: "",
-					contact: ""
+					about: {
+						content: "A million things can happen in a moment. From myriad emotions to familiar scents, places and it's people to memories and journeys, a moment is never enough. Photography is the art of weaving a million stories from a single moment. It's never just about what is seen, it's always about how it is seen and experienced. For those who believe that immortality is just a click away, Excel 2017 brings you 'The Third Eye Photography Contest' in the memory of Vineeth Marar. Become a storyteller, capture defining moments and share your experience through images. Ignite passions, initiate thought and inspire action through the power of the lens.",
+						date:"7 july",
+						time:"10:30-11:30",
+						venue:"no where?"
+						},
+					format: {
+						prelims:"MCQ round of 30 questions for 30 minutes. Top 8 teams will be Shortlisting to the final round. Correct answer will get 2 marks each. Wrong answers will have a negative mark of 1 marks.",
+					    final:"Final round comprises of 3 questions. The team members must decide which order they wish to follow before the final round question has been provided, and will not be allowed to change this order"
+						},
+					rules: "anything ",
+					contact: "lorem"
 				},
 				{
-					about: "",
-					format: "",
-					rules: "",
-					contact: ""
+					about: {
+						content: "A million things can happen in a moment. From myriad emotions to familiar scents, places and it's people to memories and journeys, a moment is never enough. Photography is the art of weaving a million stories from a single moment. It's never just about what is seen, it's always about how it is seen and experienced. For those who believe that immortality is just a click away, Excel 2017 brings you 'The Third Eye Photography Contest' in the memory of Vineeth Marar. Become a storyteller, capture defining moments and share your experience through images. Ignite passions, initiate thought and inspire action through the power of the lens.",
+						date:"7 july",
+						time:"10:30-11:30",
+						venue:"no where?"
+						},
+					format: {
+						prelims:"MCQ round of 30 questions for 30 minutes. Top 8 teams will be Shortlisting to the final round. Correct answer will get 2 marks each. Wrong answers will have a negative mark of 1 marks.",
+					    final:"Final round comprises of 3 questions. The team members must decide which order they wish to follow before the final round question has been provided, and will not be allowed to change this order"
+						},
+					rules: "anything ",
+					contact: "lorem"
 				},
 				{
-					about: "",
-					format: "",
-					rules: "",
-					contact: ""
+					about: {
+						content: "A million things can happen in a moment. From myriad emotions to familiar scents, places and it's people to memories and journeys, a moment is never enough. Photography is the art of weaving a million stories from a single moment. It's never just about what is seen, it's always about how it is seen and experienced. For those who believe that immortality is just a click away, Excel 2017 brings you 'The Third Eye Photography Contest' in the memory of Vineeth Marar. Become a storyteller, capture defining moments and share your experience through images. Ignite passions, initiate thought and inspire action through the power of the lens.",
+						date:"7 july",
+						time:"10:30-11:30",
+						venue:"no where?"
+						},
+					format: {
+						prelims:"MCQ round of 30 questions for 30 minutes. Top 8 teams will be Shortlisting to the final round. Correct answer will get 2 marks each. Wrong answers will have a negative mark of 1 marks.",
+					    final:"Final round comprises of 3 questions. The team members must decide which order they wish to follow before the final round question has been provided, and will not be allowed to change this order"
+						},
+					rules: "anything ",
+					contact: "lorem"
 				},
 			]
 		};
+
 	}
 
     componentWillMount(){
@@ -107,24 +151,26 @@ export default class ExcelEvents extends Component {
 
 	hideContent() {
 		document.getElementById('contentsContainer').classList.add('hidden')
-		document.getElementById('event-content').classList.add('hidden')
 	}
 
 	showEvent(eventNO) {
 
 		// to decide which card info to pass
-		this.setState({index: eventNO})
+
+		this.setState({ index : eventNO}, function() {
+			console.log(eventNO, this.state.index)
+
+		//console.log(eventNO,this.state.cardInfo[eventNO], this.state.index)
 	
 		document.getElementById('contentsContainer').classList.remove('hidden')
-		document.getElementById('event-content').classList.remove('hidden')
 
 		this.fadeOutEvents()
 		this.fadeInContents()
-		
+		})
 	}
 
 	fadeOutEvents() {
-		this.tl.to('#eventsContainer', 0.5, {
+		this.tl.to('#eventsContainer', 0.4, {
 			autoAlpha: 0,
 			ease: Power0.easeOut,
 		},
@@ -132,15 +178,15 @@ export default class ExcelEvents extends Component {
 	}
 
 	fadeInEvents() {
-		this.tl.to('#eventsContainer', 0.5, { autoAlpha: 1, ease: Power0.easeIn})
+		this.tl.to('#eventsContainer', 0.4, { autoAlpha: 1, ease: Power0.easeIn})
 	}
 
 	fadeOutContents() {
-		this.tl.to('#contentsContainer', 0.5, {autoAlpha: 0, scale: 0.1, ease: Power0.easeOut})
+		this.tl.to('#contentsContainer', 0.4, {autoAlpha: 0, scale: 0.1, ease: Power0.easeOut})
 	}
 
 	fadeInContents() {
-		this.tl.fromTo('#contentsContainer', 0.5, {autoAlpha: 0, scale: 0.1}, {autoAlpha: 1, scale: 1, ease: Power0.easeIn});
+		this.tl.fromTo('#contentsContainer', 0.4, {autoAlpha: 0, scale: 0.1}, {autoAlpha: 1, scale: 1, ease: Power0.easeIn});
 	}
 
 
@@ -217,7 +263,7 @@ export default class ExcelEvents extends Component {
 				</div>
 				<div id='contentsContainer' className='events--expanded hidden'>
 					<div id='contents-close' className='btn-close' onClick={this.closeEvent}><img  alt='' src={require('../img/close.png')}/></div>
-					<div id='event-content' className='event-bg hidden'><CardsNew index={this.state.index} content={this.state.cardInfo[this.state.index]} /></div>
+					<div id='event-content' className='event-bg'><CardsNew index={this.state.index} Eventcontent={this.state.cardInfo[this.state.index]}/></div>
 				</div>
 			</div>
 		);
