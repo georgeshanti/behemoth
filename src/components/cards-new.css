@@ -1,3 +1,6 @@
+*{
+    box-sizing: border-box;
+}
 body{
     background: #444444;
 }
@@ -29,6 +32,24 @@ body{
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
+.tab-wrapper {
+	position: relative;
+	display: block;
+	white-space: nowrap;
+    overflow: hidden;
+}
+
+.tab-content{
+    display: inline-block;
+    left: 0;
+    top: 0;
+    white-space: pre-wrap;
+    vertical-align: top;
+    padding-left: 10vw;
+    padding-right: 10vw;
+}
+
+
 .heading-font{
     color: rgba(255, 255, 255,0.8);
     font-size: 3em;
@@ -58,41 +79,27 @@ body{
 /*navbar css */
 .main-nav-block{
     background: rgba(0,0,0,0.3);
-    padding-top: 0.3vh;
-    padding-bottom: 0.3vh;  
-    margin-bottom: 6vh;
+      
 }
-nav ul {
+.main-nav-block ul {
     overflow:hidden;
     list-style-type: none;
     margin:0;
     padding:0;
   }
   
-  nav ul li {
-      width:25%;
-    float:left;
+  .main-nav-block ul li {
+    width:25%;
     text-align:center;
-  }
-  
-  nav ul li a{
-    padding-top:2vh;
+    display: inline-block;
+    color: rgba(255, 255, 255,0.6);
+    padding-top: 2vh;
     padding-bottom: 2vh;
   }
-
-  nav ul li a:hover{
+  
+  .main-nav-block ul li:hover{
       background-color: black;
   }
-
-
-
-  nav ul li a{
-      color: rgba(255, 255, 255,0.6);
-      display:block;
-      text-decoration: none;
-  }
-
-  
 
   /* End of navbar*/
 
@@ -137,7 +144,7 @@ nav ul {
 
     /* navbar mobile*/
     
-    nav ul li {
+    .main-nav-block ul li {
         font-size:15px;
     }
     .mini-grid ul {
@@ -171,9 +178,9 @@ nav ul {
 
     /* navbar mobile*/
     
-    nav ul li {
+    .main-nav-block ul li {
         
-        font-size:12px;
+        font-size:12.9px;
     }
     /* end of navbar*/
   }
