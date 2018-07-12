@@ -9,7 +9,8 @@ class CardsNew extends Component {
         
         this.switchLink=this.switchLink.bind(this)
         
-		this.index=this.props.index;
+        this.index=this.props.index;
+        this.content = this.props.content;
 
 	}
 

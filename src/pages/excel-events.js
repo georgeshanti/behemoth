@@ -24,11 +24,47 @@ export default class ExcelEvents extends Component {
 
 		//initialise state
 		this.state = {
-			activeEvent: null,
-			redirect : false,
-			redirectAbout: false,
 			initialItem:["All","Dept 1","Dept 2","Dept 3","Dept 4"],
-			items:[]
+			items:[],
+			index: 0,
+			cardInfo: [
+				{
+					about: "",
+					format: "",
+					rules: "",
+					contact: ""
+				},
+				{
+					about: "",
+					format: "",
+					rules: "",
+					contact: ""
+				},
+				{
+					about: "",
+					format: "",
+					rules: "",
+					contact: ""
+				},
+				{
+					about: "",
+					format: "",
+					rules: "",
+					contact: ""
+				},
+				{
+					about: "",
+					format: "",
+					rules: "",
+					contact: ""
+				},
+				{
+					about: "",
+					format: "",
+					rules: "",
+					contact: ""
+				},
+			]
 		};
 	}
 
@@ -39,6 +75,7 @@ export default class ExcelEvents extends Component {
 	showOptions(){
 		document.getElementsByClassName("dropdown-content")[0].classList.remove("hidden");
 	}
+
 	//searching
 	filterList(dept){
 		console.log(dept)
@@ -57,33 +94,23 @@ export default class ExcelEvents extends Component {
 
 	closeEvent(e) {
 
-		this.setState({redirect: true, redirectAbout: false});
-
-		this.fadeOutContents(this.state.activeEvent)
+		this.fadeOutContents()
 		this.fadeInEvents()
 		setTimeout(this.hideContent, 700)
 	}
 
 	hideContent() {
 		document.getElementById('contentsContainer').classList.add('hidden')
-		document.getElementById(this.state.activeEvent + '-content').classList.add('hidden')
-
-		this.setState({
-			activeEvent: null,
-		})
+		document.getElementById('event-content').classList.add('hidden')
 	}
 
-	showEvent(e) {
+	showEvent(eventNO) {
 
-
-		this.setState({
-			redirect: false,
-			activeEvent: e,
-			redirectAbout: true,
-		});
-
+		// to decide which card info to pass
+		this.setState({index: eventNO})
+	
 		document.getElementById('contentsContainer').classList.remove('hidden')
-		document.getElementById(e + '-content').classList.remove('hidden')
+		document.getElementById('event-content').classList.remove('hidden')
 
 		this.fadeOutEvents()
 		this.fadeInContents()
@@ -102,7 +129,7 @@ export default class ExcelEvents extends Component {
 		this.tl.to('#eventsContainer', 0.5, { autoAlpha: 1, ease: Power0.easeIn})
 	}
 
-	fadeOutContents(x) {
+	fadeOutContents() {
 		this.tl.to('#contentsContainer', 0.5, {autoAlpha: 0, scale: 0.1, ease: Power0.easeOut})
 	}
 
@@ -127,8 +154,8 @@ export default class ExcelEvents extends Component {
 				
 				<div id='eventsContainer' className='events-grid'>
 				   {this.state.items.indexOf("Dept 1")!==-1?
-					  (<div id='event1' className=' event1 events' onClick={() =>this.showEvent('event1')}>
-					       <div className=' event1 big-numbers'>
+					  (<div id='event1' className='events' onClick={() =>this.showEvent(0)}>
+					       <div className='big-numbers'>
 						   <img alt='' src={require('../img/dummy-img.png')} className="grid-logo-image"/><br/>
 						   Event 1
 						   </div>	  
@@ -136,8 +163,8 @@ export default class ExcelEvents extends Component {
 					:("")
 				   }
 				   {this.state.items.indexOf("Dept 2")!==-1?
-					  (<div id='event2' className=' event2 events' onClick={() =>this.showEvent('event2')}>
-					       <div className=' event2 big-numbers'>
+					  (<div id='event2' className='events' onClick={() =>this.showEvent(1)}>
+					       <div className='big-numbers'>
 						   <img  alt='' src={require('../img/dummy-img.png')} className="grid-logo-image"/><br/>
 						   Event 2
 						   </div>
@@ -145,8 +172,8 @@ export default class ExcelEvents extends Component {
 					:("")
 				    }
 					{this.state.items.indexOf("Dept 3")!==-1?
-					  (<div id='event3' className=' event3 events' onClick={() =>this.showEvent('event3')}>
-					       <div className=' event3 big-numbers'>
+					  (<div id='event3' className='events' onClick={() =>this.showEvent(2)}>
+					       <div className='big-numbers'>
 						   <img alt='' src={require('../img/dummy-img.png')} className="grid-logo-image"/><br/>
 						   Event 3
 						   </div>
@@ -154,8 +181,8 @@ export default class ExcelEvents extends Component {
 					:("")
 					}
 					{this.state.items.indexOf("Dept 4")!==-1?
-					  (<div id='event4' className=' event4 events' onClick={() =>this.showEvent('event4')}>
-					       <div className=' event4 big-numbers'>
+					  (<div id='event4' className='events' onClick={() =>this.showEvent(3)}>
+					       <div className='big-numbers'>
 						   <img alt='' src={require('../img/dummy-img.png')} className="grid-logo-image"/><br/>
 						   Event 4
 						   </div>
@@ -163,8 +190,8 @@ export default class ExcelEvents extends Component {
 					:("") 
 				    }
 					{this.state.items.indexOf("Dept 1")!==-1? 
-					  (<div id='event5' className='event5 events ' onClick={() =>this.showEvent('event5')}>
-					       <div className='event5 big-numbers '>
+					  (<div id='event5' className='events' onClick={() =>this.showEvent(4)}>
+					       <div className='big-numbers '>
 						   <img alt='' src={require('../img/dummy-img.png')} className="grid-logo-image"/><br/>
 						   
 						   Event 5
@@ -173,8 +200,8 @@ export default class ExcelEvents extends Component {
 					:("")
 				    }
 					{this.state.items.indexOf("Dept 2")!==-1?  
-					  (<div id='event6' className='event6 events ' onClick={() =>this.showEvent('event6')}>
-				           <div className='event6 big-numbers '>
+					  (<div id='event6' className='events' onClick={() =>this.showEvent(5)}>
+				           <div className='big-numbers '>
 						   <img alt='' src={require('../img/dummy-img.png')} className="grid-logo-image"/><br/>						   
 						   Event 6
 						   </div>
@@ -184,12 +211,7 @@ export default class ExcelEvents extends Component {
 				</div>
 				<div id='contentsContainer' className='events--expanded hidden'>
 					<div id='contents-close' className='btn-close' onClick={this.closeEvent}><img  alt='' src={require('../img/close.png')}/></div>
-					<div id='event1-content' className='event-bg hidden'><CardsNew index={0}/></div>
-					<div id='event2-content' className='event-bg hidden'><CardsNew index={1}/></div>
-					<div id='event3-content' className='event-bg hidden'><CardsNew index={2}/></div>
-					<div id='event4-content' className='event-bg hidden'><CardsNew index={3}/></div>
-					<div id='event5-content' className='event-bg hidden'><CardsNew index={4}/></div>
-					<div id='event6-content' className='event-bg hidden'><CardsNew index={5}/></div>
+					<div id='event-content' className='event-bg hidden'><CardsNew index={this.state.index} content={this.state.cardInfo[this.state.index]} /></div>
 				</div>
 			</div>
 		);
