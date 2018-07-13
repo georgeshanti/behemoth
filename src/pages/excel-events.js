@@ -144,7 +144,7 @@ export default class ExcelEvents extends Component {
 	//filtering cards
 	listContains(index){
 		if(this.state.currentOption[0]==="All Departments"){
-			if(this.state.cardInfo[index].category === this.state.currentOption[1] || this.state.currentOption[1]==="All")
+			if(this.state.cardInfo[index].category === this.state.currentOption[1] || this.state.currentOption[1]==="All Categories")
 				   return true	   
 		}
 		
