@@ -25,15 +25,15 @@ export default class ExcelEvents extends Component {
 		this.tl = new TimelineLite();
 
 		//initial categories for filtering
-		 this.initialDept=["All","Dept 1","Dept 2","Dept 3","Dept 4"]
-		 this.initialCate=["All","Online","Offline"]
+		 this.initialDept=["All Departments","Computer Science","Electronics","Robotics","Non-tech"]
+		 this.initialCate=["All Categories","Online","Offline"]
 		
 		 //initialise state
 		this.state = {
-			currentOption:["All","All"],  //options for filter
+			currentOption:["All Departments","All Categories"],  //options for filter
 			index: 0,
 			cardInfo: [
-				{   department:"Dept 1",
+				{   department:"Computer Science",
 				    category:"Online",
 					about: {
 						content: "A million things can happen in a moment. From myriad emotions to familiar scents, places and it's people to memories and journeys, a moment is never enough. Photography is the art of weaving a million stories from a single moment. It's never just about what is seen, it's always about how it is seen and experienced. For those who believe that immortality is just a click away, Excel 2017 brings you 'The Third Eye Photography Contest' in the memory of Vineeth Marar. Become a storyteller, capture defining moments and share your experience through images. Ignite passions, initiate thought and inspire action through the power of the lens.",
@@ -48,7 +48,7 @@ export default class ExcelEvents extends Component {
 					rules: "anything ",
 					contact: "lorem"
 				},
-				{   department:"Dept 2",
+				{   department:"Electronics",
 				    category:"Offline",
 					about: {
 						content: "A million things can happen in a moment. From myriad emotions to familiar scents, places and it's people to memories and journeys, a moment is never enough. Photography is the art of weaving a million stories from a single moment. It's never just about what is seen, it's always about how it is seen and experienced. For those who believe that immortality is just a click away, Excel 2017 brings you 'The Third Eye Photography Contest' in the memory of Vineeth Marar. Become a storyteller, capture defining moments and share your experience through images. Ignite passions, initiate thought and inspire action through the power of the lens.",
@@ -63,7 +63,7 @@ export default class ExcelEvents extends Component {
 					rules: "anything ",
 					contact: "lorem"
 				},
-				{   department:"Dept 3",
+				{   department:"Robotics",
 				    category:"Online",
 					about: {
 						content: "A million things can happen in a moment. From myriad emotions to familiar scents, places and it's people to memories and journeys, a moment is never enough. Photography is the art of weaving a million stories from a single moment. It's never just about what is seen, it's always about how it is seen and experienced. For those who believe that immortality is just a click away, Excel 2017 brings you 'The Third Eye Photography Contest' in the memory of Vineeth Marar. Become a storyteller, capture defining moments and share your experience through images. Ignite passions, initiate thought and inspire action through the power of the lens.",
@@ -78,7 +78,7 @@ export default class ExcelEvents extends Component {
 					rules: "anything ",
 					contact: "lorem"
 				},
-				{   department:"Dept 4",
+				{   department:"Non-tech",
 				    category:"Offline",
 					about: {
 						content: "A million things can happen in a moment. From myriad emotions to familiar scents, places and it's people to memories and journeys, a moment is never enough. Photography is the art of weaving a million stories from a single moment. It's never just about what is seen, it's always about how it is seen and experienced. For those who believe that immortality is just a click away, Excel 2017 brings you 'The Third Eye Photography Contest' in the memory of Vineeth Marar. Become a storyteller, capture defining moments and share your experience through images. Ignite passions, initiate thought and inspire action through the power of the lens.",
@@ -93,7 +93,7 @@ export default class ExcelEvents extends Component {
 					rules: "anything ",
 					contact: "lorem"
 				},
-				{   department:"Dept 1",
+				{   department:"Computer Science",
 				    category:"Online",
 					about: {
 						content: "A million things can happen in a moment. From myriad emotions to familiar scents, places and it's people to memories and journeys, a moment is never enough. Photography is the art of weaving a million stories from a single moment. It's never just about what is seen, it's always about how it is seen and experienced. For those who believe that immortality is just a click away, Excel 2017 brings you 'The Third Eye Photography Contest' in the memory of Vineeth Marar. Become a storyteller, capture defining moments and share your experience through images. Ignite passions, initiate thought and inspire action through the power of the lens.",
@@ -108,7 +108,7 @@ export default class ExcelEvents extends Component {
 					rules: "anything ",
 					contact: "lorem"
 				},
-				{  department:"Dept 1",
+				{  department:"Computer Science",
 				   category:"Offline",
 					about: {
 						content: "A million things can happen in a moment. From myriad emotions to familiar scents, places and it's people to memories and journeys, a moment is never enough. Photography is the art of weaving a million stories from a single moment. It's never just about what is seen, it's always about how it is seen and experienced. For those who believe that immortality is just a click away, Excel 2017 brings you 'The Third Eye Photography Contest' in the memory of Vineeth Marar. Become a storyteller, capture defining moments and share your experience through images. Ignite passions, initiate thought and inspire action through the power of the lens.",
@@ -143,12 +143,12 @@ export default class ExcelEvents extends Component {
 
 	//filtering cards
 	listContains(index){
-		if(this.state.currentOption[0]==="All"){
+		if(this.state.currentOption[0]==="All Departments"){
 			if(this.state.cardInfo[index].category === this.state.currentOption[1] || this.state.currentOption[1]==="All")
 				   return true	   
 		}
 		
-		if(this.state.currentOption[1]==="All"){
+		if(this.state.currentOption[1]==="All Categories"){
 			if(this.state.cardInfo[index].department === this.state.currentOption[0])
 				   return true	   
 		}
