@@ -136,19 +136,27 @@ export default class ExcelEvents extends Component {
 
 	//assigning current options
 	filterList(item,index){
-		console.log("inside me",item,index)
 		let temp=this.state.currentOption.slice()
 		temp[index]=item
-		console.log(temp)
-	 this.setState({currentOption : temp})
-	 console.log(this.state.currentOption)				
+	 this.setState({currentOption : temp})				
 	}
 
 	//filtering
 	listContains(index){
-		if(this.state.currentOption[0]==="All")
-		   return true
-		if(this.state.cardInfo[index].department === this.state.currentOption[0] || this.state.cardInfo[index].category === this.state.currentOption[1]){
+		if(this.state.currentOption[0]==="All"){
+			if(this.state.cardInfo[index].category === this.state.currentOption[1] || this.state.currentOption[1]==="All")
+				   return true
+			else 
+			       return false		   
+		}
+		
+		if(this.state.currentOption[1]==="All"){
+			if(this.state.cardInfo[index].department === this.state.currentOption[0])
+				   return true
+			else 
+			       return false		   
+		}
+		if(this.state.cardInfo[index].department === this.state.currentOption[0] && this.state.cardInfo[index].category === this.state.currentOption[1]){
 			return true
 		}
 		else
@@ -207,8 +215,8 @@ export default class ExcelEvents extends Component {
 		return(
 			<div className='container'>
 			    <Filter initialItems={this.initialDept} id={0} filterList={this.filterList} />
-		
-			    {console.log(this.currentOption)}	
+		        <Filter initialItems={this.initialCate} id={1} filterList={this.filterList} />
+			    	
 				<div id='eventsContainer' className='events-grid'>
 				   { this.listContains(0)  ?
 					  (<div id='event1' className='events' onClick={() =>this.showEvent(0)}>

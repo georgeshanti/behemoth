@@ -24,7 +24,6 @@ class Filter extends Component{
      selectedList(item){
          this.setState({selectedItem:item})
          document.getElementsByClassName("dropdown-content")[this.props.id].classList.add("hidden");
-         console.log(item,this.props.id)
          this.props.filterList(item,this.props.id)
         }
 
