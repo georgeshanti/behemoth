@@ -210,9 +210,11 @@ export default class ExcelEvents extends Component {
 	render() {
 		return(
 			<div className='container'>
+			    <div className="dropdown-wrapper">
+				<div className="font1">Competitions</div>
 			    <Filter initialItems={this.initialDept} id={0} filterList={this.filterList} />
 		        <Filter initialItems={this.initialCate} id={1} filterList={this.filterList} />
-			    	
+			</div> 
 				<div id='eventsContainer' className='events-grid'>
 				   { this.listContains(0)  ?
 					  (<div id='event1' className='events' onClick={() =>this.showEvent(0)}>

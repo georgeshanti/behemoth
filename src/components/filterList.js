@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import '../pages/excel-events.css';
+import './filterList.css';
 
 class Filter extends Component{
     constructor(props){
