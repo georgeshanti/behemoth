@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import './excel-events.css';
 import { TimelineLite, Power0} from 'gsap';
 import CardsNew from '../components/cards-new';
+import FilterList from '../components/filterList';
 
 export default class ExcelEvents extends Component {
 
@@ -17,19 +18,23 @@ export default class ExcelEvents extends Component {
 		this.fadeInContents = this.fadeInContents.bind(this)
 		this.hideContent = this.hideContent.bind(this)
 		this.filterList=this.filterList.bind(this)
-
+		this.listContains=this.listContains.bind(this)
 
 
 		//initialise timeline
 		this.tl = new TimelineLite();
 
-		//initialise state
+		//initial categories for filtering
+		 this.initialDept=["All","Dept 1","Dept 2","Dept 3","Dept 4"]
+		 this.initialCate=["All","Online","Offline"]
+		
+		 //initialise state
 		this.state = {
-			initialItem:["All","Dept 1","Dept 2","Dept 3","Dept 4"],
-			items:[],
+			currentOption:["All","All"],
 			index: 0,
 			cardInfo: [
-				{
+				{   department:"Dept 1",
+				    category:"Online",
 					about: {
 						content: "A million things can happen in a moment. From myriad emotions to familiar scents, places and it's people to memories and journeys, a moment is never enough. Photography is the art of weaving a million stories from a single moment. It's never just about what is seen, it's always about how it is seen and experienced. For those who believe that immortality is just a click away, Excel 2017 brings you 'The Third Eye Photography Contest' in the memory of Vineeth Marar. Become a storyteller, capture defining moments and share your experience through images. Ignite passions, initiate thought and inspire action through the power of the lens.",
 						date:"7 july",
@@ -43,7 +48,8 @@ export default class ExcelEvents extends Component {
 					rules: "anything ",
 					contact: "lorem"
 				},
-				{
+				{   department:"Dept 2",
+				    category:"Offline",
 					about: {
 						content: "A million things can happen in a moment. From myriad emotions to familiar scents, places and it's people to memories and journeys, a moment is never enough. Photography is the art of weaving a million stories from a single moment. It's never just about what is seen, it's always about how it is seen and experienced. For those who believe that immortality is just a click away, Excel 2017 brings you 'The Third Eye Photography Contest' in the memory of Vineeth Marar. Become a storyteller, capture defining moments and share your experience through images. Ignite passions, initiate thought and inspire action through the power of the lens.",
 						date:"7 july",
@@ -57,7 +63,8 @@ export default class ExcelEvents extends Component {
 					rules: "anything ",
 					contact: "lorem"
 				},
-				{
+				{   department:"Dept 3",
+				    category:"Online",
 					about: {
 						content: "A million things can happen in a moment. From myriad emotions to familiar scents, places and it's people to memories and journeys, a moment is never enough. Photography is the art of weaving a million stories from a single moment. It's never just about what is seen, it's always about how it is seen and experienced. For those who believe that immortality is just a click away, Excel 2017 brings you 'The Third Eye Photography Contest' in the memory of Vineeth Marar. Become a storyteller, capture defining moments and share your experience through images. Ignite passions, initiate thought and inspire action through the power of the lens.",
 						date:"7 july",
@@ -71,7 +78,8 @@ export default class ExcelEvents extends Component {
 					rules: "anything ",
 					contact: "lorem"
 				},
-				{
+				{   department:"Dept 4",
+				    category:"Offline",
 					about: {
 						content: "A million things can happen in a moment. From myriad emotions to familiar scents, places and it's people to memories and journeys, a moment is never enough. Photography is the art of weaving a million stories from a single moment. It's never just about what is seen, it's always about how it is seen and experienced. For those who believe that immortality is just a click away, Excel 2017 brings you 'The Third Eye Photography Contest' in the memory of Vineeth Marar. Become a storyteller, capture defining moments and share your experience through images. Ignite passions, initiate thought and inspire action through the power of the lens.",
 						date:"7 july",
@@ -85,7 +93,8 @@ export default class ExcelEvents extends Component {
 					rules: "anything ",
 					contact: "lorem"
 				},
-				{
+				{   department:"Dept 1",
+				    category:"Online",
 					about: {
 						content: "A million things can happen in a moment. From myriad emotions to familiar scents, places and it's people to memories and journeys, a moment is never enough. Photography is the art of weaving a million stories from a single moment. It's never just about what is seen, it's always about how it is seen and experienced. For those who believe that immortality is just a click away, Excel 2017 brings you 'The Third Eye Photography Contest' in the memory of Vineeth Marar. Become a storyteller, capture defining moments and share your experience through images. Ignite passions, initiate thought and inspire action through the power of the lens.",
 						date:"7 july",
@@ -99,7 +108,8 @@ export default class ExcelEvents extends Component {
 					rules: "anything ",
 					contact: "lorem"
 				},
-				{
+				{  department:"Dept 1",
+				   category:"Offline",
 					about: {
 						content: "A million things can happen in a moment. From myriad emotions to familiar scents, places and it's people to memories and journeys, a moment is never enough. Photography is the art of weaving a million stories from a single moment. It's never just about what is seen, it's always about how it is seen and experienced. For those who believe that immortality is just a click away, Excel 2017 brings you 'The Third Eye Photography Contest' in the memory of Vineeth Marar. Become a storyteller, capture defining moments and share your experience through images. Ignite passions, initiate thought and inspire action through the power of the lens.",
 						date:"7 july",
@@ -122,24 +132,20 @@ export default class ExcelEvents extends Component {
 		this.setState({items:this.state.initialItem})
 	}
 
-	showOptions(){
-		document.getElementsByClassName("dropdown-content")[0].classList.remove("hidden");
+	
+
+	//assigning current options
+	filterList(item,index){
+     this.setState({currentOption:this.state.currentOption.splice(index,0,item)})				
 	}
 
-	//searching
-	filterList(dept){
-		console.log(dept)
-		if(dept!=="All")
-		{ var updatedList=this.state.initialItem;
-		  updatedList=updatedList.filter(function( item){
-		    	return item.toLowerCase().search(dept.toLowerCase())!==-1
-		  });
-		  this.setState({items:updatedList});
-		}  
-		else{
-			this.setState({items:this.state.initialItem});
+	//filtering
+	listContains(index){
+		if(this.state.cardInfo[index].department === this.state.currentOption[0] || this.state.cardInfo[index].category === this.state.currentOption[1]){
+			return true
 		}
-		document.getElementsByClassName("dropdown-content")[0].classList.add("hidden");
+		else
+		    return false
 	}
 
 	closeEvent(e) {
@@ -193,19 +199,11 @@ export default class ExcelEvents extends Component {
 	render() {
 		return(
 			<div className='container'>
-			   <div className="dropdown">
-                    <div className="dropbtn" onClick={this.showOptions}>{this.state.items[0]}</div>
-                          <div className="dropdown-content hidden">
-						     <div onClick={() =>this.filterList("All")}>All dept</div>
-                             <div onClick={() =>this.filterList("Dept 1")}>Dept 1</div>
-                             <div onClick={() =>this.filterList("Dept 2")}>Dept 2</div>
-                             <div onClick={() =>this.filterList("Dept 3")}>Dept 3</div>
-							 <div onClick={() =>this.filterList("Dept 4")}>Dept 4</div>
-                          </div>
-                </div>
+			    <FilterList initialItems={this.initialDept} id={0} filterList={this.filterList} />
+				<FilterList intitalItems={this.initialCate} id={1} filterList={this.filterList} />
 				
 				<div id='eventsContainer' className='events-grid'>
-				   {this.state.items.indexOf("Dept 1")!==-1?
+				   { this.listContains(0)  ?
 					  (<div id='event1' className='events' onClick={() =>this.showEvent(0)}>
 					       <div className='big-numbers'>
 						   <img alt='' src={require('../img/dummy-img.png')} className="grid-logo-image"/><br/>
@@ -214,7 +212,7 @@ export default class ExcelEvents extends Component {
 					  </div>)
 					:("")
 				   }
-				   {this.state.items.indexOf("Dept 2")!==-1?
+				   { this.listContains(1) ?
 					  (<div id='event2' className='events' onClick={() =>this.showEvent(1)}>
 					       <div className='big-numbers'>
 						   <img  alt='' src={require('../img/dummy-img.png')} className="grid-logo-image"/><br/>
@@ -223,7 +221,7 @@ export default class ExcelEvents extends Component {
 					  </div>)
 					:("")
 				    }
-					{this.state.items.indexOf("Dept 3")!==-1?
+					{ this.listContains(2)?
 					  (<div id='event3' className='events' onClick={() =>this.showEvent(2)}>
 					       <div className='big-numbers'>
 						   <img alt='' src={require('../img/dummy-img.png')} className="grid-logo-image"/><br/>
@@ -232,7 +230,7 @@ export default class ExcelEvents extends Component {
 					   </div>)
 					:("")
 					}
-					{this.state.items.indexOf("Dept 4")!==-1?
+					{ this.listContains(3)?
 					  (<div id='event4' className='events' onClick={() =>this.showEvent(3)}>
 					       <div className='big-numbers'>
 						   <img alt='' src={require('../img/dummy-img.png')} className="grid-logo-image"/><br/>
@@ -241,7 +239,7 @@ export default class ExcelEvents extends Component {
 					  </div>)
 					:("") 
 				    }
-					{this.state.items.indexOf("Dept 1")!==-1? 
+					{ this.listContains(4)? 
 					  (<div id='event5' className='events' onClick={() =>this.showEvent(4)}>
 					       <div className='big-numbers '>
 						   <img alt='' src={require('../img/dummy-img.png')} className="grid-logo-image"/><br/>
@@ -251,7 +249,7 @@ export default class ExcelEvents extends Component {
 					  </div>)
 					:("")
 				    }
-					{this.state.items.indexOf("Dept 2")!==-1?  
+					{ this.listContains(5)?  
 					  (<div id='event6' className='events' onClick={() =>this.showEvent(5)}>
 				           <div className='big-numbers '>
 						   <img alt='' src={require('../img/dummy-img.png')} className="grid-logo-image"/><br/>						   
