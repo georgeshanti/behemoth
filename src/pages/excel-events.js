@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import './excel-events.css';
 import { TimelineLite, Power0} from 'gsap';
 import CardsNew from '../components/cards-new';
-import FilterList from '../components/filterList';
+import Filter from '../components/filterList';
 
 export default class ExcelEvents extends Component {
 
@@ -136,11 +136,18 @@ export default class ExcelEvents extends Component {
 
 	//assigning current options
 	filterList(item,index){
-     this.setState({currentOption:this.state.currentOption.splice(index,0,item)})				
+		console.log("inside me",item,index)
+		let temp=this.state.currentOption.slice()
+		temp[index]=item
+		console.log(temp)
+	 this.setState({currentOption : temp})
+	 console.log(this.state.currentOption)				
 	}
 
 	//filtering
 	listContains(index){
+		if(this.state.currentOption[0]==="All")
+		   return true
 		if(this.state.cardInfo[index].department === this.state.currentOption[0] || this.state.cardInfo[index].category === this.state.currentOption[1]){
 			return true
 		}
@@ -199,9 +206,9 @@ export default class ExcelEvents extends Component {
 	render() {
 		return(
 			<div className='container'>
-			    <FilterList initialItems={this.initialDept} id={0} filterList={this.filterList} />
-				<FilterList intitalItems={this.initialCate} id={1} filterList={this.filterList} />
-				
+			    <Filter initialItems={this.initialDept} id={0} filterList={this.filterList} />
+		
+			    {console.log(this.currentOption)}	
 				<div id='eventsContainer' className='events-grid'>
 				   { this.listContains(0)  ?
 					  (<div id='event1' className='events' onClick={() =>this.showEvent(0)}>
