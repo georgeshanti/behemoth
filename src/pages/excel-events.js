@@ -30,7 +30,7 @@ export default class ExcelEvents extends Component {
 		
 		 //initialise state
 		this.state = {
-			currentOption:["All","All"],
+			currentOption:["All","All"],  //options for filter
 			index: 0,
 			cardInfo: [
 				{   department:"Dept 1",
@@ -135,32 +135,28 @@ export default class ExcelEvents extends Component {
 	
 
 	//assigning current options
-	filterList(item,index){
+	filterList(item,index){  //index 0 dept ,1 category
 		let temp=this.state.currentOption.slice()
 		temp[index]=item
 	 this.setState({currentOption : temp})				
 	}
 
-	//filtering
+	//filtering cards
 	listContains(index){
 		if(this.state.currentOption[0]==="All"){
 			if(this.state.cardInfo[index].category === this.state.currentOption[1] || this.state.currentOption[1]==="All")
-				   return true
-			else 
-			       return false		   
+				   return true	   
 		}
 		
 		if(this.state.currentOption[1]==="All"){
 			if(this.state.cardInfo[index].department === this.state.currentOption[0])
-				   return true
-			else 
-			       return false		   
+				   return true	   
 		}
 		if(this.state.cardInfo[index].department === this.state.currentOption[0] && this.state.cardInfo[index].category === this.state.currentOption[1]){
 			return true
 		}
-		else
-		    return false
+
+         return false
 	}
 
 	closeEvent(e) {

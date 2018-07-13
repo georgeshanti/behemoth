@@ -24,7 +24,7 @@ class Filter extends Component{
      selectedList(item){
          this.setState({selectedItem:item})
          document.getElementsByClassName("dropdown-content")[this.props.id].classList.add("hidden");
-         this.props.filterList(item,this.props.id)
+         this.props.filterList(item,this.props.id) //call parent fn to update currentoption
         }
 
      render(){
