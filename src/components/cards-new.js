@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './cards-new.css';
-
+import ReactDOM from 'react-dom';
 
 class CardsNew extends Component {
 
@@ -13,7 +13,10 @@ class CardsNew extends Component {
 
     }
 
-
+    componentWillUpdate(){
+        this.switchLink('about');
+    }
+    
     switchLink(e){
         console.log('switchLink works')
         let xScrollWidth = document.getElementsByClassName('tab-content-wrap')[this.index].scrollWidth
@@ -39,7 +42,7 @@ class CardsNew extends Component {
 
     render() {
     return (
-      <div className="card">
+      <div ref="test" className="card">
         <div className="card-content">
         <div className="heading-font">Heading Event</div>
         <div className="purple-font">Prize Pool - 25k</div>
