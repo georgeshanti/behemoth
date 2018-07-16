@@ -13,7 +13,7 @@ import registerServiceWorker from './registerServiceWorker';
 
 
 ReactDOM.render(
-    <HashRouter basename="http://becon.excelmec.org">
+    <HashRouter basename="http://excelmec.org">
         <App />
     </HashRouter>
 , document.getElementById('root'));

@@ -1,0 +1,9 @@
+.NavButton{
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 54px;
+    height: 54px;
+    transition-duration: 0.5s;
+}
