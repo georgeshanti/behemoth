@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import FloatingButton from 'components/floating-button'
 import Swipeable from 'react-swipeable'
-import './style.css';
+import styles from './style.module.css';
 
 class NavButton extends Component {
     constructor(props){
@@ -46,7 +46,7 @@ class NavButton extends Component {
       var menuStyle = this.state.expanded?{transform: "translate(-50%, -150px)"}:{transform: "translate(-50%, 0px)"}
       var menuSymbol = this.state.expanded?"fas fa-times":"fas fa-bars"
       return (
-        <div style={menuStyle} className="NavButton">
+        <div style={menuStyle} className={styles.NavButton}>
           {menuComponents}
           <Swipeable onSwipedUp={this.expand.bind(this)} onSwipedDown={this.expand.bind(this)}>
             <FloatingButton expanded={this.state.expanded} icon={menuSymbol} onClick={this.expand.bind(this)}/>
