@@ -6,17 +6,23 @@ import './style.css';
 class NavButton extends Component {
     constructor(props){
       super(props);
+      var radius = 80;
+      this.menu = [
+        {symbol: "fas fa-home"},
+        {symbol: "fas fa-user-alt"},
+        {symbol: "fas fa-gamepad"},
+        {symbol: "fas fa-calendar-alt"},
+        {symbol: "fas fa-basketball-ball"},
+        {symbol: "fas fa-wrench"},
+      ]
+      var size = this.menu.length
+      this.menu.forEach((item,i)=>{
+        var angle = ( (i*2*3.14159)/size ) - (3.14159/2)
+        item.xOffset = radius * Math.cos(angle)
+        item.yOffset = radius * Math.sin(angle) 
+      })
       this.state = {
-        expanded: false,
-        menu: [
-          {symbol: "fas fa-home"},
-          {symbol: "fas fa-user-alt"},
-          {symbol: "fas fa-gamepad"},
-          {symbol: "fas fa-calendar-alt"},
-          {symbol: "fas fa-basketball-ball"},
-          {symbol: "fas fa-wrench"},
-        ],
-        radius: 80
+        expanded: false
       }
     }
 
@@ -29,22 +35,19 @@ class NavButton extends Component {
     }
 
     render() {
-      var menu = this.state.menu.map((item, i)=>{
+      var menuComponents = this.menu.map((item)=>{
         if(!this.state.expanded)
           var style = {transform: "translate(0px, 0px)"}
         else{
-          var angle = ( (i*2*3.14159)/6 ) - (3.14159/2)
-          var xOffset = this.state.radius * Math.cos(angle)
-          var yOffset = this.state.radius * Math.sin(angle)
-          var style = {transform: "translate(" + xOffset + "px, " + yOffset + "px)"}
+          var style = {transform: "translate(" + item.xOffset + "px, " + item.yOffset + "px)"}
         }
-        return <FloatingButton key={i} style={style} expanded={this.state.expanded} icon={item.symbol}/>
+        return <FloatingButton key={item.symbol} style={style} expanded={this.state.expanded} icon={item.symbol}/>
       })
       var menuStyle = this.state.expanded?{transform: "translate(-50%, -150px)"}:{transform: "translate(-50%, 0px)"}
       var menuSymbol = this.state.expanded?"fas fa-times":"fas fa-bars"
       return (
         <div style={menuStyle} className="NavButton">
-          {menu}
+          {menuComponents}
           <Swipeable onSwipedUp={this.expand.bind(this)} onSwipedDown={this.expand.bind(this)}>
             <FloatingButton expanded={this.state.expanded} icon={menuSymbol} onClick={this.expand.bind(this)}/>
           </Swipeable>
