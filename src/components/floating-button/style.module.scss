@@ -16,3 +16,10 @@
     transition-duration: 0.5s;
     outline: none;
 }
+
+.active {
+    >.FloatingButton{
+        background: white;
+        color: #2fb454;
+    }
+}
