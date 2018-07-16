@@ -1,5 +1,6 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import FloatingButton from 'components/floating-button'
+import Swipeable from 'react-swipeable'
 import './style.css';
 
 class NavButton extends Component {
@@ -37,13 +38,16 @@ class NavButton extends Component {
           var yOffset = this.state.radius * Math.sin(angle)
           var style = {transform: "translate(" + xOffset + "px, " + yOffset + "px)"}
         }
-        return <FloatingButton style={style} expanded={this.state.expanded} icon={item.symbol}/>
+        return <FloatingButton key={i} style={style} expanded={this.state.expanded} icon={item.symbol}/>
       })
-      var menuStyle= this.state.expanded?{transform: "translate(-50%, -100px)"}:{transform: "translate(-50%, 0px)"}
+      var menuStyle = this.state.expanded?{transform: "translate(-50%, -150px)"}:{transform: "translate(-50%, 0px)"}
+      var menuSymbol = this.state.expanded?"fas fa-times":"fas fa-bars"
       return (
         <div style={menuStyle} className="NavButton">
           {menu}
-          <FloatingButton expanded={this.state.expanded} icon="fas fa-bars" onClick={this.expand.bind(this)}/>
+          <Swipeable onSwipedUp={this.expand.bind(this)} onSwipedDown={this.expand.bind(this)}>
+            <FloatingButton expanded={this.state.expanded} icon={menuSymbol} onClick={this.expand.bind(this)}/>
+          </Swipeable>
         </div>
       );
     }
