@@ -26,7 +26,7 @@ a{
 
 .events {
 	background:whitesmoke;
-	background-image: url('../img/tic-tac-toe.png');
+	background-image: url('../../img/tic-tac-toe.png');
 	height: 47vh;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.21);
 }
@@ -72,7 +72,7 @@ a{
 	width: 100%;
 	height: 100%;
 	background: black;
-	background-image: url('../img/trianglebg.png');
+	background-image: url('../../img/trianglebg.png');
 }
 
 .btn-close {
@@ -95,6 +95,10 @@ a{
 	font-family: 'Righteous', cursive;
 	margin-left: 6px;
     padding-top: 6px;
+}
+
+.hidden{
+	display: none;
 }
 
 @media screen and (max-width: 600px){

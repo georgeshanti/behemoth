@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
-import './excel-events.css';
+import { Route } from 'react-router-dom'
+import styles from './style.module.css';
 import { TimelineLite, Power0} from 'gsap';
-import CardsNew from '../components/cards-new';
-import Filter from '../components/filterList';
+import CardsNew from 'components/cards-new';
+import Filter from 'components/filter-list';
 
 export default class ExcelEvents extends Component {
 
@@ -167,7 +168,7 @@ export default class ExcelEvents extends Component {
 	}
 
 	hideContent() {
-		document.getElementById('contentsContainer').classList.add('hidden')
+		// document.getElementById('contentsContainer').classList.add(styles["hidden"])
 	}
 
 	showEvent(eventNO) {
@@ -179,7 +180,7 @@ export default class ExcelEvents extends Component {
 
 		//console.log(eventNO,this.state.cardInfo[eventNO], this.state.index)
 	
-		document.getElementById('contentsContainer').classList.remove('hidden')
+		// document.getElementById('contentsContainer').classList.remove(styles["hidden"])
 
 		this.fadeOutEvents()
 		this.fadeInContents()
@@ -208,54 +209,69 @@ export default class ExcelEvents extends Component {
 
 
 	render() {
+		var closeEvent = this.closeEvent
+		var index = this.state.index
+		var cardInfo = this.state.cardInfo[this.state.index]
+		class contentsContainer extends Component{
+			render(){
+				console.log("Hi")
+				return(	
+					<div id='contentsContainer' className={styles["events--expanded"]} style={{opacity: 1}}>
+						<div id='contents-close' className={styles["btn-close"]} onClick={closeEvent}><img  alt='' src={require('../../img/close.png')}/></div>
+						<div id='event-content' className={styles["event-bg"]}><CardsNew index={index} Eventcontent={cardInfo}/></div>
+					</div>
+				)
+			}
+		}
+
 		return(
-			<div className='container'>
-			    <div className="dropdown-wrapper">
+			<div className={styles["container"]}>
+			    <div className={styles["dropdown-wrapper"]}>
 				<div className="font1">Competitions</div>
 			    <Filter initialItems={this.initialDept} id={0} filterList={this.filterList} />
 		        <Filter initialItems={this.initialCate} id={1} filterList={this.filterList} />
 			</div> 
-				<div id='eventsContainer' className='events-grid'>
+				<div id='eventsContainer' className={styles["events-grid"]}>
 				   { this.listContains(0)  ?
-					  (<div id='event1' className='events' onClick={() =>this.showEvent(0)}>
-					       <div className='big-numbers'>
-						   <img alt='' src={require('../img/dummy-img.png')} className="grid-logo-image"/><br/>
+					  (<div id='event1' className={styles["events"]} onClick={() =>this.showEvent(0)}>
+					       <div className={styles["big-numbers"]}>
+						   <img alt='' src={require('../../img/dummy-img.png')} className={styles["grid-logo-image"]}/><br/>
 						   Event 1
 						   </div>	  
 					  </div>)
 					:("")
 				   }
 				   { this.listContains(1) ?
-					  (<div id='event2' className='events' onClick={() =>this.showEvent(1)}>
-					       <div className='big-numbers'>
-						   <img  alt='' src={require('../img/dummy-img.png')} className="grid-logo-image"/><br/>
+					  (<div id='event2' className={styles["events"]} onClick={() =>this.showEvent(1)}>
+					       <div className={styles["big-numbers"]}>
+						   <img  alt='' src={require('../../img/dummy-img.png')} className={styles["grid-logo-image"]}/><br/>
 						   Event 2
 						   </div>
 					  </div>)
 					:("")
 				    }
 					{ this.listContains(2)?
-					  (<div id='event3' className='events' onClick={() =>this.showEvent(2)}>
-					       <div className='big-numbers'>
-						   <img alt='' src={require('../img/dummy-img.png')} className="grid-logo-image"/><br/>
+					  (<div id='event3' className={styles["events"]} onClick={() =>this.showEvent(2)}>
+					       <div className={styles["big-numbers"]}>
+						   <img alt='' src={require('../../img/dummy-img.png')} className={styles["grid-logo-image"]}/><br/>
 						   Event 3
 						   </div>
 					   </div>)
 					:("")
 					}
 					{ this.listContains(3)?
-					  (<div id='event4' className='events' onClick={() =>this.showEvent(3)}>
-					       <div className='big-numbers'>
-						   <img alt='' src={require('../img/dummy-img.png')} className="grid-logo-image"/><br/>
+					  (<div id='event4' className={styles["events"]} onClick={() =>this.showEvent(3)}>
+					       <div className={styles["big-numbers"]}>
+						   <img alt='' src={require('../../img/dummy-img.png')} className={styles["grid-logo-image"]}/><br/>
 						   Event 4
 						   </div>
 					  </div>)
 					:("") 
 				    }
 					{ this.listContains(4)? 
-					  (<div id='event5' className='events' onClick={() =>this.showEvent(4)}>
-					       <div className='big-numbers '>
-						   <img alt='' src={require('../img/dummy-img.png')} className="grid-logo-image"/><br/>
+					  (<div id='event5' className={styles["events"]} onClick={() =>this.showEvent(4)}>
+					       <div className={styles["big-numbers"]}>
+						   <img alt='' src={require('../../img/dummy-img.png')} className={styles["grid-logo-image"]}/><br/>
 						   
 						   Event 5
 						   </div>
@@ -263,19 +279,16 @@ export default class ExcelEvents extends Component {
 					:("")
 				    }
 					{ this.listContains(5)?  
-					  (<div id='event6' className='events' onClick={() =>this.showEvent(5)}>
-				           <div className='big-numbers '>
-						   <img alt='' src={require('../img/dummy-img.png')} className="grid-logo-image"/><br/>						   
+					  (<div id='event6' className={styles["events"]} onClick={() =>this.showEvent(5)}>
+				           <div className={styles["big-numbers"]}>
+						   <img alt='' src={require('../../img/dummy-img.png')} className={styles["grid-logo-image"]}/><br/>						   
 						   Event 6
 						   </div>
 					  </div>)
 				  :("")
 				}
 				</div>
-				<div id='contentsContainer' className='events--expanded hidden'>
-					<div id='contents-close' className='btn-close' onClick={this.closeEvent}><img  alt='' src={require('../img/close.png')}/></div>
-					<div id='event-content' className='event-bg'><CardsNew index={this.state.index} Eventcontent={this.state.cardInfo[this.state.index]}/></div>
-				</div>
+				<Route path='/events/event' component={contentsContainer} />
 			</div>
 		);
 	}

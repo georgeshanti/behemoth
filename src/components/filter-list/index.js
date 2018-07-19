@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './filterList.css';
+import styles from './style.module.css';
 
 class Filter extends Component{
     constructor(props){
@@ -28,25 +28,25 @@ class Filter extends Component{
 
      handleClick=(e)=>{
          if(this.node.contains(e.target)){
-		       document.getElementsByClassName("dropdown-content")[this.props.id].classList.remove("hidden");
+		       document.getElementsByClassName(styles["dropdown-content"])[this.props.id].classList.remove(styles["hidden"]);
              return
             }
           else{
-            document.getElementsByClassName("dropdown-content")[this.props.id].classList.add("hidden");
+            document.getElementsByClassName(styles["dropdown-content"])[this.props.id].classList.add(styles["hidden"]);
           }
         }       
      
      selectedList(item){
          this.setState({selectedItem:item})
-         document.getElementsByClassName("dropdown-content")[this.props.id].classList.add("hidden");
+         document.getElementsByClassName(styles["dropdown-content"])[this.props.id].classList.add(styles["hidden"]);
          this.props.filterList(item,this.props.id) //call parent fn to update currentoption
         }
 
      render(){
      return(
-         <div className="dropdown" ref={node => this.node=node}>
-                    <div className="dropbtn" >{this.state.selectedItem}</div>
-                          <div className="dropdown-content hidden">
+         <div className={styles["dropdown"]} ref={node => this.node=node}>
+                    <div className={styles["dropbtn"]} >{this.state.selectedItem}</div>
+                          <div className={styles["dropdown-content"] + " " + styles["hidden"]}>
                              {this.items}
                            </div>  
          </div>          
