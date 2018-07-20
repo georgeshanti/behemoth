@@ -13,7 +13,8 @@ html,body{
   position: relative;
   /*position: relative;*/
   /*top: -26px;*/
-  background-image: linear-gradient(to bottom, #45735429, #b9b9b900, #77777700, #3b3b3b00, #00000000);
+  /* background-image: linear-gradient(to bottom, #45735429, #b9b9b900, #77777700, #3b3b3b00, #00000000); */
+  background: #031426;
 }
 
 #root{

@@ -50,7 +50,7 @@ body{
 }
 
 .tab-content-wrap{
-    
+    transition-duration: 0.5s;
 }
 
 
@@ -123,7 +123,40 @@ body{
    margin-top: 0px;
 }
 
+.events--expanded {
+	opacity: 0;
+	position: fixed;
+	top: 0vh;
+	left: 0vw;
+	height: 100vh;
+	width: 100vw;
+    /* background-color: white; */
+    transition-duration: 1s;
+}
+
+.event-bg{
+	position: absolute;
+	width: 100%;
+    height: 100%;
+    background: #031426;
+	/* background: black; */
+	/* background-image: url('../../img/trianglebg.png'); */
+}
+
+.btn-close {
+	position: absolute;
+	left: 2vw;
+	top: 2vh;
+	color: whitesmoke;
+	z-index: 1;
+}
+
 @media screen and (max-width: 600px) {
+	.events--expanded {
+		top: 8.45vh;
+		left: 0vw;
+    }
+    
     .card{
         height: 85vh;
         width: 85vw;
@@ -158,6 +191,10 @@ body{
     /* end of navbar*/
   }
   @media screen and (max-width: 320px) {
+	.events--expanded {
+		top: 11vh;
+    }
+    
     .card{
         height: 85vh;
         width: 85vw;

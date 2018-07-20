@@ -9,14 +9,9 @@ export default class ExcelEvents extends Component {
 
 	constructor(props) {
 		super(props);
-
 		//method binding
 		this.showEvent = this.showEvent.bind(this)
 		this.closeEvent = this.closeEvent.bind(this)
-		this.fadeOutEvents = this.fadeOutEvents.bind(this)
-		this.fadeInEvents = this.fadeInEvents.bind(this)
-		this.fadeOutContents = this.fadeOutContents.bind(this)
-		this.fadeInContents = this.fadeInContents.bind(this)
 		this.hideContent = this.hideContent.bind(this)
 		this.filterList=this.filterList.bind(this)
 		this.listContains=this.listContains.bind(this)
@@ -162,9 +157,9 @@ export default class ExcelEvents extends Component {
 
 	closeEvent(e) {
 
-		this.fadeOutContents()
-		this.fadeInEvents()
-		setTimeout(this.hideContent, 700)
+		// this.fadeOutContents()
+		// this.fadeInEvents()
+		// setTimeout(this.hideContent, 700)
 	}
 
 	hideContent() {
@@ -172,43 +167,12 @@ export default class ExcelEvents extends Component {
 	}
 
 	showEvent(eventNO) {
-
-		// to decide which card info to pass
-
-		this.setState({ index : eventNO}, function() {
-			console.log(eventNO, this.state.index)
-
-		//console.log(eventNO,this.state.cardInfo[eventNO], this.state.index)
-	
-		// document.getElementById('contentsContainer').classList.remove(styles["hidden"])
-
-		this.fadeOutEvents()
-		this.fadeInContents()
-		})
+		console.log(eventNO)
+		this.props.history.push('/events/'+eventNO)
 	}
-
-	fadeOutEvents() {
-		this.tl.to('#eventsContainer', 0.4, {
-			autoAlpha: 0,
-			ease: Power0.easeOut,
-		},
-	)
-	}
-
-	fadeInEvents() {
-		this.tl.to('#eventsContainer', 0.4, { autoAlpha: 1, ease: Power0.easeIn})
-	}
-
-	fadeOutContents() {
-		this.tl.to('#contentsContainer', 0.4, {autoAlpha: 0, scale: 0.1, ease: Power0.easeOut})
-	}
-
-	fadeInContents() {
-		this.tl.fromTo('#contentsContainer', 0.4, {autoAlpha: 0, scale: 0.1}, {autoAlpha: 1, scale: 1, ease: Power0.easeIn});
-	}
-
 
 	render() {
+		console.log(this.listContains(0))
 		var closeEvent = this.closeEvent
 		var index = this.state.index
 		var cardInfo = this.state.cardInfo[this.state.index]
@@ -288,7 +252,7 @@ export default class ExcelEvents extends Component {
 				  :("")
 				}
 				</div>
-				<Route path='/events/event' component={contentsContainer} />
+				<Route path='/events/:event' render={()=><CardsNew Eventcontent={cardInfo}/>}/>
 			</div>
 		);
 	}
