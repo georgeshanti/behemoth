@@ -252,7 +252,7 @@ export default class ExcelEvents extends Component {
 				  :("")
 				}
 				</div>
-				<Route path='/events/:event' render={()=><CardsNew Eventcontent={cardInfo}/>}/>
+				<Route path='/events/:event/:section?' component={CardsNew}/>
 			</div>
 		);
 	}

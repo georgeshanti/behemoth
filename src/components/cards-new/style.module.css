@@ -47,6 +47,7 @@ body{
     vertical-align: top;
     padding-left: 10vw;
     padding-right: 10vw;
+    width: 100%;
 }
 
 .tab-content-wrap{
@@ -83,27 +84,43 @@ body{
 /*navbar css */
 .main-nav-block{
     background: rgba(0,0,0,0.3);
-      
+    position: relative;
+    border-radius: 50px;
 }
 .main-nav-block ul {
     overflow:hidden;
     list-style-type: none;
     margin:0;
     padding:0;
-  }
-  
-  .main-nav-block ul li {
+}
+
+.main-nav-block ul li {
     width:25%;
     text-align:center;
     display: inline-block;
-    color: rgba(255, 255, 255,0.6);
+    color: rgba(255, 255, 255,1);
     padding-top: 2vh;
     padding-bottom: 2vh;
-  }
-  
-  .main-nav-block ul li:hover{
-      background-color: black;
-  }
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.main-nav-block ul li:hover{
+    color: rgba(255, 255, 255,1);
+}
+
+.main-nav-block ul li.highlight{
+    transition-duration: 0.5s;
+    position: absolute;
+    background: #2fb454;
+    /* background: #8367d8; */
+    height: 56px;
+    z-index: -1;
+    border-radius: 50px;
+}
+
+.main-nav-block ul li.highlight:hover{
+}
 
   /* End of navbar*/
 
@@ -145,7 +162,7 @@ body{
 
 .btn-close {
 	position: absolute;
-	left: 2vw;
+	left: 2vh;
 	top: 2vh;
 	color: whitesmoke;
 	z-index: 1;
