@@ -2,10 +2,10 @@ import React, {Component} from 'react';
 import { Route } from 'react-router-dom'
 import styles from './style.module.css';
 import { TimelineLite, Power0} from 'gsap';
-import CardsNew from 'components/cards-new';
+import EventCard from 'components/event-card';
 import Filter from 'components/filter-list';
 
-export default class ExcelEvents extends Component {
+export default class Events extends Component {
 
 	constructor(props) {
 		super(props);
@@ -176,17 +176,6 @@ export default class ExcelEvents extends Component {
 		var closeEvent = this.closeEvent
 		var index = this.state.index
 		var cardInfo = this.state.cardInfo[this.state.index]
-		class contentsContainer extends Component{
-			render(){
-				console.log("Hi")
-				return(	
-					<div id='contentsContainer' className={styles["events--expanded"]} style={{opacity: 1}}>
-						<div id='contents-close' className={styles["btn-close"]} onClick={closeEvent}><img  alt='' src={require('../../img/close.png')}/></div>
-						<div id='event-content' className={styles["event-bg"]}><CardsNew index={index} Eventcontent={cardInfo}/></div>
-					</div>
-				)
-			}
-		}
 
 		return(
 			<div className={styles["container"]}>
@@ -252,7 +241,7 @@ export default class ExcelEvents extends Component {
 				  :("")
 				}
 				</div>
-				<Route path='/events/:event/:section?' component={CardsNew}/>
+				<Route path='/events/:event/:section?' component={EventCard}/>
 			</div>
 		);
 	}

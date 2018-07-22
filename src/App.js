@@ -4,27 +4,20 @@ import './App.css';
 
 import NavButton from 'components/nav-button'
 import asyncComponent from './utils/asyncComponent'
-// import Home from './pages/home'
-// import Events from './pages/events'
-// import NavBar from './components/navbar-new'
 
-const HomeImport = () => import('./pages/home')
-const EventsImport = () => import('./pages/events-new')
-const TalksImport = () => import('./pages/talks')
-const ExcelEventsImport = () => import('./pages/excel-events')
-
-const Home = asyncComponent(HomeImport)
+const EventsImport = () => import('./pages/events')
 const Events = asyncComponent(EventsImport)
-const Talks = asyncComponent(TalksImport)
-const ExcelEvents = asyncComponent(ExcelEventsImport)
 
 class App extends Component {
   render() {
     return (
       <div className="pageContainer">
         <div className="content">
-          <Route exact path="/" component={Events}/>
-          <Route path='/events' component={ExcelEvents} />
+          {/* <IndexRoute path="/" render = {()=> (<h1>Home</h1>)} /> */}
+          <Route path='/events' component={Events} />
+          <Route path="/talks" render = {()=> (<h1>Talks</h1>)} />
+          <Route path="/workshops" render = {()=> (<h1>Workshops</h1>)} />
+          <Route path="/schedule" render = {()=> (<h1>Schedule</h1>)} />
         </div>
         <NavButton/>
       </div>
