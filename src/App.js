@@ -5,7 +5,7 @@ import './App.css';
 import NavButton from 'components/nav-button'
 import asyncComponent from './utils/asyncComponent'
 
-const EventsImport = () => import('./pages/events')
+const EventsImport = () => import('pages/events')
 const Events = asyncComponent(EventsImport)
 
 class App extends Component {
