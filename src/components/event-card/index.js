@@ -34,9 +34,13 @@ class EventCard extends Component {
     }
 
     componentDidMount(){
-        this.setState({
-            opacity: 1
-        })
+        var comp = this
+        setTimeout(function(){
+            comp.setState({
+                opacity: 1
+            })
+            }
+        ,this.props.delay);
     }
 
     close(){

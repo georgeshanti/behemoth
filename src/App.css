@@ -1,14 +1,13 @@
 html,body{
   padding: 0;
   margin: 0;
-  height:100%;
+  height:auto;
   width:100%;
   /*background-image: radial-gradient(circle, #04c04d, #00997c, #006d88, #00416c, #051937);*/
   background-color: #031426;
 }
 
 .content{
-  height: 100vh;
   width: 100vw;
   position: relative;
   /*position: relative;*/
@@ -18,8 +17,4 @@ html,body{
 }
 
 #root{
-  position: fixed;
-  top:0;
-  left: 0;
-  overflow-y: auto;
 }

@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
-import { Route } from 'react-router-dom'
+import { Route, Link } from 'react-router-dom'
 import styles from './style.module.css';
 import { TimelineLite, Power0} from 'gsap';
 import EventCard from 'components/event-card';
 import Filter from 'components/filter-list';
+import EventGridCard from 'components/event-grid-card';
 
 export default class Events extends Component {
 
@@ -176,70 +177,21 @@ export default class Events extends Component {
 		var closeEvent = this.closeEvent
 		var index = this.state.index
 		var cardInfo = this.state.cardInfo[this.state.index]
+		var grid = []
+		for(var i=0 ; i<12 ; i++){
+			var gridItem = ( <Link to={"/events/"+i}><EventGridCard delay={i*100} /></Link>)
+			grid.push(gridItem)
+		}
 
 		return(
 			<div className={styles["container"]}>
-			    <div className={styles["dropdown-wrapper"]}>
-				<div className="font1">Competitions</div>
-			    <Filter initialItems={this.initialDept} id={0} filterList={this.filterList} />
-		        <Filter initialItems={this.initialCate} id={1} filterList={this.filterList} />
-			</div> 
+			    {/* <div className={styles["dropdown-wrapper"]}>
+					<div className="font1">Competitions</div>
+					<Filter initialItems={this.initialDept} id={0} filterList={this.filterList} />
+					<Filter initialItems={this.initialCate} id={1} filterList={this.filterList} />
+				</div>  */}
 				<div id='eventsContainer' className={styles["events-grid"]}>
-				   { this.listContains(0)  ?
-					  (<div id='event1' className={styles["events"]} onClick={() =>this.showEvent(0)}>
-					       <div className={styles["big-numbers"]}>
-						   <img alt='' src={require('../../img/dummy-img.png')} className={styles["grid-logo-image"]}/><br/>
-						   Event 1
-						   </div>	  
-					  </div>)
-					:("")
-				   }
-				   { this.listContains(1) ?
-					  (<div id='event2' className={styles["events"]} onClick={() =>this.showEvent(1)}>
-					       <div className={styles["big-numbers"]}>
-						   <img  alt='' src={require('../../img/dummy-img.png')} className={styles["grid-logo-image"]}/><br/>
-						   Event 2
-						   </div>
-					  </div>)
-					:("")
-				    }
-					{ this.listContains(2)?
-					  (<div id='event3' className={styles["events"]} onClick={() =>this.showEvent(2)}>
-					       <div className={styles["big-numbers"]}>
-						   <img alt='' src={require('../../img/dummy-img.png')} className={styles["grid-logo-image"]}/><br/>
-						   Event 3
-						   </div>
-					   </div>)
-					:("")
-					}
-					{ this.listContains(3)?
-					  (<div id='event4' className={styles["events"]} onClick={() =>this.showEvent(3)}>
-					       <div className={styles["big-numbers"]}>
-						   <img alt='' src={require('../../img/dummy-img.png')} className={styles["grid-logo-image"]}/><br/>
-						   Event 4
-						   </div>
-					  </div>)
-					:("") 
-				    }
-					{ this.listContains(4)? 
-					  (<div id='event5' className={styles["events"]} onClick={() =>this.showEvent(4)}>
-					       <div className={styles["big-numbers"]}>
-						   <img alt='' src={require('../../img/dummy-img.png')} className={styles["grid-logo-image"]}/><br/>
-						   
-						   Event 5
-						   </div>
-					  </div>)
-					:("")
-				    }
-					{ this.listContains(5)?  
-					  (<div id='event6' className={styles["events"]} onClick={() =>this.showEvent(5)}>
-				           <div className={styles["big-numbers"]}>
-						   <img alt='' src={require('../../img/dummy-img.png')} className={styles["grid-logo-image"]}/><br/>						   
-						   Event 6
-						   </div>
-					  </div>)
-				  :("")
-				}
+					{grid}
 				</div>
 				<Route path='/events/:event/:section?' component={EventCard}/>
 			</div>

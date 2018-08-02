@@ -24,6 +24,7 @@ class NavButton extends Component {
       this.state = {
         expanded: false
       }
+      this.expand = this.expand.bind(this)
     }
 
     expand = (prevent) => (e) => {
@@ -44,7 +45,7 @@ class NavButton extends Component {
         else
           var style = {transform: "translate(" + item.xOffset + "px, " + item.yOffset + "px)"}
         
-        return <FloatingButton to={item.link} style={style} expanded={this.state.expanded} icon={item.symbol} onClick={this.expand(false).bind(this)}/>
+        return <FloatingButton to={item.link} style={style} expanded={this.state.expanded} icon={item.symbol} onClick={this.expand(false)} />
       })
 
       var menuStyle = this.state.expanded?{transform: "translate(-50%, -150px)"}:{transform: "translate(-50%, 0px)"}
@@ -53,8 +54,8 @@ class NavButton extends Component {
       return (
         <div style={menuStyle} className={styles.NavButton}>
           {menuComponents}
-          <Swipeable onSwipedUp={this.expand.bind(this)} onSwipedDown={this.expand.bind(this)}>
-            <FloatingButton to="/nav" expanded={this.state.expanded} icon={menuSymbol} onClick={this.expand(true).bind(this)}/>
+          <Swipeable onSwipedUp={this.expand(true)} onSwipedDown={this.expand(true)}>
+            <FloatingButton to="/nav" expanded={this.state.expanded} icon={menuSymbol} onClick={this.expand(true)}/>
           </Swipeable>
         </div>
       );
