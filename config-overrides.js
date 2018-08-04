@@ -12,5 +12,6 @@ module.exports = (config, env) => {
           'pages': path.resolve(__dirname, 'src', 'pages')
         }
     };
+    config.output.path = path.resolve(__dirname, 'docs')
     return config;
 }
