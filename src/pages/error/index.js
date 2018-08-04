@@ -1,12 +1,13 @@
 import React, {Component} from 'react';
 import styles from './style.module.css';
+import gif from './gif.mp4';
 
 export default class Events extends Component {
 	render(){
 		return (
 			<div>
 				<video autoplay="" muted="" loop id={styles['myVideo']}>
-					<source src="/img/gif.mp4" type="video/mp4" />
+					<source src={gif} type="video/mp4" />
 				</video>
 
 				<div class={styles['container-fluid']}>
