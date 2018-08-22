@@ -1,0 +1,236 @@
+:root{
+    --line-logo-animation-duration: 5s;
+    --line-logo-animation-delay: 0.7s;
+}
+
+.slide{
+    width: 100vw;
+    height: 100vh;
+}
+
+.logo-container{
+    width: 100%;
+    position: fixed;
+    transition: 1s;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.end-line{
+    width: 100%;
+}
+
+@keyframes st-draw{
+    to{
+        stroke-dashoffset: 0;
+    }
+}
+
+.end-line>.st0{
+    animation-name: none;
+    animation-duration: 3.5s;
+    fill:none;
+    stroke:#7AD4DC;
+    stroke-width:5;
+    stroke-miterlimit:10;
+    stroke-dasharray: 1750;
+    stroke-dashoffset: 1750;
+    animation-fill-mode: forwards;
+}
+.present.logo-container .st0{
+    animation-name: st-draw;
+}
+.past.logo-container .st0{
+    animation-name: st-draw;
+}
+
+.logo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 55vh;
+}
+
+.future.logo-container{
+    opacity: 0;
+}
+
+.present.logo-container{
+    opacity: 1;
+}
+
+.past.logo-container{
+    opacity: 0;
+}
+
+.line-logo-container{
+    width: 60%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.5s;
+    opacity: 1;
+}
+
+.past.line-logo-container{
+    opacity: 0;
+}
+  
+@keyframes dash {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.line-logo-container polyline {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation-name: none ;
+    animation-duration: var(--line-logo-animation-duration);
+    animation-delay: var(--line-logo-animation-delay);
+    animation-fill-mode: forwards;
+  }
+
+.line-logo-container.present polyline{
+    animation-name: dash;
+}
+
+.line-logo-container.past polyline{
+    animation-name: dash;
+}
+
+.line-logo-container line {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation-name: none ;
+    animation-duration: var(--line-logo-animation-duration);
+    animation-delay: var(--line-logo-animation-delay);
+    animation-fill-mode: forwards;
+}
+
+.line-logo-container.present line{
+    animation-name: dash;
+}
+
+.line-logo-container.past line{
+    animation-name: dash;
+}
+
+.timeline-container{
+    transition: 1s;
+    opacity: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.timeline-container.future{
+    opacity: 0;
+}
+
+.timeline-container.past{
+    opacity: 0;
+}
+
+.timeline-container svg{
+    height: 85vh;
+}
+
+.timeline-container line{
+    animation-name: none ;
+    animation-duration: var(--line-logo-animation-duration);
+    animation-delay: var(--line-logo-animation-delay);
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+}
+
+.timeline-container.present line{
+    animation-name: dash ;
+}
+
+.timeline-container.past line{
+    animation-name: dash ;
+}
+
+.timeline-container text{
+    font-family: 'Josefin Sans';
+}
+
+ 
+@keyframes reveal {
+    to {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+.timeline-container circle.dot{
+    fill:#7AD4DC;
+    transform: translateY(2%);
+    opacity: 0;
+    animation-name: none;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+}
+
+.timeline-container.present circle.dot{
+    animation-name: reveal;
+}
+
+.timeline-container.past circle.dot{
+    animation-name: reveal;
+}
+
+.timeline-container circle.border{
+    stroke:#7AD4DC;
+    transform: translateY(2%);
+    opacity: 0;
+    animation-name: none;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+}
+
+.timeline-container.present circle.border{
+    animation-name: reveal;
+}
+
+.timeline-container.past circle.border{
+    animation-name: reveal;
+}
+
+
+.timeline-container g.odd{
+    transform: translateX(-2%);
+}
+
+.timeline-container g.even{
+    transform: translateX(2%);
+}
+
+.timeline-container g{
+    opacity: 0;
+    animation-name: none;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+}
+
+.timeline-container.present g{
+    animation-name: reveal;
+}
+
+.timeline-container.past g{
+    animation-name: reveal;
+}
+
+.timeline-title{
+    font-size: 35px;
+}
+
+.timeline-desc{
+    font-size: 22px;
+    letter-spacing: 2.5px;
+}
