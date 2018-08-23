@@ -6,9 +6,10 @@
 
 .picture:hover{
 	box-shadow: -20px -20px greenyellow;
+	margin: 20px 0px;
 }
 .picture{
-	height:35vw;
+	height:30vw;
 	width: 35vw;
     position:relative;
 	background-repeat: repeat-x;
@@ -20,11 +21,11 @@
     -ms-transition: all 0.2s ease-out;
 	-webkit-transition: all 0.2s ease-out;
 	transition: all 0.2s ease-out;*/
-	-moz-transition: all 0.5s ease-out;
-    -o-transition: all 0.5s ease-out;
-    -ms-transition: all 0.5s ease-out;
-	-webkit-transition: all 0.5s ease-out;
-    transition: all 0.5s ease-out;
+	-moz-transition: all 0.4s ease-out;
+    -o-transition: all 0.4s ease-out;
+    -ms-transition: all 0.4s ease-out;
+	-webkit-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
 	
 }
 
