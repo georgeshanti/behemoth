@@ -182,7 +182,7 @@ export default class Events extends Component {
 			var gridItem = ( <Link to={"/competitions/"+i}><CompetitionGridCard delay={i*100} /></Link>)
 			grid.push(gridItem)
 		}
-
+		
 		return(
 			<div className={styles["container"]}>
 			    {/* <div className={styles["dropdown-wrapper"]}>
