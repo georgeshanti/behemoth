@@ -6,9 +6,9 @@ h1{
 
 #grid {
 	position:absolute;
-	width:78%;
+	/*width:78%;
 	max-height:auto;	
-	left:11%;
+    left:11%;
 	z-index:1;
 	top:200px;
 	opacity:1;
@@ -17,21 +17,21 @@ h1{
     -ms-transition: max-height 0s 2.3s ease-out;
 	-webkit-transition: max-height 0s 2.3s ease-out;
     transition: max-height 0s 2.3s ease-out, top 1.5s cubic-bezier(0.260, 0.010, 0.000, 1.005), opacity 1.4s ease-out;
+*/
 }
 
 
 
 .left {
+	margin-left: 11vw;
 	position:relative;
 	float:left;	
-	width:46%;
-    margin-top:0;
 }
 
 .right {
+	margin-top: 120px;
+	margin-right: 11vw;
 	position:relative;
 	float:right;	
-	width:46%;
-    margin-top:120px;
 }
 

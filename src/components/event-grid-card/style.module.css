@@ -1,32 +1,37 @@
 .event {
 	position:relative;	
-    width:100%;
-    background-color: black;
 	cursor:pointer;
 	margin-bottom:70px;
 }
 
+.picture:hover{
+	box-shadow: -20px -20px greenyellow;
+}
 .picture{
+	height:35vw;
+	width: 35vw;
     position:relative;
-	width:100%;
-	height:auto;
 	background-repeat: repeat-x;
-	background-size: 100% 20px;
+	background-size: cover;
 	background-position: center bottom;
 	margin:0;
-	-moz-transition: all 0.2s ease-out;
+	/*-moz-transition: all 0.2s ease-out;
     -o-transition: all 0.2s ease-out;
     -ms-transition: all 0.2s ease-out;
 	-webkit-transition: all 0.2s ease-out;
-    transition: all 0.2s ease-out;
+	transition: all 0.2s ease-out;*/
+	-moz-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    -ms-transition: all 0.5s ease-out;
+	-webkit-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
 	
-
 }
 
 .picture img {
 	position:relative;
-    width:100%;
-	height:auto;
+	width:inherit;
+	height: inherit;
 	z-index:0;
 	-moz-transition: all 0.2s ease-out;
     -o-transition: all 0.2s ease-out;
@@ -48,19 +53,22 @@ h2 {
 	line-height:48px;
 	letter-spacing:4px;	
     margin:0px 0 25px 30px;
-    margin-top:-75.8px;
+	/*margin-top:-75.8px;*/
+	margin-top: 2px;
 	-moz-transition: all 0.2s ease-out;
     -o-transition: all 0.2s ease-out;
     -ms-transition: all 0.2s ease-out;
 	-webkit-transition: all 0.2s ease-out;
     transition: all 0.2s ease-out;
 }
-
+/*
 .event:hover h2 {
 	margin:-28px 0 25px 30px;
 }
+*/
 
 .info {
+	z-index: 2;
 	margin-left:30px;
 	padding-left:0px;
 	font-family:"Effra W01 Regular", Arial, sans-serif;

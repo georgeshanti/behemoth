@@ -7,14 +7,14 @@ export default class EventGridCard extends Component{
         return(
             <div className={styles["event"]}>
                <div className={styles["picture"]}>
-                   <img src="http://excelmec.org/static/images/third-eye-photography.png" width="700" height="557" />
+                   <img src="https://placeimg.com/640/480/tech"/>
                 </div>
                 <h2>{this.props.details.eventName}</h2>
-                <div className={styles["info"]}>
+                <p className={styles["info"]}>
                 
                       {this.props.details.eventDescp}
                    
-                </div>
+                </p>
 
             </div>
         )
