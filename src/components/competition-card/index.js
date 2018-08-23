@@ -3,7 +3,7 @@ import { Redirect, Link } from 'react-router-dom';
 import styles from './style.module.css';
 import ReactDOM from 'react-dom';
 
-class EventCard extends Component {
+class CompetitionCard extends Component {
 
     constructor(props) {
         super(props);
@@ -74,7 +74,7 @@ class EventCard extends Component {
         }
         var scrollDistance = index * 100
         if(!this.state.mounted)
-            return <Redirect to='/events' push/>
+            return <Redirect to='/competitions' push/>
         return (
             <div id='contentsContainer' className={styles["events--expanded"]} style={{opacity: this.state.opacity}}>
                 <div id='event-content' className={styles["event-bg"]}>
@@ -89,16 +89,16 @@ class EventCard extends Component {
                                         <li className={styles["highlight"]} style={{transform: "translate(" + scrollDistance + "%"}}>
 
                                         </li>
-                                        <Link to={"/events/" + this.props.match.params['event'] + "/about"}>
+                                        <Link to={"/competitions/" + this.props.match.params['event'] + "/about"}>
                                             <li><div id="format" >About</div></li>
                                         </Link>
-                                        <Link to={"/events/" + this.props.match.params['event'] + "/format"}>
+                                        <Link to={"/competitions/" + this.props.match.params['event'] + "/format"}>
                                             <li><div id="format" >Format</div></li>
                                         </Link>
-                                        <Link to={"/events/" + this.props.match.params['event'] + "/rules"}>
+                                        <Link to={"/competitions/" + this.props.match.params['event'] + "/rules"}>
                                             <li><div id="format" >Rules</div></li>
                                         </Link>
-                                        <Link to={"/events/" + this.props.match.params['event'] + "/contact"}>
+                                        <Link to={"/competitions/" + this.props.match.params['event'] + "/contact"}>
                                             <li><div id="format" >Contact</div></li>
                                         </Link>
                                     </ul>
@@ -155,4 +155,4 @@ class EventCard extends Component {
     }
 }
 
-export default EventCard;
+export default CompetitionCard;

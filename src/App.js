@@ -7,10 +7,12 @@ import asyncComponent from './utils/asyncComponent'
 
 const HomeImport = () => import('pages/home')
 const EventsImport = () => import('pages/events')
+const CompetitionsImport = () => import('pages/competitions')
 const ErrorImport = () => import('pages/error')
 
 const Home = asyncComponent(HomeImport)
 const Events = asyncComponent(EventsImport)
+const Competitions = asyncComponent(CompetitionsImport)
 const ErrorPage = asyncComponent(ErrorImport)
 
 class App extends Component {
@@ -28,6 +30,7 @@ class App extends Component {
           <Switch>
             <Route path="/" exact component={Home} />
             <Route path='/events' component={Events} />
+            <Route path='/competitions' component={Competitions} />
             <Route path="/talks" render = {()=> (<h1>Talks</h1>)} />
             <Route path="/workshops" render = {()=> (<h1>Workshops</h1>)} />
             <Route path="/schedule" render = {()=> (<h1>Schedule</h1>)} />

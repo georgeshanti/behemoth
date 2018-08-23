@@ -1,54 +1,73 @@
-.event-grid-item{
-    width: 100%;
-    padding-bottom: 100%;
-    border-style: solid;
-    border-color: #ffffff;
-    border-radius: 10px;
-    background: #2fb454;
-    transition-duration: 0.5s;
-    position: relative;
-    overflow: hidden;
-    color: #ffffff;
+.event {
+	position:relative;	
+    width:100%;
+    background-color: black;
+	cursor:pointer;
+	margin-bottom:70px;
 }
 
-.event-grid-img{
-    position: absolute;
-    width: 70%;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+.picture{
+    position:relative;
+	width:100%;
+	height:auto;
+	background-repeat: repeat-x;
+	background-size: 100% 20px;
+	background-position: center bottom;
+	margin:0;
+	-moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+	-webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+	
+
 }
 
-.event-grid-overlay{
-    position: absolute;
-    width: 100%;
-    bottom: 0px;
-    background: rgba(0,0,0,0.5);
-    padding: 16px;
-}
-
-.event-title{
-    font-size: 22px;
-    display:block;
-}
-
-.event-category{
-    font-size: 13px;
-    display:block;
+.picture img {
+	position:relative;
+    width:100%;
+	height:auto;
+	z-index:0;
+	-moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+	-webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+	cursor:pointer;
 }
 
 
-@media screen and (max-width: 600px) {
-
-    .event-grid-overlay{
-        padding: 10px;
-    }
-
-    .event-title{
-        font-size: 16px;
-    }
-    
-    .event-category{
-        font-size: 10px;
-    }
+h2 {
+	position:relative;
+	z-index:2;
+	font-family:"Effra W01 Heavy", Arial, sans-serif;
+	font-size:45px;
+	font-weight:normal;
+	color:white;
+	text-transform:uppercase;
+	line-height:48px;
+	letter-spacing:4px;	
+    margin:0px 0 25px 30px;
+    margin-top:-75.8px;
+	-moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+	-webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
 }
+
+.event:hover h2 {
+	margin:-28px 0 25px 30px;
+}
+
+.info {
+	margin-left:30px;
+	padding-left:0px;
+	font-family:"Effra W01 Regular", Arial, sans-serif;
+	font-size:18px;	
+	letter-spacing:2px;
+	line-height:21px;
+	color:white;
+	text-transform:uppercase;
+}
+
