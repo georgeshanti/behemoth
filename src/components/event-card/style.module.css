@@ -6,7 +6,51 @@
     min-height: 100vh;
     z-index: 3;
     background-color: yellowgreen;
+    overflow-x: hidden;
 }
 h2{
     color: white;
+}
+.sections{
+    padding: 5vh 5vw;
+}
+
+.btn-close{
+    position: fixed;
+    top:25px;
+    left: 25px;
+}
+
+.section1{
+    float: left;
+    position: fixed;
+    height:100vh;
+    width: 30vw;
+    padding-top: 5vw;
+}
+
+.section1 h1{
+    text-align: left;
+    color: white;
+    font-size: 70px;
+    line-height: 44px;
+    font-family: "Effra W01 Bold", Arial, sans-serif;
+}
+
+.section1 p{
+    color: rgba(255, 255, 255, 0.8);
+    text-align: left;
+    font-size: 20px;
+}
+
+.section2{
+    float: right;
+    min-height: 100vh;
+    width: 50vw;
+}
+.section2 img{
+    height: 60vh;
+    width: 50vw;
+    background-size: cover;
+    padding-bottom: 7.5vh;
 }
