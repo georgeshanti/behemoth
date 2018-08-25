@@ -2,10 +2,11 @@
 	position:relative;	
 	cursor:pointer;
 	margin-bottom:70px;
+	outline: none;
 }
 
 .picture:hover{
-	box-shadow: -20px -20px greenyellow;
+	box-shadow: -20px -20px skyblue;
 	margin: 20px 0px;
 }
 .picture{
@@ -78,5 +79,49 @@ h2 {
 	line-height:21px;
 	color:white;
 	text-transform:uppercase;
+}
+
+@media only screen and (max-width:1280px){
+	.picture{
+		box-shadow: -20px -20px skyblue;
+	}
+	h2{
+		font-size:auto;
+	}
+}
+
+@media only screen and (max-width:1280px){
+	h2{
+		font-size:25px;
+		font-weight: bolder;
+		letter-spacing: 0px;
+	}
+	.info{
+		font-size: 14px;
+	}
+}
+
+
+@media only screen and (max-width:450px){
+	.picture{
+		box-shadow: -10px -10px skyblue;
+		margin: 0 15vw;
+		width: 70vw;
+		height: auto;
+	}
+	.picture:hover{
+		box-shadow: -10px -10px skyblue;
+		margin: auto;
+	}
+	h2{
+		font-size: 25px;
+		margin: 0 20vw;
+	}
+
+	.info{
+		font-size: 14px;
+		margin-left: 20vw;
+	}
+	
 }
 

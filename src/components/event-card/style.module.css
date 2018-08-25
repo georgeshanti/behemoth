@@ -5,14 +5,12 @@
     min-width: 100vw;
     min-height: 100vh;
     z-index: 3;
-    background-color: yellowgreen;
+    background-color: skyblue;
     overflow-x: hidden;
 }
+
 h2{
     color: white;
-}
-.sections{
-    padding: 5vh 5vw;
 }
 
 .btn-close{
@@ -25,11 +23,12 @@ h2{
     float: left;
     position: fixed;
     height:100vh;
-    width: 30vw;
-    padding-top: 5vw;
+    width: 40vw;
+    padding: 5vw;
 }
 
 .section1 h1{
+    word-wrap: break-word;
     text-align: left;
     color: white;
     font-size: 70px;
@@ -49,8 +48,70 @@ h2{
     width: 50vw;
 }
 .section2 img{
-    height: 60vh;
-    width: 50vw;
-    background-size: cover;
-    padding-bottom: 7.5vh;
+    height: 40vh;
+    width: 60vw;
+    background-size: contain;
+    margin-top: -5px;
 }
+
+@media only screen and (max-width:1100px){
+    .section1 p{
+        font-size: 17px;
+    }
+    
+}
+@media only screen and (max-width:800px){
+    .section1 p{
+        font-size: 18px;
+    }
+    .section1 h1{
+       font-size: 50px;
+    }   
+
+}
+
+@media only screen and (max-width:1000px){
+
+}
+
+@media only screen and (max-width:450px){
+    .container{
+        position:initial;
+        max-width: 100vw;
+        padding: 0px; word-wrap: break-word;
+    }
+    .section1{
+        float: none;
+        position: initial;
+        height:auto;
+        width: auto;
+        padding: 10vw;
+    }
+    .section1 h1{
+        word-wrap: break-word;
+    }
+    .section1 p{
+        font-size: 17px;
+    }
+    .section2{
+        float: none;
+        position: initial;
+        height:auto;
+        width: auto;
+    }
+    .section2 img{
+        height: auto;
+        width: 80vw;
+        background-size: contain;
+        padding:0vh 10vw 5vh 10vw;
+    }
+ 
+
+}
+@media only screen and (max-width:350px){
+    .section1 p{
+        font-size: 16px;
+    }
+
+}
+
