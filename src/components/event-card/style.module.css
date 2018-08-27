@@ -49,7 +49,7 @@ h2{
     width: 50vw;
 }
 .section2 img{
-    height: 40vh;
+    height: auto;
     width: 60vw;
     background-size: contain;
     margin-top: -5px;

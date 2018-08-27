@@ -28,13 +28,10 @@ export default class EventCard extends Component{
         }
         this.colors=['pink','skyblue','palegreen','goldenrod']
         this.divstyle= {
-            backgroundColor: this.colors[this.props.match.params.eventNo%5],
+            backgroundColor: this.colors[this.state.index%4],
           };
     }
    
-    componentDidMount(){
-        console.log(this.props.match.params.eventNo);
-    }
     render(){
         return(
             <div className={styles["container"]} style={this.divstyle}>

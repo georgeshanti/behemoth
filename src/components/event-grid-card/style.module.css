@@ -59,9 +59,8 @@ h2 {
 	text-transform:uppercase;
 	line-height:48px;
 	letter-spacing:1px;	
-    margin:0px 0 25px 30px;
+    margin:2px 0px 0px 30px;
 	/*margin-top:-75.8px;*/
-	margin-top: 2px;
 	-moz-transition: all 0.2s ease-out;
     -o-transition: all 0.2s ease-out;
     -ms-transition: all 0.2s ease-out;
@@ -76,20 +75,18 @@ h2 {
 
 .info {
 	z-index: 2;
+	width: 25vw;
 	margin-left:30px;
 	padding-left:0px;
 	font-family:"Effra W01 Regular", Arial, sans-serif;
-	font-size:18px;	
+	font-size:17px;	
 	letter-spacing:2px;
 	line-height:21px;
 	color:white;
-	text-transform:uppercase;
+	/*text-transform:uppercase;*/
 }
 
 @media only screen and (max-width:1280px){
-	.picture{
-		box-shadow: -20px -20px skyblue;
-	}
 	h2{
 		font-size:auto;
 	}
@@ -107,25 +104,25 @@ h2 {
 }
 
 
-@media only screen and (max-width:450px){
-	.picture{
-		box-shadow: -10px -10px skyblue;
-		margin: 0 15vw;
+@media only screen and (max-width:480px){
+	.picture {
+		margin: 0px 15vw 0px 15vw;
 		width: 70vw;
-		height: auto;
+		height: 35vh;
 	}
-	.picture:hover{
-		box-shadow: -10px -10px skyblue;
-		margin: auto;
+	.picture img{
+		padding: 5vw;
 	}
 	h2{
 		font-size: 25px;
-		margin: 0 20vw;
+		margin: 5vw 20vw 0px 20vw;
 	}
 
 	.info{
 		font-size: 14px;
 		margin-left: 20vw;
+		width: 70vw;
+		margin-top: -10px;
 	}
 	
 }

@@ -11,10 +11,10 @@ export default class Events extends Component{
         this.state={
             index:0,
             cardInfo:[
+                {eventName:"Hello World",eventDescp:"Lorem ipsum dodo eye of modor dod frodo poop poop in toilet..."},
                 {eventName:"Hello World",eventDescp:"Lorem ..."},
-                {eventName:"Hello World",eventDescp:"Lorem ..."},
-                {eventName:"Hello World",eventDescp:"Lorem ..."},
-                {eventName:"Hello World",eventDescp:"Lorem ..."},
+                {eventName:"Hello World",eventDescp:"Lorem got is the best ..."},
+                {eventName:"Hello World",eventDescp:"Lorem okokey ..."},
                 {eventName:"Hello World",eventDescp:"Lorem ..."}
             ]
         }
@@ -25,7 +25,7 @@ export default class Events extends Component{
         var colors=['pink','skyblue','palegreen','goldenrod'] //to change add colors in event cards too
 		for(var i=0 ; i<5 ; i++){
             var gridbg=colors[i%4]
-			var gridItem = ( <Link to={"/events/"+i}><EventGridCard details={this.state.cardInfo[i]} delay={i*100} colors={gridbg} /></Link>)
+			var gridItem = ( <Link to={"/events/"+i} style={{textDecoration:'none'}}><EventGridCard details={this.state.cardInfo[i]} delay={i*100} colors={gridbg} /></Link>)
             if(i%2==0)
                grid1.push(gridItem)
             else
