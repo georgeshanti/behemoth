@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styles from './style.module.css';
 import { Route, Link } from 'react-router-dom'
+import {TimelineLite, Power0} from 'gsap'
 
 export default class EventCard extends Component{
    
@@ -29,13 +30,19 @@ export default class EventCard extends Component{
         this.colors=['pink','skyblue','palegreen','goldenrod']
         this.divstyle= {
             backgroundColor: this.colors[this.props.match.params.eventNo%5],
-          };
+        };
+
+        this.tl = new TimelineLite();
     }
 
    
     componentDidMount(){
         window.scrollTo(0, 0)
         console.log(this.props.match.params.eventNo);
+        
+        //Animation for event card
+        var text = document.getElementById('sec1')
+        this.tl.fromTo(text, 0.5, {x: -500, autoAlpha: 0}, {x: 0, autoAlpha: 1, ease: Power0.easeIn});
     }
     
     render(){
@@ -44,7 +51,7 @@ export default class EventCard extends Component{
             <div id='contents-close' className={styles["btn-close"]}><Link to={"/events"}><img  alt='' src={require('../../img/close.png')}/></Link></div>
                <div className={styles["sections"]}>
                 
-                    <div className={styles["section1"]}>
+                    <div id="sec1" className={styles["section1"]}>
                     <h1>{this.state.cardInfo[this.state.index].name}</h1>
                     <p>{this.state.cardInfo[this.state.index].content}</p>
                     </div>
