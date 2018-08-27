@@ -29,7 +29,6 @@ export default class EventCard extends Component{
         }
         this.colors=['pink','skyblue','palegreen','goldenrod']
         this.divstyle= {
-            //backgroundColor: this.colors[this.props.match.params.eventNo%5],
             backgroundColor: this.colors[this.state.index%4],
         };
 
@@ -40,11 +39,10 @@ export default class EventCard extends Component{
    
     componentDidMount(){
         window.scrollTo(0, 0)
-        console.log(this.props.match.params.eventNo);
         
         //Animation for event card
         var text = document.getElementById('sec1')
-        this.tl.fromTo(text, 0.5, {x: -500, autoAlpha: 0}, {x: 0, autoAlpha: 1, ease: Power0.easeIn});
+        this.tl.fromTo(text, .7, {x: -400, autoAlpha: 0}, {x: 0, autoAlpha: 1, ease: Power0.easeIn});
     }
     
     render(){
