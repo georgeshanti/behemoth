@@ -9,7 +9,6 @@ export default class Events extends Component{
     constructor(props){
         super(props)
         this.state={
-            index:0,
             cardInfo:[
                 {eventName:"Hello World",eventDescp:"Lorem ipsum dodo eye of modor dod frodo poop poop in toilet..."},
                 {eventName:"Hello World",eventDescp:"Lorem ..."},
