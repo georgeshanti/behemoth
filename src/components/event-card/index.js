@@ -31,7 +31,13 @@ export default class EventCard extends Component{
             backgroundColor: this.colors[this.state.index%4],
           };
     }
+
    
+    componentDidMount(){
+        window.scrollTo(0, 0)
+        console.log(this.props.match.params.eventNo);
+    }
+    
     render(){
         return(
             <div className={styles["container"]} style={this.divstyle}>
