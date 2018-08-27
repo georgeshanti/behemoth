@@ -1,11 +1,14 @@
 
 h1{
-    color:white;
+	color:white;
+	text-align: center;
+	font-family: "Effra W01 Heavy", Arial, sans-serif;
+	font-size: 60px;
+	letter-spacing: 5px;
 }
 
 a:active, a:focus {
 	outline: none;
-	-moz-outline-style: none;
   }
 
 #grid {
