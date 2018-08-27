@@ -41,8 +41,10 @@ export default class EventCard extends Component{
         window.scrollTo(0, 0)
         
         //Animation for event card
-        var text = document.getElementById('sec1')
-        this.tl.fromTo(text, .7, {x: -400, autoAlpha: 0}, {x: 0, autoAlpha: 1, ease: Power0.easeIn});
+        var title = document.getElementById('title')
+        var content=document.getElementById('content')
+        this.tl.fromTo(title, 1, { x:-400 ,autoAlpha: 0}, { x:0, autoAlpha: 1, ease: Power0.easeIn}) 
+        this.tl.fromTo(content, 2, { autoAlpha: 0}, { autoAlpha: 1, ease: Power0.easeIn},'-=1.2')
     }
     
     render(){
@@ -51,9 +53,9 @@ export default class EventCard extends Component{
             <div id='contents-close' className={styles["btn-close"]}><Link to={"/events"}><img  alt='' src={require('../../img/close.png')}/></Link></div>
                <div className={styles["sections"]}>
                 
-                    <div id="sec1" className={styles["section1"]}>
-                    <h1>{this.state.cardInfo[this.state.index].name}</h1>
-                    <p>{this.state.cardInfo[this.state.index].content}</p>
+                    <div  className={styles["section1"]}>
+                    <h1 id="title">{this.state.cardInfo[this.state.index].name}</h1>
+                    <p id="content">{this.state.cardInfo[this.state.index].content}</p>
                     </div>
                     
                     <div className={styles["section2"]}>
