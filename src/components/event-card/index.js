@@ -43,8 +43,8 @@ export default class EventCard extends Component{
         //Animation for event card
         var title = document.getElementById('title')
         var content=document.getElementById('content')
-        this.tl.fromTo(title, 1, { x:-400 ,autoAlpha: 0}, { x:0, autoAlpha: 1, ease: Power0.easeIn}) 
-        this.tl.fromTo(content, 2, { autoAlpha: 0}, { autoAlpha: 1, ease: Power0.easeIn},'-=1.2')
+        this.tl.fromTo(title, .75, { x:-400 ,autoAlpha: 0}, { x:0, autoAlpha: 1, ease: Power0.easeIn}) 
+        this.tl.fromTo(content, 1.5, { autoAlpha: 0}, { autoAlpha: 1, ease: Power0.easeIn},'-=1')
     }
     
     render(){
