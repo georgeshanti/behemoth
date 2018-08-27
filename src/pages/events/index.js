@@ -19,6 +19,8 @@ export default class Events extends Component{
             ]
         }
     }
+
+
     render(){
         var grid1 = []
         var grid2 = []

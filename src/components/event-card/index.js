@@ -27,7 +27,11 @@ export default class EventCard extends Component{
         index:this.props.match.params['eventNo']
         }
     }
-   
+
+    componentDidMount() {
+        window.scrollTo(0, 0)
+    }
+
     render(){
         return(
             <div className={styles["container"]}>
