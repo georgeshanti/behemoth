@@ -24,8 +24,10 @@ export default class Events extends Component{
     render(){
         var grid1 = []
         var grid2 = []
+        var colors=['pink','skyblue','palegreen','goldenrod'] //to change add colors in event cards too
 		for(var i=0 ; i<5 ; i++){
-			var gridItem = ( <Link to={"/events/"+i}><EventGridCard details={this.state.cardInfo[i]} delay={i*100} /></Link>)
+            var gridbg=colors[i%4]
+			var gridItem = ( <Link to={"/events/"+i}><EventGridCard details={this.state.cardInfo[i]} delay={i*100} colors={gridbg} /></Link>)
             if(i%2==0)
                grid1.push(gridItem)
             else
@@ -43,7 +45,6 @@ export default class Events extends Component{
                     {grid2}
                 </div>
             </div>
-            <Route exact path='/events/:event' component={EventCard}/>
         </div>    
         )
     }

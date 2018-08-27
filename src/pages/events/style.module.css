@@ -3,6 +3,10 @@ h1{
     color:white;
 }
 
+a:active, a:focus {
+	outline: none;
+	-moz-outline-style: none;
+  }
 
 #grid {
 	position:absolute;
