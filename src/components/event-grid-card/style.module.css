@@ -1,3 +1,4 @@
+
 .event {
 	position:relative;	
 	cursor:pointer;
@@ -5,14 +6,18 @@
 	outline: none;
 }
 
+.picture img:hover{
+	padding: 20px;
+}
 .picture:hover{
-	box-shadow: -20px -20px skyblue;
-	margin: 20px 0px;
+	margin: 10px;
+	margin-bottom: 25px;
 }
 .picture{
 	height:30vw;
 	width: 35vw;
-    position:relative;
+	position:relative;
+	background-color: goldenrod;
 	background-repeat: repeat-x;
 	background-size: cover;
 	background-position: center bottom;
@@ -48,12 +53,12 @@ h2 {
 	position:relative;
 	z-index:2;
 	font-family:"Effra W01 Heavy", Arial, sans-serif;
-	font-size:45px;
-	font-weight:normal;
+	font-size:50px;
+	font-weight:bolder;
 	color:white;
 	text-transform:uppercase;
 	line-height:48px;
-	letter-spacing:4px;	
+	letter-spacing:1px;	
     margin:0px 0 25px 30px;
 	/*margin-top:-75.8px;*/
 	margin-top: 2px;

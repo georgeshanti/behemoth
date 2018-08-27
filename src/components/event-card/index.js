@@ -26,11 +26,17 @@ export default class EventCard extends Component{
         ],
         index:this.props.match.params['eventNo']
         }
+        this.divstyle= {
+            backgroundColor: this.props.colors,
+          };
     }
    
+    componentDidMount(){
+        console.log(this.props.colors);
+    }
     render(){
         return(
-            <div className={styles["container"]}>
+            <div className={styles["container"]} style={this.divstyle}>
             <div id='contents-close' className={styles["btn-close"]}><Link to={"/events"}><img  alt='' src={require('../../img/close.png')}/></Link></div>
                <div className={styles["sections"]}>
                 
