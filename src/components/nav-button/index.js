@@ -48,12 +48,16 @@ class NavButton extends Component {
         return <FloatingButton to={item.link} style={style} expanded={this.state.expanded} icon={item.symbol} onClick={this.expand(false)} />
       })
 
-      var menuStyle = this.state.expanded?{transform: "translate(-50%, -150px)"}:{transform: "translate(-50%, 0px)"}
+      var menuClass = this.state.expanded?styles["expanded"]:""
       var menuSymbol = this.state.expanded?"fas fa-times":"fas fa-bars"
       
       return (
-        <div style={menuStyle} className={styles.NavButton}>
-          {menuComponents}
+        <div className={styles.NavButton + " " + menuClass}>
+          <div className={styles["menu-items"]}>
+            <div className={styles["menu-overlay"]}></div>
+            <div className={styles["menu-background"]}></div>
+            {menuComponents}
+          </div>
           <Swipeable onSwipedUp={this.expand(true)} onSwipedDown={this.expand(true)}>
             <FloatingButton to="/nav" expanded={this.state.expanded} icon={menuSymbol} onClick={this.expand(true)}/>
           </Swipeable>
