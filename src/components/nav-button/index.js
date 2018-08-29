@@ -6,7 +6,7 @@ import styles from './style.module.scss';
 class NavButton extends Component {
     constructor(props){
       super(props);
-      var radius = 80;
+      var radius = 100;
       this.menu = [
         {symbol: "fas fa-home", link: "/", background: "#9bcc5f", text: "Home"},
         {symbol: "fas fa-user-alt", link: "/user", background: "#578bbb", text: "User"},
@@ -17,7 +17,7 @@ class NavButton extends Component {
       ]
       var size = this.menu.length
       this.menu.forEach((item,i)=>{
-        var angle = ( (i*2*3.14159)/size ) - (3.14159/2)
+        var angle = ( (i*3.14159)/(size) ) - (3.14159)*(1-(1/(2*size))) 
         item.xOffset = radius * Math.cos(angle)
         item.yOffset = radius * Math.sin(angle) 
       })
