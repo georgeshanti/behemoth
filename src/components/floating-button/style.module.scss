@@ -3,9 +3,10 @@
     width:50px;
     background: #2fb454;
     border-style: solid;
-    border-width: 2px;
-    color: white;
-    border-radius: 50%;
+    border-width: 0px;
+    color: #ffffff;
+    border-color: #000000;
+    border-radius: 25px;
     cursor: pointer;
     line-height: 50px;
     font-size: 25px;
@@ -15,13 +16,24 @@
     left: 0px;
     transition-duration: 0.5s;
     outline: none;
-    z-index: 1000;
+
+    /*z-index: 1000;*/
+
+    >img{
+        width: 100%;
+    }
+}
+
+.FloatingButton:hover{
+    >.menu-text{
+        max-width: 200px;
+        padding-right: 25px;
+    }
 }
 
 .active {
     >.FloatingButton{
         background: white;
-        color: #2fb454;
     }
 }
 
@@ -30,4 +42,23 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.icon-holder{
+    width: 50px;
+    height: 50px;
+    position: relative;
+}
+
+.menu-text{
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    padding-left: 50px;
+    border-radius: 25px;
+    max-width: 0px;
+    overflow: hidden;
+    transition-duration: 0.5s;
+    background: inherit;
 }
