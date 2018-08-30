@@ -1,40 +1,30 @@
-import React, { Component } from 'react';
-import { Redirect, Link } from 'react-router-dom';
+import React, {Component} from 'react';
 import styles from './style.module.css';
-import ReactDOM from 'react-dom';
 
-class EventGridCard extends Component{
-    constructor(props){
-        super(props)
-        this.state = {
-            opacity: 0,
-            scale: 0,
-            color: '#'+(Math.random()*0xFFFFFF<<0).toString(16)            
-        }
-    }
 
-    componentDidMount(){
-        var comp = this
-        setTimeout(function(){
-            comp.setState({
-                opacity: 1,
-                scale: 1
-            })
-            }
-        ,this.props.delay);
+export default class EventGridCard extends Component{
+    constructor(props) {
+        super(props);
+        this.divstyle= {
+            backgroundColor: this.props.colors,
+          };
     }
 
     render(){
-        return (
-            <div class={styles['event-grid-item']} style={{ background: this.state.color, opacity: this.state.opacity, transform: "scale(" + this.state.scale + ")"}}>
-                <img class={styles['event-grid-img']} src="http://excelmec.org/static/images/third-eye-photography.png" />
-                <div class={styles['event-grid-overlay']} >
-                    <span class={styles['event-title']}>Lord of Code</span>
-                    <span class={styles['event-category']}>Computer Science</span>
+        return(
+            <div className={styles["event"]}>
+               <div className={styles["picture"]} style={this.divstyle}>
+                   <img src="https://placeimg.com/640/480/tech"/>
                 </div>
+                <h2>{this.props.details.eventName}</h2>
+                <p className={styles["info"]} >
+                
+                      {this.props.details.eventDescp}
+                   
+                </p>
+
             </div>
         )
     }
-}
 
-export default EventGridCard
+}
