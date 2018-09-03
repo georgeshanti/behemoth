@@ -27,7 +27,7 @@ export default class EventCard extends Component{
         ],
         index:this.props.match.params['eventNo']
         }
-        this.colors=['pink','skyblue','palegreen','goldenrod']
+        this.colors=['#48413F','#B29F60','#294E8B','#229DEC', '#5E3D28']
         this.divstyle= {
             backgroundColor: this.colors[this.state.index%4],
         };

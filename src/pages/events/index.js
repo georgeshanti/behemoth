@@ -23,7 +23,7 @@ export default class Events extends Component{
     render(){
         var grid1 = []
         var grid2 = []
-        var colors=['pink','skyblue','palegreen','goldenrod'] //to change add colors in event cards too
+        var colors=['#48413F','#B29F60','#294E8B','#229DEC', '#5E3D28'] //to change add colors in event cards too
 		for(var i=0 ; i<5 ; i++){
             var gridbg=colors[i%4]
 			var gridItem = ( <Link to={"/events/"+i} style={{textDecoration:'none'}}><EventGridCard details={this.state.cardInfo[i]} delay={i*100} colors={gridbg} /></Link>)
