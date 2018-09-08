@@ -9,10 +9,6 @@
 .picture img:hover{
 	padding: 20px;
 }
-.picture:hover{
-	margin: 10px;
-	margin-bottom: 25px;
-}
 .picture{
 	height:30vw;
 	width: 35vw;
@@ -59,7 +55,7 @@ h2 {
 	text-transform:uppercase;
 	line-height:48px;
 	letter-spacing:1px;	
-    margin:2px 0px 0px 30px;
+    margin:30px 0px 0px 30px;
 	/*margin-top:-75.8px;*/
 	-moz-transition: all 0.2s ease-out;
     -o-transition: all 0.2s ease-out;
