@@ -7,7 +7,17 @@
     z-index: 3;
     background-color: skyblue;
     overflow-x: hidden;
-    border:12px solid rgba(255,255,255,0.2);
+   
+}
+
+.container-border {
+    border:12px solid rgba(255, 255, 255, 0.2);
+    position: fixed;
+    z-index: 4;
+    height: 80vh;
+    width: 90vw;
+    opacity: 1;
+    margin: 50px;
 }
 
 h2{
@@ -15,17 +25,24 @@ h2{
 }
 
 .btn-close{
-    position: absolute  ;
-    top:25px;
-    left: 25px;
-    z-index: 1;
+    top:0px;
+    left: 0px;
     cursor: pointer;
-
-    transform:  rotate(-90deg);
-    transition: transform .7s;
+    background-color: rgba(255, 255, 255, 0.2);
+    height: 30px;
+    width: 30px;
 }
 
-.btn-close:hover {
+.btn-close img {
+    margin: 2px;
+    height: 17px;
+    width: 17px;
+    transform:  rotate(-90deg);
+    transition: transform .7s;
+
+}
+
+.btn-close img:hover {
     transform:  rotate(90deg);
     transition: transform .7s;
 }
@@ -58,13 +75,14 @@ h2{
 .section2{
     float: right;
     min-height: 100vh;
-    width: 50vw;
+    width: 50vw; 
 }
 .section2 img{
     height: auto;
-    width: 60vw;
+    width: 40vw;
     background-size: contain;
     margin-top: -5px;
+    z-index: 5;
 }
 
 @media only screen and (max-width:1100px){
@@ -79,7 +97,15 @@ h2{
     }
     .section1 h1{
        font-size: 50px;
-    }   
+    }  
+    
+    .container-border {
+        border: none;
+    }
+
+    .btn-close {
+        background-color: transparent;
+    }
 
 }
 

@@ -49,8 +49,11 @@ export default class EventCard extends Component{
     
     render(){
         return(
+            <div>
+            <div className={styles["container-border"]}>
+                <div id='contents-close' className={styles["btn-close"]}><Link to={"/events"}><img  alt='' src={require('../../img/close.png')}/></Link></div>
+            </div>
             <div className={styles["container"]} style={this.divstyle}>
-            <div id='contents-close' className={styles["btn-close"]}><Link to={"/events"}><img  alt='' src={require('../../img/close.png')}/></Link></div>
                <div className={styles["sections"]}>
                 
                     <div  className={styles["section1"]}>
@@ -67,6 +70,7 @@ export default class EventCard extends Component{
                         <img src="https://placeimg.com/640/480/any"/>
                     </div>
                </div>
+            </div>
             </div>
         )
     }
