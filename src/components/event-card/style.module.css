@@ -101,12 +101,13 @@ h2{
     
     .container-border {
         border: none;
+        position: absolute;
     }
 
     .btn-close {
         background-color: transparent;
     }
-
+    
 }
 
 @media only screen and (max-width:1000px){
@@ -143,6 +144,15 @@ h2{
         width: 80vw;
         background-size: contain;
         padding:0vh 10vw 5vh 10vw;
+    }
+
+    .btn-close img {
+        transform: none;
+        transition: none;
+    }
+
+    .btn-close img:hover {
+        transition: none;
     }
  
 

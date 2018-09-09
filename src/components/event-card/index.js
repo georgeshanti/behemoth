@@ -60,7 +60,6 @@ export default class EventCard extends Component{
                     <h1 id="title">{this.state.cardInfo[this.state.index].name}</h1>
                     <p id="content">{this.state.cardInfo[this.state.index].content}</p>
                     </div>
-                    
                     <div className={styles["section2"]}>
                         <img src="https://placeimg.com/640/480/any"/>
                         <img src="https://placeimg.com/640/480/any"/>
