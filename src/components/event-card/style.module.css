@@ -108,6 +108,14 @@ h2{
         background-color: transparent;
     }
     
+    .btn-close img {
+        transform: none;
+        transition: none;
+    }
+
+    .btn-close img:hover {
+        transition: none;
+    }
 }
 
 @media only screen and (max-width:1000px){
@@ -145,16 +153,6 @@ h2{
         background-size: contain;
         padding:0vh 10vw 5vh 10vw;
     }
-
-    .btn-close img {
-        transform: none;
-        transition: none;
-    }
-
-    .btn-close img:hover {
-        transition: none;
-    }
- 
 
 }
 @media only screen and (max-width:350px){

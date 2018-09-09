@@ -19,6 +19,9 @@ export default class Events extends Component{
         }
     }
 
+    componentDidMount(){
+        window.scrollTo(0, 0)
+    }
 
     render(){
         var grid1 = []
