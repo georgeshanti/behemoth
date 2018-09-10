@@ -111,6 +111,7 @@ h2{
     .btn-close img {
         transform: none;
         transition: none;
+        margin: 25px;
     }
 
     .btn-close img:hover {
@@ -152,6 +153,10 @@ h2{
         width: 80vw;
         background-size: contain;
         padding:0vh 10vw 5vh 10vw;
+    }
+    .container-border {
+        border:none;
+        margin: 0px;
     }
 
 }
