@@ -36,18 +36,21 @@ export default class Events extends Component{
                grid2.push(gridItem)   
 		}
         return(
-        <div>
-            <header><h1>Events</h1></header>
+            <div>
+                <div className={styles["white-bg"]}></div>
+                <div>
+                    <header><h1>Events</h1></header>
 
-            <div id="grid">
-                <div className={styles["left"]}>
-                    {grid1}
-                </div>
-                <div className={styles["right"]}>
-                    {grid2}
-                </div>
+                    <div id="grid">
+                        <div className={styles["left"]}>
+                            {grid1}
+                        </div>
+                        <div className={styles["right"]}>
+                            {grid2}
+                        </div>
+                    </div>
+                </div>    
             </div>
-        </div>    
         )
     }
 }

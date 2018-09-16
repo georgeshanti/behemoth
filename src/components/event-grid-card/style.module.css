@@ -47,11 +47,11 @@
 
 h2 {
 	position:relative;
-	z-index:2;
+	z-index:0;
 	font-family:"Effra W01 Heavy", Arial, sans-serif;
 	font-size:50px;
 	font-weight:bolder;
-	color:white;
+	color:black !important;
 	text-transform:uppercase;
 	line-height:48px;
 	letter-spacing:1px;	
@@ -78,7 +78,7 @@ h2 {
 	font-size:17px;	
 	letter-spacing:2px;
 	line-height:21px;
-	color:white;
+	color:black;
 	/*text-transform:uppercase;*/
 }
 
