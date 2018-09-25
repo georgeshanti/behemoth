@@ -4,6 +4,10 @@
 body{
     background: #444444;
 }
+p{
+    margin-top:0px;
+    margin-bottom:0px;
+}
 .card {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
@@ -24,8 +28,14 @@ body{
 }
 
 .card-content{
-    padding: 5vw;
+    padding: 2vw;
+    padding-bottom:2vw;
 
+}
+.competition-heading{
+    display:grid;
+    grid-template-columns: 70% 30%;
+    padding:2vw;
 }
 
 .card:hover {
@@ -45,8 +55,8 @@ body{
     top: 0;
     white-space: pre-wrap;
     vertical-align: top;
-    padding-left: 10vw;
-    padding-right: 10vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
     width: 100%;
 }
 
@@ -190,6 +200,7 @@ body{
     
     .purple-font{
         
+        padding-top:0px;
         letter-spacing: .05em;
         font-size: 2rem;
         -webkit-margin-before: 0.33em;
@@ -199,11 +210,21 @@ body{
     .white-font{
         font-size: 1rem;
         letter-spacing: .05em;
+        margin-top:1em;
     }
     .card-content{
-        margin-top:6vh;
+        margin-top:7vh;
+        padding-bottom:1vw;
     }
 
+    .competition-heading{
+        display:block;
+        padding:2vw;
+    }
+    .tab-content{
+        padding-left: 6vw;
+        padding-right: 4vw;
+    }
     /* navbar mobile*/
     /*.main-nav-block{
         height:9vh;
@@ -215,8 +236,13 @@ body{
         font-size:15px;
     }
     .mini-grid ul {
-        grid-template-columns: auto auto;
+        grid-template-columns: auto;
         margin-left: -40px;
+     }
+     .mini-grid-item{
+        grid-template-columns: 50% 50%;
+        display:grid;
+        text-align:left;
      }
     /* end of navbar*/
 }

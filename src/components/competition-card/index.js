@@ -81,9 +81,10 @@ class CompetitionCard extends Component {
                     <div ref="test" className={styles["card"]}>
                         <div id='contents-close' className={styles["btn-close"]} onClick={this.close.bind(this)}><img  alt='' src={require('../../img/close.png')}/></div>
                             <div className={styles["card-content"]}>
-                                <div className={styles["heading-font"]}>Heading Event</div>
-                                <div className={styles["purple-font"]}>Prize Pool - 25k</div>
-                                <br/><br/>
+                                <div className={styles["competition-heading"]}>
+                                    <div className={styles["heading-font"]}>Heading Event</div>
+                                    <div className={styles["purple-font"]}>Prize Pool - 25k</div>
+                                </div>
                                 <div className={styles["main-nav-block"]} >
                                     <ul>
                                         <li className={styles["highlight"]} style={{transform: "translate(" + scrollDistance + "%"}}>
@@ -135,7 +136,7 @@ class CompetitionCard extends Component {
                                     The teams that gets the desired output in the shortest time stand a chance to win the prize money.</p><br/>
                                 </div> 
                                 <div id="rules-content" className={styles["white-font"] + " " + styles["tab-content"]}>
-                                    <strong>Team Formation:</strong>
+                                    <strong>Team Formation:</strong><br/><br/>
                                     <p>1. A team can have a maximum of 3 members</p><br/>
                                     <p>2. A participant cannot be part of more than one team .</p><br/>
                                     <p>3. It is not necessary that the participants forming a team should be from the same college</p><br/>
