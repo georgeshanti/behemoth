@@ -35,7 +35,7 @@ p{
 .competition-heading{
     display:grid;
     grid-template-columns: 70% 30%;
-    padding:2vw;
+    padding:2vh;
 }
 
 .card:hover {
@@ -188,12 +188,12 @@ p{
     }
     
     .card{
-        height: 85vh;
-        width: 85vw;
+        height: 100vh;
+        width: 100vw;
     }
 
     .heading-font{
-        font-size: 2.5em;
+        font-size: 2.2em;
         line-height: 1.04167em;
         font-weight: 150;
     }
@@ -202,7 +202,7 @@ p{
         
         padding-top:0px;
         letter-spacing: .05em;
-        font-size: 2rem;
+        font-size: 1.9rem;
         -webkit-margin-before: 0.33em;
         -webkit-margin-after: 0.33em;
     }
@@ -213,13 +213,13 @@ p{
         margin-top:1em;
     }
     .card-content{
-        margin-top:7vh;
         padding-bottom:1vw;
     }
 
     .competition-heading{
         display:block;
-        padding:2vw;
+        padding:2vh;
+        margin-left:15%;
     }
     .tab-content{
         padding-left: 6vw;
@@ -227,11 +227,14 @@ p{
     }
     /* navbar mobile*/
     /*.main-nav-block{
-        height:9vh;
-    }
-    .main-nav-block ul li.highlight{
-        height: 9vh;
+        height:vh;
     }*/
+    .main-nav-block ul li.highlight{
+        height: 5.8vh;
+    }
+    .main-nav-block{
+        height:5.8vh;
+    }
     .main-nav-block ul li {
         font-size:15px;
     }
@@ -252,8 +255,8 @@ p{
     }
     
     .card{
-        height: 85vh;
-        width: 85vw;
+        height: 100vh;
+        width: 100vw;
     }
 
     .heading-font{
@@ -274,10 +277,16 @@ p{
     }
 
     /* navbar mobile*/
+    .main-nav-block{
+        height:7vh;
+    }
     
     .main-nav-block ul li {
         
         font-size:12.9px;
+    }
+    .main-nav-block ul li.highlight{
+        height: 7vh;
     }
     /* end of navbar*/
   }
