@@ -4,6 +4,10 @@
 body{
     background: #444444;
 }
+p{
+    margin-top:0px;
+    margin-bottom:0px;
+}
 .card {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
@@ -24,8 +28,14 @@ body{
 }
 
 .card-content{
-    padding: 5vw;
+    padding: 2vw;
+    padding-bottom:2vw;
 
+}
+.competition-heading{
+    display:grid;
+    grid-template-columns: 70% 30%;
+    padding:2vh;
 }
 
 .card:hover {
@@ -45,8 +55,8 @@ body{
     top: 0;
     white-space: pre-wrap;
     vertical-align: top;
-    padding-left: 10vw;
-    padding-right: 10vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
     width: 100%;
 }
 
@@ -86,6 +96,7 @@ body{
     background: rgba(0,0,0,0.3);
     position: relative;
     border-radius: 50px;
+    height:7vh;
 }
 .main-nav-block ul {
     overflow:hidden;
@@ -114,7 +125,7 @@ body{
     position: absolute;
     background: #2fb454;
     /* background: #8367d8; */
-    height: 56px;
+    height: 7vh;
     z-index: -1;
     border-radius: 50px;
 }
@@ -152,7 +163,8 @@ body{
 }
 
 .event-bg{
-	position: absolute;
+	position:fixed;
+    top:0;
 	width: 100%;
     height: 100%;
     background: rgba(3,20,38,0.9);
@@ -176,46 +188,75 @@ body{
     }
     
     .card{
-        height: 85vh;
-        width: 85vw;
+        height: 100vh;
+        width: 100vw;
     }
 
     .heading-font{
-        font-size: 2.5em;
+        font-size: 2.2em;
         line-height: 1.04167em;
         font-weight: 150;
     }
     
     .purple-font{
         
+        padding-top:0px;
         letter-spacing: .05em;
-        font-size: 2rem;
+        font-size: 1.9rem;
+        -webkit-margin-before: 0.33em;
+        -webkit-margin-after: 0.33em;
     }
     
     .white-font{
         font-size: 1rem;
         letter-spacing: .05em;
+        margin-top:1em;
+    }
+    .card-content{
+        padding-bottom:1vw;
     }
 
+    .competition-heading{
+        display:block;
+        padding:2vh;
+        margin-left:15%;
+    }
+    .tab-content{
+        padding-left: 6vw;
+        padding-right: 4vw;
+    }
     /* navbar mobile*/
-    
+    /*.main-nav-block{
+        height:vh;
+    }*/
+    .main-nav-block ul li.highlight{
+        height: 5.8vh;
+    }
+    .main-nav-block{
+        height:5.8vh;
+    }
     .main-nav-block ul li {
         font-size:15px;
     }
     .mini-grid ul {
-        grid-template-columns: auto auto;
+        grid-template-columns: auto;
         margin-left: -40px;
      }
+     .mini-grid-item{
+        grid-template-columns: 50% 50%;
+        display:grid;
+        text-align:left;
+     }
     /* end of navbar*/
-  }
-  @media screen and (max-width: 320px) {
+}
+@media screen and (max-width: 320px) {
 	.events--expanded {
 		top: 11vh;
     }
     
     .card{
-        height: 85vh;
-        width: 85vw;
+        height: 100vh;
+        width: 100vw;
     }
 
     .heading-font{
@@ -236,10 +277,16 @@ body{
     }
 
     /* navbar mobile*/
+    .main-nav-block{
+        height:7vh;
+    }
     
     .main-nav-block ul li {
         
         font-size:12.9px;
+    }
+    .main-nav-block ul li.highlight{
+        height: 7vh;
     }
     /* end of navbar*/
   }
