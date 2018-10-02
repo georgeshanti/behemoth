@@ -1,0 +1,34 @@
+#input {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  width: 8em;
+  max-width: 80%;
+  background: none;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #fff;
+  color: #fff;
+  font-size: 3em;
+  text-align: center;
+  z-index: 999;
+  opacity: .25;
+  transform: translateX(-50%);
+  transition: opacity .3s;
+  
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+}
+
+body {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}

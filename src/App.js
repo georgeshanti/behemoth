@@ -17,6 +17,12 @@ const Competitions = asyncComponent(CompetitionsImport)
 const ErrorPage = asyncComponent(ErrorImport)
 const EventCard = asyncComponent(EventCardImport)
 
+const ComingSoon = ()=>{
+  return(
+    <iframe style={{width: "100vw", height: "100vh", border: "none", position: "fixed"}} src="http://batmannair.ml/electronic-excel-coming-soon/" ></iframe>
+  )
+}
+
 class App extends Component {
   render() {
     return (
@@ -30,10 +36,10 @@ class App extends Component {
         </div>
         <div className="content">
           <Switch>
-            <Redirect exact from="/" to="/competitions" />
+            <Route path="/" exact component={ComingSoon} />
             {/* <Route path="/" exact component={Home} /> */}
-            {/* <Route exact path='/events' component={Events} /> */}
-            {/* <Route path='/events/:eventNo' component={EventCard} /> */}
+            {/* <Route exact path='/events' component={Events} />
+            <Route path='/events/:eventNo' component={EventCard} /> */}
             <Route path='/competitions' component={Competitions} />
             {/* <Route path="/talks" render = {()=> (<h1>Talks</h1>)} /> */}
             {/* <Route path="/workshops" render = {()=> (<h1>Workshops</h1>)} /> */}
