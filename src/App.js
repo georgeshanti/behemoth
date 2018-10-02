@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Route, Switch } from 'react-router-dom'
+import { Route, Switch, Redirect } from 'react-router-dom'
 import './App.css';
 
 import NavButton from 'components/nav-button'
@@ -30,13 +30,14 @@ class App extends Component {
         </div>
         <div className="content">
           <Switch>
-            <Route path="/" exact component={Home} />
-            <Route exact path='/events' component={Events} />
-            <Route path='/events/:eventNo' component={EventCard} />
+            <Redirect exact from="/" to="/competitions" />
+            {/* <Route path="/" exact component={Home} /> */}
+            {/* <Route exact path='/events' component={Events} /> */}
+            {/* <Route path='/events/:eventNo' component={EventCard} /> */}
             <Route path='/competitions' component={Competitions} />
-            <Route path="/talks" render = {()=> (<h1>Talks</h1>)} />
-            <Route path="/workshops" render = {()=> (<h1>Workshops</h1>)} />
-            <Route path="/schedule" render = {()=> (<h1>Schedule</h1>)} />
+            {/* <Route path="/talks" render = {()=> (<h1>Talks</h1>)} /> */}
+            {/* <Route path="/workshops" render = {()=> (<h1>Workshops</h1>)} /> */}
+            {/* <Route path="/schedule" render = {()=> (<h1>Schedule</h1>)} /> */}
             <Route component={ErrorPage} />
           </Switch>
         </div>
