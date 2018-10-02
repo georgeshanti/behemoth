@@ -19,7 +19,7 @@ const EventCard = asyncComponent(EventCardImport)
 
 const ComingSoon = ()=>{
   return(
-    <iframe style={{width: "100vw", height: "100vh", border: "none", position: "fixed"}} src="http://batmannair.ml/electronic-excel-coming-soon/" ></iframe>
+    <iframe style={{zIndex: 3, width: "100vw", height: "100vh", border: "none", position: "fixed"}} src="http://batmannair.ml/electronic-excel-coming-soon/" ></iframe>
   )
 }
 
