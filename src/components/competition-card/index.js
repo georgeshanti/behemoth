@@ -82,8 +82,13 @@ class CompetitionCard extends Component {
                         <div id='contents-close' className={styles["btn-close"]} onClick={this.close.bind(this)}><img  alt='' src={require('../../img/close.png')}/></div>
                             <div className={styles["card-content"]}>
                                 <div className={styles["competition-heading"]}>
-                                    <div className={styles["heading-font"]}>Heading Event</div>
-                                    <div className={styles["purple-font"]}>Prize Pool - 25k</div>
+                                    <div className={styles["img-container"]}>
+                                        <img class={styles["competition-img"]} src="http://excelmec.org/static/images/third-eye-photography.png" />
+                                    </div>
+                                    <div className={styles["heading-text-container"]}>
+                                        <div className={styles["heading-font"]}>Heading Event</div>
+                                        <div className={styles["purple-font"]}>Prize Pool - 25k</div>
+                                    </div>
                                 </div>
                                 <div className={styles["main-nav-block"]} >
                                     <ul>
@@ -142,10 +147,14 @@ class CompetitionCard extends Component {
                                     <p>3. It is not necessary that the participants forming a team should be from the same college</p><br/>
                                     <p>4. There is no restriction in the number of teams from the same college .</p><br/>
                                 </div>
-                                <div id="contact-content" className={styles["white-font"] + " " + styles["tab-content"]}>
-                                    <p>
-                                        To make CSS modules work with Webpack you only have to include the modules mentioned above and add the following loader to your webpack.config.js file:
-                                    </p>
+                                <div id={styles["contact-content"]} className={styles["white-font"] + " " + styles["tab-content"]}>
+                                    <p><b>Tinu Mathew</b></p>
+                                    <p>Event Coordinator</p>
+                                    <p>+91 9447765744</p>
+                                    <br></br>
+                                    <p><b>Atul Krishnan</b></p>
+                                    <p>Event Coordinator</p>
+                                    <p>+91 9447765744</p>
                                 </div>
                             </div>
                         </div>

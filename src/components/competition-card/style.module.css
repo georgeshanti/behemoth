@@ -34,8 +34,13 @@ p{
 }
 .competition-heading{
     display:grid;
-    grid-template-columns: 70% 30%;
+    grid-template-columns: 20% 80%;
     padding:2vh;
+    margin-bottom: 10px;
+}
+
+.competition-img{
+    width: 100%;
 }
 
 .card:hover {
@@ -64,11 +69,14 @@ p{
     transition-duration: 0.5s;
 }
 
+.heading-text-container{
+    padding: 30px;
+}
 
 .heading-font{
     color: rgba(255, 255, 255,0.8);
     font-size: 3em;
-	font-family: Lato;
+	font-family: Montserrat;
 	line-height: 1.04167em;
 	font-weight: 200;
 }
@@ -79,6 +87,7 @@ p{
     letter-spacing: .05em;
     font-family: Lato,Helvetica,Arial,sans-serif;
     font-size: 2rem;
+    text-align: left;
 }
 
 .white-font{
@@ -96,7 +105,8 @@ p{
     background: rgba(0,0,0,0.3);
     position: relative;
     border-radius: 50px;
-    height:7vh;
+    height:6vh;
+    font-family: Montserrat;
 }
 .main-nav-block ul {
     overflow:hidden;
@@ -125,7 +135,7 @@ p{
     position: absolute;
     background: #2fb454;
     /* background: #8367d8; */
-    height: 7vh;
+    height: 6vh;
     z-index: -1;
     border-radius: 50px;
 }
@@ -149,6 +159,18 @@ p{
 .mini-grid-item {
    text-align: center;
    margin-top: 0px;
+}
+
+#contact-content p{
+    font-size: 20px;
+}
+
+#contact-content b{
+    font-size: 25px;
+}
+
+.mini-grid-item h4{
+    text-align: center;
 }
 
 .events--expanded {
@@ -205,6 +227,7 @@ p{
         font-size: 1.9rem;
         -webkit-margin-before: 0.33em;
         -webkit-margin-after: 0.33em;
+        text-align: left;
     }
     
     .white-font{
