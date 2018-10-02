@@ -25,6 +25,13 @@ a{
 	padding: 50px 100px;
 }
 
+.title{
+	color:white;
+	font-family: 'Montserrat';
+	text-align: center;
+	font-size: 40px;
+}
+
 .events {
 	background:whitesmoke;
 	background-image: url('../../img/tic-tac-toe.png');
@@ -103,6 +110,11 @@ a{
 }
 
 @media screen and (max-width: 600px){
+
+    .title{
+        font-size: 25px;
+	}
+	
 	.events--expanded {
 		top: 8.45vh;
 		left: 0vw;

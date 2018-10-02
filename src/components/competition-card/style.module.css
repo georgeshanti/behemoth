@@ -62,6 +62,7 @@ p{
     vertical-align: top;
     padding-left: 5vw;
     padding-right: 5vw;
+    padding-bottom: 10vh;
     width: 100%;
 }
 
@@ -161,12 +162,19 @@ p{
    margin-top: 0px;
 }
 
+#contact-content > div{
+    margin-top: 50px;
+    width: 49%;
+    text-align: center;
+    display: inline-block;
+}
+
 #contact-content p{
     font-size: 20px;
 }
 
 #contact-content b{
-    font-size: 25px;
+    font-size: 30px;
 }
 
 .mini-grid-item h4{
@@ -204,6 +212,15 @@ p{
 }
 
 @media screen and (max-width: 600px) {
+
+    #contact-content > div{
+        width: 100%;
+    }
+    
+    .heading-text-container{
+        padding: 30px 10px;
+    }
+
 	.events--expanded {
 		top: 8.45vh;
 		left: 0vw;
@@ -215,7 +232,7 @@ p{
     }
 
     .heading-font{
-        font-size: 2.2em;
+        font-size: 1.8em;
         line-height: 1.04167em;
         font-weight: 150;
     }
@@ -224,7 +241,7 @@ p{
         
         padding-top:0px;
         letter-spacing: .05em;
-        font-size: 1.9rem;
+        font-size: 1.2rem;
         -webkit-margin-before: 0.33em;
         -webkit-margin-after: 0.33em;
         text-align: left;
@@ -240,9 +257,12 @@ p{
     }
 
     .competition-heading{
-        display:block;
+        display:grid;
+        grid-template-columns: 35% 65%;
         padding:2vh;
-        margin-left:15%;
+    }
+    .competition-heading .img-container{
+        padding-top:30px;
     }
     .tab-content{
         padding-left: 6vw;
@@ -253,13 +273,14 @@ p{
         height:vh;
     }*/
     .main-nav-block ul li.highlight{
-        height: 5.8vh;
+        height: 5vh;
     }
     .main-nav-block{
-        height:5.8vh;
+        height: 5vh;
     }
     .main-nav-block ul li {
         font-size:15px;
+        padding-top: 1vh;
     }
     .mini-grid ul {
         grid-template-columns: auto;
@@ -308,6 +329,11 @@ p{
         
         font-size:12.9px;
     }
+
+    .competition-heading{
+        display: grid;
+    }
+
     .main-nav-block ul li.highlight{
         height: 7vh;
     }

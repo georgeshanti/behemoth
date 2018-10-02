@@ -27,10 +27,10 @@ class CompetitionGridCard extends Component{
     render(){
         return (
             <div class={styles['event-grid-item']} style={{ background: this.state.color, opacity: this.state.opacity, transform: "scale(" + this.state.scale + ")"}}>
-                <img class={styles['event-grid-img']} src="http://excelmec.org/static/images/third-eye-photography.png" />
+                <img class={styles['event-grid-img']} src={this.props.details.img} />
                 <div class={styles['event-grid-overlay']} >
-                    <span class={styles['event-title']}>Lord of Code</span>
-                    <span class={styles['event-category']}>Computer Science</span>
+                    <span class={styles['event-title']}>{this.props.details.name}</span>
+                    <span class={styles['event-category']}>{this.props.details.category}</span>
                 </div>
             </div>
         )

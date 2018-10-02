@@ -29,107 +29,21 @@ export default class Events extends Component {
 		this.state = {
 			currentOption:["All Departments","All Categories"],  //options for filter
 			index: 0,
-			cardInfo: [
-				{   department:"Computer Science",
-				    category:"Online",
-					about: {
-						content: "A million things can happen in a moment. From myriad emotions to familiar scents, places and it's people to memories and journeys, a moment is never enough. Photography is the art of weaving a million stories from a single moment. It's never just about what is seen, it's always about how it is seen and experienced. For those who believe that immortality is just a click away, Excel 2017 brings you 'The Third Eye Photography Contest' in the memory of Vineeth Marar. Become a storyteller, capture defining moments and share your experience through images. Ignite passions, initiate thought and inspire action through the power of the lens.",
-						date:"7 july",
-						time:"10:30-11:30",
-						venue:"no where?"
-						},
-					format: {
-						prelims:"MCQ round of 30 questions for 30 minutes. Top 8 teams will be Shortlisting to the final round. Correct answer will get 2 marks each. Wrong answers will have a negative mark of 1 marks.",
-					    final:"Final round comprises of 3 questions. The team members must decide which order they wish to follow before the final round question has been provided, and will not be allowed to change this order"
-						},
-					rules: "anything ",
-					contact: "lorem"
-				},
-				{   department:"Electronics",
-				    category:"Offline",
-					about: {
-						content: "A million things can happen in a moment. From myriad emotions to familiar scents, places and it's people to memories and journeys, a moment is never enough. Photography is the art of weaving a million stories from a single moment. It's never just about what is seen, it's always about how it is seen and experienced. For those who believe that immortality is just a click away, Excel 2017 brings you 'The Third Eye Photography Contest' in the memory of Vineeth Marar. Become a storyteller, capture defining moments and share your experience through images. Ignite passions, initiate thought and inspire action through the power of the lens.",
-						date:"7 july",
-						time:"10:30-11:30",
-						venue:"no where?"
-						},
-					format: {
-						prelims:"MCQ round of 30 questions for 30 minutes. Top 8 teams will be Shortlisting to the final round. Correct answer will get 2 marks each. Wrong answers will have a negative mark of 1 marks.",
-					    final:"Final round comprises of 3 questions. The team members must decide which order they wish to follow before the final round question has been provided, and will not be allowed to change this order"
-						},
-					rules: "anything ",
-					contact: "lorem"
-				},
-				{   department:"Robotics",
-				    category:"Online",
-					about: {
-						content: "A million things can happen in a moment. From myriad emotions to familiar scents, places and it's people to memories and journeys, a moment is never enough. Photography is the art of weaving a million stories from a single moment. It's never just about what is seen, it's always about how it is seen and experienced. For those who believe that immortality is just a click away, Excel 2017 brings you 'The Third Eye Photography Contest' in the memory of Vineeth Marar. Become a storyteller, capture defining moments and share your experience through images. Ignite passions, initiate thought and inspire action through the power of the lens.",
-						date:"7 july",
-						time:"10:30-11:30",
-						venue:"no where?"
-						},
-					format: {
-						prelims:"MCQ round of 30 questions for 30 minutes. Top 8 teams will be Shortlisting to the final round. Correct answer will get 2 marks each. Wrong answers will have a negative mark of 1 marks.",
-					    final:"Final round comprises of 3 questions. The team members must decide which order they wish to follow before the final round question has been provided, and will not be allowed to change this order"
-						},
-					rules: "anything ",
-					contact: "lorem"
-				},
-				{   department:"Non-tech",
-				    category:"Offline",
-					about: {
-						content: "A million things can happen in a moment. From myriad emotions to familiar scents, places and it's people to memories and journeys, a moment is never enough. Photography is the art of weaving a million stories from a single moment. It's never just about what is seen, it's always about how it is seen and experienced. For those who believe that immortality is just a click away, Excel 2017 brings you 'The Third Eye Photography Contest' in the memory of Vineeth Marar. Become a storyteller, capture defining moments and share your experience through images. Ignite passions, initiate thought and inspire action through the power of the lens.",
-						date:"7 july",
-						time:"10:30-11:30",
-						venue:"no where?"
-						},
-					format: {
-						prelims:"MCQ round of 30 questions for 30 minutes. Top 8 teams will be Shortlisting to the final round. Correct answer will get 2 marks each. Wrong answers will have a negative mark of 1 marks.",
-					    final:"Final round comprises of 3 questions. The team members must decide which order they wish to follow before the final round question has been provided, and will not be allowed to change this order"
-						},
-					rules: "anything ",
-					contact: "lorem"
-				},
-				{   department:"Computer Science",
-				    category:"Online",
-					about: {
-						content: "A million things can happen in a moment. From myriad emotions to familiar scents, places and it's people to memories and journeys, a moment is never enough. Photography is the art of weaving a million stories from a single moment. It's never just about what is seen, it's always about how it is seen and experienced. For those who believe that immortality is just a click away, Excel 2017 brings you 'The Third Eye Photography Contest' in the memory of Vineeth Marar. Become a storyteller, capture defining moments and share your experience through images. Ignite passions, initiate thought and inspire action through the power of the lens.",
-						date:"7 july",
-						time:"10:30-11:30",
-						venue:"no where?"
-						},
-					format: {
-						prelims:"MCQ round of 30 questions for 30 minutes. Top 8 teams will be Shortlisting to the final round. Correct answer will get 2 marks each. Wrong answers will have a negative mark of 1 marks.",
-					    final:"Final round comprises of 3 questions. The team members must decide which order they wish to follow before the final round question has been provided, and will not be allowed to change this order"
-						},
-					rules: "anything ",
-					contact: "lorem"
-				},
-				{  department:"Computer Science",
-				   category:"Offline",
-					about: {
-						content: "A million things can happen in a moment. From myriad emotions to familiar scents, places and it's people to memories and journeys, a moment is never enough. Photography is the art of weaving a million stories from a single moment. It's never just about what is seen, it's always about how it is seen and experienced. For those who believe that immortality is just a click away, Excel 2017 brings you 'The Third Eye Photography Contest' in the memory of Vineeth Marar. Become a storyteller, capture defining moments and share your experience through images. Ignite passions, initiate thought and inspire action through the power of the lens.",
-						date:"7 july",
-						time:"10:30-11:30",
-						venue:"no where?"
-						},
-					format: {
-						prelims:"MCQ round of 30 questions for 30 minutes. Top 8 teams will be Shortlisting to the final round. Correct answer will get 2 marks each. Wrong answers will have a negative mark of 1 marks.",
-					    final:"Final round comprises of 3 questions. The team members must decide which order they wish to follow before the final round question has been provided, and will not be allowed to change this order"
-						},
-					rules: "anything ",
-					contact: "lorem"
-				},
-			]
+			cardInfo: {}
 		};
 
 	}
 
     componentWillMount(){
+		var comp = this;
+		fetch("http://cms.excelmec.org:8080/competition/")
+			.then(response => response.json())
+			.then((data) => {
+				comp.setState({cardInfo: data})
+			})
 		this.setState({items:this.state.initialItem})
 	}
 
-	
 
 	//assigning current options
 	filterList(item,index){  //index 0 dept ,1 category
@@ -173,18 +87,19 @@ export default class Events extends Component {
 	}
 
 	render() {
-		console.log(this.listContains(0))
+		console.log(this.state.cardInfo)
 		var closeEvent = this.closeEvent
 		var index = this.state.index
-		var cardInfo = this.state.cardInfo[this.state.index]
+		var cards = this.state.cardInfo
 		var grid = []
-		for(var i=0 ; i<12 ; i++){
-			var gridItem = ( <Link to={"/competitions/"+i}><CompetitionGridCard delay={i*100} /></Link>)
+		for(var i in cards){
+			var gridItem = ( <Link to={"/competitions/"+cards[i].codename}><CompetitionGridCard delay={i*100} details={cards[i]}/></Link>)
 			grid.push(gridItem)
 		}
 		
 		return(
 			<div className={styles["container"]}>
+				<h1 className={styles['title']}>COMPETITIONS</h1>
 			    {/* <div className={styles["dropdown-wrapper"]}>
 					<div className="font1">Competitions</div>
 					<Filter initialItems={this.initialDept} id={0} filterList={this.filterList} />
@@ -193,7 +108,7 @@ export default class Events extends Component {
 				<div id='eventsContainer' className={styles["events-grid"]}>
 					{grid}
 				</div>
-				<Route path='/competitions/:event/:section?' component={CompetitionCard}/>
+				<Route path='/competitions/:competition/:section?' component={CompetitionCard}/>
 			</div>
 		);
 	}

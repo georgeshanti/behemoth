@@ -13,20 +13,15 @@ class CompetitionCard extends Component {
             tabIndex: index,
             mounted: true,
             eventContent: {
-                department:"Computer Science",
-                category:"Online",
-                about: {
-                    content: "A million things can happen in a moment. From myriad emotions to familiar scents, places and it's people to memories and journeys, a moment is never enough. Photography is the art of weaving a million stories from a single moment. It's never just about what is seen, it's always about how it is seen and experienced. For those who believe that immortality is just a click away, Excel 2017 brings you 'The Third Eye Photography Contest' in the memory of Vineeth Marar. Become a storyteller, capture defining moments and share your experience through images. Ignite passions, initiate thought and inspire action through the power of the lens.",
-                    date:"7 july",
-                    time:"10:30-11:30",
-                    venue:"no where?"
-                    },
-                format: {
-                    prelims:"MCQ round of 30 questions for 30 minutes. Top 8 teams will be Shortlisting to the final round. Correct answer will get 2 marks each. Wrong answers will have a negative mark of 1 marks.",
-                    final:"Final round comprises of 3 questions. The team members must decide which order they wish to follow before the final round question has been provided, and will not be allowed to change this order"
-                    },
-                rules: "anything ",
-                contact: "lorem"
+                name:"Loading...",
+                category:"",
+                about: "",
+                date:"--",
+                time:"--",
+                venue:"--",
+                format: "",
+                rules: "",
+                contact: ""
             }
         }
         this.close = this.close.bind(this)
@@ -43,6 +38,25 @@ class CompetitionCard extends Component {
         ,this.props.delay);
     }
 
+    componentWillMount(){
+        var comp = this;
+		fetch("http://cms.excelmec.org:8080/competition/")
+        .then(response => response.json())
+        .then((data) => {
+            for(var i in data){
+                console.log(data[i].codename + " " + this.props.match.params['competition'])
+                if(data[i].codename == this.props.match.params['competition']){
+                    console.log("match")
+                    fetch("http://cms.excelmec.org:8080/competition/"+data[i].id)
+                    .then(response => response.json())
+                    .then((data) => {
+                        comp.setState({eventContent: data})
+                    })
+                }
+            }
+        })
+    }
+
     close(){
         this.setState({
             opacity: 0
@@ -56,6 +70,7 @@ class CompetitionCard extends Component {
     }
 
     render() {
+        var content = this.state.eventContent
         var closeEvent = null;
         var index = 0;
         switch(this.props.match.params['section']){
@@ -83,11 +98,11 @@ class CompetitionCard extends Component {
                             <div className={styles["card-content"]}>
                                 <div className={styles["competition-heading"]}>
                                     <div className={styles["img-container"]}>
-                                        <img class={styles["competition-img"]} src="http://excelmec.org/static/images/third-eye-photography.png" />
+                                        <img class={styles["competition-img"]} src={content.img} />
                                     </div>
                                     <div className={styles["heading-text-container"]}>
-                                        <div className={styles["heading-font"]}>Heading Event</div>
-                                        <div className={styles["purple-font"]}>Prize Pool - 25k</div>
+                                        <div className={styles["heading-font"]}>{content.name}</div>
+                                        <div className={styles["purple-font"]}>Prize Pool - {content.prize}</div>
                                     </div>
                                 </div>
                                 <div className={styles["main-nav-block"]} >
@@ -95,16 +110,16 @@ class CompetitionCard extends Component {
                                         <li className={styles["highlight"]} style={{transform: "translate(" + scrollDistance + "%"}}>
 
                                         </li>
-                                        <Link to={"/competitions/" + this.props.match.params['event'] + "/about"}>
+                                        <Link to={"/competitions/" + this.props.match.params['competition'] + "/about"}>
                                             <li><div id="format" >About</div></li>
                                         </Link>
-                                        <Link to={"/competitions/" + this.props.match.params['event'] + "/format"}>
+                                        <Link to={"/competitions/" + this.props.match.params['competition'] + "/format"}>
                                             <li><div id="format" >Format</div></li>
                                         </Link>
-                                        <Link to={"/competitions/" + this.props.match.params['event'] + "/rules"}>
+                                        <Link to={"/competitions/" + this.props.match.params['competition'] + "/rules"}>
                                             <li><div id="format" >Rules</div></li>
                                         </Link>
-                                        <Link to={"/competitions/" + this.props.match.params['event'] + "/contact"}>
+                                        <Link to={"/competitions/" + this.props.match.params['competition'] + "/contact"}>
                                             <li><div id="format" >Contact</div></li>
                                         </Link>
                                     </ul>
@@ -113,48 +128,32 @@ class CompetitionCard extends Component {
                             <div id="tab-wrapper" className={styles["tab-wrapper"]}>
                                 <div className={styles["tab-content-wrap"]} style={{transform: "translate(-" + scrollDistance + "%"}}>
                                     <div id="about-content" className={styles["white-font"] + " " + styles["tab-content"]}>
-                                    <p>{this.state.eventContent.about.content}</p>
+                                    <p dangerouslySetInnerHTML={{__html: content.about}}></p>
                                     <div className={styles["mini-grid"]}>
                                         <ul>
                                             <li className={styles["mini-grid-item"]}>
                                                 <h4 className={styles["purple-font"]}>Date</h4>
-                                                <p className={styles["white-font"]}>{this.state.eventContent.about.date}</p>
+                                                <p className={styles["white-font"]}>{content.date}</p>
                                             </li>
                                             <li className={styles["mini-grid-item"]}>
                                                 <h4 className={styles["purple-font"]}>Time</h4>
-                                                <p className={styles["white-font"]}>{this.state.eventContent.about.time}</p>
+                                                <p className={styles["white-font"]}>{content.time}</p>
                                             </li>
                                             <li className={styles["mini-grid-item"]}>
                                                 <h4 className={styles["purple-font"]}>Venue</h4>
-                                                <p className={styles["white-font"]}>{this.state.eventContent.about.venue}</p>
+                                                <p className={styles["white-font"]}>{content.venue}</p>
                                             </li>
                                         </ul>
                                     </div>
                                 </div>
-                                <div id="format-content" className={styles["white-font"] + " " + styles["tab-content"]}>
-                                    <p><strong>Preliminary Round</strong></p><br/>
-                                    <p>{this.state.eventContent.format.prelims}</p><br/><br/>
-                                    <p><strong>Final Round</strong></p><br/>
-                                    <p>{this.state.eventContent.format.final}</p><br/>
-                                    <p>The question will be provided to each member only at the start of their own time slot. Once the question has been provided, each member can code for 5 mins initially, then the time slots vary to 10mins, 5mins and 10mins again. After one person’s time slot is complete the next person of the team is expected to continue coding from where his teammate had left off. <br/>
-                                    Duration for the final round is 120 minutes in total.<br/>
-                                    The teams that gets the desired output in the shortest time stand a chance to win the prize money.</p><br/>
+                                <div id="format-content" className={styles["white-font"] + " " + styles["tab-content"]}
+                                    dangerouslySetInnerHTML={{__html: content.format}}>
                                 </div> 
-                                <div id="rules-content" className={styles["white-font"] + " " + styles["tab-content"]}>
-                                    <strong>Team Formation:</strong><br/><br/>
-                                    <p>1. A team can have a maximum of 3 members</p><br/>
-                                    <p>2. A participant cannot be part of more than one team .</p><br/>
-                                    <p>3. It is not necessary that the participants forming a team should be from the same college</p><br/>
-                                    <p>4. There is no restriction in the number of teams from the same college .</p><br/>
+                                <div id="rules-content" className={styles["white-font"] + " " + styles["tab-content"]}
+                                    dangerouslySetInnerHTML={{__html: content.rules}}>
                                 </div>
-                                <div id={styles["contact-content"]} className={styles["white-font"] + " " + styles["tab-content"]}>
-                                    <p><b>Tinu Mathew</b></p>
-                                    <p>Event Coordinator</p>
-                                    <p>+91 9447765744</p>
-                                    <br></br>
-                                    <p><b>Atul Krishnan</b></p>
-                                    <p>Event Coordinator</p>
-                                    <p>+91 9447765744</p>
+                                <div id={styles["contact-content"]} className={styles["white-font"] + " " + styles["tab-content"]}
+                                    dangerouslySetInnerHTML={{__html: content.contact}}>
                                 </div>
                             </div>
                         </div>
