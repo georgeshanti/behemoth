@@ -48,7 +48,7 @@ class CompetitionCard extends Component {
                     console.log(data[i].codename + " " + this.props.match.params['competition'])
                     if(data[i].codename == this.props.match.params['competition']){
                         console.log("match")
-                        axios.get("http://cms.excelmec.org/competition/"+data[i].id)
+                        axios.get("https://cms.excelmec.org/competition/"+data[i].id)
                         .then(function (json) {
                             comp.setState({cardInfo: json})
                         })
