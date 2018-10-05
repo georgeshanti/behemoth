@@ -40,14 +40,14 @@ class CompetitionCard extends Component {
 
     componentWillMount(){
         var comp = this;
-		fetch("http://cms.excelmec.org:8080/competition/")
+		fetch("http://cms.excelmec.org/competition/")
         .then(response => response.json())
         .then((data) => {
             for(var i in data){
                 console.log(data[i].codename + " " + this.props.match.params['competition'])
                 if(data[i].codename == this.props.match.params['competition']){
                     console.log("match")
-                    fetch("http://cms.excelmec.org:8080/competition/"+data[i].id)
+                    fetch("http://cms.excelmec.org/competition/"+data[i].id)
                     .then(response => response.json())
                     .then((data) => {
                         comp.setState({eventContent: data})

@@ -36,7 +36,7 @@ export default class Events extends Component {
 
     componentWillMount(){
 		var comp = this;
-		fetch("http://cms.excelmec.org:8080/competition/")
+		fetch("http://cms.excelmec.org/competition/")
 			.then(response => response.json())
 			.then((data) => {
 				comp.setState({cardInfo: data})
