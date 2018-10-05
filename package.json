@@ -2,7 +2,7 @@
   "name": "behemoth",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://excelmec.org/",
+  "homepage": "https://excelmec.org/",
   "dependencies": {
     "gsap": "^2.0.1",
     "react": "^16.3.2",
