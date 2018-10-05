@@ -5,6 +5,7 @@ import { TimelineLite, Power0} from 'gsap';
 import CompetitionCard from 'components/competition-card';
 import Filter from 'components/filter-list';
 import CompetitionGridCard from 'components/competition-grid-card';
+import axios from 'axios';
 
 export default class Events extends Component {
 
@@ -36,11 +37,15 @@ export default class Events extends Component {
 
     componentWillMount(){
 		var comp = this;
-		fetch("http://cms.excelmec.org/competition/")
-			.then(response => response.json())
-			.then((data) => {
-				comp.setState({cardInfo: data})
+		axios.get("https://cms.excelmec.org/competition/")
+			.then(function (response) {
+				comp.setState({cardInfo: response})
 			})
+		// fetch("http://cms.excelmec.org/competition/")
+		// 	.then(response => response.json())
+		// 	.then((data) => {
+		// 		comp.setState({cardInfo: data})
+		// 	})
 		this.setState({items:this.state.initialItem})
 	}
 

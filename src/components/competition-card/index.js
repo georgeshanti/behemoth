@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Redirect, Link } from 'react-router-dom';
 import styles from './style.module.css';
 import ReactDOM from 'react-dom';
+import axios from 'axios'
 
 class CompetitionCard extends Component {
 
@@ -40,21 +41,35 @@ class CompetitionCard extends Component {
 
     componentWillMount(){
         var comp = this;
-		fetch("http://cms.excelmec.org/competition/")
-        .then(response => response.json())
-        .then((data) => {
-            for(var i in data){
-                console.log(data[i].codename + " " + this.props.match.params['competition'])
-                if(data[i].codename == this.props.match.params['competition']){
-                    console.log("match")
-                    fetch("http://cms.excelmec.org/competition/"+data[i].id)
-                    .then(response => response.json())
-                    .then((data) => {
-                        comp.setState({eventContent: data})
-                    })
+        axios.get("https://cms.excelmec.org/competition/")
+			.then(function (response) {
+                var data = response
+                for(var i in response){
+                    console.log(data[i].codename + " " + this.props.match.params['competition'])
+                    if(data[i].codename == this.props.match.params['competition']){
+                        console.log("match")
+                        axios.get("http://cms.excelmec.org/competition/"+data[i].id)
+                        .then(function (json) {
+                            comp.setState({cardInfo: json})
+                        })
+                    }
                 }
-            }
-        })
+			})
+		// fetch("http://cms.excelmec.org/competition/")
+        // .then(response => response.json())
+        // .then((data) => {
+        //     for(var i in data){
+        //         console.log(data[i].codename + " " + this.props.match.params['competition'])
+        //         if(data[i].codename == this.props.match.params['competition']){
+        //             console.log("match")
+        //             fetch("http://cms.excelmec.org/competition/"+data[i].id)
+        //             .then(response => response.json())
+        //             .then((data) => {
+        //                 comp.setState({eventContent: data})
+        //             })
+        //         }
+        //     }
+        // })
     }
 
     close(){
