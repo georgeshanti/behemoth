@@ -44,32 +44,19 @@ class CompetitionCard extends Component {
         axios.get("https://cms.excelmec.org/competition/")
 			.then(function (response) {
                 var data = response.data
-                for(var i in response){
-                    console.log(data[i].codename + " " + this.props.match.params['competition'])
-                    if(data[i].codename == this.props.match.params['competition']){
+                for(var i in data){
+                    console.log("data", data[i].codename)
+                    console.log(data[i].codename + " " + comp.props.match.params['competition'])
+                    if(data[i].codename == comp.props.match.params['competition']){
                         console.log("match")
+                        console.log("https://cms.excelmec.org/competition/"+data[i].id)
                         axios.get("https://cms.excelmec.org/competition/"+data[i].id)
                         .then(function (json) {
-                            comp.setState({cardInfo: json.data})
+                            comp.setState({eventContent: json.data})
                         })
                     }
                 }
 			})
-		// fetch("http://cms.excelmec.org/competition/")
-        // .then(response => response.json())
-        // .then((data) => {
-        //     for(var i in data){
-        //         console.log(data[i].codename + " " + this.props.match.params['competition'])
-        //         if(data[i].codename == this.props.match.params['competition']){
-        //             console.log("match")
-        //             fetch("http://cms.excelmec.org/competition/"+data[i].id)
-        //             .then(response => response.json())
-        //             .then((data) => {
-        //                 comp.setState({eventContent: data})
-        //             })
-        //         }
-        //     }
-        // })
     }
 
     close(){
@@ -86,6 +73,7 @@ class CompetitionCard extends Component {
 
     render() {
         var content = this.state.eventContent
+        console.log(content)
         var closeEvent = null;
         var index = 0;
         switch(this.props.match.params['section']){

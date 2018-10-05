@@ -42,11 +42,6 @@ export default class Events extends Component {
 				console.log(response.data)
 				comp.setState({cardInfo: response.data})
 			})
-		// fetch("http://cms.excelmec.org/competition/")
-		// 	.then(response => response.json())
-		// 	.then((data) => {
-		// 		comp.setState({cardInfo: data})
-		// 	})
 		this.setState({items:this.state.initialItem})
 	}
 
