@@ -39,7 +39,8 @@ export default class Events extends Component {
 		var comp = this;
 		axios.get("https://cms.excelmec.org/competition/")
 			.then(function (response) {
-				comp.setState({cardInfo: response})
+				console.log(response.data)
+				comp.setState({cardInfo: response.data})
 			})
 		// fetch("http://cms.excelmec.org/competition/")
 		// 	.then(response => response.json())
