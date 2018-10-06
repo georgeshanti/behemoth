@@ -1,0 +1,22 @@
+body{
+	overflow-x: hidden;
+}
+.white-bg {
+	position: fixed;
+	top: -10vh;
+	z-index: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: ghostwhite;
+}
+
+h1{
+	position: relative;
+}
+.container{
+	position: absolute;
+	display:grid;
+	grid-template-columns: auto auto auto;
+	grid-gap: 2em;
+	z-index: 2;
+}
