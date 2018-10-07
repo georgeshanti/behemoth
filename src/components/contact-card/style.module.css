@@ -1,5 +1,24 @@
 .card{
-        height:100x;
-        width: 100px;
+        position: relative;
+        height:50vh;
+        width: 25vw;
         background-color: goldenrod;
+        border-radius: 10px;
+        z-index: 0;
+        
 }
+
+.card img{
+        position: relative;
+        height:50vh;
+        width: 25vw;
+        border-radius: 10px;
+}
+
+.bottom-left {
+        position: absolute;
+        bottom:3vw;
+        left: 2vw;
+        z-index: 3;
+        color: azure;
+    }
