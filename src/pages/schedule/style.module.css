@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Righteous');
+.container {
+	height: 100vh;
+	/*padding: 15px;
+	padding-top: 40px;*/
+	overflow: auto;
+    /* background: #3a3939; */
+}
+
+a{
+	outline: none;
+}
+/*.events-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(2, 250px);
+	grid-column-gap: 10px;
+	grid-row-gap: 10px;
+}
+*/
+.schedule-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 30px;
+	padding: 50px 100px;
+}
+
+.title{
+	color:white;
+	font-family: 'Montserrat';
+	text-align: center;
+	font-size: 40px;
+}
+
+@media screen and (max-width: 600px){
+	.schedule-grid {
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+		grid-gap: 30px;
+		padding: 2vh 2vh;
+	}
+}
