@@ -28,7 +28,7 @@ export default class Contacts extends Component{
             <div>
                <div className={styles["white-bg"]}></div>
                <div>
-                    <header><h1>Contacts</h1></header>
+                    <header><h1>Get In Touch</h1></header>
                     <div className={styles["container"]}>
                         {grid}
                     </div>

@@ -17,6 +17,9 @@
         height:50vh;
         width: 25vw;
         border-radius: 10px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
 }
 
  /*.bottom-left {
@@ -39,7 +42,7 @@
         position: absolute;
         left: 0;
         margin: 0 auto;
-        padding: 0 50px;
+        padding: 0 20px;
         bottom:3.5vh;
         color:white;
         font-style: 16px;
@@ -51,10 +54,11 @@
 
       .card-info .descp{
               font-size: 1.5em;
-              font-weight: bold;
+              font-weight: bolder;
       }
       .card-info .contact-info{
         font-size: 1em;
+        font-weight: bold;
 }
 
       .gradient-overlay{
@@ -69,4 +73,28 @@
         top:0;
         left:0;
         z-index: 15;
+        border-radius: 10px;
       }
+
+      @media screen and (max-width:1300px){
+        .card{
+                height: 40vh;
+                width: 40vw;
+        }
+        .card img{
+          height: 40vh;
+          width: 40vw;
+        }
+}
+
+      @media screen and (max-width:450px){
+              .card{
+                      height: 50vh;
+                      width: 80vw;
+              }
+              .card img{
+                height: 50vh;
+                width: 80vw;
+              }
+}
+
