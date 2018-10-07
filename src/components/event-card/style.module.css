@@ -7,6 +7,17 @@
     z-index: 3;
     background-color: skyblue;
     overflow-x: hidden;
+   
+}
+
+.container-border {
+    border:12px solid rgba(255, 255, 255, 0.2);
+    position: fixed;
+    z-index: 4;
+    height: 85vh;
+    width: 90vw;
+    opacity: 1;
+    margin: 50px;
 }
 
 h2{
@@ -14,18 +25,36 @@ h2{
 }
 
 .btn-close{
-    position: fixed;
-    top:25px;
-    left: 25px;
-    z-index: 1;
+    top:0px;
+    left: 0px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.2);
+    height: 30px;
+    width: 30px;
 }
+
+.btn-close img {
+    margin: 2px;
+    height: 17px;
+    width: 17px;
+    transform:  rotate(-90deg);
+    transition: transform .7s;
+
+}
+
+.btn-close img:hover {
+    transform:  rotate(90deg);
+    transition: transform .7s;
+}
+
+
 
 .section1{
     float: left;
     position: fixed;
     height:100vh;
     width: 40vw;
-    padding: 5vw;
+    padding: 7.5vw;
 }
 
 .section1 h1{
@@ -46,13 +75,14 @@ h2{
 .section2{
     float: right;
     min-height: 100vh;
-    width: 50vw;
+    width: 50vw; 
 }
 .section2 img{
     height: auto;
-    width: 60vw;
+    width: 40vw;
     background-size: contain;
-    margin-top: -5px;
+    margin-top: 10vh;
+    z-index: 5;
 }
 
 @media only screen and (max-width:1100px){
@@ -67,8 +97,26 @@ h2{
     }
     .section1 h1{
        font-size: 50px;
-    }   
+    }  
+    
+    .container-border {
+        border: none;
+        position: absolute;
+    }
 
+    .btn-close {
+        background-color: transparent;
+    }
+    
+    .btn-close img {
+        transform: none;
+        transition: none;
+        margin: 25px;
+    }
+
+    .btn-close img:hover {
+        transition: none;
+    }
 }
 
 @media only screen and (max-width:1000px){
@@ -106,7 +154,10 @@ h2{
         background-size: contain;
         padding:0vh 10vw 5vh 10vw;
     }
- 
+    .container-border {
+        border:none;
+        margin: 0px;
+    }
 
 }
 @media only screen and (max-width:350px){

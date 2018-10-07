@@ -19,11 +19,14 @@ export default class Events extends Component{
         }
     }
 
+    componentDidMount(){
+        window.scrollTo(0, 0)
+    }
 
     render(){
         var grid1 = []
         var grid2 = []
-        var colors=['pink','skyblue','palegreen','goldenrod'] //to change add colors in event cards too
+        var colors=['#48413F','#B29F60','#294E8B','#229DEC', '#5E3D28'] //to change add colors in event cards too
 		for(var i=0 ; i<5 ; i++){
             var gridbg=colors[i%4]
 			var gridItem = ( <Link to={"/events/"+i} style={{textDecoration:'none'}}><EventGridCard details={this.state.cardInfo[i]} delay={i*100} colors={gridbg} /></Link>)
@@ -33,18 +36,21 @@ export default class Events extends Component{
                grid2.push(gridItem)   
 		}
         return(
-        <div>
-            <header><h1>Events</h1></header>
+            <div>
+                <div className={styles["white-bg"]}></div>
+                <div>
+                    <header><h1>Events</h1></header>
 
-            <div id="grid">
-                <div className={styles["left"]}>
-                    {grid1}
-                </div>
-                <div className={styles["right"]}>
-                    {grid2}
-                </div>
+                    <div id="grid">
+                        <div className={styles["left"]}>
+                            {grid1}
+                        </div>
+                        <div className={styles["right"]}>
+                            {grid2}
+                        </div>
+                    </div>
+                </div>    
             </div>
-        </div>    
         )
     }
 }

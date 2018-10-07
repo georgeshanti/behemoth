@@ -1,8 +1,10 @@
 body{
 	overflow-x: hidden;
 }
+
 h1{
-	color:white;
+	position: relative;
+	color: black;
 	text-align: center;
 	font-family: "Effra W01 Heavy", Arial, sans-serif;
 	font-size: 60px;
@@ -41,6 +43,16 @@ a:active, a:focus {
 	position:relative;
 	float:right;	
 }
+
+.white-bg {
+	position: fixed;
+	top: -10vh;
+	z-index: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: ghostwhite;
+}
+
 
 @media only screen and (max-width:450px){
 	#grid {

@@ -10,24 +10,30 @@ export default class EventCard extends Component{
         this.state={
             cardInfo:[{
                 name:"HackForTomorrow",
-                content:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus gravida erat sit amet quam fringilla fermentum. In congue leo eu lacinia consectetur. Sed tincidunt, mauris tincidunt rutrum venenatis, ligula sapien dignissim sapien, in finibus sem urna sit amet elit. Nam accumsan eu purus eget lacinia. In sagittis tellus quis risus vulputate, sit amet dapibus ante dictum. Donec dui nulla, condimentum eu sagittis gravida, luctus at eros. Phasellus porta, est et bibendum imperdiet, sem urna venenatis leo, non convallis metus ex porttitor libero. Etiam sed feugiat enim. Aliquam auctor nisi velit. Donec vestibulum viverra orci, eu molestie nunc finibus nec"
+                content:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus gravida erat sit amet quam fringilla fermentum. In congue leo eu lacinia consectetur. Sed tincidunt, mauris tincidunt rutrum venenatis, ligula sapien dignissim sapien, in finibus sem urna sit amet elit. Nam accumsan eu purus eget lacinia. In sagittis tellus quis risus vulputate, sit amet dapibus ante dictum. Donec dui nulla, condimentum eu sagittis gravida, luctus at eros. Phasellus porta, est et bibendum imperdiet, sem urna venenatis leo, non convallis metus ex porttitor libero. Etiam sed feugiat enim. Aliquam auctor nisi velit. Donec vestibulum viverra orci, eu molestie nunc finibus nec",
+                pictures:["https://placeimg.com/640/480/any","https://placeimg.com/640/480/any","https://placeimg.com/640/480/any","https://placeimg.com/640/480/any"]
+               
             },
             {   name:"Event 2",
-                content:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus gravida erat sit amet quam fringilla fermentum. In congue leo eu lacinia consectetur. Sed tincidunt, mauris tincidunt rutrum venenatis, ligula sapien dignissim sapien, in finibus sem urna sit amet elit. Nam accumsan eu purus eget lacinia. In sagittis tellus quis risus vulputate, sit amet dapibus ante dictum. Donec dui nulla, condimentum eu sagittis gravida, luctus at eros. Phasellus porta, est et bibendum imperdiet, sem urna venenatis leo, non convallis metus ex porttitor libero. Etiam sed feugiat enim. Aliquam auctor nisi velit. Donec vestibulum viverra orci, eu molestie nunc finibus nec"
+                content:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus gravida erat sit amet quam fringilla fermentum. In congue leo eu lacinia consectetur. Sed tincidunt, mauris tincidunt rutrum venenatis, ligula sapien dignissim sapien, in finibus sem urna sit amet elit. Nam accumsan eu purus eget lacinia. In sagittis tellus quis risus vulputate, sit amet dapibus ante dictum. Donec dui nulla, condimentum eu sagittis gravida, luctus at eros. Phasellus porta, est et bibendum imperdiet, sem urna venenatis leo, non convallis metus ex porttitor libero. Etiam sed feugiat enim. Aliquam auctor nisi velit. Donec vestibulum viverra orci, eu molestie nunc finibus nec",
+                pictures:["https://placeimg.com/640/480/any","https://placeimg.com/640/480/any","https://placeimg.com/640/480/any"]      
             },
             {   name:"Event 3",
-                content:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus gravida erat sit amet quam fringilla fermentum. In congue leo eu lacinia consectetur. Sed tincidunt, mauris tincidunt rutrum venenatis, ligula sapien dignissim sapien, in finibus sem urna sit amet elit. Nam accumsan eu purus eget lacinia. In sagittis tellus quis risus vulputate, sit amet dapibus ante dictum. Donec dui nulla, condimentum eu sagittis gravida, luctus at eros. Phasellus porta, est et bibendum imperdiet, sem urna venenatis leo, non convallis metus ex porttitor libero. Etiam sed feugiat enim. Aliquam auctor nisi velit. Donec vestibulum viverra orci, eu molestie nunc finibus nec"
+                content:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus gravida erat sit amet quam fringilla fermentum. In congue leo eu lacinia consectetur. Sed tincidunt, mauris tincidunt rutrum venenatis, ligula sapien dignissim sapien, in finibus sem urna sit amet elit. Nam accumsan eu purus eget lacinia. In sagittis tellus quis risus vulputate, sit amet dapibus ante dictum. Donec dui nulla, condimentum eu sagittis gravida, luctus at eros. Phasellus porta, est et bibendum imperdiet, sem urna venenatis leo, non convallis metus ex porttitor libero. Etiam sed feugiat enim. Aliquam auctor nisi velit. Donec vestibulum viverra orci, eu molestie nunc finibus nec",
+                pictures:["https://placeimg.com/640/480/any","https://placeimg.com/640/480/any"]
             },
             {   name:"Event 4",
-                content:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus gravida erat sit amet quam fringilla fermentum. In congue leo eu lacinia consectetur. Sed tincidunt, mauris tincidunt rutrum venenatis, ligula sapien dignissim sapien, in finibus sem urna sit amet elit. Nam accumsan eu purus eget lacinia. In sagittis tellus quis risus vulputate, sit amet dapibus ante dictum. Donec dui nulla, condimentum eu sagittis gravida, luctus at eros. Phasellus porta, est et bibendum imperdiet, sem urna venenatis leo, non convallis metus ex porttitor libero. Etiam sed feugiat enim. Aliquam auctor nisi velit. Donec vestibulum viverra orci, eu molestie nunc finibus nec"
+                content:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus gravida erat sit amet quam fringilla fermentum. In congue leo eu lacinia consectetur. Sed tincidunt, mauris tincidunt rutrum venenatis, ligula sapien dignissim sapien, in finibus sem urna sit amet elit. Nam accumsan eu purus eget lacinia. In sagittis tellus quis risus vulputate, sit amet dapibus ante dictum. Donec dui nulla, condimentum eu sagittis gravida, luctus at eros. Phasellus porta, est et bibendum imperdiet, sem urna venenatis leo, non convallis metus ex porttitor libero. Etiam sed feugiat enim. Aliquam auctor nisi velit. Donec vestibulum viverra orci, eu molestie nunc finibus nec",
+                pictures:["https://placeimg.com/640/480/any","https://placeimg.com/640/480/any","https://placeimg.com/640/480/any","https://placeimg.com/640/480/any","https://placeimg.com/640/480/any","https://placeimg.com/640/480/any"]
             },
             {   name:"Event 5",
-                content:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus gravida erat sit amet quam fringilla fermentum. In congue leo eu lacinia consectetur. Sed tincidunt, mauris tincidunt rutrum venenatis, ligula sapien dignissim sapien, in finibus sem urna sit amet elit. Nam accumsan eu purus eget lacinia. In sagittis tellus quis risus vulputate, sit amet dapibus ante dictum. Donec dui nulla, condimentum eu sagittis gravida, luctus at eros. Phasellus porta, est et bibendum imperdiet, sem urna venenatis leo, non convallis metus ex porttitor libero. Etiam sed feugiat enim. Aliquam auctor nisi velit. Donec vestibulum viverra orci, eu molestie nunc finibus nec"
+                content:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus gravida erat sit amet quam fringilla fermentum. In congue leo eu lacinia consectetur. Sed tincidunt, mauris tincidunt rutrum venenatis, ligula sapien dignissim sapien, in finibus sem urna sit amet elit. Nam accumsan eu purus eget lacinia. In sagittis tellus quis risus vulputate, sit amet dapibus ante dictum. Donec dui nulla, condimentum eu sagittis gravida, luctus at eros. Phasellus porta, est et bibendum imperdiet, sem urna venenatis leo, non convallis metus ex porttitor libero. Etiam sed feugiat enim. Aliquam auctor nisi velit. Donec vestibulum viverra orci, eu molestie nunc finibus nec",
+                pictures:["https://placeimg.com/640/480/any","https://placeimg.com/640/480/any","https://placeimg.com/640/480/any","https://placeimg.com/640/480/any"]
             }
         ],
         index:this.props.match.params['eventNo']
         }
-        this.colors=['pink','skyblue','palegreen','goldenrod']
+        this.colors=['#48413F','#B29F60','#294E8B','#229DEC', '#5E3D28']
         this.divstyle= {
             backgroundColor: this.colors[this.state.index%4],
         };
@@ -48,25 +54,29 @@ export default class EventCard extends Component{
     }
     
     render(){
+        var section2=[]
+        for (var i=0;i<this.state.cardInfo[this.state.index].pictures.length;i++)
+        {     var item=<img src={this.state.cardInfo[this.state.index].pictures[i]}/>
+              section2.push(item) 
+        }
+
         return(
+            <div>
+            <div className={styles["container-border"]}>
+                <div id='contents-close' className={styles["btn-close"]}><Link to={"/events"}><img  alt='' src={require('../../img/close.png')}/></Link></div>
+            </div>
             <div className={styles["container"]} style={this.divstyle}>
-            <div id='contents-close' className={styles["btn-close"]}><Link to={"/events"}><img  alt='' src={require('../../img/close.png')}/></Link></div>
                <div className={styles["sections"]}>
                 
                     <div  className={styles["section1"]}>
                     <h1 id="title">{this.state.cardInfo[this.state.index].name}</h1>
                     <p id="content">{this.state.cardInfo[this.state.index].content}</p>
                     </div>
-                    
                     <div className={styles["section2"]}>
-                        <img src="https://placeimg.com/640/480/any"/>
-                        <img src="https://placeimg.com/640/480/any"/>
-                        <img src="https://placeimg.com/640/480/any"/>
-                        <img src="https://placeimg.com/640/480/any"/>
-                        <img src="https://placeimg.com/640/480/any"/>
-                        <img src="https://placeimg.com/640/480/any"/>
+                        {section2}
                     </div>
                </div>
+            </div>
             </div>
         )
     }
