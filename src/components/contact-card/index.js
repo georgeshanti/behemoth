@@ -10,10 +10,14 @@ export default class ContactCard extends Component{
             <div className={styles["card"]}>
                 <img src={this.props.details.img}/>
                 <div className={styles["card-info"]}>
-                    {this.props.details.descp} <br />
+                    <div className={styles["descp"]}>
+                        {this.props.details.descp} <br />
+                    </div>
                     {this.props.details.name}  <br />
+                    <div className={styles["contact-info"]}>
                     {this.props.details.email} <br />
                     {this.props.details.phno}  <br />
+                    </div>
                 </div>
                 <div className={styles["gradient-overlay"]}></div>
             </div>

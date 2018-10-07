@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+
 .card{
         position: relative;
         height:50vh;
@@ -26,23 +29,30 @@
     .card:hover{
        background: black;
        opacity:.9;
-    }
-    .card:hover .card-info{
-            opacity:1;
-    }
+       }
+
+
     .card-info{
         position: absolute;
         left: 0;
         margin: 0 auto;
         padding: 0 50px;
-        bottom:6vw;
+        bottom:3.5vh;
         color:white;
         font-style: 16px;
         line-height: 24px;
         z-index: 20;
-        opacity:0;
+        opacity:1;
+        font-family: 'Raleway', sans-serif;
       }
 
+      .card-info .descp{
+              font-size: 1.5em;
+              font-weight: bold;
+      }
+      .card-info .contact-info{
+        font-size: 1em;
+}
 
       .gradient-overlay{
         /* bg-gradient: */
