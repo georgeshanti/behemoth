@@ -8,7 +8,8 @@
         background-color: goldenrod;
         border-radius: 10px;
         z-index: 0;
-        
+        transform: scale(0.95);
+        transition: box-shadow 0.5s, transform 0.5s;
 }
 
 .card img{
@@ -29,6 +30,8 @@
     .card:hover{
        background: black;
        opacity:.9;
+       transform: scale(1);
+       transition: box-shadow 5px 20px 30px rgba(0,0,0,0.2)
        }
 
 

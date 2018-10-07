@@ -8,13 +8,13 @@ export default class Contacts extends Component{
         super(props)
         this.state={
             cardInfo:[
-               {descp:"Lorem",name:"hello",email:"aaaaa",phno:"90393843959",img:"https://placeimg.com/640/480/people"},
-               {descp:"Lorem",name:"hello",email:"aaaaa",phno:"90393843959",img:"https://placeimg.com/640/480/people"},
-               {descp:"Lorem",name:"hello",email:"aaaaa",phno:"90393843959",img:"https://placeimg.com/640/480/people"},
-               {descp:"Lorem",name:"hello",email:"aaaaa",phno:"90393843959",img:"https://placeimg.com/640/480/people"},
-               {descp:"Lorem",name:"hello",email:"aaaaa",phno:"90393843959",img:"https://placeimg.com/640/480/people"},
-               {descp:"Lorem",name:"hello",email:"aaaaa",phno:"90393843959",img:"https://placeimg.com/640/480/people"},
-               {descp:"Lorem",name:"hello",email:"aaaaa",phno:"90393843959",img:"https://placeimg.com/640/480/people"}
+               {descp:"Lorem",name:"hello",email:"aaaaa",phno:"90393843959",img:"https://placeimg.com/640/480/people",gitln:"https://github.com/",linkln:"https://in.linkedin.com/"},
+               {descp:"Lorem",name:"hello",email:"aaaaa",phno:"90393843959",img:"https://placeimg.com/640/480/people",gitln:"https://github.com/",linkln:"https://in.linkedin.com/"},
+               {descp:"Lorem",name:"hello",email:"aaaaa",phno:"90393843959",img:"https://placeimg.com/640/480/people",gitln:"https://github.com/",linkln:"https://in.linkedin.com/"},
+               {descp:"Lorem",name:"hello",email:"aaaaa",phno:"90393843959",img:"https://placeimg.com/640/480/people",gitln:"https://github.com/",linkln:"https://in.linkedin.com/"},
+               {descp:"Lorem",name:"hello",email:"aaaaa",phno:"90393843959",img:"https://placeimg.com/640/480/people",gitln:"https://github.com/",linkln:"https://in.linkedin.com/"},
+               {descp:"Lorem",name:"hello",email:"aaaaa",phno:"90393843959",img:"https://placeimg.com/640/480/people",gitln:"https://github.com/",linkln:"https://in.linkedin.com/"},
+               {descp:"Lorem",name:"hello",email:"aaaaa",phno:"90393843959",img:"https://placeimg.com/640/480/people",gitln:"https://github.com/",linkln:"https://in.linkedin.com/"}
             ]
         }
     }
