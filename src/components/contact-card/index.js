@@ -15,9 +15,14 @@ export default class ContactCard extends Component{
                     </div>
                     {this.props.details.name}  <br />
                     <div className={styles["contact-info"]}>
-                    {this.props.details.email} <br />
-                    {this.props.details.phno}  <br />
+                    <img  alt='' src={require('../../img/message-closed-envelope.png')}/> {this.props.details.email} <br />
+                    <img  alt='' src={require('../../img/phone-receiver.png')}/> {this.props.details.phno}  <br />
                     </div>
+                </div>
+                <div className={styles["bottom-right"]}>
+                    <img  alt='' src={require('../../img/github-logo.png')}/>
+                    &nbsp;
+                    <img  alt='' src={require('../../img/linkedin-logo.png')}/>
                 </div>
                 <div className={styles["gradient-overlay"]}></div>
             </div>

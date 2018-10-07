@@ -23,7 +23,7 @@ h1{
 	position: relative;
 }
 .container{
-	margin: 7.5vh 7.5vw;
+	margin: 0vh 7.5vw;
 	position: absolute;
 	display:grid;
 	grid-template-columns: auto auto auto ;
