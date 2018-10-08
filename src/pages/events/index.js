@@ -15,7 +15,7 @@ export default class Events extends Component{
 
     componentWillMount(){
 		var comp = this;
-		axios.get("https://cmx.excelmec.org/event/")
+		axios.get("https://cms.excelmec.org/event/")
 			.then(function (response) {
 				console.log(response.data)
 				comp.setState({cardInfo: response.data})

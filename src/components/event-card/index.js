@@ -23,15 +23,15 @@ export default class EventCard extends Component{
 
     componentWillMount(){
         var comp = this;
-        axios.get("https://cmx.excelmec.org/event/")
+        axios.get("https://cms.excelmec.org/event/")
 			.then(function (response) {
                 var data = response.data
                 for(var i in data){
                     console.log(data[i].codename + " " + comp.props.match.params['event'])
                     if(data[i].codename == comp.props.match.params['event']){
                         console.log("match")
-                        console.log("https://cmx.excelmec.org/event/"+data[i].id)
-                        axios.get("https://cmx.excelmec.org/event/"+data[i].id)
+                        console.log("https://cms.excelmec.org/event/"+data[i].id)
+                        axios.get("https://cms.excelmec.org/event/"+data[i].id)
                         .then(function (json) {
                             comp.setState({cardInfo: json.data})
                         })

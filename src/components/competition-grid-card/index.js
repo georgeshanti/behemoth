@@ -9,8 +9,10 @@ class CompetitionGridCard extends Component{
         this.state = {
             opacity: 0,
             scale: 0,
-            color: '#'+(Math.random()*0xFFFFFF<<0).toString(16)            
+            color: ''            
         }
+        if(this.props.details.color)
+            this.setState({color: this.props.details.color})
     }
 
     componentDidMount(){
