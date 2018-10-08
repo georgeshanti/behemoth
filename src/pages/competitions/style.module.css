@@ -26,7 +26,8 @@ a{
 }
 
 .title{
-	color:white;
+	color:black;
+	/* color: white; */
 	font-family: 'Montserrat';
 	text-align: center;
 	font-size: 40px;

@@ -5,6 +5,7 @@ import { TimelineLite, Power0} from 'gsap';
 import CompetitionCard from 'components/competition-card';
 import Filter from 'components/filter-list';
 import CompetitionGridCard from 'components/competition-grid-card';
+import EventCard from 'components/event-card';
 import axios from 'axios';
 
 export default class Events extends Component {

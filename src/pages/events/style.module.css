@@ -6,9 +6,8 @@ h1{
 	position: relative;
 	color: black;
 	text-align: center;
-	font-family: "Effra W01 Heavy", Arial, sans-serif;
+	font-family: "Montserrat";
 	font-size: 60px;
-	letter-spacing: 5px;
 }
 
 a:active, a:focus {

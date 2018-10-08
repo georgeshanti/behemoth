@@ -3,20 +3,23 @@ import styles from './style.module.css';
 import { Route, Link } from 'react-router-dom'
 import EventGridCard from 'components/event-grid-card'
 import EventCard from 'components/event-card'
-
+import axios from 'axios'
 export default class Events extends Component{
 
     constructor(props){
         super(props)
         this.state={
-            cardInfo:[
-                {eventName:"Hello World",eventDescp:"Lorem ipsum dodo eye of modor dod frodo poop poop in toilet..."},
-                {eventName:"Hello World",eventDescp:"Lorem ..."},
-                {eventName:"Hello World",eventDescp:"Lorem got is the best ..."},
-                {eventName:"Hello World",eventDescp:"Lorem okokey ..."},
-                {eventName:"Hello World",eventDescp:"Lorem ..."}
-            ]
+            cardInfo:[]
         }
+    }
+
+    componentWillMount(){
+		var comp = this;
+		axios.get("https://cmx.excelmec.org/event/")
+			.then(function (response) {
+				console.log(response.data)
+				comp.setState({cardInfo: response.data})
+            })
     }
 
     componentDidMount(){
@@ -27,9 +30,12 @@ export default class Events extends Component{
         var grid1 = []
         var grid2 = []
         var colors=['#48413F','#B29F60','#294E8B','#229DEC', '#5E3D28'] //to change add colors in event cards too
-		for(var i=0 ; i<5 ; i++){
+		for(var i in this.state.cardInfo){
             var gridbg=colors[i%4]
-			var gridItem = ( <Link to={"/events/"+i} style={{textDecoration:'none'}}><EventGridCard details={this.state.cardInfo[i]} delay={i*100} colors={gridbg} /></Link>)
+			var gridItem = (
+                <Link to={"/events/"+this.state.cardInfo[i].codename} style={{textDecoration:'none'}}>
+                    <EventGridCard delay={i*100} details={this.state.cardInfo[i]} delay={i*100} colors={gridbg} />
+                </Link>)
             if(i%2==0)
                grid1.push(gridItem)
             else
@@ -37,9 +43,8 @@ export default class Events extends Component{
 		}
         return(
             <div>
-                <div className={styles["white-bg"]}></div>
                 <div>
-                    <header><h1>Events</h1></header>
+                    <header><h1>EVENTS</h1></header>
 
                     <div id="grid">
                         <div className={styles["left"]}>
@@ -49,7 +54,8 @@ export default class Events extends Component{
                             {grid2}
                         </div>
                     </div>
-                </div>    
+                </div>
+				<Route path='/events/:event' component={EventCard}/>
             </div>
         )
     }
