@@ -15,7 +15,7 @@ export default class ContactCard extends Component{
                     </div>
                     {this.props.details.name}  <br />
                     <div className={styles["contact-info"]}>
-                    <img  alt='' src={require('../../img/message-closed-envelope.png')}/> {this.props.details.email} <br />
+                    <img  alt='' src={require('../../img/message-closed-envelope.png')}/> <a href={"mailto:" + this.props.details.email}>{this.props.details.email}</a> <br />
                     <img  alt='' src={require('../../img/phone-receiver.png')}/> {this.props.details.phno}  <br />
                     </div>
                 </div>

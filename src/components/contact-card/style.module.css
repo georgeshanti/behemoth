@@ -66,6 +66,10 @@
         font-size: 1em;
         font-weight: bold;
 }
+        a{
+             text-decoration: none;
+             color:white;
+       }
         .card-info .contact-info img{
                 height: 16px;
                 width: auto;
