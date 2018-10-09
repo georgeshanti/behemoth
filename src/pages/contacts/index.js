@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import styles from './style.module.css';
 import ContactCard from 'components/contact-card';
+import axios from 'axios'
 
 export default class Contacts extends Component{
 
@@ -18,6 +19,15 @@ export default class Contacts extends Component{
             ]
         }
     }
+
+    componentWillMount(){
+		var comp = this;
+		axios.get("https://cms.excelmec.org/contact/")
+			.then(function (response) {
+				comp.setState({cardInfo: response.data})
+			})
+    }
+
     render(){
         var grid = []
         for(var i=0 ; i<this.state.cardInfo.length ; i++){
