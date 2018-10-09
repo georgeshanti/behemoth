@@ -24,9 +24,9 @@
 
 .bottom-right {
         position: absolute;
-        bottom:2vw;
-        right: 2vw;
-        z-index: 20;
+        bottom:20px;
+        right: 20px;
+        z-index: 1;
         color: white;
     }
 
@@ -49,11 +49,11 @@
         left: 0;
         margin: 0 auto;
         padding: 0 20px;
-        bottom:3.5vh;
+        bottom: 20px;
         color:white;
         font-style: 16px;
         line-height: 24px;
-        z-index: 20;
+        z-index: 1;
         opacity:1;
         font-family: 'Montserrat', sans-serif;
       }
@@ -87,7 +87,7 @@
         position: absolute;
         top:0;
         left:0;
-        z-index: 15;
+        z-index: 0;
         border-radius: 10px;
       }
 

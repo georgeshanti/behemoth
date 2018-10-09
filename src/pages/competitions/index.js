@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import { Route, Link } from 'react-router-dom'
 import styles from './style.module.css';
 import CompetitionCard from 'components/competition-card';
-import Filter from 'components/filter-list';
+// import Filter from 'components/filter-list';
 import CompetitionGridCard from 'components/competition-grid-card';
 import axios from 'axios';
 

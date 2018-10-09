@@ -13,7 +13,7 @@ class NavButton extends Component {
         {symbol: "fas fa-gamepad", link: "/competitions", background: "#bf8908", text: "Competitions"},
         {symbol: "fas fa-calendar-alt", link: "/schedule", background: "#6815c2", text: "Schedule"},
         {symbol: "fas fa-basketball-ball", link: "/events", background: "#64806b", text: "Events"},
-        {symbol: "fas fa-wrench", link: "/settings", background: "rgb(30, 129, 115)", text: "Workshops"},
+        {symbol: "fas fa-phone", link: "/contacts", background: "rgb(30, 129, 115)", text: "Workshops"},
       ]
       var size = this.menu.length
       this.menu.forEach((item,i)=>{
