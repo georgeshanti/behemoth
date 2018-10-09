@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+
+.card{
+        position: relative;
+        height:50vh;
+        width: 25vw;
+        background-color: goldenrod;
+        border-radius: 10px;
+        z-index: 0;
+        transform: scale(0.95);
+        transition: box-shadow 0.5s, transform 0.5s;
+}
+
+.card img{
+        position: relative;
+        height:50vh;
+        width: 25vw;
+        border-radius: 10px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+}
+
+.bottom-right {
+        position: absolute;
+        bottom:2vw;
+        right: 2vw;
+        z-index: 20;
+        color: white;
+    }
+
+    .bottom-right img{
+            height: 32px;
+            width: auto;
+            border-radius: initial;
+    }
+
+    .card:hover{
+       background: black;
+       opacity:.9;
+       transform: scale(1);
+       transition: box-shadow 5px 20px 30px rgba(0,0,0,0.2)
+       }
+
+
+    .card-info{
+        position: absolute;
+        left: 0;
+        margin: 0 auto;
+        padding: 0 20px;
+        bottom:3.5vh;
+        color:white;
+        font-style: 16px;
+        line-height: 24px;
+        z-index: 20;
+        opacity:1;
+        font-family: 'Montserrat', sans-serif;
+      }
+
+      .card-info .descp{
+              font-size: 1.5em;
+              font-weight: bolder;
+      }
+      .card-info .contact-info{
+        font-size: 1em;
+        font-weight: bold;
+}
+        a{
+             text-decoration: none;
+             color:white;
+       }
+        .card-info .contact-info img{
+                height: 16px;
+                width: auto;
+                border-radius: initial;
+        }
+
+      .gradient-overlay{
+        /* bg-gradient: */
+        background-image: -webkit-linear-gradient(rgba(0,0,0,0.00) 0%, rgba(0,0,0,.6) 85%);
+        background-image: -moz-linear-gradient(rgba(0,0,0,0.00) 0%, rgba(0,0,0,.6) 85%);
+        background-image: -o-linear-gradient(rgba(0,0,0,0.00) 0%, rgba(0,0,0,.6) 85%);
+        background-image: linear-gradient(rgba(0,0,0,0.00) 0%, rgba(0,0,0,.6) 85%);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top:0;
+        left:0;
+        z-index: 15;
+        border-radius: 10px;
+      }
+
+      @media screen and (max-width:1300px){
+        .card{
+                height: 40vh;
+                width: 40vw;
+        }
+        .card img{
+          height: 40vh;
+          width: 40vw;
+        }
+        .bottom-right {
+                bottom:5.5vh;
+                right: 3vw;
+            }
+        .bottom-right img{
+                height: 32px;
+                width: auto;
+        }
+}
+
+      @media screen and (max-width:450px){
+              .card{
+                      height: 50vh;
+                      width: 80vw;
+              }
+              .card img{
+                height: 50vh;
+                width: 80vw;
+              }
+              .bottom-right {
+                bottom:5.5vh;
+                right: 3vw;
+            }
+              .bottom-right img{
+                height: 25px;
+                width: auto;
+        }
+}
+

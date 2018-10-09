@@ -7,10 +7,12 @@ import asyncComponent from './utils/asyncComponent'
 
 const EventsImport = () => import('pages/events')
 const CompetitionsImport = () => import('pages/competitions')
+const ContactsImport = () => import('pages/contacts')
 const ErrorImport = () => import('pages/error')
 
 const Events = asyncComponent(EventsImport)
 const Competitions = asyncComponent(CompetitionsImport)
+const Contacts = asyncComponent(ContactsImport)
 const ErrorPage = asyncComponent(ErrorImport)
 
 const ComingSoon = ()=>{
@@ -37,6 +39,7 @@ class App extends Component {
             <Route path='/events' component={Events} />
             {/* <Route path='/events/:event' component={EventCard} /> */}
             <Route path='/competitions' component={Competitions} />
+            <Route path='/contacts' component={Contacts} />
             {/* <Route path="/talks" render = {()=> (<h1>Talks</h1>)} /> */}
             {/* <Route path="/workshops" render = {()=> (<h1>Workshops</h1>)} /> */}
             {/* <Route path="/schedule" render = {()=> (<h1>Schedule</h1>)} /> */}
