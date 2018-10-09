@@ -17,7 +17,6 @@ export default class Events extends Component{
 		var comp = this;
 		axios.get("https://cms.excelmec.org/event/")
 			.then(function (response) {
-				console.log(response.data)
 				comp.setState({cardInfo: response.data})
             })
     }
@@ -33,10 +32,10 @@ export default class Events extends Component{
 		for(var i in this.state.cardInfo){
             var gridbg=colors[i%4]
 			var gridItem = (
-                <Link to={"/events/"+this.state.cardInfo[i].codename} style={{textDecoration:'none'}}>
-                    <EventGridCard delay={i*100} details={this.state.cardInfo[i]} delay={i*100} colors={gridbg} />
+                <Link key={i} to={"/events/"+this.state.cardInfo[i].codename} style={{textDecoration:'none'}}>
+                    <EventGridCard details={this.state.cardInfo[i]} delay={i*100} colors={gridbg} />
                 </Link>)
-            if(i%2==0)
+            if((i%2)===0)
                grid1.push(gridItem)
             else
                grid2.push(gridItem)   

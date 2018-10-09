@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Redirect, Link } from 'react-router-dom';
 import styles from './style.module.css';
-import ReactDOM from 'react-dom';
 import axios from 'axios'
 
 class CompetitionCard extends Component {
@@ -45,11 +44,7 @@ class CompetitionCard extends Component {
 			.then(function (response) {
                 var data = response.data
                 for(var i in data){
-                    console.log("data", data[i].codename)
-                    console.log(data[i].codename + " " + comp.props.match.params['competition'])
-                    if(data[i].codename == comp.props.match.params['competition']){
-                        console.log("match")
-                        console.log("https://cms.excelmec.org/competition/"+data[i].id)
+                    if(data[i].codename === comp.props.match.params['competition']){
                         axios.get("https://cms.excelmec.org/competition/"+data[i].id)
                         .then(function (json) {
                             comp.setState({eventContent: json.data})
@@ -73,8 +68,6 @@ class CompetitionCard extends Component {
 
     render() {
         var content = this.state.eventContent
-        console.log(content)
-        var closeEvent = null;
         var index = 0;
         switch(this.props.match.params['section']){
             case 'about':
@@ -89,6 +82,8 @@ class CompetitionCard extends Component {
             case 'contact':
                 index = 3
                 break;
+            default:
+                index = 0
         }
         var scrollDistance = index * 100
         if(!this.state.mounted)
@@ -101,7 +96,7 @@ class CompetitionCard extends Component {
                             <div className={styles["card-content"]}>
                                 <div className={styles["competition-heading"]}>
                                     <div className={styles["img-container"]}>
-                                        <img class={styles["competition-img"]} src={content.img} />
+                                        <img alt={content.name} class={styles["competition-img"]} src={content.img} />
                                     </div>
                                     <div className={styles["heading-text-container"]}>
                                         <div className={styles["heading-font"]}>{content.name}</div>

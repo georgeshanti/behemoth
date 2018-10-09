@@ -29,7 +29,7 @@ export default class EventGridCard extends Component{
         return(
             <div className={styles["event"]} style={{opacity: this.state.opacity, transform: this.state.transform}}>
                <div className={styles["picture"]} style={this.divstyle}>
-                   <img src="https://placeimg.com/640/480/tech"/>
+                   <img alt={this.props.details.name} src="https://placeimg.com/640/480/tech"/>
                 </div>
                 <h2>{this.props.details.name}</h2>
                 <p className={styles["info"]} >

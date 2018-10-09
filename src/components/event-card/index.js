@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import styles from './style.module.css';
-import { Route, Link } from 'react-router-dom'
-import {TimelineLite, Power0} from 'gsap'
+import { Link } from 'react-router-dom'
 import axios from 'axios'
 
 export default class EventCard extends Component{
@@ -17,8 +16,6 @@ export default class EventCard extends Component{
             backgroundColor: this.colors[this.state.index%4],
         };
 
-        this.tl = new TimelineLite();
-
     }
 
     componentWillMount(){
@@ -27,10 +24,7 @@ export default class EventCard extends Component{
 			.then(function (response) {
                 var data = response.data
                 for(var i in data){
-                    console.log(data[i].codename + " " + comp.props.match.params['event'])
-                    if(data[i].codename == comp.props.match.params['event']){
-                        console.log("match")
-                        console.log("https://cms.excelmec.org/event/"+data[i].id)
+                    if(data[i].codename === comp.props.match.params['event']){
                         axios.get("https://cms.excelmec.org/event/"+data[i].id)
                         .then(function (json) {
                             comp.setState({cardInfo: json.data})
@@ -39,22 +33,11 @@ export default class EventCard extends Component{
                 }
 			})
     }
-
-   
-    componentDidMount(){
-        window.scrollTo(0, 0)
-        
-        //Animation for event card
-        var title = document.getElementById('title')
-        var content=document.getElementById('content')
-        // this.tl.fromTo(title, .75, { x:-400 ,autoAlpha: 0}, { x:0, autoAlpha: 1, ease: Power0.easeIn}) 
-        // this.tl.fromTo(content, 1.5, { autoAlpha: 0}, { autoAlpha: 1, ease: Power0.easeIn},'-=1')
-    }
     
     render(){
         var section2=[]
         for (var i in this.state.cardInfo.imgs)
-        {     var item=<img src={this.state.cardInfo.imgs[i]}/>
+        {     var item=<img alt={i} src={this.state.cardInfo.imgs[i]}/>
               section2.push(item) 
         }
 

@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import { Redirect, Link } from 'react-router-dom';
 import styles from './style.module.css';
-import ReactDOM from 'react-dom';
 
 class CompetitionGridCard extends Component{
     constructor(props){
@@ -28,11 +26,11 @@ class CompetitionGridCard extends Component{
 
     render(){
         return (
-            <div class={styles['event-grid-item']} style={{ background: this.state.color, opacity: this.state.opacity, transform: "scale(" + this.state.scale + ")"}}>
-                <img class={styles['event-grid-img']} src={this.props.details.img} />
-                <div class={styles['event-grid-overlay']} >
-                    <span class={styles['event-title']}>{this.props.details.name}</span>
-                    <span class={styles['event-category']}>{this.props.details.category}</span>
+            <div className={styles['event-grid-item']} style={{ background: this.state.color, opacity: this.state.opacity, transform: "scale(" + this.state.scale + ")"}}>
+                <img alt={this.props.details.name} className={styles['event-grid-img']} src={this.props.details.img} />
+                <div className={styles['event-grid-overlay']} >
+                    <span className={styles['event-title']}>{this.props.details.name}</span>
+                    <span className={styles['event-category']}>{this.props.details.category}</span>
                 </div>
             </div>
         )

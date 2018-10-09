@@ -1,26 +1,22 @@
 import React, { Component } from 'react'
-import { Route, Switch, Redirect } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 import './App.css';
 
 import NavButton from 'components/nav-button'
 import asyncComponent from './utils/asyncComponent'
 
-const HomeImport = () => import('pages/home')
 const EventsImport = () => import('pages/events')
 const CompetitionsImport = () => import('pages/competitions')
 const ErrorImport = () => import('pages/error')
-const EventCardImport = () => import('components/event-card')
 
-const Home = asyncComponent(HomeImport)
 const Events = asyncComponent(EventsImport)
 const Competitions = asyncComponent(CompetitionsImport)
 const ErrorPage = asyncComponent(ErrorImport)
-const EventCard = asyncComponent(EventCardImport)
 
 const ComingSoon = ()=>{
   return(
-    <iframe style={{zIndex: 3, width: "100vw", height: "100vh", border: "none", position: "fixed"}} src="https://batmannair.ml/electronic-excel-coming-soon/" ></iframe>
-    // <iframe style={{zIndex: 1, width: "100vw", height: "100vh", border: "none", position: "fixed"}} src="https://batmannair.ml/Excel-front-page/" ></iframe>
+    <iframe title="Coming Soon" style={{zIndex: 3, width: "100vw", height: "100vh", border: "none", position: "fixed"}} src="https://batmannair.ml/electronic-excel-coming-soon/" ></iframe>
+    // <iframe title="Opening Animation" style={{zIndex: 1, width: "100vw", height: "100vh", border: "none", position: "fixed"}} src="https://batmannair.ml/Excel-front-page/" ></iframe>
   )
 }
 
@@ -38,7 +34,6 @@ class App extends Component {
         <div className="content">
           <Switch>
             <Route path="/" exact component={ComingSoon} />
-            {/* <Route path="/" exact component={Home} /> */}
             <Route path='/events' component={Events} />
             {/* <Route path='/events/:event' component={EventCard} /> */}
             <Route path='/competitions' component={Competitions} />

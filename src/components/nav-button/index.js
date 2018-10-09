@@ -30,7 +30,6 @@ class NavButton extends Component {
     expand = (prevent) => (e) => {
       if(prevent)
         e.preventDefault()
-      console.log(this.state.expanded)
       if(this.state.expanded)
         this.setState({expanded: false})
       else
@@ -38,14 +37,16 @@ class NavButton extends Component {
     }
 
     render() {
-      var menuAction = this.expand.bind(this)
+      var i = 0
       var menuComponents = this.menu.map((item)=>{
+        i++
+        var style
         if(!this.state.expanded)
-          var style = {transform: "translate(0px, 0px)", background: item.background}
+          style = {transform: "translate(0px, 0px)", background: item.background}
         else
-          var style = {transform: "translate(" + item.xOffset + "px, " + item.yOffset + "px)", background: item.background}
+          style = {transform: "translate(" + item.xOffset + "px, " + item.yOffset + "px)", background: item.background}
         
-        return <FloatingButton background={item.background} color={item.color} text={item.text} to={item.link} style={style} expanded={this.state.expanded} icon={item.symbol} onClick={this.expand(false)} />
+        return <FloatingButton key={i} background={item.background} color={item.color} text={item.text} to={item.link} style={style} expanded={this.state.expanded} icon={item.symbol} onClick={this.expand(false)} />
       })
 
       var menuClass = this.state.expanded?styles["expanded"]:""
@@ -55,8 +56,6 @@ class NavButton extends Component {
         <div className={styles.NavButton + " " + menuClass}>
           <div className={styles["menu-items"]}>
             <div className={styles["menu-overlay"]}></div>
-            {/* <div className={styles["menu-background"]} style={{background: "none", borderStyle: "solid", borderColor: "#ffffff", width: "98px", height: "98px", borderWidth: "65px"}}></div> */}
-            {/* <div className={styles["menu-background"]}></div>  */}
             {menuComponents}
           </div>
           <Swipeable onSwipedUp={this.expand(true)} onSwipedDown={this.expand(true)}>

@@ -1,27 +1,18 @@
 import React, {Component} from 'react';
 import { Route, Link } from 'react-router-dom'
 import styles from './style.module.css';
-import { TimelineLite, Power0} from 'gsap';
 import CompetitionCard from 'components/competition-card';
 import Filter from 'components/filter-list';
 import CompetitionGridCard from 'components/competition-grid-card';
-import EventCard from 'components/event-card';
 import axios from 'axios';
 
-export default class Events extends Component {
+export default class Competitions extends Component {
 
 	constructor(props) {
 		super(props);
 		//method binding
-		this.showEvent = this.showEvent.bind(this)
-		this.closeEvent = this.closeEvent.bind(this)
-		this.hideContent = this.hideContent.bind(this)
 		this.filterList=this.filterList.bind(this)
 		this.listContains=this.listContains.bind(this)
-
-
-		//initialise timeline
-		this.tl = new TimelineLite();
 
 		//initial categories for filtering
 		 this.initialDept=["All Departments","Computer Science","Electronics","Robotics","Non-tech"]
@@ -30,7 +21,6 @@ export default class Events extends Component {
 		 //initialise state
 		this.state = {
 			currentOption:["All Departments","All Categories"],  //options for filter
-			index: 0,
 			cardInfo: {}
 		};
 
@@ -40,7 +30,6 @@ export default class Events extends Component {
 		var comp = this;
 		axios.get("https://cms.excelmec.org/competition/")
 			.then(function (response) {
-				console.log(response.data)
 				comp.setState({cardInfo: response.data})
 			})
 		this.setState({items:this.state.initialItem})
@@ -72,30 +61,11 @@ export default class Events extends Component {
          return false
 	}
 
-	closeEvent(e) {
-
-		// this.fadeOutContents()
-		// this.fadeInEvents()
-		// setTimeout(this.hideContent, 700)
-	}
-
-	hideContent() {
-		// document.getElementById('contentsContainer').classList.add(styles["hidden"])
-	}
-
-	showEvent(eventNO) {
-		console.log(eventNO)
-		this.props.history.push('/competitons/'+eventNO)
-	}
-
 	render() {
-		console.log(this.state.cardInfo)
-		var closeEvent = this.closeEvent
-		var index = this.state.index
 		var cards = this.state.cardInfo
 		var grid = []
 		for(var i in cards){
-			var gridItem = ( <Link to={"/competitions/"+cards[i].codename}><CompetitionGridCard delay={i*100} details={cards[i]}/></Link>)
+			var gridItem = ( <Link key={i} to={"/competitions/"+cards[i].codename}><CompetitionGridCard delay={i*100} details={cards[i]}/></Link>)
 			grid.push(gridItem)
 		}
 		
