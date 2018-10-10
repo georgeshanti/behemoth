@@ -5,11 +5,13 @@ import './App.css';
 import NavButton from 'components/nav-button'
 import asyncComponent from './utils/asyncComponent'
 
+const ScheduleImport = () => import('pages/schedule')
 const EventsImport = () => import('pages/events')
 const CompetitionsImport = () => import('pages/competitions')
 const ContactsImport = () => import('pages/contacts')
 const ErrorImport = () => import('pages/error')
 
+const Schedule = asyncComponent(ScheduleImport)
 const Events = asyncComponent(EventsImport)
 const Competitions = asyncComponent(CompetitionsImport)
 const Contacts = asyncComponent(ContactsImport)
@@ -42,7 +44,7 @@ class App extends Component {
             <Route path='/contacts' component={Contacts} />
             {/* <Route path="/talks" render = {()=> (<h1>Talks</h1>)} /> */}
             {/* <Route path="/workshops" render = {()=> (<h1>Workshops</h1>)} /> */}
-            {/* <Route path="/schedule" render = {()=> (<h1>Schedule</h1>)} /> */}
+            <Route path="/schedule" component={Schedule} /> 
             <Route component={ErrorPage} />
           </Switch>
         </div>
