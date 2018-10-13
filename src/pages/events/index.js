@@ -43,7 +43,7 @@ export default class Events extends Component{
         return(
             <div>
                 <div>
-                    <header><h1>EVENTS</h1></header>
+                    <header><h1 className={styles['title']}>EVENTS</h1></header>
 
                     <div id="grid">
                         <div className={styles["left"]}>

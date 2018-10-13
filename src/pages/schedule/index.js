@@ -1,9 +1,6 @@
 import React, {Component} from 'react';
-import { Route, Link } from 'react-router-dom'
 import styles from './style.module.css';
-import Filter from 'components/filter-list';
 import ScheduleGridCard from 'components/schedule-grid-card';
-import { Transform } from 'stream';
 
 export default class Events extends Component {
 
@@ -82,7 +79,7 @@ export default class Events extends Component {
 		var tabs = []
 		var cards = this.state.cardInfo
 		for(var i in cards){
-			var classn = i==this.state.index?styles['active']:{}
+			var classn = i===this.state.index?styles['active']:{}
 			var gridItem = ( <ScheduleGridCard key={i} delay={i*100} details={cards[i]}/>)
 			var tabItem = ( <div key={i} className={styles['schedule-tab'] + " " + classn} onClick={this.changeTab(i)}>Day {cards[i].day}</div>)
 			grid.push(gridItem)

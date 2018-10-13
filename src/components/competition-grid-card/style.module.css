@@ -14,6 +14,15 @@
     box-shadow: 0px 0px 20px 4px rgba(136, 136, 136, 0.54);
 }
 
+.event-grid-item.hidden{
+    opacity: 0;
+    transform: scale(0);
+}
+
+.event-grid-item:hover{
+    transform: scale(1.02);
+}
+
 .event-grid-img{
     position: absolute;
     width: 70%;

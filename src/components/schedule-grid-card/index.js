@@ -27,7 +27,7 @@ class CompetitionGridCard extends Component{
         var y=this.props.details.contents
         var style
         for(var  i in y){
-            if(i==y.length - 1)
+            if(i===y.length - 1)
                 style={borderWidth: "0px"}
             else
                 style={}

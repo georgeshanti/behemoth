@@ -3,7 +3,7 @@
 
 .card{
         position: relative;
-        height:50vh;
+        height:25vw;
         width: 25vw;
         background-color: goldenrod;
         border-radius: 10px;
@@ -14,7 +14,7 @@
 
 .card img{
         position: relative;
-        height:50vh;
+        height: 25vw;
         width: 25vw;
         border-radius: 10px;
         background-size: cover;
@@ -93,11 +93,14 @@
 
       @media screen and (max-width:1300px){
         .card{
-                height: 40vh;
+                height: 40vw;
                 width: 40vw;
         }
+        .card-info{
+                font-size: 15px;
+        }
         .card img{
-          height: 40vh;
+          height: 40vw;
           width: 40vw;
         }
         .bottom-right {
@@ -112,15 +115,15 @@
 
       @media screen and (max-width:450px){
               .card{
-                      height: 50vh;
+                      height: 80vw;
                       width: 80vw;
               }
               .card img{
-                height: 50vh;
+                height: 80vw;
                 width: 80vw;
               }
               .bottom-right {
-                bottom:5.5vh;
+                bottom: 3vw;
                 right: 3vw;
             }
               .bottom-right img{

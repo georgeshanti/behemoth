@@ -5,12 +5,14 @@ import './App.css';
 import NavButton from 'components/nav-button'
 import asyncComponent from './utils/asyncComponent'
 
+const HomeImport = () => import('pages/home')
 const ScheduleImport = () => import('pages/schedule')
 const EventsImport = () => import('pages/events')
 const CompetitionsImport = () => import('pages/competitions')
 const ContactsImport = () => import('pages/contacts')
 const ErrorImport = () => import('pages/error')
 
+const Home = asyncComponent(HomeImport)
 const Schedule = asyncComponent(ScheduleImport)
 const Events = asyncComponent(EventsImport)
 const Competitions = asyncComponent(CompetitionsImport)
@@ -37,7 +39,7 @@ class App extends Component {
         </div> */}
         <div className="content">
           <Switch>
-            <Route path="/" exact component={ComingSoon} />
+            <Route path="/" exact component={Home} />
             <Route path='/events' component={Events} />
             {/* <Route path='/events/:event' component={EventCard} /> */}
             <Route path='/competitions' component={Competitions} />

@@ -1,0 +1,501 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    margin: 0;
+}
+
+#content-wrapper {
+    pointer-events: none;
+    width: 100vw;
+    height: 100vh;
+}
+
+.logo-group {
+    position: relative;
+    top: 10vh;
+    left: 50%;
+}
+
+.logo-group img {
+    display: block;
+    margin-bottom: 10px;
+    transform: scale(1) translate(-50%, 0%);
+    transform-origin: 50% 50%
+}
+
+.excel-logo {
+    width: 13em;
+}
+
+.curtain .box {
+    pointer-events: auto;
+    position: absolute;
+    top: 98%;
+    left: 50%;
+    width: 100vw;
+    height: 200vw;
+    background: black;
+    transform-origin: 0% 0%;
+    overflow: hidden;
+}
+
+.curtain .right {
+    background: none;
+    transform: rotate(-50deg);
+}
+
+.curtain .left {
+    background: none;
+    transform: rotate(140deg);
+}
+
+.curtain .down {
+    transform: translateX(-50%);
+    height: 220vh;
+}
+
+.container {
+    position: absolute;
+    top: 0;
+    max-width: 1000px;
+}
+
+.content-container {
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+}
+
+.content-container>* {
+    pointer-events: auto;
+}
+
+.left-content {
+    background: none;
+    top: 100vh;
+    transition: box-shadow 4s ease-out;
+}
+.left-content>* {
+    transition: 0.5s ease-out;
+}
+
+.right-content {
+    background: none;
+    top: 200vh;
+    transition: box-shadow 4s ease-out;
+    clip-path: none;
+    -webkit-clip-path: none;
+}
+.right-content>* {
+    transition: 0.5s ease-out;
+}
+
+.find-out {
+    position: absolute;
+    top: 50vh;
+    color: white;
+    left: 3%;
+}
+
+.find-out span {
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 2.2em;
+}
+
+.find-out p {
+    font-family: 'Josefin Sans', serif;
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.tagline {
+    position: absolute;
+    top: 77vh;
+    left: 3%;
+    font-size: 2.7em;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: -1px;
+    font-weight: 700;
+}
+
+.tagline span {
+    position: absolute;
+}
+
+.tagline .innovate {
+    top: 1.1em;
+    left: 4%;
+}
+
+.tagline .engineer {
+    top: 2.2em;
+}
+
+.quick-buttons {
+    position: absolute;
+    top: 50%;
+    right: -1%;
+    width: 50vw;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    text-align: center;
+    padding: 10px 0;
+    display: none;
+}
+
+.quick-buttons .schedule {
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.2em;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding-left: 25vw;
+}
+
+.news-feed {
+    position: absolute;
+    top: 50vh;
+    right: 3%;
+}
+
+.news-container {
+    position: relative;
+    width: 70vw;
+}
+
+.news-container .block {
+    /* position: absolute;
+    left: 4px; */
+    margin-bottom: 0.5em;
+    margin-left: 1px;
+    width: 20px;
+    height: 5px;
+    background: white;
+}
+
+.news-container .date {
+    /* position: absolute;
+    left: 1%;
+    top: 1em; */
+    display: block;
+    margin-bottom: 0.5em;
+    font-size: 1em;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.news-container .headline {
+    /* position: absolute;
+    top: 2em;
+    left: 1%; */
+    display: block;
+    margin-bottom: 1.4em;
+    font-family: 'Josefin Sans', serif;
+    letter-spacing: -0.04em;
+    font-size: 1.5em;
+    color: white;
+    text-decoration: none;
+}
+
+.mobile {
+    pointer-events: auto;
+    display: block;
+}
+
+/* Bigger Screens */
+@media (min-width:900px) {
+    body {
+        position: fixed;
+        overflow: hidden;
+    }
+    #content-wrapper {
+        overflow: hidden;
+        position: initial;
+    }
+    .content-container {
+        height: 100vh;
+        border: 0;
+    }
+    .left-content {
+        overflow: hidden;
+        /* background: url("images/twinkle_twinkle.png"); */
+        background: #000020;
+        background-size: 700px;
+        top: 0;
+    }
+    .left-content:hover {
+        box-shadow: inset 8px 7px 100px 50px #2fb45420;
+    }
+    .right-content {
+        overflow: hidden;
+        /* background: url("images/twinkle_twinkle.png"); */
+        background: #100000;
+        top: 0;
+    }
+    .right-content:hover {
+        box-shadow: inset -8px 7px 100px 50px #2fb45420;
+    }
+    .quick-buttons {
+        display: block;
+    }
+    .news-feed {
+        top: 65%;
+    }
+    .news-container {
+        width: 25vw;
+    }
+    .mobile {
+        display: none;
+    }
+}
+
+.mobile .right {
+    background: black;
+}
+.mobile .left {
+    background: black;
+}
+
+.mobile .button {
+    position:  absolute;
+    top: 88%;
+    font-size: 7vmin;
+    text-decoration:  none;
+    color: white;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    padding: 10px 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 1s;
+}
+
+.mobile .button:hover {
+    text-decoration: underline;
+}
+
+.mobile .schedule {
+    left: -5%;
+    padding-right: 10vw;
+}
+
+.mobile .events {
+    right: -5%;
+    padding-left: 10vw;
+}
+
+.fb-button {
+    pointer-events: auto;
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 97%;
+    border-radius: 50%;
+    background: #2fb454;
+    cursor: pointer;
+}
+
+.fb-button span {
+    position: relative;
+    top: 15px;
+    left: 15px;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: white;
+}
+
+.anim-content {
+    position: absolute;
+    opacity: 0;
+    top: 30vw;
+    left: 30vw;
+    width: 5vw;
+    height: 5vw;
+    background: #ababab80;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    background: #ababab80;
+}
+.diamond {
+    position: absolute;
+    transform: rotate(45deg);
+    background: #ababab80;
+}
+.square {
+    position: absolute;
+    background: #ababab80;
+}
+
+@keyframes calendar-drop{
+    0%{
+        max-height: 0px;
+    }
+    100%{
+        max-height: 99px;
+    }
+}
+
+@keyframes start_animation{
+  0%{width: 0; height: 0; border-radius: 50%; background-size:0vh;}
+  100%{width: 100%; height: 100%; border-radius: 0;background-size:120vh;}
+}
+@keyframes fade-wave{
+  0%{ opacity:1; }
+  100%{ opacity:0.8; }
+}
+@keyframes background-fall{
+  0%{ background-position-y:0%; }
+  100%{ background-position-y:100%; }
+}
+
+
+@keyframes clip1{
+  0%{
+    clip-path: polygon(0% -50%, 50% -50%, -50% 50%, -100% 50% );
+    -webkit-clip-path: polygon(0% -50%, 50% -50%, -50% 50%, -100% 50% );
+    }
+  100%{
+    clip-path: polygon(150% 50%, 200% 50%, 100% 150%, 50% 150%);
+    -webkit-clip-path: polygon(150% 50%, 200% 50%, 100% 150%, 50% 150%);
+    }
+}
+@keyframes clipa{
+  0%{
+    clip-path: polygon(-5% -55%, 55% -45%, -45% 55%, -95% 55% );
+    -webkit-clip-path: polygon(-5% -55%, 55% -45%, -45% 55%, -95% 55% );
+    }
+  100%{
+    clip-path: polygon(150% 50%, 200% 50%, 100% 150%, 50% 150%);
+    -webkit-clip-path: polygon(150% 50%, 200% 50%, 100% 150%, 50% 150%);
+    }
+}
+@keyframes clip2{
+  0%{
+    clip-path: polygon(50% -50%, 100% -50%, 200% 50%, 150% 50%);
+    -webkit-clip-path: polygon(50% -50%, 100% -50%, 200% 50%, 150% 50%);
+    }
+  100%{
+    clip-path: polygon(-100% 50%, -50% 50%, 50% 150%, 0% 150%);
+    -webkit-clip-path: polygon(-100% 50%, -50% 50%, 50% 150%, 0% 150%);
+    }
+}
+@keyframes clipb{
+  0%{
+    clip-path: polygon(40% -60%, 100% -50%, 190% 40%, 150% 50%);
+    -webkit-clip-path: polygon(40% -60%, 100% -50%, 190% 40%, 150% 50%);
+    }
+  100%{
+    clip-path: polygon(-100% 50%, -50% 50%, 50% 150%, 0% 150%);
+    -webkit-clip-path: polygon(-100% 50%, -50% 50%, 50% 150%, 0% 150%);
+    }
+}
+@keyframes clip3{
+  0%{
+    clip-path: polygon(-100% -150%, -50% -150%, -150% -50%, -200% -50%);
+    -webkit-clip-path: polygon(-100% -150%, -50% -150%, -150% -50%, -200% -50%);
+    }
+  100%{
+    clip-path: polygon(150% 50%, 200% 50%, 100% 150%, 50% 150%);
+    -webkit-clip-path: polygon(150% 50%, 200% 50%, 100% 150%, 50% 150%);
+    }
+}
+@keyframes clip4{
+  0%{
+    clip-path: polygon(150% -150%, 200% -150%, 300% -50%, 250% -50%);
+    -webkit-clip-path: polygon(150% -150%, 200% -150%, 300% -50%, 250% -50%);
+    }
+  100%{
+    clip-path: polygon(-100% 50%, -50% 50%, 50% 150%, 0% 150%);
+    -webkit-clip-path: polygon(-100% 50%, -50% 50%, 50% 150%, 0% 150%);
+    }
+}
+.logo-anim .background {
+    pointer-events: none;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    width:100%;
+    height:100%;
+    background: url("images/logo_text.png") no-repeat center;
+    background-size: 120vh;
+    transform-origin:center;
+    transform: translate(-50%, -50%);
+    animation: start_animation 1s 1s both cubic-bezier(0.21, 0.21, 0, 1.74),
+                fade-wave 4s 7s alternate both infinite cubic-bezier(0.53, 0.32, 0.19, 1.13);
+}
+
+.countdown{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 25vh;
+    max-height: 0px;
+    overflow: hidden;
+    animation:calendar-drop 1s ease-in-out 1 forwards;
+    animation-delay: 6s;
+}
+
+.clips {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    max-width: 100%;
+    height:100%;
+    opacity: 0;
+    transition: 1s;
+}
+.clips:hover {
+    opacity: 1;
+}
+.clip{
+    position: absolute;
+    top: -10%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    max-width: 100%;
+    height:100%;
+    opacity: 0.3;
+    background: #2fb45430 url("images/logo_text.png") no-repeat center;
+    background-size: 120vh;
+    transform-origin:center;
+}
+#clip1 { animation:clip1 4s linear infinite; }
+#clipa {
+    transform: scale(1.08,1.08);
+    animation:clipa 9s linear infinite;
+}
+#clip2 {
+    transform: scale(1.082,1.082);
+    animation:clip2 5s linear infinite;
+}
+#clipb {
+    transform: scale(1.084,1.084);
+    animation:clipb 4s linear infinite;
+}
+#clip3 {
+    transform: scale(1.085,1.085);
+    animation:clip3 7s linear infinite;
+}
+#clip4 {
+    transform: scale(1.083,1.083);
+    animation:clip4 6s linear infinite;
+}

@@ -31,6 +31,14 @@ h1{
 	z-index: 2;
 }
 
+.title{
+	color:black;
+	/* color: white; */
+	font-family: 'Montserrat';
+	text-align: center;
+	font-size: 40px;
+}
+
 @media screen and (max-width:1300px){
 	.container{
 		grid-template-columns: auto auto;
@@ -43,5 +51,9 @@ h1{
 	.container{
 		grid-template-columns: auto;
 		margin: 0vh 10vw;
+	}
+
+	.title{
+		font-size: 25px;
 	}
 }
