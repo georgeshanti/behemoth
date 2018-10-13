@@ -181,13 +181,22 @@ export default class Home extends Component {
                                 <p>More about Excel.</p>
                             </div>
                             <div className="tagline">
-                                <span className="inspire">Inspire.</span>
+                                <span className="inspire"><i class="fas fa-fire"></i>Inspire.</span>
+                                <span className="innovate"><i class="fas fa-lightbulb"></i>Innovate.</span>
+                                <span className="engineer"><i class="fas fa-rocket" style={{fontSize: "0.9em", margin:"0px 12px"}}></i>Engineer.</span>
+                                {/* <span className="inspire">Inspire.</span>
                                 <span className="innovate">Innovate.</span>
-                                <span className="engineer">Engineer.</span>
+                                <span className="engineer">Engineer.</span> */}
                             </div>
                         </div>
                     </a>
                     <div className="right-content content-container">
+                        <div className="social-container">
+                            <a href="https://www.facebook.com/excelmec/" target="_blank"><i class="fab fa-facebook-square" style={{fontSize: "1.2em"}}></i></a>
+                            <a href="https://www.instagram.com/excelmec/" target="_blank"><i class="fab fa-instagram" style={{fontSize: "1.2em"}}></i></a>
+                            <a href="https://www.youtube.com/user/excelmec/" target="_blank"><i class="fab fa-youtube"></i></a>
+                            <a href="https://www.twitter.com/excelmec/" target="_blank"><i class="fab fa-twitter"></i></a>
+                        </div>
                         <div className="quick-buttons">
                             <Link to="/schedule" style={{textDecoration: "none"}}><span className="schedule button slide-top-anim">Schedule</span></Link>
                         </div>

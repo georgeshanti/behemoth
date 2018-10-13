@@ -118,6 +118,7 @@ body {
     left: 3%;
     font-size: 2.7em;
     color: white;
+    color: #4e678d;
     font-family: 'Montserrat', sans-serif;
     letter-spacing: -1px;
     font-weight: 700;
@@ -125,15 +126,58 @@ body {
 
 .tagline span {
     position: absolute;
+    width: 300px;
 }
 
+.tagline i{
+    margin: 0px 16px;
+    font-size: 1em;
+}
+
+.tagline .inspire {
+    /* color: #4e678d; */
+}
 .tagline .innovate {
     top: 1.1em;
     left: 4%;
+    /* color: #2f5896; */
 }
 
 .tagline .engineer {
     top: 2.2em;
+    /* color: #013481; */
+}
+
+.social-container{
+    position: absolute;
+    top: 10%;
+    width: 50px;
+    text-align: center;
+    right: 1%;
+    color: white;
+    font-size: 2.5em;
+}
+
+.social-container i{
+    transition: 0.5s;
+    cursor: pointer;
+    color: white;
+}
+
+.social-container:hover i.fa-facebook-square {
+    color: #3B5998;
+}
+
+.social-container:hover i.fa-instagram {
+    color: #bc2a8d;
+}
+
+.social-container:hover i.fa-youtube {
+    color: #ff0000;
+}
+
+.social-container:hover i.fa-twitter {
+    color: #1dcaff;
 }
 
 .quick-buttons {
@@ -177,6 +221,7 @@ body {
     width: 20px;
     height: 5px;
     background: white;
+    background: #4e678d;
 }
 
 .news-container .date {
@@ -187,6 +232,7 @@ body {
     margin-bottom: 0.5em;
     font-size: 1em;
     color: white;
+    color: #4e678d;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     text-transform: uppercase;
@@ -227,21 +273,20 @@ body {
     .left-content {
         overflow: hidden;
         /* background: url("images/twinkle_twinkle.png"); */
-        background: #000020;
-        background-size: 700px;
+        background: linear-gradient(-45deg, #000000, #393c42);
         top: 0;
     }
     .left-content:hover {
-        box-shadow: inset 8px 7px 100px 50px #2fb45420;
+        box-shadow: inset 8px 7px 100px 50px #6f79c91a;
     }
     .right-content {
         overflow: hidden;
         /* background: url("images/twinkle_twinkle.png"); */
-        background: #100000;
+        background: linear-gradient(45deg, #000000, #393c42);
         top: 0;
     }
     .right-content:hover {
-        box-shadow: inset -8px 7px 100px 50px #2fb45420;
+        box-shadow: inset -8px 7px 100px 50px #6f79c91a;
     }
     .quick-buttons {
         display: block;
@@ -258,10 +303,12 @@ body {
 }
 
 .mobile .right {
-    background: black;
+    /* background: black; */
+    background: #393c42;
 }
 .mobile .left {
-    background: black;
+    /* background: black; */
+    background: #393c42;
 }
 
 .mobile .button {
