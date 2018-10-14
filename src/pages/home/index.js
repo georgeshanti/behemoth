@@ -4,6 +4,7 @@ import Countdown from 'components/countdown';
 import FindOut from 'components/find-out'
 import './animation.scss';
 import './style.css';
+import nestlogo from './images/nest_logo.png';
 import meclogo from './images/mec_logo_no_text.png';
 import excel2015 from './images/2015.png';
 import excel2016 from './images/2016.png';
@@ -93,6 +94,10 @@ export default class Home extends Component {
                     <img className="excel-logo" src="images/northernlights.svg" alt="Excel logo"/>
                     <img className="excel-text" src="images/excel-text.png" alt="Excel-text"/>
                 </div> */}
+
+                <div className="title-sponsor">
+                    <a href="" target="_blank"><img src={nestlogo}/></a>
+                </div>
 
                 <div className="logo-anim">
                     <div className="clips">

@@ -572,6 +572,19 @@ body {
                 fade-wave 4s 7s alternate both infinite cubic-bezier(0.53, 0.32, 0.19, 1.13);
 }
 
+.title-sponsor {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    width: 15%;
+    height: 15%;
+    transform-origin:center;
+    transform: translate(-50%, -50%);
+}
+.title-sponsor img {
+    width: 100%;
+}
+
 .countdown{
     width: 100%;
     text-align: center;
