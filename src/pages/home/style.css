@@ -53,7 +53,7 @@ body {
 
 .curtain .down {
     transform: translateX(-50%);
-    height: 220vh;
+    height: 180vh;
 }
 
 .container {
@@ -74,7 +74,7 @@ body {
 
 .left-content {
     background: none;
-    top: 100vh;
+    top: 80vh;
     transition: box-shadow 4s ease-out;
 }
 .left-content>* {
@@ -83,7 +83,7 @@ body {
 
 .right-content {
     background: none;
-    top: 200vh;
+    top: 160vh;
     transition: box-shadow 4s ease-out;
     clip-path: none;
     -webkit-clip-path: none;
@@ -143,9 +143,9 @@ body {
     position: absolute;
     top: 77vh;
     left: 3%;
-    font-size: 2.7em;
+    font-size: 2.2em;
     color: white;
-    color: #4e678d;
+    color: #77aaff;
     font-family: 'Montserrat', sans-serif;
     letter-spacing: -1px;
     font-weight: 700;
@@ -247,7 +247,7 @@ body {
     width: 20px;
     height: 5px;
     background: white;
-    background: #4e678d;
+    background: #77aaff;
 }
 
 .news-container .date {
@@ -258,7 +258,7 @@ body {
     margin-bottom: 0.5em;
     font-size: 0.8em;
     color: white;
-    color: #4e678d;
+    color: #77aaff;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     text-transform: uppercase;
@@ -354,6 +354,16 @@ body {
     }
     .left-content:hover {
         box-shadow: inset 8px 7px 100px 50px #6f79c91a;
+    }
+    .tagline {
+        font-size: 2.7em;
+        color: #4e678d;
+    }
+    .news-container .block {
+        background: #4e678d;
+    }
+    .news-container .date {
+        color: #4e678d;
     }
     .right-content {
         overflow: hidden;
