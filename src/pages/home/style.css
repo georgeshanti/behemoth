@@ -564,7 +564,7 @@ body {
     left: 50%;
     width:100%;
     height:100%;
-    background: url("images/logo_text1.png") no-repeat center;
+    background: url("images/logo_text.png") no-repeat center;
     background-size: 120vh;
     transform-origin:center;
     transform: translate(-50%, -50%);
@@ -619,7 +619,7 @@ body {
     width: 100vw;
     height:100%;
     opacity: 0.3;
-    background: #2fb45430 url("images/logo_text1.png") no-repeat center;
+    background: #2fb45430 url("images/logo_text.png") no-repeat center;
     background-size: 120vh;
     transform-origin:center;
 }
