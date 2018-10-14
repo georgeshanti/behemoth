@@ -411,7 +411,7 @@ body {
 }
 
 .mobile .events {
-    right: -5%;
+    right: 0%;
     padding-left: 10vw;
 }
 
@@ -620,4 +620,13 @@ body {
 #clip4 {
     transform: scale(1.083,1.083);
     animation:clip4 6s linear infinite;
+}
+
+@media (max-width: 450px){
+    .clips{
+        display: none;
+    }
+    .clip{
+        display: none;
+    }
 }

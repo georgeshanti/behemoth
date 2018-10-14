@@ -53,12 +53,21 @@
     }
 }
 
-@keyframes mobile-button-anim {
+@keyframes mobile-button-anim-left {
     0% {
         width: 100vw;
     }
     100% {
         width: 50vw;
+    }
+}
+
+@keyframes mobile-button-anim-right {
+    0% {
+        width: 100vw;
+    }
+    100% {
+        width: 40vw;
     }
 }
 
@@ -207,9 +216,14 @@ $t_mobile_anim: $d_mobile_anim + $time_mobile_anim;
     }
 }
 
-.mobile .button {
+.mobile .right .button {
     animation:
-        mobile-button-anim $time_mobile_anim $d_mobile_anim both $slow_bounce,
+        mobile-button-anim-right $time_mobile_anim $d_mobile_anim both $slow_bounce,
+        fade-in $time_mobile_anim $d_mobile_anim both $slow_bounce;
+}
+.mobile .left .button {
+    animation:
+        mobile-button-anim-left $time_mobile_anim $d_mobile_anim both $slow_bounce,
         fade-in $time_mobile_anim $d_mobile_anim both $slow_bounce;
 }
 .mobile .right {
