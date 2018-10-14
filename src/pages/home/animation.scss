@@ -43,6 +43,14 @@
     }
 }
 
+@keyframes slide-down {
+    0% {
+        transform: translateY(-0.5em);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
 
 @keyframes slide-up-top {
     0% {
@@ -235,6 +243,11 @@ $t_mobile_anim: $d_mobile_anim + $time_mobile_anim;
         curtain-open-left $time_curtain_open+1s $d_curtain_open both $explode;
 }
 
+.float-buttons {
+    animation:
+        fade-in $time_content_in $d_content_in+1 both ease-out,
+        slide-down $time_content_in $d_content_in+1 both ease-out;
+}
 
 @keyframes jump-up-left {
     0% {
