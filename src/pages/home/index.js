@@ -88,7 +88,7 @@ export default class Home extends Component {
                     <img className="excel-logo" src="images/northernlights.svg" alt="Excel logo"/>
                     <img className="excel-text" src="images/excel-text.png" alt="Excel-text"/>
                 </div> */}
-        
+
                 <div className="logo-anim">
                     <div className="clips">
                         <div id="clip3" className="clip"></div>
@@ -103,7 +103,7 @@ export default class Home extends Component {
                         <Countdown date={(new Date(2018, 10, 3))} />
                     </div>
                 </div>
-        
+
                 <div className="curtain">
                     {/* <div class = "right box"></div>
                     <div class = "left box">
@@ -171,8 +171,8 @@ export default class Home extends Component {
                         }}></div>
                     </div>
                 </div>
-        
-        
+
+
                 <div className="container">
                     <a href="">
                         <div className="left-content content-container">
@@ -191,12 +191,6 @@ export default class Home extends Component {
                         </div>
                     </a>
                     <div className="right-content content-container">
-                        <div className="social-container">
-                            <a href="https://www.facebook.com/excelmec/" target="_blank"><i class="fab fa-facebook-square" style={{fontSize: "1.2em"}}></i></a>
-                            <a href="https://www.instagram.com/excelmec/" target="_blank"><i class="fab fa-instagram" style={{fontSize: "1.2em"}}></i></a>
-                            <a href="https://www.youtube.com/user/excelmec/" target="_blank"><i class="fab fa-youtube"></i></a>
-                            <a href="https://www.twitter.com/excelmec/" target="_blank"><i class="fab fa-twitter"></i></a>
-                        </div>
                         <div className="quick-buttons">
                             <Link to="/schedule" style={{textDecoration: "none"}}><span className="schedule button slide-top-anim">Schedule</span></Link>
                         </div>
@@ -206,7 +200,7 @@ export default class Home extends Component {
                                 <span className="date">10 October</span>
                                 <a className="headline" href="">New Event Cool Name launched, check it out!</a>
                             </div>
-        
+
                             <div className="news-container">
                                 <div className="block"></div>
                                 <span className="date">1 November</span>
@@ -214,8 +208,17 @@ export default class Home extends Component {
                             </div>
                         </div>
                     </div>
+
+                    <div className="content-container float-buttons">
+                        <div className="social-container">
+                            <a href="https://www.facebook.com/excelmec/" target="_blank"><i class="fab fa-facebook-square" style={{fontSize: "1.2em"}}></i></a>
+                            <a href="https://www.instagram.com/excelmec/" target="_blank"><i class="fab fa-instagram" style={{fontSize: "1.2em"}}></i></a>
+                            <a href="https://www.youtube.com/user/excelmec/" target="_blank"><i class="fab fa-youtube"></i></a>
+                            <a href="https://www.twitter.com/excelmec/" target="_blank"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
                 </div>
-        
+
                 <div className="mobile">
                     <div className="content-container left">
                         <a className="schedule button" href="">Schedule</a>
@@ -224,10 +227,10 @@ export default class Home extends Component {
                         <a className="events button" href="">Events</a>
                     </div>
                 </div>
-        
+
                 {/* <!-- Fake Menu Button --> */}
                 {/* <div className="fb-button"><span></span></div> */}
-        
+
                 <script src="js/main.js"></script>
             </div>
 		)

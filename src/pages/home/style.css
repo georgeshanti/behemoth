@@ -156,6 +156,7 @@ body {
     right: 1%;
     color: white;
     font-size: 2.5em;
+    display: none;
 }
 
 .social-container i{
@@ -256,6 +257,14 @@ body {
     display: block;
 }
 
+/* Breakpoint when media buttons start slicing off */
+@media (max-width: 1100px) {
+    .social-container {
+        top: 25%;
+        width: 1em;
+        font-size: 2em;
+    }
+}
 /* Bigger Screens */
 @media (min-width:900px) {
     body {
@@ -269,6 +278,9 @@ body {
     .content-container {
         height: 100vh;
         border: 0;
+    }
+    .social-container {
+        display: block;
     }
     .left-content {
         overflow: hidden;
