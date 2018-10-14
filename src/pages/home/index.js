@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
-import { Link } from 'react-router-dom';
+import { Route, Link } from 'react-router-dom';
 import Countdown from 'components/countdown';
+import FindOut from 'components/find-out'
 import './animation.scss';
 import './style.css';
 import excel2014 from './images/2014.png';
@@ -181,8 +182,10 @@ export default class Home extends Component {
                     <a href="">
                         <div className="left-content content-container">
                             <div className="find-out">
-                                <span className="slide-top-anim slide-up">Find out &nbsp;&#8594;</span>
-                                <p>More about Excel.</p>
+                                <Link to="/find-out" style={{textDecoration: "none", color: "white"}}>
+                                    <span className="slide-top-anim slide-up">Find out &nbsp;&#8594;</span>
+                                    <p>More about Excel.</p>
+                                </Link>
                             </div>
                             <div className="tagline">
                                 <span className="inspire"><i class="fas fa-fire"></i>Inspire.</span>
@@ -240,7 +243,7 @@ export default class Home extends Component {
 
                 {/* <!-- Fake Menu Button --> */}
                 {/* <div className="fb-button"><span></span></div> */}
-
+				<Route path='/find-out' component={FindOut}/>
                 <script src="js/main.js"></script>
             </div>
 		)

@@ -39,11 +39,11 @@ class App extends Component {
         </div> */}
         <div className="content">
           <Switch>
-            <Route path="/" exact component={Home} />
             <Route path='/events' component={Events} />
             <Route path='/competitions' component={Competitions} />
             <Route path='/contacts' component={Contacts} />
             <Route path="/schedule" component={Schedule} /> 
+            <Route path="/" component={Home} />
             <Route component={ErrorPage} />
           </Switch>
         </div>
