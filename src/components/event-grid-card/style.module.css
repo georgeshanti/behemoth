@@ -9,9 +9,14 @@
 
 .picture img {
 	border-radius: 20px;
-	position:relative;
-	width:inherit;
-	height: inherit;
+	position: relative;
+	/*new code*/
+	width:75%;
+	height: 75%;
+    top: 50%;
+    left: 50%;
+	transform: translate(-50%, -50%);
+	/* .. */
 	z-index:0;
 	-moz-transition: all 0.2s ease-out;
     -o-transition: all 0.2s ease-out;
