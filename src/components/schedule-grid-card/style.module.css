@@ -7,8 +7,11 @@
     transition-duration: 0.5s;
     position: relative;
     overflow: hidden;
+    border-style: solid;
+    border-color: #1881c3;
+    border-width: 3px;
+    border-radius: 10px;
     color: rgba(255, 255, 255,0.8);
-    overflow-y:hidden;
 }
 
 .schedule-grid-overlay{
@@ -24,18 +27,15 @@
     text-align:center;
     padding: 10px;
     background: #1881c3;
-    border-radius: 10px 10px 0px 0px;
 }
 
 .contents-container{
     width: calc(100% - 6px);
     border-style: solid;
-    border-color: #1881c3;
-    border-width: 0px 3px 3px 3px;
-    border-radius: 0px 0px 10px 10px;
     height: 70vh;
     overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-y: auto;
+    padding-right: 30px;
 }
 
 .schedule-time{
