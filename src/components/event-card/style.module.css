@@ -20,8 +20,8 @@
 }
 
 .container-border {
-    background:dimgray;
-    border:12px solid #27272727;
+    background:#48413F;
+    border:12px solid #0a022927;
     position: fixed;
     /* z-index: 2; */
     height: 85vh;
