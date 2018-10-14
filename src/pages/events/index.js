@@ -41,17 +41,15 @@ export default class Events extends Component{
                grid2.push(gridItem)   
 		}
         return(
-            <div>
-                <div>
-                    <header><h1 className={styles['title']}>EVENTS</h1></header>
+            <div style={{height: "100vh", overflow: "auto"}}>
+                <header><h1 className={styles['title']}>EVENTS</h1></header>
 
-                    <div id="grid">
-                        <div className={styles["left"]}>
-                            {grid1}
-                        </div>
-                        <div className={styles["right"]}>
-                            {grid2}
-                        </div>
+                <div id="grid">
+                    <div className={styles["left"]}>
+                        {grid1}
+                    </div>
+                    <div className={styles["right"]}>
+                        {grid2}
                     </div>
                 </div>
 				<Route path='/events/:event' component={EventCard}/>
