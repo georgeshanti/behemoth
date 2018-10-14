@@ -24,7 +24,7 @@ h1{
 }
 .container{
 	margin: 0vh 7.5vw;
-	position: absolute;
+	/* position: absolute; */
 	display:grid;
 	grid-template-columns: auto auto auto ;
 	grid-gap: 5vw;

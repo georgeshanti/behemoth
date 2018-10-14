@@ -27,14 +27,11 @@ export default class Contacts extends Component{
                grid.push(gridItem) 
         }  
         return(
-            <div>
-               <div className={styles["white-bg"]}></div>
-               <div>
+            <div style={{height: "100vh", overflow: "auto"}}>
                     <header><h1 className={styles['title']}>GET IN TOUCH</h1></header>
                     <div className={styles["container"]}>
                         {grid}
                     </div>
-                </div>
             </div>
         )
     }

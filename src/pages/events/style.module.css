@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:700');
 body{
 	overflow-x: hidden;
 }
@@ -8,6 +9,9 @@ h1{
 	text-align: center;
 	font-family: "Montserrat";
 	font-size: 60px;
+}
+.title::first-letter{
+	font-size: 150%;
 }
 
 a:active, a:focus {
@@ -53,14 +57,20 @@ a:active, a:focus {
 }
 
 .title{
-	color:black;
+	color:rgba(0,0,0,0.8);
 	/* color: white; */
-	font-family: 'Montserrat';
+	font-family: 'Alegreya Sans SC', sans-serif;
+	font-weight: bold 700;
 	text-align: center;
-	font-size: 40px;
+	font-size: 90px;
 }
 
+@media only screen and (max-width:1300px){
+	.title{
+		font-size: 70px;
+	}
 
+}
 @media only screen and (max-width:450px){
 
 	.title{
@@ -82,6 +92,17 @@ a:active, a:focus {
 	
 }
 
+
+@media only screen and (max-width:450px){
+	.title{
+		font-size: 55px;
+	}
+
+}
+
 @media only screen and (max-width:330px){
+	.title{
+		font-size: 50px;
+	}
 
 }

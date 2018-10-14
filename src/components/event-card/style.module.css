@@ -1,7 +1,7 @@
 .overlay{
     width: 100vw;
     height: 100vh;
-    background: rgba(3,20,38,0.9);
+    background: ghostwhite;
     position: fixed;
     top: 0px;
     left: 0px;
@@ -20,8 +20,8 @@
 }
 
 .container-border {
-    background: #272727;
-    border:12px solid #27272727;
+    background:#48413F;
+    border:12px solid #0a022927;
     position: fixed;
     /* z-index: 2; */
     height: 85vh;
@@ -43,13 +43,13 @@ h2{
     position: absolute;
     z-index: 2;
     cursor: pointer;
-    background: #272727;
+    background: none;
     height: 30px;
     width: 30px;
 }
 
 .btn-close img {
-    margin: 2px;
+    margin: 10px;
     height: 17px;
     width: 17px;
     transform:  rotate(-90deg);
