@@ -579,10 +579,11 @@ body {
     left: 0;
     right: 0;
     margin: 0 auto;
-    max-width: 100%;
+    width: 100vw;
     height:100%;
     opacity: 0;
     transition: 1s;
+    overflow: hidden;
 }
 .clips:hover {
     opacity: 1;
@@ -593,7 +594,7 @@ body {
     left: 0;
     right: 0;
     margin: 0 auto;
-    max-width: 100%;
+    width: 100vw;
     height:100%;
     opacity: 0.3;
     background: #2fb45430 url("images/logo_text.png") no-repeat center;
@@ -622,15 +623,9 @@ body {
     animation:clip4 6s linear infinite;
 }
 
+// Fix countdown clipping for mobile
 @media (max-width: 450px){
     .countdown{
         bottom: 22vh;
-    }
-
-    .clips{
-        display: none;
-    }
-    .clip{
-        display: none;
     }
 }
