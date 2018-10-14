@@ -41,11 +41,8 @@ class App extends Component {
           <Switch>
             <Route path="/" exact component={Home} />
             <Route path='/events' component={Events} />
-            {/* <Route path='/events/:event' component={EventCard} /> */}
             <Route path='/competitions' component={Competitions} />
             <Route path='/contacts' component={Contacts} />
-            {/* <Route path="/talks" render = {()=> (<h1>Talks</h1>)} /> */}
-            {/* <Route path="/workshops" render = {()=> (<h1>Workshops</h1>)} /> */}
             <Route path="/schedule" component={Schedule} /> 
             <Route component={ErrorPage} />
           </Switch>

@@ -3,6 +3,10 @@ import { Link } from 'react-router-dom';
 import Countdown from 'components/countdown';
 import './animation.scss';
 import './style.css';
+import excel2014 from './images/2014.png';
+import excel2015 from './images/2015.png';
+import excel2016 from './images/2016.png';
+import excel2017 from './images/2017.png';
 
 export default class Home extends Component {
 
@@ -176,6 +180,12 @@ export default class Home extends Component {
                 <div className="container">
                     <a href="">
                         <div className="left-content content-container">
+                            <div className="excel-website-container">
+                                <a href="https://excelmec.org/excel2017" target="_blank"><img src={excel2017}/></a>
+                                <a href="https://excelmec.org/excel2016" target="_blank"><img src={excel2016}/></a>
+                                <a href="https://excelmec.org/excel2015" target="_blank"><img src={excel2015}/></a>
+                                <a href="https://excelmec.org/excel2014" target="_blank"><img src={excel2014}/></a>
+                            </div>
                             <div className="find-out">
                                 <span className="slide-top-anim slide-up">Find out &nbsp;&#8594;</span>
                                 <p>More about Excel.</p>
