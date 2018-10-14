@@ -20,7 +20,7 @@
 }
 
 .container-border {
-    background: #272727;
+    background:dimgray;
     border:12px solid #27272727;
     position: fixed;
     /* z-index: 2; */
@@ -43,13 +43,13 @@ h2{
     position: absolute;
     z-index: 2;
     cursor: pointer;
-    background: #272727;
+    background: none;
     height: 30px;
     width: 30px;
 }
 
 .btn-close img {
-    margin: 2px;
+    margin: 10px;
     height: 17px;
     width: 17px;
     transform:  rotate(-90deg);

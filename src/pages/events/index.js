@@ -28,7 +28,7 @@ export default class Events extends Component{
     render(){
         var grid1 = []
         var grid2 = []
-        var colors=['#48413F','#B29F60','#294E8B','#229DEC', '#5E3D28'] //to change add colors in event cards too
+        var colors=['powderblue','thistle','palegreen','lavender', 'lightsalmon'] //to change add colors in event cards too
 		for(var i in this.state.cardInfo){
             var gridbg=colors[i%4]
 			var gridItem = (
