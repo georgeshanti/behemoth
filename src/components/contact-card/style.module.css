@@ -22,15 +22,15 @@
         background-position: 50% 50%;
 }
 
-.bottom-right {
+.top-right {
         position: absolute;
-        bottom:20px;
+        top:20px;
         right: 20px;
         z-index: 1;
         color: white;
     }
 
-    .bottom-right img{
+    .top-right img{
             height: 32px;
             width: auto;
             border-radius: initial;
@@ -63,7 +63,7 @@
               font-weight: bolder;
       }
       .card-info .contact-info{
-        font-size: 1em;
+        font-size: 0.9em;
         font-weight: bold;
 }
         a{
@@ -71,7 +71,7 @@
              color:white;
        }
         .card-info .contact-info img{
-                height: 16px;
+                height: 14px;
                 width: auto;
                 border-radius: initial;
         }
@@ -103,11 +103,11 @@
           height: 40vw;
           width: 40vw;
         }
-        .bottom-right {
-                bottom:5.5vh;
+        .top-right {
+                top:5.5vh;
                 right: 3vw;
             }
-        .bottom-right img{
+        .top-right img{
                 height: 32px;
                 width: auto;
         }
@@ -122,11 +122,11 @@
                 height: 80vw;
                 width: 80vw;
               }
-              .bottom-right {
-                bottom: 3vw;
+              .top-right {
+                top: 3vw;
                 right: 3vw;
             }
-              .bottom-right img{
+              .top-right img{
                 height: 25px;
                 width: auto;
         }
