@@ -114,12 +114,13 @@ h2 {
 
 @media only screen and (max-width:480px){
 	.event {
-		width: 75vw;
+		width: 70vw;
 		margin: auto;
 	}
 
 	.picture {
 		/* margin: 0px 15vw 0px 15vw; */
+		margin-top: 5vh;
 		width: 70vw;
 		height: 35vh;
 	}
@@ -128,6 +129,7 @@ h2 {
 	}*/
 	h2{
 		font-size: 25px;
+		margin-top: 0vh;
 		width: 70vw;
 		/* margin: 5vw 20vw 0px 20vw; */
 	}
