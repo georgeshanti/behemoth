@@ -623,6 +623,10 @@ body {
 }
 
 @media (max-width: 450px){
+    .countdown{
+        bottom: 22vh;
+    }
+
     .clips{
         display: none;
     }

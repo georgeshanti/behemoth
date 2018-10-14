@@ -27,14 +27,14 @@
     padding-bottom: 8px;
 }
 
-/* @media (max-width:450px){ */
-/*     .value-container{ */
-/*         width: 50px; */
-/*     } */
-/*     .value{ */
-/*         font-size: 30px; */
-/*     } */
-/*     .metric{ */
-/*         font-size: 15px; */
-/*     } */
-/* } */
+@media (max-width:450px){
+    .value-container{
+        width: 8vh;
+    }
+    .value{
+        font-size: 4vh;
+    }
+    .metric{
+        font-size: 2vh;
+    }
+}
