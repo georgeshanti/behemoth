@@ -75,9 +75,11 @@ class CompetitionCard extends Component {
             var con = content.contactInfo[i]
             var contact = (
                 <div>
-                    <p><b>{con.name}</b></p>
-                    <p>{con.designation}</p>
-                    <p>{con.phone}</p>
+                    <div style={{display:"inline-block", textAlign:"left"}}>
+                        <p><b>{con.name}</b></p>
+                        <p><i class="fas fa-user-alt"></i> {con.designation}</p>
+                        <p><a href={"tel:"+con.phone} style={{textDecoration: "none", color: "white"}}><i class="fas fa-phone"></i> {con.phone}</a></p>
+                    </div>
                 </div>)
             contacts.push(contact)
         }
