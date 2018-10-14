@@ -195,6 +195,7 @@ p{
 	width: 100%;
     height: 100%;
     background: rgba(3,20,38,0.9);
+    overflow: hidden;
 	/* background: black; */
 	/* background-image: url('../../img/trianglebg.png'); */
 }
@@ -206,6 +207,11 @@ p{
 	color: whitesmoke;
     z-index: 1;
     cursor: pointer;
+}
+
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
 }
 
 @media screen and (max-width: 600px) {
