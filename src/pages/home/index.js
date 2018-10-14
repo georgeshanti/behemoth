@@ -90,10 +90,6 @@ export default class Home extends Component {
 	render(){
 		return (
             <div className="content-wrapper">
-                {/* <div className="logo-group">
-                    <img className="excel-logo" src="images/northernlights.svg" alt="Excel logo"/>
-                    <img className="excel-text" src="images/excel-text.png" alt="Excel-text"/>
-                </div> */}
 
                 <div className="title-sponsor">
                     <a href="" target="_blank"><img src={nestlogo}/></a>

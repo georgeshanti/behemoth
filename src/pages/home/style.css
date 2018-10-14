@@ -130,12 +130,12 @@ body {
     position: relative;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    font-size: 2.2em;
+    font-size: 1.7em;
 }
 
 .find-out p {
     font-family: 'Josefin Sans', serif;
-    font-size: 1.5em;
+    font-size: 1.2em;
     margin: 0;
 }
 
@@ -159,6 +159,7 @@ body {
 .tagline i{
     margin: 0px 16px;
     font-size: 1em;
+    display: none;
 }
 
 .tagline .innovate {
@@ -220,7 +221,7 @@ body {
 .quick-buttons .schedule {
     position: relative;
     font-family: 'Montserrat', sans-serif;
-    font-size: 2.2em;
+    font-size: 1.7em;
     color: white;
     text-decoration: none;
     text-transform: uppercase;
@@ -255,7 +256,7 @@ body {
     top: 1em; */
     display: block;
     margin-bottom: 0.5em;
-    font-size: 1em;
+    font-size: 0.8em;
     color: white;
     color: #4e678d;
     font-family: 'Montserrat', sans-serif;
@@ -383,6 +384,21 @@ body {
     }
     .excel-website-container {
         display: block;
+    }
+    .find-out span {
+        font-size: 2.2em;
+    }
+    .find-out p {
+        font-size: 1.5em;
+    }
+    .tagline i {
+        display: inline-block
+    }
+    .quick-buttons .schedule {
+        font-size: 2.2em;
+    }
+    .news-container .date {
+        font-size: 1em;
     }
 }
 
