@@ -21,9 +21,9 @@
 	cursor:pointer;
 }
 
-.event:hover .picture img{
+/*.event:hover .picture img{
 	margin: 20px;
-}
+}*/
 .picture{
 	border-radius: 20px;
 	height:30vw;
@@ -50,6 +50,7 @@
 
 h2 {
 	position:relative;
+	width: 30vw;
 	z-index:0;
 	font-family: "Montserrat";
 	font-size:50px;
@@ -117,11 +118,12 @@ h2 {
 		width: 70vw;
 		height: 35vh;
 	}
-	.picture img{
+	/*.picture img{
 		margin: 5vw;
-	}
+	}*/
 	h2{
 		font-size: 25px;
+		width: 70vw;
 		/* margin: 5vw 20vw 0px 20vw; */
 	}
 
