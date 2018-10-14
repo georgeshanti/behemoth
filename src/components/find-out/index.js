@@ -11,13 +11,22 @@ export default class FindOut extends Component{
         this.divstyle= {
             backgroundColor: '#48413F',
         };
+        this.state = {
+            hidden: true
+        }
+    }
 
+    componentDidMount(){
+        var comp = this
+        setTimeout(function(){
+            comp.setState({hidden: false})
+        },0)
     }
     
     render(){
-
+        var opa = this.state.hidden?0:1
         return(
-            <div className={styles["overlay"]}>
+            <div className={styles["overlay"]} style={{opacity: opa}}>
                 <div className={styles["container-border"]}>
                     <div id='contents-close' className={styles["btn-close"]}><Link to={"/"}><img  alt='' src={require('../../img/close.png')}/></Link></div>
                     <div className={styles["container"]} style={this.divstyle}>
