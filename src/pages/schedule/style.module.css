@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css?family=Righteous');
+.container {
+	height: 100vh;
+	/*padding: 15px;
+	padding-top: 40px;*/
+	overflow: auto;
+    /* background: #3a3939; */
+}
+
+a{
+	outline: none;
+}
+/*.events-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(2, 250px);
+	grid-column-gap: 10px;
+	grid-row-gap: 10px;
+}
+*/
+.schedule-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 30px;
+	padding: 50px 100px;
+}
+
+.title{
+	color:black;
+	font-family: 'Montserrat';
+	text-align: center;
+	font-size: 40px;
+}
+
+.schedule-tab-container{
+	display: none;
+	font-size: 22px;
+	width: calc(95% - 40px);
+	margin: auto;
+	padding: 10px 20px 0px;
+	grid-template-columns: 33% 33% 33%;
+	font-family: 'Montserrat';
+	text-align: center;
+    color: #ffffff;
+    background: #1881c3;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.schedule-tab{
+	padding-bottom: 10px;
+	border-style: solid;
+	border-width: 0px 0px 3px;
+	border-color: transparent;
+	transition: 0.5s;
+}
+.schedule-tab.active{
+	border-color: orange;
+}
+
+@media screen and (max-width: 600px){
+
+	.schedule-scroll{
+		width: 95%;
+		margin: auto;
+		overflow: hidden;
+	}
+	.schedule-grid {
+		width: 100%;
+		display: grid;
+		grid-template-columns: 100% 100% 100%;
+		grid-gap: 0px;
+		/* padding: 2vh 2vh; */
+		padding: 0px;
+		transition: 0.5s;
+	}
+	.schedule-tab-container{
+		display: grid;
+	}
+}

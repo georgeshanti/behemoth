@@ -1,0 +1,107 @@
+#input {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  width: 8em;
+  max-width: 80%;
+  background: none;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #fff;
+  color: #fff;
+  font-size: 3em;
+  text-align: center;
+  z-index: 999;
+  opacity: .25;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  transition: opacity .3s;
+}
+#input:hover, #input:focus {
+  opacity: 1;
+}
+
+body {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+#wrapper {
+  z-index: 200;
+  overflow: hidden;
+  width: 100%;
+  /* padding-bottom: 50px; */
+  transition: all 0.5s;
+  /* background-color: #fff; */
+  height: 90%;
+}
+
+footer {
+  background-color: none;
+  min-height: 200px;
+  padding-top: 60px;
+  position: relative;
+  width: 100%;
+  z-index: 20; 
+  opacity: 0;
+  transition: 2s;
+}
+
+footer .container {
+  position: fixed;
+  z-index: 10;
+  bottom: 15px;
+  width: 100%; }
+
+/* footer .social ul {
+  margin-bottom: 35px; }
+
+footer .menu li a {
+  font-family: Roboto;
+  color: #b1aca1;
+  padding: 10px;
+  text-decoration: none; }
+
+footer .menu li a:hover {
+  color: #7dabdb; }
+
+footer .social a {
+  color: #b1aca1;
+  font-size: 0.8em;
+  padding: 10px;
+  padding-top: 0;
+  margin-bottom: 50px;
+  transition: color 0.2s linear; }
+
+footer .social a:hover {
+  color: #6794c2; }
+
+footer .copyright {
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 200;
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  margin-left: -53px; } */
+
+  #mec-logo{
+    float: left;
+    width: 120px;
+    cursor: pointer;
+
+  }
+  #excel-logo{
+    float: right;
+    width: 120px;
+    cursor: pointer;
+  }

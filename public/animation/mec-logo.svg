@@ -1,0 +1,66 @@
+<svg version="1.1" x="0px" y="0px" viewBox="0 0 700 700">
+<style type="text/css">
+<![CDATA[
+    .st1 { fill: none; stroke: #7AD4DC; stroke-width: 6; stroke-miterlimit: 10; }
+    .st2 { fill: none; stroke: #7AD4DC; stroke-width: 5; stroke-miterlimit: 10; }
+]]>
+</style>
+<g id="Lines">
+    <polyline id="Right_Walls" class="st1" points="552,519 552,471 563,456 563,381 532,364 532,331 542,331 568,302 568,257 532,237  444,254 418,210 354.3,202 	">
+    </polyline>
+    <polyline id="Left_Walls" class="st1" points="157,519 157,471 146,456 146,381 177,364 177,331 167,331 141,302 141,257 177,237  265,254 291,210 354.3,202 	">
+    </polyline>
+    <polyline id="Right_balcony_1" class="st1" points="356.3,404 477,414.3 520.3,436.3 520.3,466 470,438.1 356.3,428.3 	">
+    </polyline>
+    <polyline id="Left_balcony_1_1_" class="st1" points="357.3,404 235.7,414.3 192.3,436.3 192.3,466 242.6,438.1 357.3,428.3 	">
+    </polyline>
+    <polyline id="Right_balcony_2" class="st1" points="356.3,323.9 486,338.3 520.3,366.3 520.3,398.9 470,368 356.3,360.2 	">
+    </polyline>
+    <polyline id="Left_balcony_2" class="st1" points="357.3,323.9 226.7,338.3 192.3,366.3 192.3,398.9 242.6,368 357.3,360.2 	">
+    </polyline>
+    <polyline id="Right_balcony_3.5" class="st2" points="490,312.4 473.1,300.3 356.3,287.6 	">
+    </polyline>
+    <polyline id="Right_balcony_3" class="st1" points="356.3,265.3 486,279.6 517.3,301.6 520.3,324.3 	">
+    </polyline>
+    <polyline id="Left_balcony_3.5" class="st2" points="217.6,311.4 236.4,300.2 357.3,287.6 	">
+    </polyline>
+    <polyline id="Left_balcony_3" class="st1" points="357.3,265.3 226.7,279.6 195.3,301.6 192.3,324.3 	">
+    </polyline>
+    <line id="Left_window_4" class="st2" x1="142.3" y1="261" x2="47" y2="299.7">
+    </line>
+    <line id="Left_window_3" class="st2" x1="142.3" y1="300" x2="23.5" y2="350">
+    </line>
+    <line id="Left_window_2" class="st2" x1="149.5" y1="387" x2="38.5" y2="414">
+    </line>
+    <line id="Left_window_1" class="st2" x1="146" y1="454" x2="47" y2="471">
+    </line>
+    <line id="Right_window_4" class="st2" x1="569.7" y1="261" x2="665" y2="299.7">
+    </line>
+    <line id="Right_window_3" class="st2" x1="569.7" y1="300" x2="688.5" y2="350">
+    </line>
+    <line id="Right_window_2" class="st2" x1="562.5" y1="387" x2="673.5" y2="414">
+    </line>
+    <line id="Right_window_1" class="st2" x1="566" y1="454" x2="665" y2="471">
+    </line>
+    <polyline id="Left_panel_1_" class="st1" points="206,241.3 204.3,217 224.3,191 295,210.3 	">
+    </polyline>
+    <polyline id="Right_panel" class="st1" points="501.3,241.3 503,217 483,191 412.3,210.3 	">
+    </polyline>
+    <line id="Right_panel_line" class="st2" x1="479.5" y1="192" x2="477" y2="247.3">
+    </line>
+    <line id="Left_panel_line" class="st2" x1="228" y1="192" x2="230.5" y2="247.3">
+    </line>
+    <polyline id="Right_roof" class="st2" points="416.3,210 389.1,191 353,185.3 	">
+    </polyline>
+    <polyline id="Left_roof" class="st2" points="291,210 318.3,191 354.3,185.3 	">
+    </polyline>
+    <polyline id="Left_top_2" class="st2" points="265,254 306,222 354.3,215.2 	">
+    </polyline>
+    <polyline id="Right_top_2" class="st2" points="443.3,254 402.3,222 354,215.2 	">
+    </polyline>
+    <line id="Left_top_1" class="st1" x1="276.3" y1="245.2" x2="354.3" y2="233.2">
+    </line>
+    <line id="Right_top_1" class="st1" x1="431.3" y1="245.2" x2="353.3" y2="233.2">
+    </line>
+</g>
+</svg>

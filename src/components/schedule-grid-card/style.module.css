@@ -1,0 +1,126 @@
+.schedule-grid-item{
+    width: 100%;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #2fb454;
+    /* background: #272727; */
+    transition-duration: 0.5s;
+    position: relative;
+    overflow: hidden;
+    color: rgba(255, 255, 255,0.8);
+    overflow-y:scroll;
+}
+
+.schedule-grid-overlay{
+    width: 100%;
+/*    padding: 16px;*/
+}
+
+.schedule-title{
+    font-size: 22px;
+    font-family: 'Montserrat';
+    display:block;
+    color: #ffffff;
+    text-align:center;
+    padding: 10px;
+    background: #1881c3;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.contents-container{
+    width: calc(100% - 6px);
+    border-style: solid;
+    border-color: #1881c3;
+    border-width: 0px 3px 3px 3px;
+    border-radius: 0px 0px 10px 10px;
+    height: 70vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.schedule-time{
+    font-family: 'Montserrat';
+    font-size:14px;
+    border-style:solid;
+    border-color:#595959;
+    border-color: orange;
+    border-width: 0px 2px 0px 0px;
+    text-align: right;
+    padding: 20px;
+    display:inline-block;
+    vertical-align: middle;
+    width: calc(25% - 42px);
+}
+
+.schedule-sub-title{
+    text-transform: uppercase;
+    font-size: 16px;
+    display:inline-block;
+    padding: 0px 0px 0px 20px;
+    vertical-align: middle;
+    width: calc(75% - 20px);
+}
+
+.schedule-venue{
+    font-size: 15px;
+    display: inline-block;
+    float: right;
+    /* vertical-align: bottom; */
+    margin-right: 10px;
+    font-family: Ubuntu;
+    color: #747474;
+}
+
+.schedule-sub-grid{
+    font-family: Ubuntu;
+    /* display: grid; */
+    padding: 3px 0px;
+    /* grid-template-columns: 20% 80%; */
+    color: #454545;
+    border-style: solid;
+    border-color: #eeeeee;
+    border-width: 0px 0px 2px 0px;
+}
+
+.schedule-sub-category{
+    font-size: 12px;
+    color: grey;
+    margin-top: 2px;
+    text-transform: none;
+    width: 100%;
+}
+
+hr{
+    height: 1px;
+    color: #312e2e;
+    background-color: #312e2e;
+    border: none;
+}
+
+.schedule-body{
+    font-size:14px;
+    text-align:center;
+}
+
+@media screen and (max-width: 600px) {
+
+    .schedule-grid-overlay{
+        padding: 0px;
+    }
+
+    .schedule-time{
+        padding: 15px;
+        width: calc(25% - 32px)
+    }
+
+    .schedule-sub-title{
+        padding: 0px 0px 0px 10px;
+        width: calc(75% - 10px);
+    }
+
+    .schedule-title{
+        font-size: 14px;
+        display: none;
+    }
+    
+}

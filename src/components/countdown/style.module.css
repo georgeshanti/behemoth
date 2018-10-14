@@ -1,0 +1,40 @@
+.container{
+
+}
+
+.value-container{
+    width: 9vh;
+    margin: 2.5px;
+    border-radius: 8px;
+    text-align: center;
+    display: inline-block;
+    /* background: #32b69c; */
+    /* background: #1f65b3; */
+    /* background: orange; */
+    background: lightgreen;
+    color: white;
+    vertical-align: middle;
+    font-family: lato;
+}
+
+.value{
+    font-size: 5vh;
+    margin-top: 0px;
+}
+
+.metric{
+    font-size: 3vh;
+    padding-bottom: 8px;
+}
+
+/* @media (max-width:450px){ */
+/*     .value-container{ */
+/*         width: 50px; */
+/*     } */
+/*     .value{ */
+/*         font-size: 30px; */
+/*     } */
+/*     .metric{ */
+/*         font-size: 15px; */
+/*     } */
+/* } */

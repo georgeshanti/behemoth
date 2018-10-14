@@ -1,0 +1,136 @@
+
+.event {
+	position:relative;	
+	cursor:pointer;
+	margin-bottom:70px;
+	outline: none;
+	transition: 0.5s;
+}
+
+.picture img {
+	border-radius: 20px;
+	position:relative;
+	width:inherit;
+	height: inherit;
+	z-index:0;
+	-moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+	-webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+	cursor:pointer;
+}
+
+.event:hover .picture img{
+	margin: 20px;
+}
+.picture{
+	border-radius: 20px;
+	height:30vw;
+	width: 35vw;
+	position:relative;
+	background-color: goldenrod;
+	background-repeat: repeat-x;
+	background-size: cover;
+	background-position: center bottom;
+	margin:0;
+	/*-moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+	-webkit-transition: all 0.2s ease-out;
+	transition: all 0.2s ease-out;*/
+	-moz-transition: all 0.4s ease-out;
+    -o-transition: all 0.4s ease-out;
+    -ms-transition: all 0.4s ease-out;
+	-webkit-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
+	
+}
+
+
+h2 {
+	position:relative;
+	z-index:0;
+	font-family: "Montserrat";
+	font-size:50px;
+	font-weight:bolder;
+	color:black !important;
+	line-height:48px;
+	letter-spacing:1px;	
+    margin: 30px 0px 0px 10px;
+	-moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+	-webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+/*
+.event:hover h2 {
+	margin:-28px 0 25px 30px;
+}
+*/
+
+.info {
+
+    overflow: hidden;
+    white-space: nowrap;
+	text-overflow: ellipsis;
+	z-index: 2;
+	width: calc(35vw - 30px);
+	margin-left: 15px;
+	margin-top: 0px;
+	padding-left: 0px;
+	font-family: "Josefin Sans";
+	font-size: 20px;	
+	line-height: 21px;
+	color: black;
+	font-weight: 300;
+	/*text-transform:uppercase;*/
+}
+
+@media only screen and (max-width:1280px){
+	h2{
+		font-size:auto;
+	}
+}
+
+@media only screen and (max-width:1280px){
+	h2{
+		font-size:25px;
+		font-weight: bolder;
+		letter-spacing: 0px;
+	}
+	.info{
+		font-size: 14px;
+	}
+}
+
+
+@media only screen and (max-width:480px){
+	.event {
+		width: 75vw;
+		margin: auto;
+	}
+
+	.picture {
+		/* margin: 0px 15vw 0px 15vw; */
+		width: 70vw;
+		height: 35vh;
+	}
+	.picture img{
+		margin: 5vw;
+	}
+	h2{
+		font-size: 25px;
+		/* margin: 5vw 20vw 0px 20vw; */
+	}
+
+	.info{
+		font-size: 14px;
+		/* margin-left: 20vw; */
+		width: calc(75vw - 20px);
+		margin-top: -10px;
+	}
+	
+}
+
