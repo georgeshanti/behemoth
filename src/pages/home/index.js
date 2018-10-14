@@ -4,7 +4,7 @@ import Countdown from 'components/countdown';
 import FindOut from 'components/find-out'
 import './animation.scss';
 import './style.css';
-import excel2014 from './images/2014.png';
+import meclogo from './images/mec_logo_no_text.png';
 import excel2015 from './images/2015.png';
 import excel2016 from './images/2016.png';
 import excel2017 from './images/2017.png';
@@ -218,10 +218,10 @@ export default class Home extends Component {
 
                     <div className="content-container float-buttons">
                         <div className="excel-website-container">
+                            <a href="http://mec.ac.in" target="_blank"><img src={meclogo}/></a>
                             <a href="https://excelmec.org/excel2017" target="_blank"><img src={excel2017}/></a>
                             <a href="https://excelmec.org/excel2016" target="_blank"><img src={excel2016}/></a>
                             <a href="https://excelmec.org/excel2015" target="_blank"><img src={excel2015}/></a>
-                            <a href="https://excelmec.org/excel2014" target="_blank"><img src={excel2014}/></a>
                         </div>
                         <div className="social-container">
                             <a href="https://www.facebook.com/excelmec/" target="_blank"><i class="fab fa-facebook-square" style={{fontSize: "1.2em"}}></i></a>
