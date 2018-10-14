@@ -180,12 +180,6 @@ export default class Home extends Component {
                 <div className="container">
                     <a href="">
                         <div className="left-content content-container">
-                            <div className="excel-website-container">
-                                <a href="https://excelmec.org/excel2017" target="_blank"><img src={excel2017}/></a>
-                                <a href="https://excelmec.org/excel2016" target="_blank"><img src={excel2016}/></a>
-                                <a href="https://excelmec.org/excel2015" target="_blank"><img src={excel2015}/></a>
-                                <a href="https://excelmec.org/excel2014" target="_blank"><img src={excel2014}/></a>
-                            </div>
                             <div className="find-out">
                                 <span className="slide-top-anim slide-up">Find out &nbsp;&#8594;</span>
                                 <p>More about Excel.</p>
@@ -220,6 +214,12 @@ export default class Home extends Component {
                     </div>
 
                     <div className="content-container float-buttons">
+                        <div className="excel-website-container">
+                            <a href="https://excelmec.org/excel2017" target="_blank"><img src={excel2017}/></a>
+                            <a href="https://excelmec.org/excel2016" target="_blank"><img src={excel2016}/></a>
+                            <a href="https://excelmec.org/excel2015" target="_blank"><img src={excel2015}/></a>
+                            <a href="https://excelmec.org/excel2014" target="_blank"><img src={excel2014}/></a>
+                        </div>
                         <div className="social-container">
                             <a href="https://www.facebook.com/excelmec/" target="_blank"><i class="fab fa-facebook-square" style={{fontSize: "1.2em"}}></i></a>
                             <a href="https://www.instagram.com/excelmec/" target="_blank"><i class="fab fa-instagram" style={{fontSize: "1.2em"}}></i></a>

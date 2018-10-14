@@ -92,6 +92,10 @@ body {
     transition: 0.5s ease-out;
 }
 
+.float-buttons {
+    pointer-events: none;
+}
+
 .find-out {
     position: absolute;
     top: 50vh;
@@ -100,20 +104,18 @@ body {
 }
 
 .excel-website-container{
+    position: absolute;
+    top: 10%;
+    left: 1%;
     width: 60px;
-    padding: 75px 50px;
+    display: none;
 }
-
 .excel-website-container a{
     display: inline-block;
-    padding-left: 1.5px;
-    padding-top: 1.5px;
-    margin: 5px;
-    background: white;
-    border-radius: 50%;
+    /* background: white; */
+    /* border-radius: 50%; */
     cursor: pointer;
 }
-
 .excel-website-container img{
     width: 50px;
 }
@@ -295,15 +297,15 @@ body {
     .social-container i.fa-facebook-square {
         color: #3B5998;
     }
-    
+
     .social-container i.fa-instagram {
         color: #bc2a8d;
     }
-    
+
     .social-container i.fa-youtube {
         color: #ff0000;
     }
-    
+
     .social-container i.fa-twitter {
         color: #1dcaff;
     }
@@ -315,6 +317,12 @@ body {
         top: 25%;
         width: 1em;
         font-size: 2em;
+    }
+    .excel-website-container {
+        top: 25%;
+    }
+    .excel-website-container img {
+        width: 40px;
     }
 }
 /* Bigger Screens */
@@ -332,6 +340,9 @@ body {
         border: 0;
     }
     .social-container {
+        display: block;
+    }
+    .excel-website-container {
         display: block;
     }
     .left-content {
