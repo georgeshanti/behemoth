@@ -106,7 +106,7 @@ body {
 .excel-website-container{
     position: absolute;
     top: 10%;
-    left: 1%;
+    left: 3%;
     width: 60px;
     display: none;
 }
@@ -118,6 +118,12 @@ body {
 }
 .excel-website-container img{
     width: 50px;
+    border-radius: 50%;
+    transition: 0.2s;
+}
+.excel-website-container img:hover{
+    box-shadow: 0px 0px 5px 1px #ffffff1b;
+    transform: scale(1.2);
 }
 
 .find-out span {
@@ -171,7 +177,7 @@ body {
     top: 10%;
     width: 50px;
     text-align: center;
-    right: 1%;
+    right: 3%;
     color: white;
     font-size: 2.5em;
     display: none;
@@ -339,12 +345,6 @@ body {
         height: 100vh;
         border: 0;
     }
-    .social-container {
-        display: block;
-    }
-    .excel-website-container {
-        display: block;
-    }
     .left-content {
         overflow: hidden;
         /* background: url("images/twinkle_twinkle.png"); */
@@ -374,6 +374,15 @@ body {
     }
     .mobile {
         display: none;
+    }
+}
+/* Special case as these get cut off before the breakpoint */
+@media (min-width:1000px) {
+    .social-container {
+        display: block;
+    }
+    .excel-website-container {
+        display: block;
     }
 }
 
