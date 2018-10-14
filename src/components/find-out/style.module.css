@@ -110,6 +110,7 @@ h2{
 }
 
 .section1 p{
+    text-indent: 0px;
     color: white;
     text-align: left;
     font-size: 20px;

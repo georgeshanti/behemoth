@@ -11,6 +11,7 @@ const EventsImport = () => import('pages/events')
 const CompetitionsImport = () => import('pages/competitions')
 const ContactsImport = () => import('pages/contacts')
 const ErrorImport = () => import('pages/error')
+const SponsorsImport = () => import('pages/sponsors')
 
 const Home = asyncComponent(HomeImport)
 const Schedule = asyncComponent(ScheduleImport)
@@ -18,6 +19,7 @@ const Events = asyncComponent(EventsImport)
 const Competitions = asyncComponent(CompetitionsImport)
 const Contacts = asyncComponent(ContactsImport)
 const ErrorPage = asyncComponent(ErrorImport)
+const Sponsors = asyncComponent(SponsorsImport)
 
 const ComingSoon = ()=>{
   return(
@@ -43,6 +45,7 @@ class App extends Component {
             <Route path='/competitions' component={Competitions} />
             <Route path='/contacts' component={Contacts} />
             <Route path="/schedule" component={Schedule} /> 
+            <Route path="/sponsors" component={Sponsors} />
             <Route path="/" component={Home} />
             <Route component={ErrorPage} />
           </Switch>
