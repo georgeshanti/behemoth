@@ -23,7 +23,7 @@ class CompetitionGridCard extends Component{
     render(){
         var classN = this.state.hidden?" "+styles["hidden"]:""
         return (
-            <div className={styles['event-grid-item'] + classN} style={{ background: this.state.color, opacity: this.state.opacity, transform: "scale(" + this.state.scale + ")"}}>
+            <div className={styles['event-grid-item'] + classN} style={{ background: this.props.details.color, opacity: this.state.opacity, transform: "scale(" + this.state.scale + ")"}}>
                 <img alt={this.props.details.name} className={styles['event-grid-img']} src={this.props.details.img} />
                 <div className={styles['event-grid-overlay']} >
                     <span className={styles['event-title']}>{this.props.details.name}</span>
