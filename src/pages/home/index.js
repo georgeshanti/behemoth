@@ -106,7 +106,7 @@ export default class Home extends Component {
                     </div>
                     <div className="background"></div>
                     <div className="countdown">
-                        <Countdown date={(new Date(2018, 10, 3))} />
+                        <Countdown date={(new Date(2018, 10, 2))} />
                     </div>
                 </div>
 
@@ -205,14 +205,14 @@ export default class Home extends Component {
                         <div className="news-feed">
                             <div className="news-container">
                                 <div className="block"></div>
-                                <span className="date">10 October</span>
-                                <a className="headline" href="">New Event Cool Name launched, check it out!</a>
+                                <span className="date">21 October</span>
+                                <a className="headline" href="">TEDxMEC</a>
                             </div>
 
                             <div className="news-container">
                                 <div className="block"></div>
-                                <span className="date">1 November</span>
-                                <a className="headline" href="">Random Feed all the way</a>
+                                <span className="date">27 October</span>
+                                <a className="headline" href="">Emerge '18</a>
                             </div>
                         </div>
                     </div>
