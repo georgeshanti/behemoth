@@ -65,7 +65,12 @@ a:active, a:focus {
 	font-size: 90px;
 }
 
+@media only screen and (max-width:1300px){
+	.title{
+		font-size: 70px;
+	}
 
+}
 @media only screen and (max-width:450px){
 
 	.title{
