@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Redirect, Link } from 'react-router-dom';
 import styles from './style.module.css';
 import axios from 'axios'
+import { SSL_OP_NETSCAPE_CA_DN_BUG } from 'constants';
 
 class CompetitionCard extends Component {
 
@@ -69,6 +70,17 @@ class CompetitionCard extends Component {
     render() {
         var content = this.state.eventContent
         var index = 0;
+        var contacts = []
+        for( var i in content.contactInfo){
+            var con = content.contactInfo[i]
+            var contact = (
+                <div>
+                    <p><b>{con.name}</b></p>
+                    <p>{con.designation}</p>
+                    <p>{con.phone}</p>
+                </div>)
+            contacts.push(contact)
+        }
         switch(this.props.match.params['section']){
             case 'about':
                 index = 0
@@ -150,8 +162,8 @@ class CompetitionCard extends Component {
                                 <div id="rules-content" className={styles["white-font"] + " " + styles["tab-content"]}
                                     dangerouslySetInnerHTML={{__html: content.rules}}>
                                 </div>
-                                <div id={styles["contact-content"]} className={styles["white-font"] + " " + styles["tab-content"]}
-                                    dangerouslySetInnerHTML={{__html: content.contact}}>
+                                <div id={styles["contact-content"]} className={styles["white-font"] + " " + styles["tab-content"]}>
+                                    {contacts}
                                 </div>
                             </div>
                         </div>
