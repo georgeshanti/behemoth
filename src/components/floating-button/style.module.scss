@@ -37,6 +37,10 @@
     }
 }
 
+.icon:nth-child(5){
+    transform: scaleX(-1);
+}
+
 .icon{
     position: absolute;
     top: 50%;

@@ -105,6 +105,11 @@ hr{
 
 @media screen and (max-width: 600px) {
 
+    .schedule-grid-item{
+        width: calc(100% - 6px);
+        border-radius: 0px 0px 10px 10px;
+        border-width: 0px 3px 3px;
+    }
     .schedule-grid-overlay{
         padding: 0px;
     }

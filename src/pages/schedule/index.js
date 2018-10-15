@@ -79,7 +79,9 @@ export default class Events extends Component {
 		var tabs = []
 		var cards = this.state.cardInfo
 		for(var i in cards){
-			var classn = i===this.state.index?styles['active']:{}
+			i = parseInt(i)
+			console.log(i===this.state.index, i)
+			var classn = (i===this.state.index)?styles['active']:{}
 			var gridItem = ( <ScheduleGridCard key={i} delay={i*100} details={cards[i]}/>)
 			var tabItem = ( <div key={i} className={styles['schedule-tab'] + " " + classn} onClick={this.changeTab(i)}>Day {cards[i].day}</div>)
 			grid.push(gridItem)
