@@ -101,8 +101,10 @@ class CompetitionCard extends Component {
         var height = ['0px', '0px', '0px', '0px']
         height[index] = 'unset'
         var scrollDistance = index * 100
-        if(!this.state.mounted)
-            return <Redirect to='/competitions' push/>
+        if(!this.state.mounted){
+            window.history.back()
+        }
+            // return <Redirect to='/competitions' push/>
         return (
             <div id='contentsContainer' className={styles["events--expanded"]} style={{opacity: this.state.opacity}}>
                 <div id='event-content' className={styles["event-bg"]}>

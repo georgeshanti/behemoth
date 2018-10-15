@@ -212,6 +212,7 @@ p{
 	width: 100vw;
     /* background-color: white; */
     transition-duration: 0.5s;
+    z-index: 2;
 }
 
 .event-bg{
