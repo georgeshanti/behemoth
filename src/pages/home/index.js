@@ -90,9 +90,13 @@ export default class Home extends Component {
 	render(){
 		return (
             <div className="content-wrapper">
-
-                <div className="title-sponsor">
-                    <a href="" target="_blank"><img src={nestlogo}/></a>
+                <div className="sponsors">
+                    <div className="sponsor">
+                        <a href="" target="_blank"><img src={nestlogo}/></a>
+                    </div>
+                    <div className="sponsor">
+                        <a href="" target="_blank"><img src="https://cdn.freebiesupply.com/logos/large/2x/bosch-logo-png-transparent.png"/></a>
+                    </div>
                 </div>
 
                 <div className="logo-anim">
@@ -191,7 +195,7 @@ export default class Home extends Component {
                             <div className="tagline">
                                 <span className="inspire"><i class="fas fa-fire"></i>Inspire.</span>
                                 <span className="innovate"><i class="fas fa-lightbulb"></i>Innovate.</span>
-                                <span className="engineer"><i class="fas fa-rocket" style={{fontSize: "0.9em", margin:"0px 12px"}}></i>Engineer.</span>
+                                <span className="engineer"><i class="fas fa-rocket" style={{fontSize: "0.7em", margin:"0px 12px"}}></i>Engineer.</span>
                                 {/* <span className="inspire">Inspire.</span>
                                 <span className="innovate">Innovate.</span>
                                 <span className="engineer">Engineer.</span> */}
@@ -219,7 +223,7 @@ export default class Home extends Component {
 
                     <div className="content-container float-buttons">
                         <div className="excel-website-container">
-                            <a href="http://mec.ac.in" target="_blank"><img src={meclogo}/></a>
+                            <a href="http://mec.ac.in" target="_blank"><img src={meclogo}/><span>Govt. Model<br/>Engineering<br/>College, Thrikakkara</span></a>
                             <a href="https://excelmec.org/excel2017" target="_blank"><img src={excel2017}/></a>
                             <a href="https://excelmec.org/excel2016" target="_blank"><img src={excel2016}/></a>
                             <a href="https://excelmec.org/excel2015" target="_blank"><img src={excel2015}/></a>
