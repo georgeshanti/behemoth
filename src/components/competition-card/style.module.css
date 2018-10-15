@@ -241,6 +241,9 @@ p{
 }
 
 @media screen and (max-width: 600px) {
+    .btn-close {
+        top: 6vh;
+    }
 
     #contact-content > div{
         width: 100%;
