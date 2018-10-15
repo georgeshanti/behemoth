@@ -8,13 +8,21 @@ class NavButton extends Component {
       super(props);
       var radius = 80;
       this.menu = [
-        {symbol: "fas fa-home", link: "/", background: "#9bcc5f", text: "Home"},
+        {symbol: "fas fa-home", link: "/", background: "rgb(227, 93, 57)", text: "Home"},
         {symbol: "fas fa-gamepad", link: "/play", background: "#578bbb", text: "User"},
         {symbol: "fas fa-trophy", link: "/competitions", background: "#bf8908", text: "Competitions"},
         {symbol: "fas fa-calendar-alt", link: "/schedule", background: "#6815c2", text: "Schedule"},
-        {symbol: "fab fa-bandcamp", link: "/events", background: "#64806b", text: "Events"},
-        {symbol: "fas fa-phone", link: "/contacts", background: "rgb(30, 129, 115)", text: "Workshops"},
+        {symbol: "fab fa-bandcamp", link: "/events", background: "rgb(104, 104, 104)", text: "Events"},
+        {symbol: "fas fa-phone", link: "/contacts", background: "#ff007c", text: "Workshops"},
       ]
+      // this.menu = [
+      //   {symbol: "fas fa-home", link: "/", background: "rgb(227, 93, 57)", text: "Home"},
+      //   {symbol: "fas fa-gamepad", link: "/play", background: "#6815c2", text: "User"},
+      //   {symbol: "fas fa-trophy", link: "/competitions", background: "rgb(227, 93, 57)", text: "Competitions"},
+      //   {symbol: "fas fa-calendar-alt", link: "/schedule", background: "#6815c2", text: "Schedule"},
+      //   {symbol: "fab fa-bandcamp", link: "/events", background: "rgb(227, 93, 57)", text: "Events"},
+      //   {symbol: "fas fa-phone", link: "/contacts", background: "#6815c2", text: "Workshops"},
+      // ]
       var size = this.menu.length
       this.menu.forEach((item,i)=>{
         var angle = ( (i*2*3.14159)/size ) - (3.14159/2)

@@ -28,28 +28,35 @@ export default class Events extends Component{
     render(){
         var grid1 = []
         var grid2 = []
+        var grid3 = []
         var colors=['powderblue','thistle','palegreen','lavender', 'lightsalmon'] //to change add colors in event cards too
-		for(var i in this.state.cardInfo){
+        var cardInfo = this.state.cardInfo
+		for(var i in cardInfo){
             var gridbg=colors[i%4]
 			var gridItem = (
-                <Link key={i} to={"/events/"+this.state.cardInfo[i].codename} style={{textDecoration:'none'}}>
-                    <EventGridCard details={this.state.cardInfo[i]} delay={i*100} colors={gridbg} />
+                <Link key={i} to={"/events/"+cardInfo[i].codename} style={{textDecoration:'none'}}>
+                    <EventGridCard details={cardInfo[i]} delay={i*100} colors={gridbg} />
                 </Link>)
-            if((i%2)===0)
-               grid1.push(gridItem)
+            if((i%3)===0)
+                grid1.push(gridItem)
+            else if((i%3)===1)
+                grid2.push(gridItem)
             else
-               grid2.push(gridItem)   
+                grid3.push(gridItem)
 		}
         return(
             <div style={{height: "100vh", overflow: "auto"}}>
                 <header><h1 className={styles['title']}>EVENTS</h1></header>
 
-                <div id="grid">
+                <div id={styles["grid"]}>
                     <div className={styles["left"]}>
                         {grid1}
                     </div>
                     <div className={styles["right"]}>
                         {grid2}
+                    </div>
+                    <div className={styles["left"]}>
+                        {grid3}
                     </div>
                 </div>
 				<Route path='/events/:event' component={EventCard}/>

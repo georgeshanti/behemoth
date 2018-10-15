@@ -92,10 +92,10 @@ export default class Home extends Component {
             <div className="content-wrapper">
                 <div className="sponsors">
                     <div className="sponsor">
-                        <a href="" target="_blank"><img src={nestlogo}/></a>
+                        <a href="" target="_blank"><img src="https://cdn.freebiesupply.com/logos/large/2x/bosch-logo-png-transparent.png"/></a>
                     </div>
                     <div className="sponsor">
-                        <a href="" target="_blank"><img src="https://cdn.freebiesupply.com/logos/large/2x/bosch-logo-png-transparent.png"/></a>
+                        <a href="" target="_blank"><img src={nestlogo}/></a>
                     </div>
                 </div>
 
@@ -239,10 +239,10 @@ export default class Home extends Component {
 
                 <div className="mobile">
                     <div className="content-container left">
-                        <a className="schedule button" href="">Schedule</a>
+                        <Link to="/schedule"><a className="schedule button">Schedule</a></Link>
                     </div>
                     <div className="content-container right">
-                        <a className="events button" href="">Events</a>
+                        <Link to="/events"><a className="events button">Events</a></Link>
                     </div>
                 </div>
 

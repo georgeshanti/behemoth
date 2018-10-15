@@ -15,33 +15,23 @@ a:active, a:focus {
 	outline: none;
   }
 
-#grid {
-	position:absolute;
-	/*width:78%;
-	max-height:auto;	
-    left:11%;
-	z-index:1;
-	top:200px;
-	opacity:1;
-	-moz-transition: max-height 0s 2.3s ease-out, top 1.5s cubic-bezier(0.260, 0.010, 0.000, 1.005), opacity 1.4s ease-out;
-    -o-transition: max-height 0s 2.3s ease-out;
-    -ms-transition: max-height 0s 2.3s ease-out;
-	-webkit-transition: max-height 0s 2.3s ease-out;
-    transition: max-height 0s 2.3s ease-out, top 1.5s cubic-bezier(0.260, 0.010, 0.000, 1.005), opacity 1.4s ease-out;
-*/
+#grid{
+	width: 90%;
+	margin: auto;
+	display: grid;
+	grid-template-columns: 30% 30% 30%;
+	grid-gap: 5%;
 }
 
 .left {
-	margin-left: 11vw;
 	position:relative;
-	float:left;	
+	width: 100%;
 }
 
 .right {
 	margin-top: 120px;
-	margin-right: 11vw;
 	position:relative;
-	float:right;	
+	width: 100%;
 }
 
 .white-bg {
@@ -62,12 +52,6 @@ a:active, a:focus {
 	font-size: 40px;
 }
 
-@media only screen and (max-width:1300px){
-	.title{
-		font-size: 70px;
-	}
-
-}
 @media only screen and (max-width:450px){
 
 	.title{
@@ -75,16 +59,10 @@ a:active, a:focus {
 	}
 
 	#grid {
-		display: grid;
-		grid-template-columns: auto;
-	}
-	.left{
-		margin:auto;
-		float: none;
+		grid-template-columns: 100%;
 	}
 	.right{
-		margin:auto;
-		float: none;
+		margin:0px auto;
 	}
 	
 }
@@ -92,14 +70,13 @@ a:active, a:focus {
 
 @media only screen and (max-width:450px){
 	.title{
-		font-size: 55px;
+		font-size: 25px;
 	}
-
 }
 
 @media only screen and (max-width:330px){
 	.title{
-		font-size: 50px;
+		font-size: 25px;
 	}
 
 }

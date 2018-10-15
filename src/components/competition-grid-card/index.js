@@ -27,7 +27,7 @@ class CompetitionGridCard extends Component{
                 <img alt={this.props.details.name} className={styles['event-grid-img']} src={this.props.details.img} />
                 <div className={styles['event-grid-overlay']} >
                     <span className={styles['event-title']}>{this.props.details.name}</span>
-                    <span className={styles['event-category']}>{this.props.details.category}</span>
+                    <span className={styles['event-category']}>{this.props.details.department} - {this.props.details.category}</span>
                 </div>
             </div>
         )

@@ -53,7 +53,8 @@ export default class EventCard extends Component{
                             {this.state.cardInfo.website &&
                                 (<a target="_blank" class={styles["website-link"]} href={this.state.cardInfo.website}>Go to website <i class="fas fa-arrow-right"></i></a>)
                             }
-                            <p id="content">{this.state.cardInfo.details}</p>
+                            <p id="content"
+                                    dangerouslySetInnerHTML={{__html: this.state.cardInfo.details}}></p>
                             </div>
                             <div className={styles["section2"]}>
                                 {section2}

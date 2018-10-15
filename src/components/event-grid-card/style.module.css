@@ -12,18 +12,16 @@
 	position: relative;
 	/*new code*/
 	width:75%;
-	height: 75%;
+	display: block;
+	margin: auto;
+	/* height: 75%;
     top: 50%;
     left: 50%;
-	transform: translate(-50%, -50%);
-	/* .. */
+	transform: translate(-50%, -50%); */
 	z-index:0;
-	-moz-transition: all 0.2s ease-out;
-    -o-transition: all 0.2s ease-out;
-    -ms-transition: all 0.2s ease-out;
-	-webkit-transition: all 0.2s ease-out;
     transition: all 0.2s ease-out;
 	cursor:pointer;
+	padding: 10% 0px;
 }
 
 /*.event:hover .picture img{
@@ -31,8 +29,8 @@
 }*/
 .picture{
 	border-radius: 20px;
-	height:30vw;
-	width: 35vw;
+	height: 100%;
+	width: 100%;
 	position:relative;
 	background-color: goldenrod;
 	background-repeat: repeat-x;
@@ -55,7 +53,7 @@
 
 h2 {
 	position:relative;
-	width: 30vw;
+	width: 100%;
 	z-index:0;
 	font-family: "Montserrat";
 	font-size:50px;
@@ -63,7 +61,7 @@ h2 {
 	color:black;
 	line-height:48px;
 	letter-spacing:1px;	
-    margin: 30px 0px 0px 10px;
+    margin: 10px 0px 0px 10px;
 	-moz-transition: all 0.2s ease-out;
     -o-transition: all 0.2s ease-out;
     -ms-transition: all 0.2s ease-out;
@@ -82,7 +80,7 @@ h2 {
     white-space: nowrap;
 	text-overflow: ellipsis;
 	z-index: 2;
-	width: calc(35vw - 30px);
+	width: calc(100% - 30px);
 	margin-left: 15px;
 	margin-top: 0px;
 	padding-left: 0px;
@@ -91,7 +89,7 @@ h2 {
 	line-height: 21px;
 	color: black;
 	font-weight: 300;
-	letter-spacing: -0.6px;
+	letter-spacing: -0.5px;
 	/*text-transform:uppercase;*/
 }
 
@@ -114,33 +112,27 @@ h2 {
 
 
 @media only screen and (max-width:480px){
-	.event {
+	/* .event {
 		width: 70vw;
 		margin: auto;
 	}
 
 	.picture {
-		/* margin: 0px 15vw 0px 15vw; */
 		margin-top: 5vh;
 		width: 70vw;
 		height: 35vh;
 	}
-	/*.picture img{
-		margin: 5vw;
-	}*/
 	h2{
 		font-size: 25px;
 		margin-top: 0vh;
 		width: 70vw;
-		/* margin: 5vw 20vw 0px 20vw; */
 	}
 
 	.info{
 		font-size: 14px;
-		/* margin-left: 20vw; */
 		width: calc(75vw - 20px);
 		margin-top: -10px;
-	}
+	} */
 	
 }
 

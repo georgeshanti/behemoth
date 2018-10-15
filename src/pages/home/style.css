@@ -159,7 +159,7 @@ body {
     position: absolute;
     top: 77vh;
     left: 3%;
-    font-size: 2.2em;
+    font-size: 2em;
     color: white;
     color: #77aaff;
     font-family: 'Montserrat', sans-serif;
@@ -251,6 +251,7 @@ body {
 }
 
 .news-container {
+    font-size: 0.85em;
     position: relative;
     width: 70vw;
 }
@@ -372,7 +373,7 @@ body {
         box-shadow: inset 8px 7px 100px 50px #6f79c91a;
     }
     .tagline {
-        font-size: 2.7em;
+        font-size: 2em;
         color: #4e678d;
     }
     .news-container .block {

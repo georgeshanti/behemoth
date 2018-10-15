@@ -8,10 +8,9 @@ class CompetitionCard extends Component {
 
     constructor(props) {
         super(props);
-        var index = 0
         this.state = {
             opacity: 0,
-            tabIndex: index,
+            tabIndex: 0,
             mounted: true,
             eventContent: {
                 name:"Loading...",
@@ -22,11 +21,13 @@ class CompetitionCard extends Component {
                 venue:"--",
                 format: "",
                 rules: "",
-                contact: ""
+                contact: "",
+                buttons: []
             }
         }
         this.close = this.close.bind(this)
         this.xScrollWidth = 0
+        this.changeTab = this.changeTab.bind(this)
     }
 
     componentDidMount(){
@@ -37,6 +38,10 @@ class CompetitionCard extends Component {
             })
             }
         ,this.props.delay);
+    }
+
+    changeTab = (i) => (e) => {
+        this.setState({tabIndex: i})
     }
 
     componentWillMount(){
@@ -69,8 +74,16 @@ class CompetitionCard extends Component {
 
     render() {
         var content = this.state.eventContent
-        var index = 0;
         var contacts = []
+        var buttons = []
+        for( var i in content.buttons){
+            var con = content.buttons[i]
+            var button = (
+                <a href={con.link} className={styles['button']}>{con.name}</a>
+            )
+            buttons.push(button)
+        }
+
         for( var i in content.contactInfo){
             var con = content.contactInfo[i]
             var contact = (
@@ -83,22 +96,10 @@ class CompetitionCard extends Component {
                 </div>)
             contacts.push(contact)
         }
-        switch(this.props.match.params['section']){
-            case 'about':
-                index = 0
-                break;
-            case 'format':
-                index = 1
-                break;
-            case 'rules':
-                index = 2
-                break;
-            case 'contact':
-                index = 3
-                break;
-            default:
-                index = 0
-        }
+        var index = parseInt(this.state.tabIndex)
+        console.log(index)
+        var height = ['0px', '0px', '0px', '0px']
+        height[index] = 'unset'
         var scrollDistance = index * 100
         if(!this.state.mounted)
             return <Redirect to='/competitions' push/>
@@ -115,6 +116,8 @@ class CompetitionCard extends Component {
                                     <div className={styles["heading-text-container"]}>
                                         <div className={styles["heading-font"]}>{content.name}</div>
                                         <div className={styles["purple-font"]}>Prize Pool - {content.prize}</div>
+                                        <div className={styles["purple-font"]}>Registration Fee - {content.registration}</div>
+                                        {buttons}
                                     </div>
                                 </div>
                                 <div className={styles["main-nav-block"]} >
@@ -122,24 +125,16 @@ class CompetitionCard extends Component {
                                         <li className={styles["highlight"]} style={{transform: "translate(" + scrollDistance + "%"}}>
 
                                         </li>
-                                        <Link to={"/competitions/" + this.props.match.params['competition'] + "/about"}>
-                                            <li><div id="format" >About</div></li>
-                                        </Link>
-                                        <Link to={"/competitions/" + this.props.match.params['competition'] + "/format"}>
-                                            <li><div id="format" >Format</div></li>
-                                        </Link>
-                                        <Link to={"/competitions/" + this.props.match.params['competition'] + "/rules"}>
-                                            <li><div id="format" >Rules</div></li>
-                                        </Link>
-                                        <Link to={"/competitions/" + this.props.match.params['competition'] + "/contact"}>
-                                            <li><div id="format" >Contact</div></li>
-                                        </Link>
+                                            <li><div id="format" onClick={this.changeTab(0)}>About</div></li>
+                                            <li><div id="format" onClick={this.changeTab(1)}>Format</div></li>
+                                            <li><div id="format" onClick={this.changeTab(2)}>Rules</div></li>
+                                            <li><div id="format" onClick={this.changeTab(3)}>Contact</div></li>
                                     </ul>
                                 </div>
                             </div>
                             <div id="tab-wrapper" className={styles["tab-wrapper"]}>
                                 <div className={styles["tab-content-wrap"]} style={{transform: "translate(-" + scrollDistance + "%"}}>
-                                    <div id="about-content" className={styles["white-font"] + " " + styles["tab-content"]}>
+                                <div id="about-content" className={styles["white-font"] + " " + styles["tab-content"]} style={{height: height[0]}}>
                                     <p dangerouslySetInnerHTML={{__html: content.about}}></p>
                                     <div className={styles["mini-grid"]}>
                                         <ul>
@@ -159,12 +154,12 @@ class CompetitionCard extends Component {
                                     </div>
                                 </div>
                                 <div id="format-content" className={styles["white-font"] + " " + styles["tab-content"]}
-                                    dangerouslySetInnerHTML={{__html: content.format}}>
+                                    dangerouslySetInnerHTML={{__html: content.format}} style={{height: height[1]}}>
                                 </div> 
                                 <div id="rules-content" className={styles["white-font"] + " " + styles["tab-content"]}
-                                    dangerouslySetInnerHTML={{__html: content.rules}}>
+                                    dangerouslySetInnerHTML={{__html: content.rules}} style={{height: height[2]}}>
                                 </div>
-                                <div id={styles["contact-content"]} className={styles["white-font"] + " " + styles["tab-content"]}>
+                                <div id={styles["contact-content"]} className={styles["white-font"] + " " + styles["tab-content"]} style={{height: height[3]}}>
                                     {contacts}
                                 </div>
                             </div>

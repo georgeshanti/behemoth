@@ -33,6 +33,11 @@ a{
 	font-size: 40px;
 }
 
+.filter{
+	display: grid;
+	grid-template-columns: 50% 50%;
+}
+
 .events {
 	background:whitesmoke;
 	background-image: url('../../img/tic-tac-toe.png');
@@ -155,6 +160,14 @@ a{
 @media screen and (max-width:500px) and (max-height:800px){
 	.dropdown-wrapper{
 		height: 95px;
+	}
+}
+@media screen and (max-width:500px){
+	.filter{
+		width: 95%;
+		margin: auto;
+		grid-template-columns: 49% 49%;
+		grid-gap: 2%;
 	}
 }
 @media screen and (max-height:700px) and (min-width:600px){

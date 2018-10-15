@@ -154,6 +154,25 @@ p{
     margin-right:2vw;
 }
 
+.button{
+    text-decoration: none;
+    color: white;
+    /* text-transform: uppercase; */
+    border-color: white;
+    display: inline-block;
+    padding: 6px 15px 5px;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 20px;
+    margin: 5px;
+    transition: 0.3s;
+}
+
+.button:hover{
+    background: white;
+    color: black;
+}
+
 .mini-grid-item {
    text-align: center;
    margin-top: 0px;
@@ -177,6 +196,7 @@ p{
 
 #contact-content b{
     font-size: 30px;
+    margin-left: 45px;
 }
 
 .mini-grid-item h4{
