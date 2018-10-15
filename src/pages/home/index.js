@@ -210,13 +210,13 @@ export default class Home extends Component {
                             <div className="news-container">
                                 <div className="block"></div>
                                 <span className="date">21 October</span>
-                                <a className="headline" href="">TEDxMEC</a>
+                                <a className="headline" href="">TEDxMEC - Improvise. Adapt. Overcome. </a>
                             </div>
 
                             <div className="news-container">
                                 <div className="block"></div>
                                 <span className="date">27 October</span>
-                                <a className="headline" href="">Emerge '18</a>
+                                <a className="headline" href="">Emerge '18 - Inspire The Future.</a>
                             </div>
                         </div>
                     </div>
