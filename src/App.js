@@ -28,6 +28,15 @@ const ComingSoon = ()=>{
   )
 }
 
+class Play extends Component{
+  componentDidMount() {
+    window.location.assign('https://play.excelmec.org/');
+  }
+  render(){
+    return (<div></div>)
+  }
+}
+
 class App extends Component {
   render() {
     return (
@@ -46,6 +55,7 @@ class App extends Component {
             <Route path='/contacts' component={Contacts} />
             <Route path="/schedule" component={Schedule} /> 
             <Route path="/sponsors" component={Sponsors} />
+            <Route path="/play" component={Play} />
             <Route path="/" component={Home} />
             <Route component={ErrorPage} />
           </Switch>

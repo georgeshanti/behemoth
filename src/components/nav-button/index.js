@@ -9,10 +9,10 @@ class NavButton extends Component {
       var radius = 80;
       this.menu = [
         {symbol: "fas fa-home", link: "/", background: "#9bcc5f", text: "Home"},
-        {symbol: "fas fa-user-alt", link: "/user", background: "#578bbb", text: "User"},
-        {symbol: "fas fa-gamepad", link: "/competitions", background: "#bf8908", text: "Competitions"},
+        {symbol: "fas fa-gamepad", link: "/play", background: "#578bbb", text: "User"},
+        {symbol: "fas fa-trophy", link: "/competitions", background: "#bf8908", text: "Competitions"},
         {symbol: "fas fa-calendar-alt", link: "/schedule", background: "#6815c2", text: "Schedule"},
-        {symbol: "fas fa-basketball-ball", link: "/events", background: "#64806b", text: "Events"},
+        {symbol: "fab fa-bandcamp", link: "/events", background: "#64806b", text: "Events"},
         {symbol: "fas fa-phone", link: "/contacts", background: "rgb(30, 129, 115)", text: "Workshops"},
       ]
       var size = this.menu.length
