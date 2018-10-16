@@ -115,8 +115,8 @@ hr{
     }
 
     .schedule-time{
-        padding: 15px;
-        width: calc(25% - 32px)
+        padding: 15px 10px 15px 15px;
+        width: calc(25% - 27px)
     }
 
     .schedule-sub-title{

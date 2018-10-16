@@ -5,37 +5,41 @@
 .value-container{
     width: 9vh;
     margin: 2.5px;
+    margin-bottom: 10px;
     border-radius: 8px;
     text-align: center;
     display: inline-block;
     /* background: #32b69c; */
     /* background: #1f65b3; */
     /* background: orange; */
-    background: lightgreen;
+    /* background: lightgreen; */
+    /* background: #383b41; */
+    background: #3c4453;
     color: white;
     vertical-align: middle;
     font-family: lato;
-    box-shadow: 2px 3px rgba(0,0,0,0.3);
+    box-shadow: 4px 5px rgba(0,0,0,0.3);
 }
 
 .value{
-    font-size: 5vh;
+    font-size: 3.5em;
     margin-top: 0px;
 }
 
 .metric{
-    font-size: 3vh;
+    font-size: 1em;
     padding-bottom: 8px;
 }
 
 @media (max-width:450px){
     .value-container{
         width: 8vh;
+        border-radius: 4px;
     }
     .value{
-        font-size: 4vh;
+        font-size: 2em;
     }
     .metric{
-        font-size: 2vh;
+        font-size: 0.5em;
     }
 }

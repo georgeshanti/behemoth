@@ -53,7 +53,7 @@ body {
 
 .curtain .down {
     transform: translateX(-50%);
-    height: 180vh;
+    height: 130vh;
 }
 
 .container {
@@ -74,7 +74,7 @@ body {
 
 .left-content {
     background: none;
-    top: 80vh;
+    top: 50vh;
     transition: box-shadow 4s ease-out;
 }
 .left-content>* {
@@ -83,7 +83,7 @@ body {
 
 .right-content {
     background: none;
-    top: 160vh;
+    top: 120vh;
     transition: box-shadow 4s ease-out;
     clip-path: none;
     -webkit-clip-path: none;
@@ -101,6 +101,7 @@ body {
     top: 50vh;
     color: white;
     left: 3%;
+    font-size: 0.9em;
 }
 
 .excel-website-container{
@@ -422,7 +423,7 @@ body {
         display: inline-block
     }
     .quick-buttons .schedule {
-        font-size: 2.2em;
+        font-size: 1.5em;
     }
     .news-container .date {
         font-size: 1em;
@@ -533,7 +534,7 @@ body {
 
 @keyframes sponsor_animation{
   0%{opacity: 0; }
-  100%{opacity: 0.8; }
+  100%{opacity: 0.9; }
 }
 @keyframes fade-wave{
   0%{ opacity:1; }
@@ -621,20 +622,34 @@ body {
 }
 
 .sponsors {
+    width: 100%;
     text-align: center;
     position: absolute;
     top: 10%;
     left: 50%;
     transform-origin:center;
     transform: translate(-50%, -50%);
-    line-height: 100px;
-    width: fit-content;
+    /* line-height: 100px; */
+    /* width: fit-content; */
 }
 
 .sponsor{
     display: inline-block;
     margin: 0px 5vw;
     width: 10vw;
+    vertical-align: top;
+    animation: sponsor_animation both 1s 7s ease-in-out;
+}
+
+.sponsor span{
+    font-family: Montserrat;
+    text-transform: uppercase;
+    font-size: 0.7em;
+}
+
+.sponsor a{
+    display: block;
+    /* height: 200px; */
 }
 
 .sponsor img {
@@ -707,9 +722,13 @@ body {
 /* // Fix countdown clipping for mobile */
 @media (max-width: 450px){
     .countdown{
-        bottom: 22vh;
+        bottom: 20vh;
     }
     .sponsor {
         width: 25vw;
+    }
+
+    .mobile .button{
+        font-size: 6vmin;
     }
 }

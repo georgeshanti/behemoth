@@ -4,6 +4,7 @@ import Countdown from 'components/countdown';
 import FindOut from 'components/find-out'
 import './animation.scss';
 import './style.css';
+import boschlogo from './images/bosch.png';
 import nestlogo from './images/nest_logo.png';
 import meclogo from './images/mec_logo_no_text.png';
 import excel2015 from './images/2015.png';
@@ -90,14 +91,7 @@ export default class Home extends Component {
 	render(){
 		return (
             <div className="content-wrapper">
-                <div className="sponsors">
-                    <div className="sponsor">
-                        <a href="" target="_blank"><img src="https://cdn.freebiesupply.com/logos/large/2x/bosch-logo-png-transparent.png"/></a>
-                    </div>
-                    <div className="sponsor">
-                        <a href="" target="_blank"><img src={nestlogo}/></a>
-                    </div>
-                </div>
+                
 
                 <div className="logo-anim">
                     <div className="clips">
@@ -114,10 +108,17 @@ export default class Home extends Component {
                     </div>
                 </div>
 
+                <div className="sponsors">
+                    <div className="sponsor">
+                        <span>Title Sponsor</span>
+                        <a href="http://nesttech.com/" target="_blank"><img src={nestlogo} style={{width: "60%"}}/></a>
+                    </div>
+                    <div className="sponsor">
+                        <span>Associate Sponsor</span>
+                        <a href="https://www.bosch.in/" target="_blank"><img src={boschlogo} style={{marginTop: "11%"}}/></a>
+                    </div>
+                </div>
                 <div className="curtain">
-                    {/* <div class = "right box"></div>
-                    <div class = "left box">
-                    </div> */}
                     <div className="down box">
                         <div className="diamond" style={{
                         width: "35vw",
@@ -184,39 +185,37 @@ export default class Home extends Component {
 
 
                 <div className="container">
-                    <a href="">
-                        <div className="left-content content-container">
-                            <div className="find-out">
-                                <Link to="/find-out" style={{textDecoration: "none", color: "white"}}>
-                                    <span className="slide-top-anim slide-up">Find out &nbsp;&#8594;</span>
-                                    <p>More about Excel.</p>
-                                </Link>
-                            </div>
-                            <div className="tagline">
-                                <span className="inspire"><i class="fas fa-fire"></i>Inspire.</span>
-                                <span className="innovate"><i class="fas fa-lightbulb"></i>Innovate.</span>
-                                <span className="engineer"><i class="fas fa-rocket" style={{fontSize: "0.7em", margin:"0px 12px"}}></i>Engineer.</span>
-                                {/* <span className="inspire">Inspire.</span>
-                                <span className="innovate">Innovate.</span>
-                                <span className="engineer">Engineer.</span> */}
-                            </div>
+                    <div className="left-content content-container">
+                        <div className="find-out">
+                            <Link to="/find-out" style={{textDecoration: "none", color: "white"}}>
+                                <span className="slide-top-anim slide-up">Find out &nbsp;&#8594;</span>
+                                <p>More about Excel.</p>
+                            </Link>
                         </div>
-                    </a>
+                        <div className="tagline">
+                            <span className="inspire"><i class="fas fa-fire"></i>Inspire.</span>
+                            <span className="innovate"><i class="fas fa-lightbulb"></i>Innovate.</span>
+                            <span className="engineer"><i class="fas fa-rocket" style={{fontSize: "0.7em", margin:"0px 12px"}}></i>Engineer.</span>
+                            {/* <span className="inspire">Inspire.</span>
+                            <span className="innovate">Innovate.</span>
+                            <span className="engineer">Engineer.</span> */}
+                        </div>
+                    </div>
                     <div className="right-content content-container">
                         <div className="quick-buttons">
                             <Link to="/schedule" style={{textDecoration: "none"}}><span className="schedule button slide-top-anim">Schedule</span></Link>
                         </div>
                         <div className="news-feed">
-                            <div className="news-container">
-                                <div className="block"></div>
-                                <span className="date">21 October</span>
-                                <a className="headline" href="">TEDxMEC - Improvise. Adapt. Overcome. </a>
-                            </div>
 
                             <div className="news-container">
                                 <div className="block"></div>
                                 <span className="date">27 October</span>
                                 <a className="headline" href="">Emerge '18 - Inspire The Future.</a>
+                            </div>
+                            <div className="news-container">
+                                <div className="block"></div>
+                                <span className="date">28 October</span>
+                                <a className="headline" href="">Plogging - #KochiPlogs </a>
                             </div>
                         </div>
                     </div>

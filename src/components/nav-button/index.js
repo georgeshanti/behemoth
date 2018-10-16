@@ -36,6 +36,7 @@ class NavButton extends Component {
     }
 
     expand = (prevent) => (e) => {
+      console.log(e)
       if(prevent)
         e.preventDefault()
       if(this.state.expanded)
@@ -61,7 +62,7 @@ class NavButton extends Component {
       var menuSymbol = this.state.expanded?"fas fa-times":"fas fa-bars"
       // var menuStyle = this.state.expanded?{borderWidth: "3px", borderColor: "#000000"}:{borderColor: "#ffffff"}
       return (
-        <div className={styles.NavButton + " " + menuClass}>
+        <div className={styles.NavButton + " " + menuClass} onClick={this.expand(false)}>
           <div className={styles["menu-items"]}>
             <div className={styles["menu-overlay"]}></div>
             {menuComponents}
