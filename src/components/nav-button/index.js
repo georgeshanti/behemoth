@@ -60,7 +60,6 @@ class NavButton extends Component {
 
       var menuClass = this.state.expanded?styles["expanded"]:""
       var menuSymbol = this.state.expanded?"fas fa-times":"fas fa-bars"
-      // var menuStyle = this.state.expanded?{borderWidth: "3px", borderColor: "#000000"}:{borderColor: "#ffffff"}
       return (
         <div className={styles.NavButton + " " + menuClass} onClick={this.expand(false)}>
           <div className={styles["menu-items"]}>

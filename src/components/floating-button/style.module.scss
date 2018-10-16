@@ -1,4 +1,17 @@
 .FloatingButton{
+    @at-root a:focus#{&} {
+        outline: 0;
+        border: none;
+        -moz-outline-style: none;
+    }
+    @at-root a:active#{&} {
+        outline: 0;
+        border: none;
+        -moz-outline-style: none;
+    }
+}
+
+.FloatingButton{
     height: 50px;
     width:50px;
     background: #2fb454;
