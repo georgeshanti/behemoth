@@ -32,6 +32,11 @@ a{
 	font-size: 40px;
 }
 
+.filter{
+	display: grid;
+	grid-template-columns: 100%;
+}
+
 .schedule-tab-container{
 	display: none;
 	font-size: 22px;

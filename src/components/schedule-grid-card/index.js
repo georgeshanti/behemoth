@@ -41,6 +41,10 @@ class CompetitionGridCard extends Component{
             return a.start - b.start
         })
         for(var  i in y){
+
+            if(this.props.department!=0 && this.props.departments[this.props.department]!=y[i].department)
+                continue
+            
             var style = (i===y.length - 1)?{borderWidth: "0px"}:{}
             var time
 

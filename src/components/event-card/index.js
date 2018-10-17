@@ -9,7 +9,8 @@ export default class EventCard extends Component{
         super(props)
         this.state={
             cardInfo:[],
-        index:this.props.match.params['eventNo']
+            mounted: true,
+            index:this.props.match.params['eventNo']
         }
         this.colors=['#48413F','#B29F60','#294E8B','#229DEC', '#5E3D28']
         this.divstyle= {
@@ -33,6 +34,10 @@ export default class EventCard extends Component{
                 }
 			})
     }
+
+    unmount = () => (e)=>{
+        this.setState({mounted: false})
+    }
     
     render(){
         var section2=[]
@@ -40,11 +45,15 @@ export default class EventCard extends Component{
         {     var item=<img alt={i} src={this.state.cardInfo.imgs[i]}/>
               section2.push(item) 
         }
+        
+        if(!this.state.mounted){
+            window.history.back()
+        }
 
         return(
             <div className={styles["overlay"]}>
                 <div className={styles["container-border"]}>
-                    <div id='contents-close' className={styles["btn-close"]}><Link to={"/events"}><img  alt='' src={require('../../img/close.png')}/></Link></div>
+                    <div id='contents-close' className={styles["btn-close"]} onClick={this.unmount()}><img  alt='' src={require('../../img/close.png')}/></div>
                     <div className={styles["container"]} style={this.divstyle}>
                     <div className={styles["sections"]}>
                         

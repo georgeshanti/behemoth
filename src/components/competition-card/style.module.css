@@ -103,7 +103,6 @@ p{
     background: rgba(0,0,0,0.3);
     position: relative;
     border-radius: 50px;
-    height:6vh;
     font-family: Montserrat;
 }
 .main-nav-block ul {
@@ -132,8 +131,8 @@ p{
     transition-duration: 0.5s;
     position: absolute;
     background: #2fb454;
+    color: #2fb454;
     /* background: #8367d8; */
-    height: 6vh;
     z-index: -1;
     border-radius: 50px;
 }
@@ -242,7 +241,7 @@ p{
 
 @media screen and (max-width: 600px) {
     .btn-close {
-        top: 6vh;
+        display: none;
     }
 
     #contact-content > div{
@@ -304,15 +303,15 @@ p{
     /*.main-nav-block{
         height:vh;
     }*/
-    .main-nav-block ul li.highlight{
+    /* .main-nav-block ul li.highlight{
         height: 5vh;
     }
     .main-nav-block{
         height: 5vh;
-    }
+    } */
     .main-nav-block ul li {
         font-size:15px;
-        padding-top: 1vh;
+        /* padding-top: 1vh; */
     }
     .mini-grid ul {
         grid-template-columns: auto;
@@ -353,9 +352,9 @@ p{
     }
 
     /* navbar mobile*/
-    .main-nav-block{
+    /* .main-nav-block{
         height:7vh;
-    }
+    } */
     
     .main-nav-block ul li {
         
@@ -366,8 +365,8 @@ p{
         display: grid;
     }
 
-    .main-nav-block ul li.highlight{
+    /* .main-nav-block ul li.highlight{
         height: 7vh;
-    }
+    } */
     /* end of navbar*/
   }

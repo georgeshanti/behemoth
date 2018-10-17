@@ -88,7 +88,7 @@ class CompetitionCard extends Component {
             var con = content.contactInfo[i]
             var contact = (
                 <div>
-                    <div style={{display:"inline-block", textAlign:"left"}}>
+                    <div style={{display:"inline-block", textAlign:"left", width: "300px"}}>
                         <p><b>{con.name}</b></p>
                         <p><i class="fas fa-user-alt"></i> {con.designation}</p>
                         <p><a href={"tel:"+con.phone} style={{textDecoration: "none", color: "white"}}><i class="fas fa-phone"></i> {con.phone}</a></p>
@@ -124,13 +124,11 @@ class CompetitionCard extends Component {
                                 </div>
                                 <div className={styles["main-nav-block"]} >
                                     <ul>
-                                        <li className={styles["highlight"]} style={{transform: "translate(" + scrollDistance + "%"}}>
-
-                                        </li>
-                                            <li><div id="format" onClick={this.changeTab(0)}>About</div></li>
-                                            <li><div id="format" onClick={this.changeTab(1)}>Format</div></li>
-                                            <li><div id="format" onClick={this.changeTab(2)}>Rules</div></li>
-                                            <li><div id="format" onClick={this.changeTab(3)}>Contact</div></li>
+                                        <li className={styles["highlight"]} style={{transform: "translate(" + scrollDistance + "%"}}>Highlight</li>
+                                        <li onClick={this.changeTab(0)}><div id="format">About</div></li>
+                                        <li onClick={this.changeTab(1)}><div id="format">Format</div></li>
+                                        <li onClick={this.changeTab(2)}><div id="format">Rules</div></li>
+                                        <li onClick={this.changeTab(3)}><div id="format">Contact</div></li>
                                     </ul>
                                 </div>
                             </div>

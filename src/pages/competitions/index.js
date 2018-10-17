@@ -6,7 +6,6 @@ import CompetitionCard from 'components/competition-card';
 import CompetitionGridCard from 'components/competition-grid-card';
 import axios from 'axios';
 import DropDown from 'components/dropdown';
-import { timingSafeEqual } from 'crypto';
 
 export default class Competitions extends Component {
 
@@ -69,7 +68,7 @@ export default class Competitions extends Component {
 				<div id='eventsContainer' className={styles["events-grid"]}>
 					{grid}
 				</div>
-				<Route path='/competitions/:competition/:section?' component={CompetitionCard}/>
+				<Route path='/competitions/:competition' component={CompetitionCard}/>
 			</div>
 		);
 	}

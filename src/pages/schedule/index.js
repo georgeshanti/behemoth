@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import styles from './style.module.css';
 import ScheduleGridCard from 'components/schedule-grid-card';
+import DropDown from 'components/dropdown';
 
 export default class Events extends Component {
 
@@ -9,15 +10,21 @@ export default class Events extends Component {
 
 		 //initialise state
 		this.state = {
-			index: 0
+			index: 0,
+			department: 0
 		}
 
+		this.departments = ['All Departments', 'Computer Science', 'Robotics', 'Electronics', 'Non-Tech']
 		this.cardInfo = ["day_one", "day_two", "day_three"]
 		this.changeTab = this.changeTab.bind(this)
 	};
 
 	changeTab = (i) => (e) => {
 		this.setState({ index: i})
+	}
+
+	changeDepartment = (i) => (e) => {
+		this.setState({department: i})
 	}
 
 	render() {
@@ -28,7 +35,7 @@ export default class Events extends Component {
 			i = parseInt(i)
 			console.log(i===this.state.index, i)
 			var classn = (i===this.state.index)?styles['active']:{}
-			var gridItem = ( <ScheduleGridCard key={i} delay={i*100} details={cards[i]}/>)
+			var gridItem = ( <ScheduleGridCard key={i} delay={i*100} details={cards[i]} departments={this.departments} department={this.state.department}/>)
 			var tabItem = ( <div key={i} className={styles['schedule-tab'] + " " + classn} onClick={this.changeTab(i)}>Day {cards[i].day}</div>)
 			grid.push(gridItem)
 			tabs.push(tabItem)
@@ -37,6 +44,9 @@ export default class Events extends Component {
 		return(
 			<div className={styles["container"]}>
 				<h1 className={styles['title']}>SCHEDULE</h1>
+				<div className={styles['filter']}>
+					<DropDown items={this.departments} option={this.state.department} handle={this.changeDepartment}/>
+				</div>
 				<div className={styles['schedule-tab-container']}>
 					{tabs}
 				</div>

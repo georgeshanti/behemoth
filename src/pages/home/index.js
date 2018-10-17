@@ -10,8 +10,14 @@ import meclogo from './images/mec_logo_no_text.png';
 import excel2015 from './images/2015.png';
 import excel2016 from './images/2016.png';
 import excel2017 from './images/2017.png';
+import axios from 'axios';
 
 export default class Home extends Component {
+
+    constructor(props){
+        super(props)
+        this.state = []
+    }
 
     touchstart = (e) => {
         this.clips.style.opacity = 1;
@@ -57,6 +63,14 @@ export default class Home extends Component {
         this.resetContents(this.right_contents);
     }
 
+    componentWillMount(){
+		var comp = this;
+		axios.get("https://cms.excelmec.org/newsfeed/")
+			.then(function (response) {
+                comp.setState({newsfeed: response.data})
+            })
+    }
+
     componentDidMount(){
         this.clips = document.querySelector(".clips");
 
@@ -89,6 +103,18 @@ export default class Home extends Component {
     }
 
 	render(){
+        var newsfeed = []
+        for( var i in this.state.newsfeed){
+            var feed = (
+
+                <div className="news-container">
+                    <div className="block"></div>
+                    <span className="date">{this.state.newsfeed[i].date}</span>
+                    <a className="headline" href={this.state.newsfeed[i].link} target="_blank">{this.state.newsfeed[i].title}</a>
+                </div>
+            )
+            newsfeed.push(feed)
+        }
 		return (
             <div className="content-wrapper">
                 
@@ -206,26 +232,16 @@ export default class Home extends Component {
                             <Link to="/schedule" style={{textDecoration: "none"}}><span className="schedule button slide-top-anim">Schedule</span></Link>
                         </div>
                         <div className="news-feed">
-
-                            <div className="news-container">
-                                <div className="block"></div>
-                                <span className="date">27 October</span>
-                                <a className="headline" href="">Emerge '18 - Inspire The Future.</a>
-                            </div>
-                            <div className="news-container">
-                                <div className="block"></div>
-                                <span className="date">28 October</span>
-                                <a className="headline" href="">Plogging - #KochiPlogs </a>
-                            </div>
+                            {newsfeed}
                         </div>
                     </div>
 
                     <div className="content-container float-buttons">
                         <div className="excel-website-container">
                             <a href="http://mec.ac.in" target="_blank"><img src={meclogo}/><span>Govt. Model<br/>Engineering<br/>College, Thrikakkara</span></a>
-                            <a href="https://excelmec.org/excel2017" target="_blank"><img src={excel2017}/></a>
+                            {/* <a href="https://excelmec.org/excel2017" target="_blank"><img src={excel2017}/></a>
                             <a href="https://excelmec.org/excel2016" target="_blank"><img src={excel2016}/></a>
-                            <a href="https://excelmec.org/excel2015" target="_blank"><img src={excel2015}/></a>
+                            <a href="https://excelmec.org/excel2015" target="_blank"><img src={excel2015}/></a> */}
                         </div>
                         <div className="social-container">
                             <a href="https://www.facebook.com/excelmec/" target="_blank"><i class="fab fa-facebook-square" style={{fontSize: "1.2em"}}></i></a>

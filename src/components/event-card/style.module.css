@@ -70,7 +70,9 @@ h2{
     /* float: left; */
     position: fixed;
     width: 40%;
-    padding: 4.5vw 0vw 4.5vw 4.5vw;
+    margin: 4.5vw 0vw 4.5vw 4.5vw;
+    height: calc(85vh - 9vw);
+    overflow: auto;
 }
 
 .section1 h1{
