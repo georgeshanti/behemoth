@@ -84,7 +84,7 @@ class ScheduleGridCard extends Component{
         return (
             <div className={styles['schedule-grid-item']} style={{  opacity: this.state.opacity, transform: "scale(" + this.state.scale + ")"}}>  
                 <div className={styles['schedule-grid-overlay']} >
-                    <span className={styles['schedule-title']}>Day {this.props.details.day}</span>
+                    <span className={styles['schedule-title']}>Day {this.props.day+1}</span>
                     <div className={styles['contents-container']}>
                         {contents}
                     </div>

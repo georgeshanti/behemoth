@@ -7,9 +7,6 @@ import './style.css';
 import boschlogo from './images/bosch.png';
 import nestlogo from './images/nest_logo.png';
 import meclogo from './images/college below white.png';
-import excel2015 from './images/2015.png';
-import excel2016 from './images/2016.png';
-import excel2017 from './images/2017.png';
 import axios from 'axios';
 
 export default class Home extends Component {
@@ -239,7 +236,7 @@ export default class Home extends Component {
                     <div className="content-container float-buttons">
                         <div className="excel-website-container">
                             <a href="http://mec.ac.in" target="_blank"><img src={meclogo}/>
-                                {/* <span>Govt. Model<br/>Engineering<br/>College, Thrikakkara</span> */}
+                                <span>Govt. Model<br/>Engineering<br/>College, Thrikakkara</span>
                             </a>
                             {/* <a href="https://excelmec.org/excel2017" target="_blank"><img src={excel2017}/></a>
                             <a href="https://excelmec.org/excel2016" target="_blank"><img src={excel2016}/></a>

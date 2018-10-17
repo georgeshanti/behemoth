@@ -33,10 +33,9 @@ export default class Events extends Component {
 		var cards = this.cardInfo
 		for(var i in cards){
 			i = parseInt(i)
-			console.log(i===this.state.index, i)
 			var classn = (i===this.state.index)?styles['active']:{}
-			var gridItem = ( <ScheduleGridCard key={i} delay={i*100} details={cards[i]} departments={this.departments} department={this.state.department}/>)
-			var tabItem = ( <div key={i} className={styles['schedule-tab'] + " " + classn} onClick={this.changeTab(i)}>Day {cards[i].day}</div>)
+			var gridItem = ( <ScheduleGridCard key={i} day={i} delay={i*100} details={cards[i]} departments={this.departments} department={this.state.department}/>)
+			var tabItem = ( <div key={i} className={styles['schedule-tab'] + " " + classn} onClick={this.changeTab(i)}>Day {i+1}</div>)
 			grid.push(gridItem)
 			tabs.push(tabItem)
 		}
@@ -45,7 +44,7 @@ export default class Events extends Component {
 			<div className={styles["container"]}>
 				<h1 className={styles['title']}>SCHEDULE</h1>
 				<div className={styles['filter']}>
-					<DropDown items={this.departments} option={this.state.department} handle={this.changeDepartment}/>
+					{/* <DropDown items={this.departments} option={this.state.department} handle={this.changeDepartment}/> */}
 				</div>
 				<div className={styles['schedule-tab-container']}>
 					{tabs}

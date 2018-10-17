@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import styles from './style.module.css';
 import { Link } from 'react-router-dom'
+import excel2014 from './images/2014.png';
+import excel2015 from './images/2015.png';
+import excel2016 from './images/2016.png';
+import excel2017 from './images/2017.png';
 import axios from 'axios'
 
 export default class FindOut extends Component{
@@ -47,10 +51,13 @@ export default class FindOut extends Component{
                                 <p id="content">
                                     Govt. Model Engineering College through its dedication to excellence over the past 28 years has managed to carve a unique identity for itself as one of the best engineering colleges in South India. The college has been actively involved in bridging the technological divide by promoting social upliftment through technology. Be it electrifying remote hamlets of the state or promoting renewable energy by building a 30KW solar power plant, MEC has managed to outdo itself every single time through its culture of innovation. 
                                 </p>
-            {/*                                <h1 id="title">Legacy</h1>
-                                <p id="content">
-                                    This is the description.
-                                </p>*/}
+                                           <h1 id="title">Legacy</h1>
+                                <p id={styles["content"]}>
+                                    <a href="https://excelmec.org/excel2017" target="_blank"><img src={excel2017}/></a>
+                                    <a href="https://excelmec.org/excel2016" target="_blank"><img src={excel2016}/></a>
+                                    <a href="https://excelmec.org/excel2015" target="_blank"><img src={excel2015}/></a>
+                                    <a href="https://excelmec.org/excel2014" target="_blank"><img src={excel2014}/></a>
+                                </p>
                             </div>
                     </div>
                     </div>

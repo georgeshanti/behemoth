@@ -8,7 +8,7 @@ export default class EventCard extends Component{
     constructor(props){
         super(props)
         this.state={
-            cardInfo:[],
+            cardInfo:{},
             mounted: true,
             index:this.props.match.params['eventNo']
         }
@@ -49,13 +49,15 @@ export default class EventCard extends Component{
         if(!this.state.mounted){
             window.history.back()
         }
+        if(this.state.cardInfo.imgs!=undefined)
+            var section = this.state.cardInfo.imgs.length==0?" "+styles["no-images"]:""
 
         return(
             <div className={styles["overlay"]}>
                 <div className={styles["container-border"]}>
                     <div id='contents-close' className={styles["btn-close"]} onClick={this.unmount()}><img  alt='' src={require('../../img/close.png')}/></div>
                     <div className={styles["container"]} style={this.divstyle}>
-                    <div className={styles["sections"]}>
+                    <div className={styles["sections"] + section}>
                         
                             <div  className={styles["section1"]}>
                             <h1 id="title">{this.state.cardInfo.name}</h1>

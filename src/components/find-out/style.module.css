@@ -119,6 +119,15 @@ h2{
     font-weight: 300;
 }
 
+#content img{
+    width: 150px;
+    transition: 0.5s;
+}
+
+#content img:hover{
+    transform: scale(1.1);
+}
+
 .section2{
     /* float: right; */
     position: absolute;
