@@ -1,12 +1,14 @@
 import React, { Component } from 'react'
 import { Route, Switch } from 'react-router-dom'
 import './App.css';
+import Schedule from './pages/schedule'
+
 
 import NavButton from 'components/nav-button'
 import asyncComponent from './utils/asyncComponent'
 
 const HomeImport = () => import('pages/home')
-const ScheduleImport = () => import('pages/schedule')
+//const ScheduleImport = () => import('pages/schedule')
 const EventsImport = () => import('pages/events')
 const CompetitionsImport = () => import('pages/competitions')
 const ContactsImport = () => import('pages/contacts')
@@ -14,7 +16,7 @@ const ErrorImport = () => import('pages/error')
 const SponsorsImport = () => import('pages/sponsors')
 
 const Home = asyncComponent(HomeImport)
-const Schedule = asyncComponent(ScheduleImport)
+//const Schedule = asyncComponent(ScheduleImport)
 const Events = asyncComponent(EventsImport)
 const Competitions = asyncComponent(CompetitionsImport)
 const Contacts = asyncComponent(ContactsImport)
