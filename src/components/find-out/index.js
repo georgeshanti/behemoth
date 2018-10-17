@@ -47,10 +47,10 @@ export default class FindOut extends Component{
                                 <p id="content">
                                     Govt. Model Engineering College through its dedication to excellence over the past 28 years has managed to carve a unique identity for itself as one of the best engineering colleges in South India. The college has been actively involved in bridging the technological divide by promoting social upliftment through technology. Be it electrifying remote hamlets of the state or promoting renewable energy by building a 30KW solar power plant, MEC has managed to outdo itself every single time through its culture of innovation. 
                                 </p>
-                                <h1 id="title">Legacy</h1>
+            {/*                                <h1 id="title">Legacy</h1>
                                 <p id="content">
                                     This is the description.
-                                </p>
+                                </p>*/}
                             </div>
                     </div>
                     </div>
