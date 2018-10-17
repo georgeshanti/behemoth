@@ -69,6 +69,7 @@ h2{
     color: 454545;
     width: calc(100% - 9vw);
     padding: 4.5vw;
+    margin: 0 auto;
 }
 
 .section1 h1{
