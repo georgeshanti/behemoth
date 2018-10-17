@@ -236,7 +236,7 @@ export default class Home extends Component {
                     <div className="content-container float-buttons">
                         <div className="excel-website-container">
                             <a href="http://mec.ac.in" target="_blank"><img src={meclogo}/>
-                                <span>Govt. Model<br/>Engineering<br/>College, Thrikakkara</span>
+                                {/* <span>Govt. Model<br/>Engineering<br/>College, Thrikakkara</span> */}
                             </a>
                             {/* <a href="https://excelmec.org/excel2017" target="_blank"><img src={excel2017}/></a>
                             <a href="https://excelmec.org/excel2016" target="_blank"><img src={excel2016}/></a>
