@@ -136,6 +136,7 @@ class CompetitionCard extends Component {
                                 <div className={styles["tab-content-wrap"]} style={{transform: "translate(-" + scrollDistance + "%"}}>
                                 <div id="about-content" className={styles["white-font"] + " " + styles["tab-content"]} style={{height: height[0]}}>
                                     <p dangerouslySetInnerHTML={{__html: content.about}}></p>
+                                    {this.state.eventContent.category!="Online" &&(
                                     <div className={styles["mini-grid"]}>
                                         <ul>
                                             <li className={styles["mini-grid-item"]}>
@@ -151,7 +152,7 @@ class CompetitionCard extends Component {
                                                 <p className={styles["white-font"]}>{content.venue}</p>
                                             </li>
                                         </ul>
-                                    </div>
+                                    </div>)}
                                 </div>
                                 <div id="format-content" className={styles["white-font"] + " " + styles["tab-content"]}
                                     dangerouslySetInnerHTML={{__html: content.format}} style={{height: height[1]}}>

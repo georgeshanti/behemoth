@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styles from './style.module.css';
 import axios from 'axios';
 
-class CompetitionGridCard extends Component{
+class ScheduleGridCard extends Component{
     constructor(props){
         super(props)
         this.state = {
@@ -32,7 +32,6 @@ class CompetitionGridCard extends Component{
     }
 
     render(){
-        console.log(this.state.cardInfo)
         var contents=[]
 
         var y=this.state.cardInfo
@@ -52,12 +51,19 @@ class CompetitionGridCard extends Component{
             // console.log(y[i].start)
             var start = y[i].start%12
             start = parseFloat(start)
+            if(start<1){
+                start+=12
+            }
             start = (start).toFixed(2).toString().replace(".",":") + time
 
             time = y[i].end>=12?" PM":" AM"
             var end = y[i].end%12
             end = parseFloat(end)
+            if(end<1){
+                end+=12
+            }
             end = (end).toFixed(2) + time
+
             var x=(
                     <div key={i}>
                         <div className={styles['schedule-sub-grid']} style={style}>
@@ -88,4 +94,4 @@ class CompetitionGridCard extends Component{
     }
 }
 
-export default CompetitionGridCard
+export default ScheduleGridCard

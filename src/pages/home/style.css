@@ -107,7 +107,7 @@ body {
 .excel-website-container{
     position: absolute;
     top: 10%;
-    left: 3%;
+    left: 0%;
     width: 60px;
     display: none;
 }
@@ -118,14 +118,14 @@ body {
     cursor: pointer;
 }
 .excel-website-container img{
-    width: 50px;
+    width: 200px;
     border-radius: 50%;
     transition: 0.2s;
     display: inline-block;
 }
 .excel-website-container img:hover{
-    box-shadow: 0px 0px 5px 1px #ffffff1b;
-    transform: scale(1.2);
+    /* box-shadow: 0px 0px 5px 1px #ffffff1b; */
+    transform: scale(1.05);
 }
 
 .excel-website-container a span{
@@ -344,7 +344,7 @@ body {
         top: 25%;
     }
     .excel-website-container img {
-        width: 40px;
+        width: 150px;
     }
 }
 /* Bigger Screens */
