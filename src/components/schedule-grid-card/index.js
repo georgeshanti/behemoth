@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styles from './style.module.css';
+import axios from 'axios';
 
 class CompetitionGridCard extends Component{
     constructor(props){
@@ -7,7 +8,16 @@ class CompetitionGridCard extends Component{
         this.state = {
             opacity: 0,
             scale: 0,
+            cardInfo: []
         }
+    }
+
+    componentWillMount(){
+		var comp = this;
+		axios.get("https://cms.excelmec.org/"+this.props.details+"/")
+			.then(function (response) {
+                comp.setState({cardInfo: response.data})
+            })
     }
 
     componentDidMount(){
@@ -22,23 +32,36 @@ class CompetitionGridCard extends Component{
     }
 
     render(){
+        console.log(this.state.cardInfo)
         var contents=[]
 
-        var y=this.props.details.contents
+        var y=this.state.cardInfo
         var style
+        y.sort(function(a,b){
+            return a.start - b.start
+        })
         for(var  i in y){
-            if(i===y.length - 1)
-                style={borderWidth: "0px"}
-            else
-                style={}
+            var style = (i===y.length - 1)?{borderWidth: "0px"}:{}
+            var time
+
+            time = y[i].start>=12?" PM":" AM"
+            // console.log(y[i].start)
+            var start = y[i].start%12
+            start = parseFloat(start)
+            start = (start).toFixed(2).toString().replace(".",":") + time
+
+            time = y[i].end>=12?" PM":" AM"
+            var end = y[i].end%12
+            end = parseFloat(end)
+            end = (end).toFixed(2) + time
             var x=(
-                    <div>
-                        <div class={styles['schedule-sub-grid']} style={style}>
-                            <div class={styles['schedule-time']}>{y[i].from}<br/>{y[i].to}</div>
-                            <div class={styles['schedule-sub-title']}>
-                                {y[i].title}
-                                <div class={styles['schedule-sub-category']}>{y[i].category}
-                                    <div class={styles['schedule-venue']}>{y[i].venue}</div>
+                    <div key={i}>
+                        <div className={styles['schedule-sub-grid']} style={style}>
+                            <div className={styles['schedule-time']}>{start}<br/>{end}</div>
+                            <div className={styles['schedule-sub-title']}>
+                                {y[i].name}
+                                <div className={styles['schedule-sub-category']}>{y[i].department}
+                                    <div className={styles['schedule-venue']}>{y[i].venue}</div>
                                 </div>
                             </div>
                         </div>
@@ -49,9 +72,9 @@ class CompetitionGridCard extends Component{
         }
 
         return (
-            <div class={styles['schedule-grid-item']} style={{  opacity: this.state.opacity, transform: "scale(" + this.state.scale + ")"}}>  
-                <div class={styles['schedule-grid-overlay']} >
-                    <span class={styles['schedule-title']}>Day {this.props.details.day}</span>
+            <div className={styles['schedule-grid-item']} style={{  opacity: this.state.opacity, transform: "scale(" + this.state.scale + ")"}}>  
+                <div className={styles['schedule-grid-overlay']} >
+                    <span className={styles['schedule-title']}>Day {this.props.details.day}</span>
                     <div className={styles['contents-container']}>
                         {contents}
                     </div>

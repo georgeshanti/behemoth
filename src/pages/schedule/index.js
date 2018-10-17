@@ -9,64 +9,10 @@ export default class Events extends Component {
 
 		 //initialise state
 		this.state = {
-			index: 0,
-			cardInfo: [
-				{   
-					day:"1",
-					category:"Online",
-					about:"about",
-					contents:[
-						{from:"9:30 AM",to:"12:30 AM",title:"Competition A", category: "Non-Tech", venue: "Auditorium"},
-						{from:"9:30 AM",to:"12:30 AM",title:"Competition A", category: "Non-Tech", venue: "Auditorium"},
-						{from:"9:30 AM",to:"12:30 AM",title:"Competition A", category: "Non-Tech", venue: "Auditorium"},
-						{from:"9:30 AM",to:"12:30 AM",title:"Competition A", category: "Non-Tech", venue: "Auditorium"},
-						{from:"9:30 AM",to:"12:30 AM",title:"Competition A", category: "Non-Tech", venue: "Auditorium"},
-						{from:"9:30 AM",to:"12:30 AM",title:"Competition A", category: "Non-Tech", venue: "Auditorium"},
-						{from:"9:30 AM",to:"12:30 AM",title:"Competition A", category: "Non-Tech", venue: "Auditorium"},
-						{from:"9:30 AM",to:"12:30 AM",title:"Competition A", category: "Non-Tech", venue: "Auditorium"},
-						{from:"9:30 AM",to:"12:30 AM",title:"Competition A", category: "Non-Tech", venue: "Auditorium"},
-						{from:"9:30 AM",to:"12:30 AM",title:"Competition A", category: "Non-Tech", venue: "Auditorium"},
-						{from:"9:30 AM",to:"12:30 AM",title:"Competition A", category: "Non-Tech", venue: "Auditorium"},
-					]
-				},
-				{   
-					day:"2",
-					category:"Online",
-					about:"about",
-					contents:[
-						{from:"9:30 AM",to:"12:30 AM",title:"Competition A", category: "Non-Tech", venue: "Auditorium"},
-						{from:"9:30 AM",to:"12:30 AM",title:"Competition A", category: "Non-Tech", venue: "Auditorium"},
-						{from:"9:30 AM",to:"12:30 AM",title:"Competition A", category: "Non-Tech", venue: "Auditorium"},
-						{from:"9:30 AM",to:"12:30 AM",title:"Competition A", category: "Non-Tech", venue: "Auditorium"},
-						{from:"9:30 AM",to:"12:30 AM",title:"Competition A", category: "Non-Tech", venue: "Auditorium"},
-						{from:"9:30 AM",to:"12:30 AM",title:"Competition A", category: "Non-Tech", venue: "Auditorium"},
-						{from:"9:30 AM",to:"12:30 AM",title:"Competition A", category: "Non-Tech", venue: "Auditorium"},
-						{from:"9:30 AM",to:"12:30 AM",title:"Competition A", category: "Non-Tech", venue: "Auditorium"},
-						{from:"9:30 AM",to:"12:30 AM",title:"Competition A", category: "Non-Tech", venue: "Auditorium"},
-						{from:"9:30 AM",to:"12:30 AM",title:"Competition A", category: "Non-Tech", venue: "Auditorium"},
-						{from:"9:30 AM",to:"12:30 AM",title:"Competition A", category: "Non-Tech", venue: "Auditorium"},
-					]
-				},
-				{   
-					day:"3",
-					category:"Online",
-					about:"about",
-					contents:[
-						{from:"9:30 AM",to:"12:30 AM",title:"Competition A", category: "Non-Tech", venue: "Auditorium"},
-						{from:"9:30 AM",to:"12:30 AM",title:"Competition A", category: "Non-Tech", venue: "Auditorium"},
-						{from:"9:30 AM",to:"12:30 AM",title:"Competition A", category: "Non-Tech", venue: "Auditorium"},
-						{from:"9:30 AM",to:"12:30 AM",title:"Competition A", category: "Non-Tech", venue: "Auditorium"},
-						{from:"9:30 AM",to:"12:30 AM",title:"Competition A", category: "Non-Tech", venue: "Auditorium"},
-						{from:"9:30 AM",to:"12:30 AM",title:"Competition A", category: "Non-Tech", venue: "Auditorium"},
-						{from:"9:30 AM",to:"12:30 AM",title:"Competition A", category: "Non-Tech", venue: "Auditorium"},
-						{from:"9:30 AM",to:"12:30 AM",title:"Competition A", category: "Non-Tech", venue: "Auditorium"},
-						{from:"9:30 AM",to:"12:30 AM",title:"Competition A", category: "Non-Tech", venue: "Auditorium"},
-						{from:"9:30 AM",to:"12:30 AM",title:"Competition A", category: "Non-Tech", venue: "Auditorium"},
-						{from:"9:30 AM",to:"12:30 AM",title:"Competition A", category: "Non-Tech", venue: "Auditorium"},
-					]
-				}
-			]
+			index: 0
 		}
+
+		this.cardInfo = ["day_one", "day_two", "day_three"]
 		this.changeTab = this.changeTab.bind(this)
 	};
 
@@ -77,7 +23,7 @@ export default class Events extends Component {
 	render() {
 		var grid = []
 		var tabs = []
-		var cards = this.state.cardInfo
+		var cards = this.cardInfo
 		for(var i in cards){
 			i = parseInt(i)
 			console.log(i===this.state.index, i)

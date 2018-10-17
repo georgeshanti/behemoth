@@ -53,7 +53,7 @@ class App extends Component {
             <Route path='/events' component={Events} />
             <Route path='/competitions' component={Competitions} />
             <Route path='/contacts' component={Contacts} />
-            {/* <Route path="/schedule" component={Schedule} />  */}
+            <Route path="/schedule" component={Schedule} /> 
             <Route path="/sponsors" component={Sponsors} />
             <Route path="/play" component={Play} />
             <Route exact path="/find-out" component={Home} />
