@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import styles from './style.module.css';
 import ScheduleGridCard from 'components/schedule-grid-card';
 import DropDown from 'components/dropdown';
+import LogoHeader from 'components/logo-header';
 
 export default class Events extends Component {
 
@@ -42,9 +43,10 @@ export default class Events extends Component {
 		
 		return(
 			<div className={styles["container"]}>
+				<LogoHeader />
 				<h1 className={styles['title']}>SCHEDULE</h1>
 				<div className={styles['filter']}>
-					{/* <DropDown items={this.departments} option={this.state.department} handle={this.changeDepartment}/> */}
+					<DropDown items={this.departments} option={this.state.department} handle={this.changeDepartment}/>
 				</div>
 				<div className={styles['schedule-tab-container']}>
 					{tabs}

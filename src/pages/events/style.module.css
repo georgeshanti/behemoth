@@ -46,6 +46,7 @@ a:active, a:focus {
 .title{
 	color:rgba(0,0,0,0.8);
 	/* color: white; */
+	margin-top: 75px;
 	font-family: 'Montserrat', sans-serif;
 	font-weight: bold 700;
 	text-align: center;

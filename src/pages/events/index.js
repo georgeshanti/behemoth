@@ -3,6 +3,8 @@ import styles from './style.module.css';
 import { Route, Link } from 'react-router-dom'
 import EventGridCard from 'components/event-grid-card'
 import EventCard from 'components/event-card'
+import LogoHeader from 'components/logo-header'
+
 import axios from 'axios'
 export default class Events extends Component{
 
@@ -46,6 +48,7 @@ export default class Events extends Component{
 		}
         return(
             <div style={{height: "100vh", overflow: "auto"}}>
+                <LogoHeader />
                 <header><h1 className={styles['title']}>EVENTS</h1></header>
 
                 <div id={styles["grid"]}>

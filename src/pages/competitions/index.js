@@ -6,6 +6,7 @@ import CompetitionCard from 'components/competition-card';
 import CompetitionGridCard from 'components/competition-grid-card';
 import axios from 'axios';
 import DropDown from 'components/dropdown';
+import LogoHeader from 'components/logo-header';
 
 export default class Competitions extends Component {
 
@@ -60,6 +61,7 @@ export default class Competitions extends Component {
 		
 		return(
 			<div className={styles["container"]}>
+				<LogoHeader />
 				<h1 className={styles['title']}>COMPETITIONS</h1>
 				<div className={styles['filter']}>
 					<DropDown items={this.departments} option={this.state.department} handle={this.changeDepartment}/>

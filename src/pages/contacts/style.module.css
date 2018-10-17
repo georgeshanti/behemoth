@@ -37,6 +37,7 @@ h1{
 	font-family: 'Montserrat';
 	text-align: center;
 	font-size: 40px;
+	margin-top: 75px;
 }
 
 @media screen and (max-width:1300px){
