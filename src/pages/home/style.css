@@ -99,7 +99,7 @@ body {
 .find-out {
     position: absolute;
     top: 50vh;
-    color: white;
+    color: black;
     left: 3%;
     font-size: 0.9em;
     text-shadow: 0px 0px 3em black;
@@ -224,7 +224,6 @@ body {
 
 .quick-buttons{
     color: white;
-    text-shadow: 0px 0px 5px black;
 }
 
 .quick-buttons {
@@ -243,7 +242,8 @@ body {
     position: relative;
     font-family: 'Montserrat', sans-serif;
     font-size: 1.7em;
-    color: white;
+    color: black;
+    font-weight: 600;
     text-decoration: none;
     text-transform: uppercase;
     padding-left: 25vw;
@@ -256,6 +256,7 @@ body {
     position: absolute;
     top: 50vh;
     right: 3%;
+    animation: fade-in 0.5s 5.3s both ease-out;
 }
 
 .news-container {
@@ -375,8 +376,9 @@ body {
         overflow: hidden;
         /* background: url("images/twinkle_twinkle.png"); */
         /* background: linear-gradient(-45deg, #000000, #393c42); */
-        background: url('./images/landscape.png');
-        background-size: 50vw;
+        background: url('./images/landscape_1.png');
+        background-size: contain;
+        background-position: left bottom;
         top: 0;
     }
     .left-content:hover {
@@ -397,8 +399,9 @@ body {
         overflow: hidden;
         /* background: url("images/twinkle_twinkle.png"); */
         /* background: linear-gradient(45deg, #000000, #393c42); */
-        background: url('./images/landscape.png');
-        background-size: 50vw;
+        background: url('./images/landscape_1.png');
+        background-size: contain;
+        background-position: right bottom;
         top: 0;
     }
     .right-content:hover {
@@ -445,10 +448,16 @@ body {
 .mobile .right {
     /* background: black; */
     background: #393c42;
+    background: url('./images/landscape_1.png');
+    background-size: 55vw;
+    background-position: left bottom;
 }
 .mobile .left {
     /* background: black; */
     background: #393c42;
+    background: url('./images/landscape_1.png');
+    background-size: 55vw;
+    background-position: right bottom;
 }
 
 .mobile .button {
@@ -456,14 +465,16 @@ body {
     top: 88%;
     font-size: 7vmin;
     text-decoration:  none;
-    color: white;
-    border-top: 2px solid white;
-    border-bottom: 2px solid white;
+    color: black;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
     padding: 10px 0;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
     text-align: center;
     text-transform: uppercase;
     transition: 1s;
+    /* text-shadow: 0px 0px 10px white; */
 }
 
 .mobile .button:hover {
@@ -540,8 +551,10 @@ body {
 }
 
 @keyframes start_animation{
-  0%{width: 0; height: 0; border-radius: 50%; background-size:0vh;}
-  100%{width: 100%; height: 100%; border-radius: 0;background-size:120vh;}
+    0%{transform: scale(0)}
+    100%{transform: scale(1)}
+  /* 0%{width: 0; height: 0; border-radius: 50%; background-size:0vh;}
+  100%{width: 100%; height: 100%; border-radius: 0;background-size:120vh;} */
 }
 
 @keyframes sponsor_animation{
@@ -620,8 +633,14 @@ body {
 }
 
 .logo-anim{
+}
+
+.logo-anim .space{
+    position: absolute;
+    top: 0px;
+    left: 0px;
     background: url('./images/space.png');
-    background-size: 50vw;
+    background-size: contain;
     background-position: center;
     height: 100vh;
     width: 100vw;
@@ -630,16 +649,80 @@ body {
 .logo-anim .background {
     pointer-events: none;
     position: absolute;
-    top: 40%;
-    left: 50%;
+    top: -10%;
+    left: 0%;
     width:100%;
     height:100%;
-    background: url("images/logo_text.png") no-repeat center;
-    background-size: 120vh;
+    background: none;
+    /* background: url("images/logo_text.png") no-repeat center;
+    background-size: 120vh; */
     transform-origin:center;
     transform: translate(-50%, -50%);
-    animation: start_animation 1s 1s both cubic-bezier(0.21, 0.21, 0, 1.74),
-                fade-wave 4s 7s alternate both infinite cubic-bezier(0.53, 0.32, 0.19, 1.13);
+    animation: start_animation 1s 1s both cubic-bezier(0.21, 0.21, 0, 1.74);
+                /* fade-wave 4s 7s alternate both infinite cubic-bezier(0.53, 0.32, 0.19, 1.13); */
+}
+
+.logo-anim .background img{
+    width: 25vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border-radius: 100vw;
+}
+
+.logo-anim .background svg{
+    width: 25vw;
+    display: none;
+    height: 25vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#edge {
+    transform: scale(1) rotate(-90deg);
+    stroke-dasharray: 78.5398163397;
+    animation: dash 10s ease-in-out infinite;
+  } 
+  @keyframes dash {
+    0% {
+      stroke-dashoffset: 78.5398163397;
+      stroke-dasharray: 78.5398163397;
+    }
+    50% {
+      stroke-dashoffset: 0;
+      stroke-dasharray: 78.5398163397;
+    }
+    100% {
+      stroke-dashoffset: -78.5398163397;
+      stroke-dasharray: 78.5398163397;
+    }
+  }
+
+.left-container{
+    filter: drop-shadow(4px -4px 15px rgba(255,255,255,0.7));
+}
+
+.mobile .left-container{
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    pointer-events: none;
+}
+
+.right-container{
+    filter: drop-shadow(-4px -4px 15px rgba(255,255,255,0.7));
+    pointer-events: auto;
+}
+
+.mobile .right-container{
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    pointer-events: none;
 }
 
 .sponsors {
@@ -666,6 +749,8 @@ body {
     font-family: Montserrat;
     text-transform: uppercase;
     font-size: 0.7em;
+    color: white;
+    text-shadow:0px 0px 10px black;
 }
 
 .sponsor a{
@@ -746,6 +831,10 @@ body {
 
 /* // Fix countdown clipping for mobile */
 @media (max-width: 450px){
+    .find-out{
+        color: white;
+    }
+
     .countdown{
         bottom: 20vh;
     }
@@ -755,5 +844,15 @@ body {
 
     .mobile .button{
         font-size: 6vmin;
+    }
+
+    .logo-anim .background img{
+        width: 75vw;
+    }
+}
+
+@media (max-width: 800px){
+    .logo-anim .background img{
+        width: 50vw;
     }
 }

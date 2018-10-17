@@ -7,6 +7,7 @@ import './style.css';
 import boschlogo from './images/bosch.png';
 import nestlogo from './images/nest_logo.png';
 import meclogo from './images/college below white.png';
+import excellogo from './images/logo_text_1.png';
 import axios from 'axios';
 
 export default class Home extends Component {
@@ -125,7 +126,13 @@ export default class Home extends Component {
                         <div id="clip2" className="clip"></div>
                         <div id="clipb" className="clip"></div>
                     </div>
-                    <div className="background"></div>
+                    <div className="space"></div>
+                    <div className="background">
+                        <img src={excellogo}/>
+                        <svg viewBox="13 13 26 26">
+                            <circle id="edge" cx="0" cy="0" r="12.5" stroke="#000000" fill="none" stroke-width="1"/>
+                        </svg>
+                    </div>
                     <div className="countdown">
                         <Countdown date={(new Date(2018, 10, 2))} />
                     </div>
@@ -208,31 +215,34 @@ export default class Home extends Component {
 
 
                 <div className="container">
-                    <div className="left-content content-container">
-                        <div className="find-out">
-                            <Link to="/find-out" style={{textDecoration: "none", color: "white"}}>
-                                <span className="slide-top-anim slide-up">Find out &nbsp;&#8594;</span>
-                                <p>More about Excel.</p>
-                            </Link>
-                        </div>
-                        <div className="tagline">
-                            <span className="inspire"><i class="fas fa-fire"></i>Inspire.</span>
-                            <span className="innovate"><i class="fas fa-lightbulb"></i>Innovate.</span>
-                            <span className="engineer"><i class="fas fa-rocket" style={{fontSize: "0.7em", margin:"0px 12px"}}></i>Engineer.</span>
-                            {/* <span className="inspire">Inspire.</span>
-                            <span className="innovate">Innovate.</span>
-                            <span className="engineer">Engineer.</span> */}
-                        </div>
-                    </div>
-                    <div className="right-content content-container">
-                        <div className="quick-buttons">
-                            <Link to="/schedule" style={{textDecoration: "none"}}><span className="schedule button slide-top-anim">Schedule</span></Link>
-                        </div>
-                        <div className="news-feed">
-                            {newsfeed}
+                    <div className="left-container">
+                        <div className="left-content content-container">
+                            <div className="find-out">
+                                <Link to="/find-out" style={{textDecoration: "none", color: "inherit"}}>
+                                    <span className="slide-top-anim slide-up">Find out &nbsp;&#8594;</span>
+                                    <p>More about Excel.</p>
+                                </Link>
+                            </div>
+                            <div className="tagline">
+                                <span className="inspire"><i class="fas fa-fire"></i>Inspire.</span>
+                                <span className="innovate"><i class="fas fa-lightbulb"></i>Innovate.</span>
+                                <span className="engineer"><i class="fas fa-rocket" style={{fontSize: "0.7em", margin:"0px 12px"}}></i>Engineer.</span>
+                                {/* <span className="inspire">Inspire.</span>
+                                <span className="innovate">Innovate.</span>
+                                <span className="engineer">Engineer.</span> */}
+                            </div>
                         </div>
                     </div>
-
+                    <div className="right-container">
+                        <div className="right-content content-container">
+                            <div className="quick-buttons">
+                                <Link to="/schedule" style={{textDecoration: "none"}}><span className="schedule button slide-top-anim">Schedule</span></Link>
+                            </div>
+                            <div className="news-feed">
+                                {newsfeed}
+                            </div>
+                        </div>
+                    </div>
                     <div className="content-container float-buttons">
                         <div className="excel-website-container">
                             <a href="http://mec.ac.in" target="_blank"><img src={meclogo}/>
@@ -252,11 +262,15 @@ export default class Home extends Component {
                 </div>
 
                 <div className="mobile">
-                    <div className="content-container left">
-                        <Link to="/schedule"><a className="schedule button">Schedule</a></Link>
+                    <div class="left-container">
+                        <div className="content-container left">
+                            <Link to="/schedule"><a className="schedule button">Schedule</a></Link>
+                        </div>
                     </div>
-                    <div className="content-container right">
-                        <Link to="/events"><a className="events button">Events</a></Link>
+                    <div class="right-container">
+                        <div className="content-container right">
+                            <Link to="/events"><a className="events button">Events</a></Link>
+                        </div>
                     </div>
                 </div>
 
