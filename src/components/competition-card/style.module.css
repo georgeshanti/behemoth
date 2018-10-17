@@ -187,6 +187,7 @@ p{
 
 #contact-content p{
     font-size: 20px;
+    text-align: center;
 }
 
 #contact-content p i{
@@ -195,7 +196,7 @@ p{
 
 #contact-content b{
     font-size: 30px;
-    margin-left: 45px;
+ /*   margin-left: 45px;*/
 }
 
 .mini-grid-item h4{
