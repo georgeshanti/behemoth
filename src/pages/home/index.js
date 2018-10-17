@@ -7,7 +7,7 @@ import './style.css';
 import boschlogo from './images/bosch.png';
 import nestlogo from './images/nest_logo.png';
 import meclogo from './images/college below white.png';
-import excellogo from './images/logo_text_1.png';
+import excellogo from './images/logo_text_2.png';
 import axios from 'axios';
 
 export default class Home extends Component {
