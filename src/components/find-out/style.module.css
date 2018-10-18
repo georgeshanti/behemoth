@@ -69,13 +69,14 @@ h2{
     color: 454545;
     width: calc(100% - 9vw);
     padding: 4.5vw;
+    margin: 0 auto;
 }
 
 .section1 h1{
     color: white;
     word-wrap: break-word;
-    text-align: left;
-    font-size: 70px;
+    text-align: center;
+    font-size: 32px;
     /* line-height: 70px; */
     margin: 10px 0px;
     font-family: "Montserrat", Arial, sans-serif;
@@ -113,14 +114,14 @@ h2{
 .section1 p{
     text-indent: 0px;
     color: white;
-    text-align: left;
+    text-align: center;
     font-size: 20px;
     font-family: "Josefin Sans", Arial, sans-serif;
     font-weight: 300;
 }
 
 #content img{
-    width: 150px;
+    width: 4em;
     transition: 0.5s;
 }
 
