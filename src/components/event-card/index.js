@@ -41,6 +41,14 @@ export default class EventCard extends Component{
     
     render(){
         var section2=[]
+        var buttons = []
+        for( var i in this.state.cardInfo.buttons){
+            var con = this.state.cardInfo.buttons[i]
+            var button = (
+                <a href={con.link} target="_blank" className={styles["website-link"]}>{con.name}</a>
+            )
+            buttons.push(button)
+        }
         for (var i in this.state.cardInfo.imgs)
         {     var item=<img alt={i} src={this.state.cardInfo.imgs[i]}/>
               section2.push(item) 
@@ -64,6 +72,7 @@ export default class EventCard extends Component{
                             {this.state.cardInfo.website &&
                                 (<a target="_blank" class={styles["website-link"]} href={this.state.cardInfo.website}>Go to website <i class="fas fa-arrow-right"></i></a>)
                             }
+                            {buttons}
                             <p id="content"
                                     dangerouslySetInnerHTML={{__html: this.state.cardInfo.details}}></p>
                             </div>
