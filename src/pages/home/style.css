@@ -703,7 +703,7 @@ body {
   }
 
 .left-container{
-    filter: drop-shadow(4px -4px 15px rgba(255,255,255,0.7));
+    filter: drop-shadow(4px -4px 15px rgba(0,0,0,0.7));
 }
 
 .mobile .left-container{
@@ -714,7 +714,7 @@ body {
 }
 
 .right-container{
-    filter: drop-shadow(-4px -4px 15px rgba(255,255,255,0.7));
+    filter: drop-shadow(4px -4px 15px rgba(0,0,0,0.7));
     pointer-events: auto;
 }
 
