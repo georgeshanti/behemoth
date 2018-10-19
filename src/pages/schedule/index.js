@@ -17,6 +17,7 @@ export default class Events extends Component {
 		this.departments = ['All Departments', 'Computer Science', 'Robotics', 'Electronics', 'Non-Tech']
 		this.cardInfo = ["day_one", "day_two", "day_three"]
 		this.changeTab = this.changeTab.bind(this)
+		this.days=["Nov 2nd", "Nov 3rd", "Nov 4th"]
 	};
 
 	changeTab = (i) => (e) => {
@@ -34,8 +35,8 @@ export default class Events extends Component {
 		for(var i in cards){
 			i = parseInt(i)
 			var classn = (i===this.state.index)?styles['active']:{}
-			var gridItem = ( <ScheduleGridCard key={i} day={i} delay={i*100} details={cards[i]} departments={this.departments} department={this.state.department}/>)
-			var tabItem = ( <div key={i} className={styles['schedule-tab'] + " " + classn} onClick={this.changeTab(i)}>Day {i+1}</div>)
+			var gridItem = ( <ScheduleGridCard key={i} day={this.days[i]} delay={i*100} details={cards[i]} departments={this.departments} department={this.state.department}/>)
+			var tabItem = ( <div key={i} className={styles['schedule-tab'] + " " + classn} onClick={this.changeTab(i)}>{this.days[i]}</div>)
 			grid.push(gridItem)
 			tabs.push(tabItem)
 		}
