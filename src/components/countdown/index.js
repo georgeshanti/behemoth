@@ -63,6 +63,7 @@ class Countdown extends Component{
                     <div className={styles["value"]}>{this.state.secs}</div>
                     <div className={styles["metric"]}>Secs</div>
                 </div>
+                <div className={styles["dates"]}>October 2<sup>nd</sup>, 3<sup>rd</sup> and 4<sup>th</sup></div>
             </div>
         )
     }

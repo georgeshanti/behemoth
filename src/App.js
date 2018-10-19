@@ -32,7 +32,7 @@ const ComingSoon = ()=>{
 
 class Play extends Component{
   componentDidMount() {
-    window.location.assign('https://play.excelmec.org/');
+    window.location.assign('http://play.excelmec.org/');
   }
   render(){
     return (<div></div>)
