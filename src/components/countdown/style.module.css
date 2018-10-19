@@ -26,6 +26,14 @@
     padding-bottom: 8px;
 }
 
+.dates{
+    margin-top: 10px;
+    font-family: Montserrat;
+    font-weight: 400;
+    font-size: 1.5em;
+    letter-spacing: -0.03em;
+}
+
 @media (max-width:450px){
     .value-container{
         width: 8vh;
@@ -36,5 +44,9 @@
     }
     .metric{
         font-size: 0.5em;
+    }
+
+    .dates{
+        font-size: 1.2em;
     }
 }

@@ -108,7 +108,8 @@ export default class Home extends Component {
                 <div className="news-container">
                     <div className="block"></div>
                     <span className="date">{this.state.newsfeed[i].date}</span>
-                    <a className="headline" href={this.state.newsfeed[i].link} target="_blank">{this.state.newsfeed[i].title}</a>
+                <a className="headline" href={this.state.newsfeed[i].link || ''} >{this.state.newsfeed[i].title}</a>
+                
                 </div>
             )
             newsfeed.push(feed)
