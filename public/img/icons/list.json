@@ -1,16 +1,8 @@
-{
-  "short_name": "Excel 2018",
-  "name": "Excel 2018",
-  "icons": [
+[
     {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    },
-    {
-      "src": "/img/icons/android-icon-48x48.png",
-      "type": "image/png",
-      "size": "48x48"
+        "src": "/img/icons/android-icon-48x48.png",
+        "type": "image/png",
+        "size": "48x48"
     },
     {
         "src": "/img/icons/android-icon-192x192.png",
@@ -82,10 +74,4 @@
         "type": "image/png",
         "size": "144x144"
     }
-  ],
-  "start_url": "/",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff",
-  "scope": "/#/"
-}
+]
