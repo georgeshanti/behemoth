@@ -3,6 +3,7 @@ import { Route, Link } from 'react-router-dom'
 import styles from './style.module.css';
 import SponsorGridCard from 'components/competition-grid-card';
 import axios from 'axios';
+import sponsorsData from './sponsor-data.json'
 
 export default class Competitions extends Component {
 
@@ -10,7 +11,7 @@ export default class Competitions extends Component {
 		super(props);
 		 //initialise state
 		this.state = {
-			cardInfo: {}
+			cardInfo: sponsorsData
 		};
 
 	}

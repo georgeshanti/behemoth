@@ -6,7 +6,7 @@ import CompetitionCard from 'components/competition-card';
 import CompetitionGridCard from 'components/competition-grid-card';
 import axios from 'axios';
 import DropDown from 'components/dropdown';
-import competitionData from './competition-data.json'
+import competitionsData from './competitions-data.json'
 
 export default class Competitions extends Component {
 
@@ -23,7 +23,7 @@ export default class Competitions extends Component {
 		this.state = {
 			department: 0,
 			category: 0,  //options for filter
-			cardInfo: competitionData,
+			cardInfo: competitionsData,
 		};
 
 		this.departments = ['All Departments', 'Computer Science', 'Robotics', 'Electronics', 'Non-Tech']

@@ -8,12 +8,13 @@ import boschlogo from './images/bosch.png';
 import nestlogo from './images/nest_logo.png';
 import meclogo from './images/college below white.png';
 import axios from 'axios';
+import homeData from './home-data.json'
 
 export default class Home extends Component {
 
     constructor(props){
         super(props)
-        this.state = []
+        this.state = homeData
     }
 
     touchstart = (e) => {
@@ -60,6 +61,7 @@ export default class Home extends Component {
         this.resetContents(this.right_contents);
     }
 
+    /* Not required any more as we are loading the data from local file
     componentWillMount(){
 		var comp = this;
 		axios.get("https://cms.excelmec.org/newsfeed/")
@@ -67,6 +69,7 @@ export default class Home extends Component {
                 comp.setState({newsfeed: response.data})
             })
     }
+    */
 
     componentDidMount(){
         this.clips = document.querySelector(".clips");

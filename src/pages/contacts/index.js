@@ -2,16 +2,18 @@ import React, {Component} from 'react';
 import styles from './style.module.css';
 import ContactCard from 'components/contact-card';
 import axios from 'axios'
+import contactsData from './contacts-data.json' 
 
 export default class Contacts extends Component{
 
     constructor(props){
         super(props)
         this.state={
-            cardInfo:[]
+            cardInfo: contactsData
         }
     }
 
+    /*Not required any more as we are loading the data from local file
     componentWillMount(){
 		var comp = this;
 		axios.get("https://cms.excelmec.org/contact/")
@@ -19,6 +21,7 @@ export default class Contacts extends Component{
 				comp.setState({cardInfo: response.data})
 			})
     }
+    */
 
     render(){
         var grid = []

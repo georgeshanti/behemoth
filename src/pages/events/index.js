@@ -4,15 +4,17 @@ import { Route, Link } from 'react-router-dom'
 import EventGridCard from 'components/event-grid-card'
 import EventCard from 'components/event-card'
 import axios from 'axios'
-export default class Events extends Component{
+import eventsData from './events-data.json'
 
+export default class Events extends Component{
     constructor(props){
         super(props)
         this.state={
-            cardInfo:[]
+            cardInfo: eventsData
         }
     }
 
+    /*Not required any more as we are loading the data from local file
     componentWillMount(){
 		var comp = this;
 		axios.get("https://cms.excelmec.org/event/")
@@ -20,6 +22,7 @@ export default class Events extends Component{
 				comp.setState({cardInfo: response.data})
             })
     }
+    */
 
     componentDidMount(){
         window.scrollTo(0, 0)
