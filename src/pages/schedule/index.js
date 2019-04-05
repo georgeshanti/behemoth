@@ -15,7 +15,8 @@ export default class Events extends Component {
 		}
 
 		this.departments = ['All Departments', 'Computer Science', 'Robotics', 'Electronics', 'Non-Tech']
-		this.cardInfo = ["day_one", "day_two", "day_three"]
+		// this.cardInfo = ["day_one", "day_two", "day_three"]
+		this.cardInfo = [0, 1, 2]
 		this.changeTab = this.changeTab.bind(this)
 		this.days=["Nov 2nd", "Nov 3rd", "Nov 4th"]
 	};

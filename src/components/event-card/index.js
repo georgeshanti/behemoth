@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import styles from './style.module.css';
 import { Link } from 'react-router-dom'
 import axios from 'axios'
+import eventsData from '../../pages/events/events-data.json'
+import eachEventsData from './each-events-data.json'
 
 export default class EventCard extends Component{
    
@@ -19,6 +21,7 @@ export default class EventCard extends Component{
 
     }
 
+    /* Not required any more as we are loading the data from local file
     componentWillMount(){
         var comp = this;
         axios.get("https://cms.excelmec.org/event/")
@@ -33,6 +36,16 @@ export default class EventCard extends Component{
                     }
                 }
 			})
+    }
+    */
+    componentWillMount() {
+        var comp = this;
+        for(var response in eventsData) {
+            var data = eventsData[response]
+            if(data.codename === comp.props.match.params['event']){
+                comp.setState({cardInfo: eachEventsData[data.id-1]})
+            }
+        }
     }
 
     unmount = () => (e)=>{

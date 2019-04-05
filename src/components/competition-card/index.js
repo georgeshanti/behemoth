@@ -3,6 +3,8 @@ import { Redirect, Link } from 'react-router-dom';
 import styles from './style.module.css';
 import axios from 'axios'
 import { SSL_OP_NETSCAPE_CA_DN_BUG } from 'constants';
+import competitionsData from '../../pages/competitions/competitions-data.json'
+import eachCompetitionsData from './each-competitions-data.json'
 
 class CompetitionCard extends Component {
 
@@ -44,6 +46,7 @@ class CompetitionCard extends Component {
         this.setState({tabIndex: i})
     }
 
+    /* Not required any more as we are loading the data from local file
     componentWillMount(){
         var comp = this;
         axios.get("https://cms.excelmec.org/competition/")
@@ -58,6 +61,16 @@ class CompetitionCard extends Component {
                     }
                 }
 			})
+    }
+    */
+    componentWillMount() {
+        var comp = this;
+        for(var response in competitionsData) {
+            var data = competitionsData[response]
+            if(data.codename === comp.props.match.params['competition']){
+                comp.setState({eventContent: eachCompetitionsData[data.id-1]})
+            }
+        }
     }
 
     close(){

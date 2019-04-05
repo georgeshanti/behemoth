@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styles from './style.module.css';
 import axios from 'axios';
+import scheduleData from './schedule-data.json'
 
 class ScheduleGridCard extends Component{
     constructor(props){
@@ -8,10 +9,11 @@ class ScheduleGridCard extends Component{
         this.state = {
             opacity: 0,
             scale: 0,
-            cardInfo: []
+            cardInfo: scheduleData[this.props.details]
         }
     }
 
+    /* Not required any more as we are loading the data from local file
     componentWillMount(){
 		var comp = this;
 		axios.get("https://cms.excelmec.org/"+this.props.details+"/")
@@ -19,6 +21,7 @@ class ScheduleGridCard extends Component{
                 comp.setState({cardInfo: response.data})
             })
     }
+    */
 
     componentDidMount(){
         var comp = this
