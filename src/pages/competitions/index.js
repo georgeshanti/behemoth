@@ -6,6 +6,7 @@ import CompetitionCard from 'components/competition-card';
 import CompetitionGridCard from 'components/competition-grid-card';
 import axios from 'axios';
 import DropDown from 'components/dropdown';
+import competitionData from './competition-data.json'
 
 export default class Competitions extends Component {
 
@@ -22,7 +23,7 @@ export default class Competitions extends Component {
 		this.state = {
 			department: 0,
 			category: 0,  //options for filter
-			cardInfo: {},
+			cardInfo: competitionData,
 		};
 
 		this.departments = ['All Departments', 'Computer Science', 'Robotics', 'Electronics', 'Non-Tech']
@@ -37,6 +38,7 @@ export default class Competitions extends Component {
 		this.setState({department: i})
 	}
 
+	/* Not required any more as we are loading the data from local file
     componentWillMount(){
 		var comp = this;
 		axios.get("https://cms.excelmec.org/competition/")
@@ -45,6 +47,7 @@ export default class Competitions extends Component {
 			})
 		this.setState({items:this.state.initialItem})
 	}
+	*/
 
 	render() {
 		var cards = this.state.cardInfo
